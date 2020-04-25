@@ -5,19 +5,16 @@ import logo from "../../static/images/logo.png"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <div className={"container"}>
-      <div className={"top-menu"}>
-        <div className={"logo"}>
-          <Link to="/" title={"Vngle"}>
-            <img alt={"Logo"} src={logo} />
-          </Link>
-        </div>
-
-        <div className={"get-started"}>
-          <a href={"https://app.histaff.io"}>Get Started</a>
-        </div>
-      </div>
+    <div className={"logo"}>
+      <Link to="/" title={siteTitle}>
+        <img alt={"Logo"} src={logo} />
+      </Link>
     </div>
+    <nav className={"menu"}>
+      <Link to="about">About</Link>
+      <Link to="tipline">Tipline</Link>
+      <Link to="blog">Blog</Link>
+    </nav>
   </header>
 )
 
