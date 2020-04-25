@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "vngle-site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Vngle is a decentralized grassroots news network for news deserts.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kenneth Chen",
   "dependencies": {
     "gatsby": "^2.20.36",
     "gatsby-cli": "^2.11.22",
@@ -40,9 +40,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": ""
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": ""
   }
 }
