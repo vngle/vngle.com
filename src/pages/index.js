@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Input, Button, Space, Form, Upload } from "antd"
 import {
   MailOutlined,
@@ -75,7 +75,7 @@ class IndexPage extends React.Component {
           <section className="stories">
             <div className="header">
               <img
-                alt="Profile picture of vnglestories instagram"
+                alt="Instagram post"
                 src={this.state.instaFeed.profile.profile_pic_url}
                 className="avatar"
               />
