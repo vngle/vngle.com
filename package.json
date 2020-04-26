@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kenneth Chen",
   "dependencies": {
+    "antd": "^4.1.5",
     "gatsby": "^2.20.36",
     "gatsby-cli": "^2.11.22",
     "gatsby-image": "^2.3.5",
