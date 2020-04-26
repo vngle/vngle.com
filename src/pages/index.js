@@ -12,6 +12,9 @@ import Nanogram from "nanogram.js"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import logo from "../../static/images/hero.svg"
+import MozillaLogo from "../../static/images/mozilla.png"
+import ColumbiaLogo from "../../static/images/columbia-tamer.png"
+import GoodieNationLogo from "../../static/images/goodie-nation.png"
 
 class IndexPage extends React.Component {
   state = {
@@ -55,7 +58,10 @@ class IndexPage extends React.Component {
             </div>
 
             <Space direction="vertical" size="middle">
-              <p>Sign up to receive grassroots COVID-19 news coverage</p>
+              <p>
+                Sign up to receive COVID-19 grassroots news coverage in your
+                area.
+              </p>
               <Input
                 placeholder="Email"
                 prefix={<MailOutlined />}
@@ -101,8 +107,8 @@ class IndexPage extends React.Component {
               <div className="content">
                 <h1>Think something needs coverage?</h1>
                 <p>
-                  Request coverage upload your own content of what you believe
-                  matters in your area.
+                  Request special coverage on your city or upload your own
+                  content to show what's happening locally.
                 </p>
               </div>
               <div className="form">
@@ -128,6 +134,21 @@ class IndexPage extends React.Component {
                   </Form.Item>
                 </Form>
               </div>
+            </div>
+          </section>
+
+          <section className="worked-with">
+            <h1>Who We've Worked With</h1>
+            <div className="flex-container">
+              <a href="https://www.mozilla.org">
+                <img alt="Mozilla logo" src={MozillaLogo} />
+              </a>
+              <a href="https://www8.gsb.columbia.edu/socialenterprise/">
+                <img alt="Columbia Tamer Center logo" src={ColumbiaLogo} />
+              </a>
+              <a href="https://goodienation.org/">
+                <img alt="Goodie Nation logo" src={GoodieNationLogo} />
+              </a>
             </div>
           </section>
         </Layout>

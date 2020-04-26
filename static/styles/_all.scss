@@ -173,28 +173,51 @@ body {
 
     .flex-container {
       display: flex;
-      width: 75%;
       max-width: 60rem;
       margin: 0 auto;
 
       .content {
+        width: 52%;
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
 
       .form {
-        width: 64%;
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .worked-with {
+    padding: 65px 20px;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 2rem;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-evenly;
+
+      img {
+        width: 200px;
       }
     }
   }
 
   footer {
-    padding: 120px 0 45px;
+    padding: 60px 0 45px;
 
     .logo {
       img {
