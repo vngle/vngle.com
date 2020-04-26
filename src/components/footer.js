@@ -23,7 +23,7 @@ export default () => (
             </div>
 
             <div className={"about"}>
-              <p>Decentralized grassroots news network for news deserts.</p>
+              <p>"Various angles" on your city.</p>
             </div>
           </div>
         </Col>

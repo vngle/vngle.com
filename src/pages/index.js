@@ -54,7 +54,7 @@ class IndexPage extends React.Component {
             <img alt="Logo" src={logo}></img>
 
             <div className={"headline"}>
-              <h1>Decentralized grassroots news network for news deserts.</h1>
+              <h1>A decentralized grassroots news network for news deserts.</h1>
             </div>
 
             <Space direction="vertical" size="middle">
@@ -115,7 +115,9 @@ class IndexPage extends React.Component {
                 <Form>
                   <Form.Item>
                     <Button size="large" shape="round">
-                      Request Coverage
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform">
+                        Request Coverage
+                      </a>
                     </Button>
                   </Form.Item>
                   <h2>OR</h2>

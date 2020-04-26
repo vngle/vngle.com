@@ -11,6 +11,10 @@ const Header = ({ siteTitle }) => (
       </Link>
     </div>
     <nav className={"menu"}>
+      <div className="join-us">
+        <a href="/">Join Us</a>
+      </div>
+      <Link to="/covid">COVID-19</Link>
       <Link to="/about">About</Link>
       <Link to="/tipline">Tipline</Link>
       <Link to="/blog">Blog</Link>
