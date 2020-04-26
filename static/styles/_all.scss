@@ -1,6 +1,6 @@
 $break-small: 375px;
 $primary-color: #ffcc35;
-$secondary-color: #344ff7;
+$secondary-color: #41a9ff;
 $light-color: #f7f7f7;
 $dark-color: #1e1c21;
 
@@ -161,6 +161,10 @@ body {
       margin-bottom: 2rem;
     }
 
+    h2 {
+      font-family: Inter, sans-serif;
+    }
+
     p {
       font-size: medium;
       color: $dark-color;
@@ -234,7 +238,7 @@ body {
 
             &:hover,
             &:active {
-              color: #8953b7;
+              color: $secondary-color;
             }
           }
         }

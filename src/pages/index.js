@@ -101,8 +101,8 @@ class IndexPage extends React.Component {
               <div className="content">
                 <h1>Think something needs coverage?</h1>
                 <p>
-                  Request coverage <b>OR</b> upload your own content of what you
-                  believe matters in your area.
+                  Request coverage upload your own content of what you believe
+                  matters in your area.
                 </p>
               </div>
               <div className="form">
