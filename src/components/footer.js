@@ -62,13 +62,13 @@ export default () => (
 
         <Col span={8}>
           <div className={"social"}>
-            <a>
+            <a href="https://www.facebook.com/vnglestories/">
               <FacebookFilled />
             </a>
-            <a>
+            <a href="https://twitter.com/vnglestories">
               <TwitterOutlined />
             </a>
-            <a>
+            <a href="https://www.instagram.com/vnglestories/">
               <InstagramOutlined />
             </a>
           </div>
