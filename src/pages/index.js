@@ -55,7 +55,7 @@ class IndexPage extends React.Component {
             </div>
 
             <Space direction="vertical" size="middle">
-              <p>Sign up to receive grassroots news coverage</p>
+              <p>Sign up to receive grassroots COVID-19 news coverage</p>
               <Input
                 placeholder="Email"
                 prefix={<MailOutlined />}
