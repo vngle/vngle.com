@@ -8,6 +8,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql, Link } from "gatsby"
+import { Row, Col } from "antd"
+import {
+  GithubOutlined,
+  FacebookFilled,
+  InstagramOutlined,
+  TwitterOutlined,
+} from "@ant-design/icons"
+import "antd/dist/antd.css"
 
 import Header from "./header"
 import "../../static/styles/main.scss"
@@ -34,8 +42,8 @@ const Layout = ({ children }) => (
         <main>{children}</main>
         <footer>
           <div className={"container"}>
-            <div className={"row"}>
-              <div className={"col-5"}>
+            <Row gutter={16}>
+              <Col span={8}>
                 <div className={"widget__item"}>
                   <div className={"logo"}>
                     <Link to="/" title={"Vngle"}>
@@ -49,69 +57,56 @@ const Layout = ({ children }) => (
                     </p>
                   </div>
                 </div>
-              </div>
+              </Col>
 
-              <div className={"col-2"}>
-                <div className={"widget__item"}>
-                  <ul className={"links"}>
-                    <h4>Vngle</h4>
-                    <ul>
-                      <li>
-                        <Link to="/about" title={"About"}>
-                          About Us
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/tipline" title={"Tipline"}>
-                          Tipline
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/blog" title={"Blog"}>
-                          Blog
-                        </Link>
-                      </li>
-                      <li>
-                        <a
-                          className={"links__special"}
-                          href={"https://www.vngle.com/"}
-                          title={
-                            "We look forward to receiving your great feedback"
-                          }
-                        >
-                          Feedback
-                        </a>
-                      </li>
-                    </ul>
+              <Col span={8}>
+                <ul className={"links"}>
+                  <h4>Vngle</h4>
+                  <ul>
+                    <li>
+                      <Link to="/about" title={"About"}>
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/tipline" title={"Tipline"}>
+                        Tipline
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/blog" title={"Blog"}>
+                        Blog
+                      </Link>
+                    </li>
+                    <li>
+                      <a
+                        className={"links__special"}
+                        href={"https://www.vngle.com/"}
+                        title={
+                          "We look forward to receiving your great feedback"
+                        }
+                      >
+                        Feedback
+                      </a>
+                    </li>
                   </ul>
-                </div>
-              </div>
+                </ul>
+              </Col>
 
-              <div className={"col-3"}>
-                <div className={"widget__item"}>
-                  <div className={"social"}>
-                    <a href="https://twitter.com/histaffio" title={"Twitter"}>
-                      <img alt={"Twitter"} src={iconTwitter} />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/company/histaff/"
-                      title={"LinkedIn"}
-                    >
-                      <img alt={"LinkedIn"} src={iconLinkedin} />
-                    </a>
-                    <a href="https://github.com/histaff" title={"GitHub"}>
-                      <img alt={"GitHub"} src={iconGitHub} />
-                    </a>
-                    <a
-                      href="https://www.instagram.com/histaff.io/"
-                      title={"Instagram"}
-                    >
-                      <img alt={"Instagram"} src={iconInstagram} />
-                    </a>
-                  </div>
+              <Col span={8}>
+                <div className={"social"}>
+                  <a>
+                    <FacebookFilled />
+                  </a>
+                  <a>
+                    <TwitterOutlined />
+                  </a>
+                  <a>
+                    <InstagramOutlined />
+                  </a>
                 </div>
-              </div>
-            </div>
+              </Col>
+            </Row>
 
             <div className={"copyright"}>
               <p>
