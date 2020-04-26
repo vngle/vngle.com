@@ -1,11 +1,12 @@
-$break-small: 719px;
+$break-small: 375px;
 $primary-color: #ffcc35;
-$secondary-color: #f7f7f7;
+$light-color: #f7f7f7;
+$dark-color: #1e1c21;
 
 body {
   font-family: Inter;
   color: #797283;
-  background-color: $secondary-color;
+  background-color: $light-color;
 
   p {
     font-family: Inter;
@@ -19,7 +20,7 @@ body {
   h6 {
     font-family: PT Serif;
     line-height: 43px;
-    color: #1e1c21;
+    color: $dark-color;
   }
 
   a {
@@ -32,9 +33,13 @@ body {
   }
 
   header {
-    background-color: $secondary-color;
-    display: block;
-    padding: 39px 0;
+    background: $light-color;
+    color: $dark-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 39px 50px;
 
     .logo {
       img {
@@ -42,23 +47,23 @@ body {
       }
     }
 
-    .top-menu {
-      display: flex;
-      justify-content: space-between;
+    .menu {
+      a {
+        text-decoration: none;
+        margin-left: 3rem;
+        color: $dark-color;
+        font-weight: bold;
+      }
+      a:hover {
+        color: $primary-color;
+        transition: color 0.3s;
+      }
+    }
 
-      .get-started {
+    @media screen and (max-width: $break-small) {
+      .menu {
         a {
-          width: 160px;
-          height: 47px;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 16px;
-          line-height: 47px;
-          display: block;
-          background: #8953b7;
-          border-radius: 4px;
-          text-align: center;
-          color: #ffffff;
+          margin-left: 1rem;
         }
       }
     }
@@ -68,7 +73,7 @@ body {
     text-align: center;
     padding: 100px 50px;
     background-color: $primary-color;
-    color: #1e1c21;
+    color: $dark-color;
 
     h1 {
       font-style: normal;
@@ -137,7 +142,7 @@ body {
           font-size: 36px;
           font-weight: bold;
           margin-bottom: 15px;
-          color: #1e1c21;
+          color: $dark-color;
         }
 
         p {
@@ -175,8 +180,8 @@ body {
   }
 
   .call-to-action {
-    background-color: #8953b7;
-    color: #ffffff;
+    background-color: $primary-color;
+    color: $dark-color;
     padding: 65px 0;
     border-radius: 40px 40px 0px 0px;
 
@@ -216,7 +221,7 @@ body {
         justify-content: center;
         font-weight: bold;
         flex-direction: column;
-        color: #8953b7;
+        color: $dark-color;
 
         @media screen and (max-width: $break-small) {
           margin: 0 auto;
@@ -233,7 +238,7 @@ body {
         font-family: Inter;
         font-weight: 600;
         margin: 0 0 32px;
-        color: #ffffff;
+        color: $dark-color;
       }
 
       p {
@@ -263,7 +268,7 @@ body {
       text-align: center;
       font-size: 26px;
       margin-bottom: 99px;
-      color: #1e1c21;
+      color: $dark-color;
     }
 
     .item {
@@ -282,14 +287,14 @@ body {
   }
 
   .bg-color {
-    background-color: $secondary-color;
+    background-color: $light-color;
     padding: 52px 0;
   }
 
   .integration-guid {
     width: 80%;
     margin: 0 auto;
-    color: #1e1c21;
+    color: $dark-color;
 
     h1,
     h2,
@@ -327,6 +332,12 @@ body {
 
   footer {
     padding: 120px 0 45px;
+
+    .logo {
+      img {
+        height: 47px;
+      }
+    }
 
     @media screen and (max-width: $break-small) {
       padding: 50px 0 45px;
