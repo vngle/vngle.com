@@ -19,7 +19,7 @@ body {
   h4,
   h5,
   h6 {
-    font-family: PT Serif;
+    font-family: "Playfair Display", Serif;
     line-height: 43px;
     color: $dark-color;
   }
@@ -125,11 +125,6 @@ body {
       max-width: 30%;
     }
 
-    .headline {
-      margin-right: 10rem;
-      margin-left: 10rem;
-    }
-
     @media screen and (max-width: $break-small) {
       padding: 50px 10px 50px 10px;
       img {
@@ -140,8 +135,6 @@ body {
 
   .stories {
     padding: 65px 20px;
-    margin: 0 auto;
-    max-width: 60rem;
 
     .header {
       display: flex;
