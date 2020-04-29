@@ -12,7 +12,9 @@ const Header = ({ siteTitle }) => (
     </div>
     <nav className={"menu"}>
       <div className="join-us">
-        <a href="/">Join Us</a>
+        <a href="https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true">
+          Join Us
+        </a>
       </div>
       <Link to="/covid">COVID-19</Link>
       <Link to="/about">About</Link>
