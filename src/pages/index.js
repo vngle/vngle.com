@@ -1,15 +1,12 @@
 import React from "react"
-import { Input, Button, Space, Form, Upload } from "antd"
-import {
-  MailOutlined,
-  EnvironmentOutlined,
-  InboxOutlined,
-  LoadingOutlined,
-} from "@ant-design/icons"
+import { Button, Form, Upload } from "antd"
+import { InboxOutlined, LoadingOutlined } from "@ant-design/icons"
 import "antd/dist/antd.css"
 import Nanogram from "nanogram.js"
+import MailchimpSubscribe from "react-mailchimp-subscribe"
 
 import Layout from "../components/layout"
+import NewsSubForm from "../components/newsSubForm"
 import SEO from "../components/seo"
 import logo from "../../static/images/hero.svg"
 import MozillaLogo from "../../static/images/mozilla.png"
@@ -17,8 +14,11 @@ import ColumbiaLogo from "../../static/images/columbia-tamer.png"
 import GoodieNationLogo from "../../static/images/goodie-nation.png"
 
 class IndexPage extends React.Component {
-  state = {
-    instaFeed: null,
+  constructor(props) {
+    super(props)
+    this.state = {
+      instaFeed: null,
+    }
   }
 
   instaParser = new Nanogram()
@@ -50,35 +50,29 @@ class IndexPage extends React.Component {
         <Layout>
           <SEO title="Decentralized grassroots news network for news deserts." />
 
-          <section className={"page-header"}>
-            <img alt="Logo" src={logo}></img>
+          <section className="page-header">
+            <div className="container">
+              <img alt="Logo" src={logo}></img>
 
-            <div className={"headline"}>
-              <h1>A decentralized grassroots news network for news deserts.</h1>
+              <div className={"headline"}>
+                <h1>
+                  A decentralized grassroots news network for news deserts.
+                </h1>
+              </div>
+              <MailchimpSubscribe
+                url={process.env.GATSBY_MAILCHIMP_URL}
+                render={({ subscribe, status, message }) => (
+                  <NewsSubForm
+                    status={status}
+                    message={message}
+                    onSubmitted={formData => subscribe(formData)}
+                  />
+                )}
+              />
             </div>
-
-            <Space direction="vertical" size="middle">
-              <p>
-                Sign up to receive COVID-19 grassroots news coverage in your
-                area.
-              </p>
-              <Input
-                placeholder="Email"
-                prefix={<MailOutlined />}
-                size="large"
-              />
-              <Input
-                placeholder="City/Zipcode"
-                prefix={<EnvironmentOutlined />}
-                size="large"
-              />
-              <Button type="primary" size="large" shape="round" block>
-                Submit
-              </Button>
-            </Space>
           </section>
 
-          <section className="stories">
+          <section className="stories container">
             <div className="header">
               <img
                 alt="Instagram post"
