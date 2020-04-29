@@ -105,7 +105,7 @@ class IndexPage extends React.Component {
                   content to show what's happening locally.
                 </p>
               </div>
-              <div className="form">
+              <div className="coverage-action">
                 <Form>
                   <Form.Item>
                     <Button size="large" shape="round">
@@ -115,7 +115,11 @@ class IndexPage extends React.Component {
                     </Button>
                   </Form.Item>
                   <h2>OR</h2>
-                  <Form.Item name="dragger" valuePropName="fileList" noStyle>
+                  <Form.Item
+                    name="dragger"
+                    valuePropName="fileList"
+                    className="dragger"
+                  >
                     <Upload.Dragger name="files" action="/upload.do">
                       <p className="ant-upload-drag-icon">
                         <InboxOutlined />
