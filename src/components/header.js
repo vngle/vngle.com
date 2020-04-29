@@ -16,9 +16,10 @@ const Header = ({ siteTitle }) => (
           Join Us
         </a>
       </div>
-      <Link to="/covid">COVID-19</Link>
       <Link to="/about">About</Link>
-      <Link to="/tipline">Tipline</Link>
+      <a href="https://docs.google.com/forms/d/1ymGkcekuWk_1SPl0r6lp9uleQKGbHE6dTx4aY1jrNT0/edit">
+        Tipline
+      </a>
       <Link to="/blog">Blog</Link>
     </nav>
   </header>
