@@ -32,7 +32,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["PT Serif"],
+          families: ["Playfair Display"],
         },
         custom: {
           families: ["Inter"],
