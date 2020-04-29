@@ -16,13 +16,26 @@ export default ({ status, message, onSubmitted }) => {
         initialValues={{ remember: true }}
         onFinish={onSubmitted}
       >
-        <Form.Item name="EMAIL" required>
-          <Input placeholder="Email" prefix={<MailOutlined />} size="large" />
+        <Form.Item
+          name="EMAIL"
+          rules={[
+            { required: true, message: "Please enter your email address." },
+            {
+              type: "email",
+              message: "Please enter a valid email address.",
+            },
+          ]}
+        >
+          <Input
+            placeholder="Email"
+            prefix={<MailOutlined className="site-form-item-icon" />}
+            size="large"
+          />
         </Form.Item>
         <Form.Item name="city-zip">
           <Input
             placeholder="City/Zipcode"
-            prefix={<EnvironmentOutlined />}
+            prefix={<EnvironmentOutlined className="site-form-item-icon" />}
             size="large"
           />
         </Form.Item>
