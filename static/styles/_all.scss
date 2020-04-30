@@ -80,11 +80,12 @@ body {
         border-radius: 4px;
         text-align: center;
         color: $dark-color;
+      }
 
-        .join-us:hover {
-          background-color: #fce18f;
-          transition: background-color 0.3s;
-        }
+      .join-us:hover {
+        background-color: #fce18f;
+        color: $dark-color;
+        transition: background-color 0.3s;
       }
     }
 
