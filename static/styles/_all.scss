@@ -1,4 +1,5 @@
-$break-small: 375px;
+$break-small: 376px;
+$break-mid: 540px;
 $primary-color: #ffcc35;
 $secondary-color: #41a9ff;
 $light-color: #f7f7f7;
@@ -47,7 +48,7 @@ body {
       }
     }
 
-    .menu {
+    nav {
       display: flex;
 
       a {
@@ -55,30 +56,32 @@ body {
         flex-direction: column;
         justify-content: center;
         text-decoration: none;
-        margin-left: 3rem;
         color: $dark-color;
         font-weight: bold;
         font-size: large;
       }
+
+      a + a {
+        margin-left: 3rem;
+      }
+
       a:hover {
         color: $primary-color;
         transition: color 0.3s;
       }
 
       .join-us {
-        a {
-          padding: 15px 25px;
-          font-style: normal;
-          font-weight: bold;
-          font-size: large;
-          display: block;
-          background: $primary-color;
-          border-radius: 4px;
-          text-align: center;
-          color: $dark-color;
-        }
+        padding: 15px 25px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: large;
+        display: block;
+        background: $primary-color;
+        border-radius: 4px;
+        text-align: center;
+        color: $dark-color;
 
-        a:hover {
+        .join-us:hover {
           background-color: #fce18f;
           transition: background-color 0.3s;
         }
@@ -86,11 +89,37 @@ body {
     }
 
     @media screen and (max-width: $break-small) {
-      .menu {
+      nav {
         a {
           margin-left: 1rem;
           font-size: medium;
         }
+      }
+    }
+
+    @media screen and (max-width: $break-mid) {
+      display: block;
+      padding: 30px 10px;
+
+      nav {
+        margin-top: 1.5rem;
+        justify-content: space-around;
+
+        a + a {
+          margin: 0;
+        }
+      }
+
+      nav a:first-child {
+        order: 2;
+      }
+
+      nav a:nth-child(2) {
+        order: 1;
+      }
+
+      nav a:nth-child(3) {
+        order: 3;
       }
     }
   }
@@ -206,6 +235,20 @@ body {
 
         .dragger {
           margin-bottom: 0;
+        }
+      }
+
+      @media screen and (max-width: $break-mid) {
+        flex-direction: column;
+
+        .content {
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        .coverage-action {
+          margin-left: 0;
+          margin-top: 2rem;
         }
       }
     }
@@ -352,5 +395,16 @@ body {
 
   p {
     font-size: 18px;
+  }
+
+  img {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  @media screen and (min-width: $break-mid) {
+    .blake-img {
+      width: 50%;
+    }
   }
 }
