@@ -10,12 +10,13 @@ const Header = ({ siteTitle }) => (
         <img alt={"Logo"} src={logo} />
       </Link>
     </div>
-    <nav className={"menu"}>
-      <div className="join-us">
-        <a href="https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true">
-          Join Us
-        </a>
-      </div>
+    <nav>
+      <a
+        href="https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true"
+        className="join-us"
+      >
+        Join Us
+      </a>
       <Link to="/about">About</Link>
       <a href="https://docs.google.com/forms/d/1ymGkcekuWk_1SPl0r6lp9uleQKGbHE6dTx4aY1jrNT0/edit">
         Tipline

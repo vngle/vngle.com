@@ -11,7 +11,6 @@ export default ({ status, message, onSubmitted }) => {
   if (status !== "success") {
     return (
       <Form
-        {...layout}
         name="newsletter-subscribe"
         initialValues={{ remember: true }}
         onFinish={onSubmitted}
