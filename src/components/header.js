@@ -20,7 +20,6 @@ const Header = ({ siteTitle }) => (
       <a href="https://docs.google.com/forms/d/1ymGkcekuWk_1SPl0r6lp9uleQKGbHE6dTx4aY1jrNT0/edit">
         Tipline
       </a>
-      <Link to="/blog">Blog</Link>
     </nav>
   </header>
 )

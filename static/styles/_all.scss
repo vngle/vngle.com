@@ -77,6 +77,11 @@ body {
           text-align: center;
           color: $dark-color;
         }
+
+        a:hover {
+          background-color: #fce18f;
+          transition: background-color 0.3s;
+        }
       }
     }
 
@@ -333,4 +338,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* About Page */
+
+.page-about {
+  text-align: center;
+  padding: 65px 20px;
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 18px;
+  }
 }
