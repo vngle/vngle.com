@@ -1,6 +1,8 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import VngleDef from "../../static/images/vngle-def.png"
+import Blake from "../../static/images/blake-portrait.png"
 
 export default () => (
   <Layout>
@@ -15,6 +17,7 @@ export default () => (
         limited to no news coverage, by capturing human-interests stories that
         go underrepresented.
       </p>
+      <img src={VngleDef} alt="Vngle definition" />
       <p>
         Through partnering with communities, we provide grassroots coverage and
         reporting tools to areas that have little to no daily news. Our
@@ -24,7 +27,11 @@ export default () => (
       </p>
       <h2>We ensure all communities get proper representation</h2>
       <p>It all started with this guy:</p>
-
+      <img
+        src={Blake}
+        alt="Portrait of founder Blake Stoner"
+        className="blake-img"
+      />
       <p>
         There’s 3,143 counties in the United States and over 2,000 are
         considered news deserts. Blake noticed this problem as he was
