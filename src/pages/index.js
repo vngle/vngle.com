@@ -1,6 +1,6 @@
 import React from "react"
-import { Button, Form, Upload } from "antd"
-import { InboxOutlined, LoadingOutlined } from "@ant-design/icons"
+import { Button } from "antd"
+import { LoadingOutlined } from "@ant-design/icons"
 import "antd/dist/antd.css"
 import Nanogram from "nanogram.js"
 import MailchimpSubscribe from "react-mailchimp-subscribe"
@@ -72,6 +72,44 @@ class IndexPage extends React.Component {
             </div>
           </section>
 
+          <section className="call-to-action">
+            <div className="flex-container">
+              <div className="content">
+                <h1>Think something needs coverage?</h1>
+                <p>
+                  Request special coverage on your city or upload your own
+                  content to show what's happening locally.
+                </p>
+              </div>
+              <div className="coverage-action">
+                <Button size="large" shape="round">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform">
+                    Request Coverage
+                  </a>
+                </Button>
+
+                {/* <h2>OR</h2>
+                  <Form.Item
+                    name="dragger"
+                    valuePropName="fileList"
+                    className="dragger"
+                  >
+                    <Upload.Dragger name="files" action="/upload.do">
+                      <p className="ant-upload-drag-icon">
+                        <InboxOutlined />
+                      </p>
+                      <p className="ant-upload-text">
+                        Click or drag file to this area to upload
+                      </p>
+                      <p className="ant-upload-hint">
+                        Documents, photos, videos, etc.
+                      </p>
+                    </Upload.Dragger>
+                  </Form.Item> */}
+              </div>
+            </div>
+          </section>
+
           <section className="stories container">
             <div className="header">
               <img
@@ -93,47 +131,6 @@ class IndexPage extends React.Component {
                   </div>
                 )
               )}
-            </div>
-          </section>
-
-          <section className="call-to-action">
-            <div className="flex-container">
-              <div className="content">
-                <h1>Think something needs coverage?</h1>
-                <p>
-                  Request special coverage on your city or upload your own
-                  content to show what's happening locally.
-                </p>
-              </div>
-              <div className="coverage-action">
-                <Form>
-                  <Form.Item>
-                    <Button size="large" shape="round">
-                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform">
-                        Request Coverage
-                      </a>
-                    </Button>
-                  </Form.Item>
-                  <h2>OR</h2>
-                  <Form.Item
-                    name="dragger"
-                    valuePropName="fileList"
-                    className="dragger"
-                  >
-                    <Upload.Dragger name="files" action="/upload.do">
-                      <p className="ant-upload-drag-icon">
-                        <InboxOutlined />
-                      </p>
-                      <p className="ant-upload-text">
-                        Click or drag file to this area to upload
-                      </p>
-                      <p className="ant-upload-hint">
-                        Documents, photos, videos, etc.
-                      </p>
-                    </Upload.Dragger>
-                  </Form.Item>
-                </Form>
-              </div>
             </div>
           </section>
 
