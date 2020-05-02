@@ -39,8 +39,14 @@ export default ({ status, message, onSubmitted }) => {
           />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" size="large" shape="round" htmlType="submit">
-            {status === "sending" ? <LoadingOutlined /> : "Subscribe"}
+          <Button
+            type="primary"
+            size="large"
+            shape="round"
+            htmlType="submit"
+            loading={status === "sending"}
+          >
+            Subscribe
           </Button>
         </Form.Item>
       </Form>
@@ -48,11 +54,4 @@ export default ({ status, message, onSubmitted }) => {
   } else {
     return <p>{message}</p>
   }
-}
-
-const layout = {
-  wrapperCol: {
-    offset: 4,
-    span: 16,
-  },
 }
