@@ -6,3 +6,5 @@
 
 import "typeface-inter"
 import "typeface-playfair-display"
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./src/static/styles/main.scss"
