@@ -8,12 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import "antd/dist/antd.css"
-import "normalize.css"
+import { ThemeProvider } from "styled-components"
 
 import Header from "./header"
 import Footer from "../components/footer"
-import "../../static/styles/main.scss"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -28,9 +26,11 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider theme={theme}>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </>
     )}
   />
@@ -38,6 +38,16 @@ const Layout = ({ children }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+}
+
+// When updating theme, make sure to update variables in _variable.scss too
+const theme = {
+  colors: {
+    primary: "#ffcc35",
+    secondary: "#41a9ff",
+    light: "#f7f7f7",
+    dark: "#1e1c21",
+  },
 }
 
 export default Layout
