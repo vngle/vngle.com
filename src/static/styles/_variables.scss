@@ -1,1 +1,18 @@
+// Overrides to bootstrap variables
+
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+// When updating variables, make sure to update styled-component theme in layout.js too
+$theme-colors: (
+  "primary": #ffcc35,
+  "secondary": #41a9ff,
+  "light": #f7f7f7,
+  "dark": #1e1c21,
+);
+
+$font-family-base: "Inter";
+$headings-font-family: "Playfair Display";
+
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
