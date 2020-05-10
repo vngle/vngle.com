@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/static/images`,
+        path: `${__dirname}/src/static/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `vngle`,
+        short_name: `vngle`,
         start_url: `/`,
         background_color: `#f7f7f7`,
         theme_color: `#FF54AC`,
         display: `minimal-ui`,
-        icon: `${__dirname}/static/images/logo-box.jpg`, // This path is relative to the root of the site.
+        icon: `${__dirname}/src/static/images/logo-box.jpg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
