@@ -12,7 +12,10 @@ $theme-colors: (
   "dark": #1e1c21,
 );
 
+$enable-shadows: true;
+
 $font-family-base: "Inter";
 $headings-font-family: "Playfair Display";
+$body-bg: theme-color("light");
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
