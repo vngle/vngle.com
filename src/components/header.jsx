@@ -3,7 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import { Container, Navbar, Nav, Button } from "react-bootstrap"
-import logo from "../static/images/logo.png"
+
+import Logo from "../static/images/logo.png"
 
 const Header = ({ siteTitle }) => (
   <StyledHeader>
@@ -11,16 +12,19 @@ const Header = ({ siteTitle }) => (
       <Container>
         <Navbar.Brand>
           <Link to="/" title={siteTitle}>
-            <img alt="Vngle logo" src={logo} height="47" />
+            <img alt="Vngle logo" src={Logo} height="47" />
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="justify-content-end text-center">
           <Nav>
-            <Nav.Link>Where We Are Now</Nav.Link>
+            <Link to="/wwan" className="nav-link">
+              Where We Are Now
+            </Link>
             <Nav.Link href="https://docs.google.com/forms/d/1ymGkcekuWk_1SPl0r6lp9uleQKGbHE6dTx4aY1jrNT0/edit">
               Tipline
             </Nav.Link>
+            <Nav.Link href="https://medium.com/vngle">Blog</Nav.Link>
             <Link to="/about" className="nav-link">
               About
             </Link>

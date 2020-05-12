@@ -119,12 +119,12 @@ const IndexPage = () => {
                     <Form.Label className="font-weight-bold">OR</Form.Label>
                   </Form.Group>
                   <Form.Group>
-                    <Form.File
-                      id="coverage-upload"
-                      label="Upload documents, photos, vidoes, etc."
-                      className="text-left"
-                      custom
-                    />
+                    <Form.Label className="font-weight-bold">
+                      Email us at{" "}
+                      <a href="mailto:" className="text-secondary">
+                        ???@vngle.com
+                      </a>
+                    </Form.Label>
                   </Form.Group>
                 </Form>
               </Col>
@@ -161,7 +161,7 @@ const IndexPage = () => {
           <Row as={Col} className="justify-content-center">
             <h1>Who We've Worked With</h1>
           </Row>
-          <Row className="align-items-center">
+          <Row className="align-items-center text-center">
             <Col>
               <a href="https://www.mozilla.org">
                 <img alt="Mozilla logo" src={MozillaLogo} width={200} />
