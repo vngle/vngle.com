@@ -1,18 +1,47 @@
 import React from "react"
-import { Form, Button } from "react-bootstrap"
+import { Form, Button, Col } from "react-bootstrap"
 
 export default ({ status, message, onSubmitted }) => {
   if (status !== "success") {
     return (
       <Form>
-        <Form.Group controlId="formMailchimp">
+        <Form.Group controlId="formEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
         </Form.Group>
-        <Form.Group>
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="text" placeholder="Enter city" />
+        <Form.Group controlId="formCity">
+          <Form.Label>Location</Form.Label>
+          <Form.Control type="text" placeholder="City" />
         </Form.Group>
+        <Form.Row>
+          <Form.Group as={Col} controlId="formState">
+            <Form.Control type="text" placeholder="State" />
+          </Form.Group>
+          <Form.Group as={Col} controlId="formZip">
+            <Form.Control type="text" placeholder="Zipcode" />
+          </Form.Group>
+        </Form.Row>
+        <Form.Group>
+          <Form.Label>Sign me up for ...</Form.Label>
+
+          <Form.Group>
+            <Form.Check
+              type="checkbox"
+              id="general-newsletter-checkbox"
+              label="General newsletter"
+              inline
+              custom
+            />
+            <Form.Check
+              type="checkbox"
+              id="location-newsletter-checkbox"
+              label="Location-specific newsletter"
+              inline
+              custom
+            />
+          </Form.Group>
+        </Form.Group>
+
         <Button>Subscribe</Button>
       </Form>
 
