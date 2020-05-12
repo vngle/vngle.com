@@ -1,8 +1,8 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import VngleDef from "../../static/images/vngle-def.png"
-import Blake from "../../static/images/blake-portrait.png"
+import VngleDef from "../static/images/vngle-def.png"
+import Blake from "../static/images/blake-portrait.png"
 
 export default () => (
   <Layout>

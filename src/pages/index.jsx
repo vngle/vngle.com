@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react"
-import { Jumbotron, Container, Card, Row, Col } from "react-bootstrap"
+import {
+  Jumbotron,
+  Container,
+  Card,
+  Row,
+  Col,
+  Form,
+  Button,
+  Spinner,
+} from "react-bootstrap"
 import styled from "styled-components"
 import Nanogram from "nanogram.js"
 import MailchimpSubscribe from "react-mailchimp-subscribe"
@@ -27,11 +36,11 @@ const IndexPage = () => {
   }, [])
 
   if (instaFeed === null) {
-    return <div className="loading">LOADING</div>
+    return <Spinner></Spinner>
   } else {
     return (
       <Layout>
-        <SEO title="Decentralized grassroots news network for news deserts." />
+        <SEO title="Decentralized grassroots news network for news deserts" />
 
         <Jumbotron className="bg-primary rounded-0" as="section">
           <HeroContainer>
@@ -39,16 +48,19 @@ const IndexPage = () => {
               A decentralized grassroots news network for news deserts.
             </h1>
             <Row>
-              <Col className="text-center" lg md sm>
-                <img alt="Man reading newspaper" src={HeroImg}></img>
-              </Col>
               <Col
+                className="d-flex flex-column justify-content-center text-center"
                 lg
-                md={12}
-                sm={12}
-                xs={12}
-                className="d-flex flex-column justify-content-center"
+                md
+                sm
               >
+                <img
+                  alt="Man reading newspaper"
+                  src={HeroImg}
+                  className="m-auto"
+                ></img>
+              </Col>
+              <Col lg md={12} sm={12} xs={12}>
                 <Card className="shadow border-0">
                   <Card.Body>
                     <Card.Title className="mb-4" as="h4">
@@ -71,53 +83,59 @@ const IndexPage = () => {
           </HeroContainer>
         </Jumbotron>
 
-        <section className="call-to-action">
-          <div className="flex-container">
-            <div className="content">
-              <h1>Think something needs coverage?</h1>
-              <p>
-                Request special coverage on your city or upload your own content
-                to show what's happening locally.
-              </p>
-            </div>
-            <div className="coverage-action">
-              {/* <Button size="large" shape="round">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform">
-                    Request Coverage
-                  </a>
-                </Button> */}
+        <Jumbotron className="bg-primary border-radius-0" as="section">
+          <Container>
+            <Row>
+              <Col>
+                <h1>Think something needs converage?</h1>
+                <p>
+                  Request special coverage on your city or upload your own
+                  content to show what's happening locally.
+                </p>
+              </Col>
+              <Col
+                className="text-center d-flex flex-column justify-content-center"
+                lg
+                md={12}
+              >
+                <Form>
+                  <Form.Group>
+                    <Button
+                      variant="light"
+                      size="lg"
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform"
+                    >
+                      Request Converage
+                    </Button>
+                  </Form.Group>
+                  <Form.Group>
+                    <Form.Label className="font-weight-bold">OR</Form.Label>
+                  </Form.Group>
+                  <Form.Group>
+                    <Form.File
+                      id="coverage-upload"
+                      label="Upload documents, photos, vidoes, etc."
+                      className="text-left"
+                      custom
+                    />
+                  </Form.Group>
+                </Form>
+              </Col>
+            </Row>
+          </Container>
+        </Jumbotron>
 
-              {/* <h2>OR</h2>
-                  <Form.Item
-                    name="dragger"
-                    valuePropName="fileList"
-                    className="dragger"
-                  >
-                    <Upload.Dragger name="files" action="/upload.do">
-                      <p className="ant-upload-drag-icon">
-                        <InboxOutlined />
-                      </p>
-                      <p className="ant-upload-text">
-                        Click or drag file to this area to upload
-                      </p>
-                      <p className="ant-upload-hint">
-                        Documents, photos, videos, etc.
-                      </p>
-                    </Upload.Dragger>
-                  </Form.Item> */}
-            </div>
-          </div>
-        </section>
-
-        <section className="stories container">
-          <div className="header">
+        <Container as="section">
+          <Row>
             <img
               alt="Instagram post"
               src={instaFeed.profile.profile_pic_url}
               className="avatar"
             />
             <h2>@vnglestories</h2>
-          </div>
+          </Row>
+        </Container>
+        <section className="stories container">
           <div className="gallery">
             {instaFeed.profile.edge_owner_to_timeline_media.edges.map(
               (post, i) => (

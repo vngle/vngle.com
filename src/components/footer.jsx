@@ -1,19 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-import "antd/dist/antd.css"
-import { Row, Col } from "antd"
-import {
-  FacebookFilled,
-  InstagramOutlined,
-  TwitterOutlined,
-} from "@ant-design/icons"
-
-import logo from "../../static/images/logo.png"
+import logo from "../static/images/logo.png"
 
 export default () => (
   <footer>
     <div className={"container"}>
-      <Row gutter={16}>
+      {/* <Row gutter={16}>
         <Col span={8}>
           <div className={"widget__item"}>
             <div className={"logo"}>
@@ -62,18 +54,12 @@ export default () => (
 
         <Col span={8}>
           <div className={"social"}>
-            <a href="https://www.facebook.com/vnglestories/">
-              <FacebookFilled />
-            </a>
-            <a href="https://twitter.com/vnglestories">
-              <TwitterOutlined />
-            </a>
-            <a href="https://www.instagram.com/vnglestories/">
-              <InstagramOutlined />
-            </a>
+            <a href="https://www.facebook.com/vnglestories/">Facebook</a>
+            <a href="https://twitter.com/vnglestories">Twitter </a>
+            <a href="https://www.instagram.com/vnglestories/">Insta </a>
           </div>
         </Col>
-      </Row>
+      </Row> */}
 
       <div className={"copyright"}>
         <p>
