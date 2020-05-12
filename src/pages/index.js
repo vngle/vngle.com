@@ -44,8 +44,9 @@ const IndexPage = () => {
               </Col>
               <Col
                 lg
-                md
-                sm
+                md={12}
+                sm={12}
+                xs={12}
                 className="d-flex flex-column justify-content-center"
               >
                 <Card className="shadow border-0">
