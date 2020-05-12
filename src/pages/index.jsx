@@ -36,7 +36,13 @@ const IndexPage = () => {
   }, [])
 
   if (instaFeed === null) {
-    return <Spinner></Spinner>
+    return (
+      <LoadingWrapper className="d-flex flex-column justify-content-center">
+        <Spinner animation="grow" variant="primary" className="m-auto">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
+      </LoadingWrapper>
+    )
   } else {
     return (
       <Layout>
@@ -54,6 +60,7 @@ const IndexPage = () => {
                 md
                 sm
               >
+                {/* use Gatsby Image */}
                 <img
                   alt="Man reading newspaper"
                   src={HeroImg}
@@ -126,45 +133,60 @@ const IndexPage = () => {
         </Jumbotron>
 
         <Container as="section">
+          <Row className="align-items-center mb-4">
+            <Col lg="auto" md="auto" sm="auto" xs="auto">
+              <img
+                alt="Instagram post"
+                src={instaFeed.profile.profile_pic_url}
+                width="70px"
+              />
+            </Col>
+            <Col>
+              <h2>@vnglestories</h2>
+            </Col>
+          </Row>
           <Row>
-            <img
-              alt="Instagram post"
-              src={instaFeed.profile.profile_pic_url}
-              className="avatar"
-            />
-            <h2>@vnglestories</h2>
+            {instaFeed.profile.edge_owner_to_timeline_media.edges.map(post => (
+              <Col key={post.node.id} lg={3} md={4} sm={6} className="mb-4">
+                <a href={`https://www.instagram.com/p/${post.node.shortcode}`}>
+                  {/* use Gatsby Image */}
+                  <img alt="post" src={post.node.thumbnail_src} width="100%" />
+                </a>
+              </Col>
+            ))}
           </Row>
         </Container>
-        <section className="stories container">
-          <div className="gallery">
-            {instaFeed.profile.edge_owner_to_timeline_media.edges.map(
-              (post, i) => (
-                <div className="post" key={i}>
-                  <a
-                    href={`https://www.instagram.com/p/${post.node.shortcode}`}
-                  >
-                    <img alt="post" src={post.node.thumbnail_src} />
-                  </a>
-                </div>
-              )
-            )}
-          </div>
-        </section>
 
-        <section className="worked-with">
-          <h1>Who We've Worked With</h1>
-          <div className="flex-container">
-            <a href="https://www.mozilla.org">
-              <img alt="Mozilla logo" src={MozillaLogo} />
-            </a>
-            <a href="https://www8.gsb.columbia.edu/socialenterprise/">
-              <img alt="Columbia Tamer Center logo" src={ColumbiaLogo} />
-            </a>
-            <a href="https://goodienation.org/">
-              <img alt="Goodie Nation logo" src={GoodieNationLogo} />
-            </a>
-          </div>
-        </section>
+        <Container as="section" className="my-4">
+          <Row as={Col} className="justify-content-center">
+            <h1>Who We've Worked With</h1>
+          </Row>
+          <Row className="align-items-center">
+            <Col>
+              <a href="https://www.mozilla.org">
+                <img alt="Mozilla logo" src={MozillaLogo} width={200} />
+              </a>
+            </Col>
+            <Col>
+              <a href="https://www8.gsb.columbia.edu/socialenterprise/">
+                <img
+                  alt="Columbia Tamer Center logo"
+                  src={ColumbiaLogo}
+                  width={200}
+                />
+              </a>
+            </Col>
+            <Col>
+              <a href="https://goodienation.org/">
+                <img
+                  alt="Goodie Nation logo"
+                  src={GoodieNationLogo}
+                  width={200}
+                />
+              </a>
+            </Col>
+          </Row>
+        </Container>
       </Layout>
     )
   }
@@ -182,6 +204,15 @@ const HeroContainer = styled(Container)`
     img {
       width: calc(100px + 25vw);
     }
+  }
+`
+
+const LoadingWrapper = styled.div`
+  height: 100vh;
+
+  & div {
+    width: 100px;
+    height: 100px;
   }
 `
 
