@@ -46,7 +46,6 @@ export default () => (
           </Figure>
         </Col>
       </Row>
-      <img />
       <p>
         There’s 3,143 counties in the United States and over 2,000 are
         considered news deserts. Blake noticed this problem as he was
