@@ -1,26 +1,63 @@
-import React from "react"
-import { Form, Button, Col } from "react-bootstrap"
+import React, { useState } from "react"
+import { Form, Button, Spinner } from "react-bootstrap"
 
 export default ({ status, message, onSubmitted }) => {
+  const [formData, setFormData] = useState({
+    EMAIL: "",
+    ZIPCODE: "",
+    "group[293730][1]": false,
+    "group[293730][2]": false,
+  })
+
+  const handleSubmit = event => {
+    event.preventDefault()
+
+    onSubmitted(formData)
+  }
+
+  const handleChange = event => {
+    const name = event.target.name
+    const value =
+      event.target.type === "checkbox"
+        ? event.target.checked
+        : event.target.value
+    setFormData({
+      ...formData,
+      [name]: value,
+    })
+  }
+
+  /**
+   * TODO:
+   *  1. Form validation
+   *  2. Conditional requirement (zip code required if location-based letter checked)
+   *  3. Display error messages
+   *  4. Better response message display
+   */
+
   if (status !== "success") {
     return (
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Control
+            type="email"
+            placeholder="Enter email"
+            name="EMAIL"
+            value={formData.EMAIL}
+            onChange={handleChange}
+          />
         </Form.Group>
-        <Form.Group controlId="formCity">
-          <Form.Label>Location</Form.Label>
-          <Form.Control type="text" placeholder="City" />
+        <Form.Group controlId="formZipcode">
+          <Form.Label>Zip Code</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter zip code"
+            name="ZIPCODE"
+            value={formData.ZIPCODE}
+            onChange={handleChange}
+          />
         </Form.Group>
-        <Form.Row>
-          <Form.Group as={Col} controlId="formState">
-            <Form.Control type="text" placeholder="State" />
-          </Form.Group>
-          <Form.Group as={Col} controlId="formZip">
-            <Form.Control type="text" placeholder="Zipcode" />
-          </Form.Group>
-        </Form.Row>
         <Form.Group>
           <Form.Label>Sign me up for ...</Form.Label>
 
@@ -29,6 +66,9 @@ export default ({ status, message, onSubmitted }) => {
               type="checkbox"
               id="general-newsletter-checkbox"
               label="General newsletter"
+              name="group[293730][1]"
+              checked={formData["group[293730][1]"]}
+              onChange={handleChange}
               inline
               custom
             />
@@ -36,55 +76,23 @@ export default ({ status, message, onSubmitted }) => {
               type="checkbox"
               id="location-newsletter-checkbox"
               label="Location-specific newsletter"
+              name="group[293730][2]"
+              checked={formData["group[293730][2]"]}
+              onChange={handleChange}
               inline
               custom
             />
           </Form.Group>
         </Form.Group>
 
-        <Button>Subscribe</Button>
+        <Button type="submit" block>
+          {status === "sending" ? (
+            <Spinner animation="border" size="sm" />
+          ) : (
+            "Subscribe"
+          )}
+        </Button>
       </Form>
-
-      // <Form
-      //   name="newsletter-subscribe"
-      //   initialValues={{ remember: true }}
-      //   onFinish={onSubmitted}
-      // >
-      //   <Form.Item
-      //     name="EMAIL"
-      //     rules={[
-      //       { required: true, message: "Please enter your email address." },
-      //       {
-      //         type: "email",
-      //         message: "Please enter a valid email address.",
-      //       },
-      //     ]}
-      //   >
-      //     <Input
-      //       placeholder="Email"
-      //       prefix={<MailOutlined className="site-form-item-icon" />}
-      //       size="large"
-      //     />
-      //   </Form.Item>
-      //   <Form.Item name="city-zip">
-      //     <Input
-      //       placeholder="City/Zipcode"
-      //       prefix={<EnvironmentOutlined className="site-form-item-icon" />}
-      //       size="large"
-      //     />
-      //   </Form.Item>
-      //   <Form.Item>
-      //     <Button
-      //       type="primary"
-      //       size="large"
-      //       shape="round"
-      //       htmlType="submit"
-      //       loading={status === "sending"}
-      //     >
-      //       Subscribe
-      //     </Button>
-      //   </Form.Item>
-      // </Form>
     )
   } else {
     return <p>{message}</p>
