@@ -10,7 +10,7 @@ import Linkedin from "../static/images/icons/linkedin.svg"
 import Twitter from "../static/images/icons/twitter.svg"
 
 export default () => (
-  <Container as="footer" className="text-center">
+  <Container as="footer" className="text-center pt-5">
     <Row>
       <Col sm className="m-auto">
         <Row className="justify-content-around mb-5">
