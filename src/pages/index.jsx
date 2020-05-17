@@ -51,7 +51,8 @@ const IndexPage = () => {
         <Jumbotron className="bg-primary rounded-0" as="section">
           <HeroContainer>
             <h1 className="text-center">
-              A decentralized grassroots news network for news deserts.
+              {/* typed.js here? */}
+              Local News & Community Stories Driven By You
             </h1>
             <Row>
               <Col
@@ -70,9 +71,12 @@ const IndexPage = () => {
               <Col lg md={12} sm={12} xs={12}>
                 <Card className="shadow border-0">
                   <Card.Body>
-                    <Card.Title className="mb-4" as="h4">
+                    <Card.Title as="h4" className="mb-3">
                       Sign up for our newsletter!
                     </Card.Title>
+                    <Card.Subtitle className="mb-4 font-weight-normal">
+                      Get the latest local COVID-19 updates near you.
+                    </Card.Subtitle>
                     <MailchimpSubscribe
                       url={process.env.GATSBY_MAILCHIMP_URL}
                       render={({ subscribe, status, message }) => (
@@ -96,8 +100,8 @@ const IndexPage = () => {
               <Col>
                 <h1>Think something needs converage?</h1>
                 <p>
-                  Request special coverage on your city or upload your own
-                  content to show what's happening locally.
+                  Request special coverage on your city or send us content
+                  (documents, photos, videos, etc.) via our email.
                 </p>
               </Col>
               <Col
@@ -121,8 +125,11 @@ const IndexPage = () => {
                   <Form.Group>
                     <Form.Label className="font-weight-bold">
                       Email us at{" "}
-                      <a href="mailto:" className="text-secondary">
-                        ???@vngle.com
+                      <a
+                        href="mailto:coverage@vngle.com"
+                        className="text-secondary"
+                      >
+                        coverage@vngle.com
                       </a>
                     </Form.Label>
                   </Form.Group>
@@ -195,8 +202,9 @@ const IndexPage = () => {
 const HeroContainer = styled(Container)`
   & {
     h1 {
-      font-size: calc(9px + 4vw);
+      font-size: calc(12px + 4vw);
       font-weight: 900;
+      line-height: 1.5em;
       margin-top: 0.7em;
       margin-bottom: 1.5em;
     }
