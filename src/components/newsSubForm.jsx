@@ -5,13 +5,22 @@ export default ({ status, message, onSubmitted }) => {
   const [formData, setFormData] = useState({
     EMAIL: "",
     ZIPCODE: "",
-    "group[293730][1]": false,
-    "group[293730][2]": false,
+    "group[293730][1]": true,
+    "group[293730][2]": true,
   })
+  const [validated, setValidated] = useState(false)
 
   const handleSubmit = event => {
-    event.preventDefault()
+    console.log(event.currentTarget)
 
+    const form = event.currentTarget
+
+    if (!form.checkValidity()) {
+      event.stopPropagation()
+    }
+
+    event.preventDefault()
+    setValidated(true)
     onSubmitted(formData)
   }
 
@@ -21,6 +30,7 @@ export default ({ status, message, onSubmitted }) => {
       event.target.type === "checkbox"
         ? event.target.checked
         : event.target.value
+
     setFormData({
       ...formData,
       [name]: value,
@@ -37,16 +47,22 @@ export default ({ status, message, onSubmitted }) => {
 
   if (status !== "success") {
     return (
-      <Form onSubmit={handleSubmit}>
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Form.Group controlId="formEmail">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label>
+            Email address<span className="text-danger">*</span>
+          </Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter email"
             name="EMAIL"
             value={formData.EMAIL}
             onChange={handleChange}
+            required
           />
+          <Form.Control.Feedback type="invalid">
+            Please provide a valid email address
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group controlId="formZipcode">
           <Form.Label>Zip Code</Form.Label>
