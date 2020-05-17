@@ -11,8 +11,6 @@ export default ({ status, message, onSubmitted }) => {
   const [validated, setValidated] = useState(false)
 
   const handleSubmit = event => {
-    console.log(event.currentTarget)
-
     const form = event.currentTarget
 
     if (!form.checkValidity()) {
@@ -39,78 +37,79 @@ export default ({ status, message, onSubmitted }) => {
 
   /**
    * TODO:
-   *  1. Form validation
    *  2. Conditional requirement (zip code required if location-based letter checked)
    *  3. Display error messages
    *  4. Better response message display
    */
 
-  if (status !== "success") {
-    return (
-      <Form noValidate validated={validated} onSubmit={handleSubmit}>
-        <Form.Group controlId="formEmail">
-          <Form.Label>
-            Email address<span className="text-danger">*</span>
-          </Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter email"
-            name="EMAIL"
-            value={formData.EMAIL}
-            onChange={handleChange}
-            required
-          />
-          <Form.Control.Feedback type="invalid">
-            Please provide a valid email address
-          </Form.Control.Feedback>
-        </Form.Group>
-        <Form.Group controlId="formZipcode">
-          <Form.Label>Zip Code</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Enter zip code"
-            name="ZIPCODE"
-            value={formData.ZIPCODE}
-            onChange={handleChange}
-          />
-        </Form.Group>
+  return (
+    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+      <Form.Group controlId="formEmail">
+        <Form.Label>
+          Email address<span className="text-danger">*</span>
+        </Form.Label>
+        <Form.Control
+          type="email"
+          placeholder="Enter email"
+          name="EMAIL"
+          value={formData.EMAIL}
+          onChange={handleChange}
+          required
+        />
+        <Form.Control.Feedback type="invalid">
+          Please provide a valid email address
+        </Form.Control.Feedback>
+      </Form.Group>
+      <Form.Group controlId="formZipcode">
+        <Form.Label>Zip Code</Form.Label>
+        <Form.Control
+          type="text"
+          placeholder="Enter zip code"
+          name="ZIPCODE"
+          value={formData.ZIPCODE}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Sign me up for ...</Form.Label>
+
         <Form.Group>
-          <Form.Label>Sign me up for ...</Form.Label>
-
-          <Form.Group>
-            <Form.Check
-              type="checkbox"
-              id="general-newsletter-checkbox"
-              label="General newsletter"
-              name="group[293730][1]"
-              checked={formData["group[293730][1]"]}
-              onChange={handleChange}
-              inline
-              custom
-            />
-            <Form.Check
-              type="checkbox"
-              id="location-newsletter-checkbox"
-              label="Location-specific newsletter"
-              name="group[293730][2]"
-              checked={formData["group[293730][2]"]}
-              onChange={handleChange}
-              inline
-              custom
-            />
-          </Form.Group>
+          <Form.Check
+            type="checkbox"
+            id="general-newsletter-checkbox"
+            label="General newsletter"
+            name="group[293730][1]"
+            checked={formData["group[293730][1]"]}
+            onChange={handleChange}
+            inline
+            custom
+          />
+          <Form.Check
+            type="checkbox"
+            id="location-newsletter-checkbox"
+            label="Location-specific newsletter"
+            name="group[293730][2]"
+            checked={formData["group[293730][2]"]}
+            onChange={handleChange}
+            inline
+            custom
+          />
         </Form.Group>
-
-        <Button type="submit" block>
-          {status === "sending" ? (
-            <Spinner animation="border" size="sm" />
-          ) : (
-            "Subscribe"
-          )}
-        </Button>
-      </Form>
-    )
-  } else {
-    return <p>{message}</p>
-  }
+      </Form.Group>
+      {status === "success" ? (
+        <Form.Group>
+          <Form.Label className="text-success">{message}</Form.Label>
+        </Form.Group>
+      ) : (
+        ""
+      )}
+      <Button type="submit" block>
+        {status === "sending" ? (
+          <Spinner animation="border" size="sm" />
+        ) : (
+          "Subscribe"
+        )}
+      </Button>
+    </Form>
+  )
 }

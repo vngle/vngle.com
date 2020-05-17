@@ -71,7 +71,7 @@ const IndexPage = () => {
               <Col lg md={12} sm={12} xs={12}>
                 <Card className="shadow border-0">
                   <Card.Body>
-                    <Card.Title as="h4" className="mb-3">
+                    <Card.Title as="h2" className="mb-3">
                       Sign up for our newsletter!
                     </Card.Title>
                     <Card.Subtitle className="mb-4 font-weight-normal">
