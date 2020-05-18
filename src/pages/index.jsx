@@ -117,7 +117,7 @@ const IndexPage = () => {
                       size="lg"
                       href="https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform"
                     >
-                      Request Converage
+                      Request Coverage
                     </Button>
                   </Form.Group>
                   <Form.Group>
