@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import { Container, Navbar, Nav, Button } from "react-bootstrap"
+import { Container, Navbar, Nav, Dropdown, Button } from "react-bootstrap"
 
 import Logo from "../static/images/logo.png"
 
@@ -18,22 +18,45 @@ const Header = ({ siteTitle }) => (
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="justify-content-end text-center">
           <Nav>
-            <Link to="/wwan" className="nav-link">
-              Where We Are Now
-            </Link>
-            <Nav.Link href="https://docs.google.com/forms/d/1ymGkcekuWk_1SPl0r6lp9uleQKGbHE6dTx4aY1jrNT0/edit">
-              Tipline
+            <Nav.Item>
+              <Link to="/wwan" className="nav-link" eventKey="1">
+                Where We Are Now
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Link to="/about" className="nav-link" eventKey="2">
+                About
+              </Link>
+            </Nav.Item>
+            <Nav.Link href="https://medium.com/vngle" eventKey="3">
+              Blog
             </Nav.Link>
-            <Nav.Link href="https://medium.com/vngle">Blog</Nav.Link>
-            <Link to="/about" className="nav-link">
-              About
-            </Link>
-            <Button
-              href="https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true"
-              size="lg"
-            >
-              Join Us!
-            </Button>
+            <Dropdown as={Nav.Item}>
+              <Dropdown.Toggle as={Button}>Get Involved</Dropdown.Toggle>
+              <Dropdown.Menu role="menu">
+                <Dropdown.Item
+                  role="menuitem"
+                  href="http://eepurl.com/g1cJk5"
+                  eventKey="4.1"
+                >
+                  Subscribe to Newsletter
+                </Dropdown.Item>
+                <Dropdown.Item
+                  role="menuitem"
+                  href="https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true"
+                  eventKey="4.2"
+                >
+                  Report Story
+                </Dropdown.Item>
+                <Dropdown.Item
+                  role="menuitem"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform"
+                  eventKey="4.3"
+                >
+                  Request Coverage
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -60,11 +83,25 @@ const StyledHeader = styled.header`
           font-size: 1.25rem;
           margin-left: 1rem;
           margin-right: 1rem;
+
+          .nav-link {
+            padding: 0;
+            margin: 0;
+          }
+
+          .nav-link:hover {
+            color: ${props => props.theme.colors.dark};
+            transition: color 0.3s;
+          }
         }
 
         .nav-link:hover {
           color: ${props => props.theme.colors.primary};
           transition: color 0.3s;
+        }
+
+        .show {
+          margin-top: 0;
         }
       }
 
