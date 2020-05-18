@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Form, Button, Spinner } from "react-bootstrap"
+import styled from "styled-components"
 
 export default ({ status, message, onSubmitted }) => {
   const [formData, setFormData] = useState({
@@ -96,6 +97,7 @@ export default ({ status, message, onSubmitted }) => {
           />
         </Form.Group>
       </Form.Group>
+
       {status === "success" ? (
         <Form.Group>
           <Form.Label className="text-success">{message}</Form.Label>
@@ -103,6 +105,7 @@ export default ({ status, message, onSubmitted }) => {
       ) : (
         ""
       )}
+
       <Button type="submit" block>
         {status === "sending" ? (
           <Spinner animation="border" size="sm" />
@@ -110,6 +113,16 @@ export default ({ status, message, onSubmitted }) => {
           "Subscribe"
         )}
       </Button>
+
+      <MutedMsg className="text-muted mt-2">
+        * We're currently operating in Georgia with more states coming soon.
+        Sign ups outside of Georgia will be invited to the Vngle community until
+        we reach them.
+      </MutedMsg>
     </Form>
   )
 }
+
+const MutedMsg = styled(Form.Label)`
+  font-size: 10px;
+`
