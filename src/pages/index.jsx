@@ -170,12 +170,12 @@ const IndexPage = () => {
             <h1>Who We've Worked With</h1>
           </Row>
           <Row className="align-items-center text-center">
-            <Col>
+            <Col sm={12}>
               <a href="https://www.mozilla.org">
                 <img alt="Mozilla logo" src={MozillaLogo} width={200} />
               </a>
             </Col>
-            <Col>
+            <Col sm={12}>
               <a href="https://www8.gsb.columbia.edu/socialenterprise/">
                 <img
                   alt="Columbia Tamer Center logo"
@@ -184,7 +184,7 @@ const IndexPage = () => {
                 />
               </a>
             </Col>
-            <Col>
+            <Col sm={12}>
               <a href="https://goodienation.org/">
                 <img
                   alt="Goodie Nation logo"
