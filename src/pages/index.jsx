@@ -99,7 +99,7 @@ const IndexPage = () => {
           <Container>
             <Row>
               <Col>
-                <h1>Think something needs converage?</h1>
+                <h1>Think something needs coverage?</h1>
                 <p>
                   Request special coverage on your city or send us content
                   (documents, photos, videos, etc.) via our email.
