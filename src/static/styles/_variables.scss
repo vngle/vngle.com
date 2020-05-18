@@ -16,6 +16,7 @@ $theme-colors: (
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 $enable-shadows: true;
+$enable-responsive-font-sizes: true;
 
 $font-family-base: "Inter";
 $headings-font-family: "Playfair Display";
