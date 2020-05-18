@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Form, Button, Spinner } from "react-bootstrap"
 import styled from "styled-components"
+import DOMPurify from "dompurify"
 
 export default ({ status, message, onSubmitted }) => {
   const [formData, setFormData] = useState({
@@ -34,6 +35,28 @@ export default ({ status, message, onSubmitted }) => {
       ...formData,
       [name]: value,
     })
+  }
+
+  let respMessage
+
+  if (status === "success") {
+    respMessage = (
+      <Form.Group>
+        <Form.Label className="text-success">{message}</Form.Label>
+      </Form.Group>
+    )
+  } else if (status === "error") {
+    // Sanitize innerHTML to prevent potential XSS attacks
+    const cleanMessage = DOMPurify.sanitize(message)
+
+    respMessage = (
+      <Form.Group>
+        <Form.Label
+          className="text-danger"
+          dangerouslySetInnerHTML={{ __html: cleanMessage }}
+        ></Form.Label>
+      </Form.Group>
+    )
   }
 
   /**
@@ -98,13 +121,7 @@ export default ({ status, message, onSubmitted }) => {
         </Form.Group>
       </Form.Group>
 
-      {status === "success" ? (
-        <Form.Group>
-          <Form.Label className="text-success">{message}</Form.Label>
-        </Form.Group>
-      ) : (
-        ""
-      )}
+      {respMessage}
 
       <Button type="submit" block>
         {status === "sending" ? (
