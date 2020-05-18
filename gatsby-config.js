@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Vngle`,
-    description: `"Various angles" on local stories driven by you.`,
+    description: `"Various angles" on local news driven by you.`,
     author: `Kenneth Chen`,
   },
   plugins: [

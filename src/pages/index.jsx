@@ -47,7 +47,7 @@ const IndexPage = () => {
   } else {
     return (
       <Layout>
-        <SEO title="Various angles on local stories driven by you" />
+        <SEO title="Various angles on local news driven by you" />
 
         <Jumbotron className="bg-primary rounded-0" as="section">
           <HeroContainer>
