@@ -53,7 +53,7 @@ const IndexPage = () => {
           <HeroContainer>
             <h1 className="text-center display-2">
               {/* typed.js here? */}
-              Various Angles On Local Stories Driven by You
+              Various Angles On Local News Driven by You
             </h1>
             <Row>
               <Col

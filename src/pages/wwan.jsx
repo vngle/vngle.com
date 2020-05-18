@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 
 import Wwan from "../static/images/wwan.png"
 import VngleRV from "../static/images/vngle-rv.png"
+import WwanPodcastTeaser from "../static/images/wwan-podcast-teaser.png"
 
 const citiesTraveled = [
   "Atlanta, GA",
@@ -106,6 +107,14 @@ export default () => (
           <a href="https://twitter.com/vnglestories">Twitter</a>.
         </strong>
       </p>
+      <Figure className="d-block">
+        <Figure.Image
+          alt="Where we are now podcast teaser"
+          src={WwanPodcastTeaser}
+          className="d-block mx-auto"
+          width="75%"
+        />
+      </Figure>
     </Container>
   </Layout>
 )
