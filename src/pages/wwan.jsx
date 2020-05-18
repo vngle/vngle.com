@@ -1,18 +1,111 @@
 import React from "react"
-import { Container, Jumbotron } from "react-bootstrap"
+import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
+
+import Wwan from "../static/images/wwan.png"
+import VngleRV from "../static/images/vngle-rv.png"
+
+const citiesTraveled = [
+  "Atlanta, GA",
+  "College Park, GA",
+  "Savannah, GA",
+  "New York, NY",
+  "Syracuse, NY",
+  "Los Angeles, CA",
+  "San Francisco, CA",
+  "Oakland, CA",
+  "Las Vegas, NV",
+  "Boulder, CO",
+  "Denver, CO",
+  "Honolulu, HI",
+  "Aberdeen, MS",
+  "Jackson, MS",
+  "Charlotte, NC",
+  "Washington D.C.",
+  "Chattanooga, TN",
+  "Memphis, TN",
+  "New Orleans, LA",
+  "St Croix/St Thomas",
+  "U.S. Virgin Island",
+  "San Juan, Puerto Rico",
+]
 
 export default () => (
   <Layout>
+    <SEO title="Where we are now" />
+
     <Jumbotron className="bg-primary rounded-0" as="section">
       <Container>
-        <h1>Where We Are Now</h1>
+        <h1>
+          <em>Where We Are Now</em> is our national docuseries to develop
+          grassroots news across America.
+        </h1>
       </Container>
     </Jumbotron>
 
     <Container as="article">
-      <h2>Under Construction...</h2>
+      <Figure className="d-block">
+        <Figure.Image
+          alt="Where we are now poster"
+          src={Wwan}
+          width="75%"
+          className="d-block mx-auto"
+        />
+      </Figure>
+      <p>
+        It is a docuseries style assessment to understand how to address
+        America’s changing culture and growing news deserts.
+      </p>
+      <h2 className="mb-4">Cities we've traveled to thus far:</h2>
+      <Row>
+        {citiesTraveled.map(city => (
+          <Col key={city} lg={3} md={4} sm={6} className="mb-4">
+            <p>
+              <em>{city}</em>
+            </p>
+          </Col>
+        ))}
+      </Row>
+      <p>
+        Today, the United States of America is in a new era of polarization.
+        There is much debate over national issues, but a lesser focus on the
+        reality of local affairs within different communities. Because of that,
+        many regional concerns are overlooked and buried by constant media buzz.
+        The truth is, America is only as great as the lump sum of all its parts.
+        To understand America holistically, it must be viewed through "various
+        angles" from across the nation.
+      </p>
+      <p>
+        Through <strong>Where We Are Now</strong> we are exploring the current
+        state of America from regional and local points of view. This initiative
+        will feature current perspectives in cities across the nation while
+        highlighting details on how far we’ve come as a nation and how far we
+        still have to go. The intent is to create an impartial production that
+        gives common consideration to the conditions of communities across
+        America while serving as a beacon for collective conversation.
+      </p>
+      <Figure className="d-block">
+        <Figure.Image
+          alt="Where we are now poster"
+          src={VngleRV}
+          width="75%"
+          className="d-block mx-auto"
+        />
+        <Figure.Caption className="text-center">
+          We are working to create Vngle's mobile office
+        </Figure.Caption>
+      </Figure>
+      <p>
+        <strong>
+          Keep up with <u>Where We Are Now</u> by following @VngleStories on{" "}
+          <a href="https://www.instagram.com/vnglestories/">Instagram</a>,{" "}
+          <a href="https://www.facebook.com/vnglestories/">Facebook</a>,{" "}
+          <a href="https://www.linkedin.com/company/vngle/">Linkedin</a>, &{" "}
+          <a href="https://twitter.com/vnglestories">Twitter</a>.
+        </strong>
+      </p>
     </Container>
   </Layout>
 )

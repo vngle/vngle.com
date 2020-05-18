@@ -2,11 +2,15 @@ import React from "react"
 import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
+
 import VngleDef from "../static/images/vngle-def.png"
 import Blake from "../static/images/blake-portrait.png"
 
 export default () => (
   <Layout>
+    <SEO title="About us" />
+
     <Jumbotron className="bg-primary rounded-0" as="section">
       <Container>
         <h1>About Us</h1>
@@ -20,9 +24,15 @@ export default () => (
         limited to no news coverage, by capturing human-interests stories that
         go underrepresented.
       </p>
-      <Figure className="m-auto">
-        <Figure.Image alt="Vngle definition" src={VngleDef} />
-        <Figure.Caption>Definition of Vngle</Figure.Caption>
+      <Figure className="d-block">
+        <Figure.Image
+          alt="Vngle definition"
+          src={VngleDef}
+          className="d-block mx-auto"
+        />
+        <Figure.Caption className="text-center">
+          Definition of Vngle
+        </Figure.Caption>
       </Figure>
       <p>
         Through partnering with communities, we provide grassroots coverage and
