@@ -7,6 +7,7 @@ import {
   Col,
   Form,
   Button,
+  Image,
   Spinner,
 } from "react-bootstrap"
 import styled from "styled-components"
@@ -46,13 +47,13 @@ const IndexPage = () => {
   } else {
     return (
       <Layout>
-        <SEO title="Decentralized grassroots news network for news deserts" />
+        <SEO title="Various angles on local stories driven by you" />
 
         <Jumbotron className="bg-primary rounded-0" as="section">
           <HeroContainer>
-            <h1 className="text-center">
+            <h1 className="text-center display-2">
               {/* typed.js here? */}
-              Local News & Community Stories Driven By You
+              Various Angles On Local Stories Driven by You
             </h1>
             <Row>
               <Col
@@ -62,11 +63,7 @@ const IndexPage = () => {
                 sm
               >
                 {/* use Gatsby Image */}
-                <img
-                  alt="Man reading newspaper"
-                  src={HeroImg}
-                  className="m-auto"
-                ></img>
+                <Image alt="Man reading newspaper" src={HeroImg} fluid></Image>
               </Col>
               <Col lg md={12} sm={12} xs={12}>
                 <Card className="shadow border-0">
@@ -202,15 +199,10 @@ const IndexPage = () => {
 const HeroContainer = styled(Container)`
   & {
     h1 {
-      font-size: calc(12px + 4vw);
       font-weight: 900;
       line-height: 1.5em;
       margin-top: 0.7em;
       margin-bottom: 1.5em;
-    }
-
-    img {
-      width: calc(100px + 25vw);
     }
   }
 `

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Vngle`,
-    description: `Decentralized grassroots news network for news deserts.`,
-    author: `@efeichen`,
+    description: `"Various angles" on local stories driven by you.`,
+    author: `Kenneth Chen`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
