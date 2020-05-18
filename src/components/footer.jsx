@@ -14,17 +14,17 @@ export default () => (
     <Row>
       <Col sm className="m-auto">
         <Row className="justify-content-around mb-5">
-          <a href="https://www.facebook.com/vnglestories/">
-            <img src={Facebook} alt="Facebook" />
-          </a>
           <a href="https://www.instagram.com/vnglestories/">
             <img src={Instagram} alt="Instagram" />
           </a>
-          <a href="https://twitter.com/vnglestories">
-            <img src={Twitter} alt="Twitter" />
+          <a href="https://www.facebook.com/vnglestories/">
+            <img src={Facebook} alt="Facebook" />
           </a>
           <a href="https://www.linkedin.com/company/vngle/">
             <img src={Linkedin} alt="Linkedin" />
+          </a>
+          <a href="https://twitter.com/vnglestories">
+            <img src={Twitter} alt="Twitter" />
           </a>
         </Row>
         <div className="mb-4">
@@ -66,7 +66,7 @@ export default () => (
 
     <Row as={Col} className="justify-content-center mt-3">
       <p>
-        Copyright {new Date().getFullYear()}, {` `}{" "}
+        Copyright {new Date().getFullYear()},{" "}
         <Link to="/" title="Vngle">
           Vngle
         </Link>
