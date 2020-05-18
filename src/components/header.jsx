@@ -19,16 +19,16 @@ const Header = ({ siteTitle }) => (
         <Navbar.Collapse className="justify-content-end text-center">
           <Nav>
             <Nav.Item>
-              <Link to="/wwan" className="nav-link" eventKey="1">
+              <Link to="/wwan" className="nav-link" eventkey="1">
                 Where We Are Now
               </Link>
             </Nav.Item>
             <Nav.Item>
-              <Link to="/about" className="nav-link" eventKey="2">
+              <Link to="/about" className="nav-link" eventkey="2">
                 About
               </Link>
             </Nav.Item>
-            <Nav.Link href="https://medium.com/vngle" eventKey="3">
+            <Nav.Link href="https://medium.com/vngle" eventkey="3">
               Blog
             </Nav.Link>
             <Dropdown as={Nav.Item}>
@@ -37,21 +37,21 @@ const Header = ({ siteTitle }) => (
                 <Dropdown.Item
                   role="menuitem"
                   href="http://eepurl.com/g1cJk5"
-                  eventKey="4.1"
+                  eventkey="4.1"
                 >
                   Subscribe to Newsletter
                 </Dropdown.Item>
                 <Dropdown.Item
                   role="menuitem"
                   href="https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true"
-                  eventKey="4.2"
+                  eventkey="4.2"
                 >
-                  Report Story
+                  Report a Story
                 </Dropdown.Item>
                 <Dropdown.Item
                   role="menuitem"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform"
-                  eventKey="4.3"
+                  eventkey="4.3"
                 >
                   Request Coverage
                 </Dropdown.Item>

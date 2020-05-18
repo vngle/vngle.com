@@ -28,8 +28,7 @@ const citiesTraveled = [
   "Chattanooga, TN",
   "Memphis, TN",
   "New Orleans, LA",
-  "St Croix/St Thomas",
-  "U.S. Virgin Island",
+  "U.S. Virgin Islands (St Croix/St Thomas)",
   "San Juan, Puerto Rico",
 ]
 

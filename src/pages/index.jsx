@@ -63,9 +63,13 @@ const IndexPage = () => {
                 sm
               >
                 {/* use Gatsby Image */}
-                <Image alt="Man reading newspaper" src={HeroImg} fluid></Image>
+                <Image
+                  alt="Man reading newspaper"
+                  src={HeroImg}
+                  className="hero-img"
+                />
               </Col>
-              <Col lg md={12} sm={12} xs={12}>
+              <Col lg={6} md={12} sm={12} xs={12}>
                 <Card className="shadow border-0">
                   <Card.Body>
                     <Card.Title as="h2" className="mb-3">
@@ -203,6 +207,11 @@ const HeroContainer = styled(Container)`
       line-height: 1.5em;
       margin-top: 0.7em;
       margin-bottom: 1.5em;
+    }
+
+    .hero-img {
+      width: calc(100px + 25vw);
+      margin: 0 auto;
     }
   }
 `
