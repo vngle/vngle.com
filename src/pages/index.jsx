@@ -53,7 +53,7 @@ const IndexPage = () => {
           <HeroContainer>
             <h1 className="text-center display-2">
               {/* typed.js here? */}
-              Various Angles On Local News Driven by You
+              Various Angles On Grassroots Local News Driven by You
             </h1>
             <Row>
               <Col
@@ -73,7 +73,7 @@ const IndexPage = () => {
                 <Card className="shadow border-0">
                   <Card.Body>
                     <Card.Title as="h2" className="mb-3">
-                      Sign up for our newsletter!
+                      Sign up for community updates!
                     </Card.Title>
                     <Card.Subtitle className="mb-4 font-weight-normal">
                       Get the latest local COVID-19 updates near you.

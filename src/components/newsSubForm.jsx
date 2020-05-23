@@ -7,8 +7,8 @@ export default ({ status, message, onSubmitted }) => {
   const [formData, setFormData] = useState({
     EMAIL: "",
     ZIPCODE: "",
-    "group[293730][1]": true,
-    "group[293730][2]": true,
+    "group[293762][1]": true,
+    "group[293762][2]": true,
   })
   const [validated, setValidated] = useState(false)
 
