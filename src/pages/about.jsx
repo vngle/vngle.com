@@ -13,7 +13,10 @@ export default () => (
 
     <Jumbotron className="bg-primary rounded-0" as="section">
       <Container>
-        <h1>About Us</h1>
+        <h1>
+          We cover the stories you don’t hear and the perspectives you don’t
+          get.
+        </h1>
       </Container>
     </Jumbotron>
     <Container as="article">

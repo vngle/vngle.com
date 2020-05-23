@@ -21,6 +21,11 @@ import HeroImg from "../static/images/hero.svg"
 import MozillaLogo from "../static/images/mozilla.png"
 import ColumbiaLogo from "../static/images/columbia-tamer.png"
 import GoodieNationLogo from "../static/images/goodie-nation.png"
+import Logo from "../static/images/logo.png"
+import Facebook from "../static/images/icons/facebook.svg"
+import Instagram from "../static/images/icons/instagram.svg"
+import Linkedin from "../static/images/icons/linkedin.svg"
+import Twitter from "../static/images/icons/twitter.svg"
 
 const IndexPage = () => {
   const [instaFeed, setInstaFeed] = useState(null)
@@ -53,7 +58,7 @@ const IndexPage = () => {
           <HeroContainer>
             <h1 className="text-center display-2">
               {/* typed.js here? */}
-              Various Angles On Grassroots Local News Driven by You
+              Various Angles On Grassroots Local News <u>Driven by You</u>
             </h1>
             <Row>
               <Col
@@ -70,7 +75,7 @@ const IndexPage = () => {
                 />
               </Col>
               <Col lg={6} md={12} sm={12} xs={12}>
-                <Card className="shadow border-0">
+                <Card className="shadow border-0" id="sub-card">
                   <Card.Body>
                     <Card.Title as="h2" className="mb-3">
                       Sign up for community updates!
@@ -88,6 +93,20 @@ const IndexPage = () => {
                         />
                       )}
                     />
+                    <Row className="justify-content-around mt-4">
+                      <a href="https://www.instagram.com/vnglestories/">
+                        <img src={Instagram} alt="Instagram" />
+                      </a>
+                      <a href="https://www.facebook.com/vnglestories/">
+                        <img src={Facebook} alt="Facebook" />
+                      </a>
+                      <a href="https://www.linkedin.com/company/vngle/">
+                        <img src={Linkedin} alt="Linkedin" />
+                      </a>
+                      <a href="https://twitter.com/vnglestories">
+                        <img src={Twitter} alt="Twitter" />
+                      </a>
+                    </Row>
                   </Card.Body>
                 </Card>
               </Col>
@@ -125,13 +144,7 @@ const IndexPage = () => {
                   </Form.Group>
                   <Form.Group>
                     <Form.Label className="font-weight-bold">
-                      Email us at{" "}
-                      <a
-                        href="mailto:coverage@vngle.com"
-                        className="text-secondary"
-                      >
-                        coverage@vngle.com
-                      </a>
+                      Text "COVERAGE" to <b>(678) 995-5121</b>
                     </Form.Label>
                   </Form.Group>
                 </Form>

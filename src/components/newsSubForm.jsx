@@ -7,8 +7,8 @@ export default ({ status, message, onSubmitted }) => {
   const [formData, setFormData] = useState({
     EMAIL: "",
     ZIPCODE: "",
-    "group[293762][1]": true,
-    "group[293762][2]": true,
+    NUMBER: "",
+    "group[293774][4]": false,
   })
   const [validated, setValidated] = useState(false)
 
@@ -68,7 +68,7 @@ export default ({ status, message, onSubmitted }) => {
 
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
-      <Form.Group controlId="formEmail">
+      <Form.Group controlId="email">
         <Form.Label>
           Email address<span className="text-danger">*</span>
         </Form.Label>
@@ -84,7 +84,7 @@ export default ({ status, message, onSubmitted }) => {
           Please provide a valid email address
         </Form.Control.Feedback>
       </Form.Group>
-      <Form.Group controlId="formZipcode">
+      <Form.Group controlId="zipCode">
         <Form.Label>Zip Code</Form.Label>
         <Form.Control
           type="text"
@@ -95,31 +95,40 @@ export default ({ status, message, onSubmitted }) => {
         />
       </Form.Group>
       <Form.Group>
-        <Form.Label>Sign me up for ...</Form.Label>
+        <Form.Label>Prefer text message updates instead?</Form.Label>
 
         <Form.Group>
           <Form.Check
             type="checkbox"
-            id="general-newsletter-checkbox"
-            label="General newsletter"
-            name="group[293730][1]"
-            checked={formData["group[293730][1]"]}
-            onChange={handleChange}
-            inline
-            custom
-          />
-          <Form.Check
-            type="checkbox"
-            id="location-newsletter-checkbox"
-            label="Location-specific newsletter"
-            name="group[293730][2]"
-            checked={formData["group[293730][2]"]}
+            id="sms-confirm"
+            label="Yes! Do not send updates to my email"
+            name="group[293774][4]"
+            checked={formData["group[293774][4]"]}
             onChange={handleChange}
             inline
             custom
           />
         </Form.Group>
       </Form.Group>
+      {formData["group[293774][4]"] === true && (
+        <Form.Group controlId="number">
+          <Form.Label>
+            Phone Number<span className="text-danger">*</span>
+          </Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter cell phone number"
+            name="NUMBER"
+            value={formData.NUMBER}
+            onChange={handleChange}
+            required={formData["group[293774][4]"]}
+          />
+          <Form.Control.Feedback type="invalid">
+            Please provide a phone number to receive updates through text
+            messages
+          </Form.Control.Feedback>
+        </Form.Group>
+      )}
 
       {respMessage}
 
@@ -130,8 +139,7 @@ export default ({ status, message, onSubmitted }) => {
           "Subscribe"
         )}
       </Button>
-
-      <MutedMsg className="text-muted mt-2">
+      <MutedMsg className="text-muted">
         * We're currently operating in Georgia with more states coming soon.
         Sign ups outside of Georgia will be invited to the Vngle community until
         we reach them.
@@ -140,6 +148,6 @@ export default ({ status, message, onSubmitted }) => {
   )
 }
 
-const MutedMsg = styled(Form.Label)`
+const MutedMsg = styled(Form.Text)`
   font-size: 10px;
 `

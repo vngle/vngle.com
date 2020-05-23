@@ -39,7 +39,7 @@ const Header = ({ siteTitle }) => (
                   href="http://eepurl.com/g1cJk5"
                   eventkey="4.1"
                 >
-                  Subscribe to Newsletter
+                  Subscribe For Updates
                 </Dropdown.Item>
                 <Dropdown.Item
                   role="menuitem"
