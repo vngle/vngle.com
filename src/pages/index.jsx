@@ -43,6 +43,7 @@ const IndexPage = () => {
   if (instaFeed === null) {
     return (
       <LoadingWrapper className="d-flex flex-column justify-content-center">
+        <SEO title="Various angles on local news driven by you" />
         <Spinner animation="grow" variant="primary" className="m-auto">
           <span className="sr-only">Loading...</span>
         </Spinner>
