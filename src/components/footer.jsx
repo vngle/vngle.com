@@ -3,11 +3,11 @@ import { Link } from "gatsby"
 import { Container, Row, Col, Nav, Badge } from "react-bootstrap"
 import styled from "styled-components"
 
-import Logo from "../static/images/logo.png"
-import Facebook from "../static/images/icons/facebook.svg"
-import Instagram from "../static/images/icons/instagram.svg"
-import Linkedin from "../static/images/icons/linkedin.svg"
-import Twitter from "../static/images/icons/twitter.svg"
+import Logo from "../../static/images/logo.png"
+import Facebook from "../../static/images/icons/facebook.svg"
+import Instagram from "../../static/images/icons/instagram.svg"
+import Linkedin from "../../static/images/icons/linkedin.svg"
+import Twitter from "../../static/images/icons/twitter.svg"
 
 export default () => (
   <Container as="footer" className="text-center pt-5">

@@ -4,7 +4,7 @@ import React from "react"
 import styled from "styled-components"
 import { Container, Navbar, Nav, Dropdown, Button } from "react-bootstrap"
 
-import Logo from "../static/images/logo.png"
+import Logo from "../../static/images/logo.png"
 
 const Header = ({ siteTitle }) => (
   <StyledHeader>

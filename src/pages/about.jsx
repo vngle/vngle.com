@@ -4,8 +4,8 @@ import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import VngleDef from "../static/images/vngle-def.png"
-import Blake from "../static/images/blake-portrait.png"
+import VngleDef from "../../static/images/vngle-def.png"
+import Blake from "../../static/images/blake-portrait.png"
 
 export default () => (
   <Layout>
