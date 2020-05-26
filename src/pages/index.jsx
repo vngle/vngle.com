@@ -214,6 +214,8 @@ const IndexPage = () => {
 
 const HeroContainer = styled(Container)`
   & {
+    padding: 0;
+
     h1 {
       font-weight: 900;
       line-height: 1.5em;
