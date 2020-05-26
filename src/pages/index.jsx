@@ -80,7 +80,7 @@ const IndexPage = () => {
                       Sign up for community updates!
                     </Card.Title>
                     <Card.Subtitle className="mb-4 font-weight-normal">
-                      Get the latest local COVID-19 updates near you.
+                      Get the latest local <b>COVID-19 updates</b> near you.
                     </Card.Subtitle>
                     <MailchimpSubscribe
                       url={process.env.GATSBY_MAILCHIMP_URL}
