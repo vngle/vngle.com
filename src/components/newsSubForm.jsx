@@ -14,6 +14,17 @@ export default ({ status, message, onSubmitted }) => {
 
   const handleSubmit = event => {
     const form = event.currentTarget
+    const submitData = {
+      EMAIL: formData.EMAIL,
+      ZIPCODE: formData.ZIPCODE,
+      NUMBER: formData.NUMBER,
+    }
+
+    // don't send checkbox status if unchecked
+    // Mailchimp will populate field if any value is sent
+    if (formData["group[293774][4]"]) {
+      submitData["group[293774][4]"] = formData["group[293774][4]"]
+    }
 
     if (!form.checkValidity()) {
       event.stopPropagation()
@@ -21,7 +32,7 @@ export default ({ status, message, onSubmitted }) => {
 
     event.preventDefault()
     setValidated(true)
-    onSubmitted(formData)
+    onSubmitted(submitData)
   }
 
   const handleChange = event => {
