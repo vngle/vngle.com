@@ -15,8 +15,8 @@ $theme-colors: (
 $enable-shadows: true;
 $enable-responsive-font-sizes: true;
 
-$font-family-base: "Inter";
-$headings-font-family: "Playfair Display";
+$font-family-base: "Inter", sans-serif;
+$headings-font-family: "Playfair Display", serif;
 $body-bg: map-get($theme-colors, "light");
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
