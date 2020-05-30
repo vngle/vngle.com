@@ -1,5 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+import PropTypes from "prop-types"
 import Img from "gatsby-image"
 
 /*
@@ -13,20 +15,62 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const Image = () => (
+const Image = ({ src, alt, bg, height }) => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
+        images: allFile {
+          edges {
+            node {
+              relativePath
+              name
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => {
+      const image = data.images.edges.find(n => {
+        return n.node.relativePath.includes(src)
+      })
+      if (!image) {
+        return null
+      }
+
+      return (
+        <StyledImage
+          alt={alt}
+          fluid={image.node.childImageSharp.fluid}
+          bg={bg}
+          height={height}
+        />
+      )
+    }}
   />
 )
+
+const StyledImage = styled(Img)`
+  ${({ bg, height }) =>
+    bg &&
+    `
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: ${height || "100%"};
+      z-index: -1;
+  `}
+`
+Image.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  bg: PropTypes.bool,
+  height: PropTypes.string,
+}
+
 export default Image
