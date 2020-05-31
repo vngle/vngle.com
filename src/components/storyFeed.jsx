@@ -47,8 +47,6 @@ const StoryFeed = () => {
 
       setInstaFeed([...instaFeed, ...data.edges])
       setInstaInfo(data.page_info)
-
-      console.log(response)
     } catch (error) {
       console.error(error)
 
