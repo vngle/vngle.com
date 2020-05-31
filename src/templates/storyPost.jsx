@@ -1,6 +1,6 @@
 import React from "react"
 import { Container } from "react-bootstrap"
-import { Disqus, CommentCount } from "gatsby-plugin-disqus"
+import { Disqus } from "gatsby-plugin-disqus"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -42,7 +42,6 @@ export default ({ pageContext: { post }, location }) => {
           <img src={post.node.display_url} width="100%" alt={caption} />
         )}
         <p>{caption}</p>
-        <CommentCount config={disqusConfig} placeholder={"..."} />
         <Disqus config={disqusConfig} />
       </Container>
     </Layout>
