@@ -35,7 +35,7 @@ export default ({ pageContext: { post }, location }) => {
                 kind="captions"
                 srcLang="en"
                 label="english_captions"
-              />{" "}
+              />
             </video>
           </div>
         ) : (

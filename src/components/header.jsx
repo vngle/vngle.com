@@ -99,10 +99,6 @@ const StyledHeader = styled.header`
           color: ${props => props.theme.colors.primary};
           transition: color 0.3s;
         }
-
-        .show {
-          margin-top: 0;
-        }
       }
 
       .navbar-toggler {
