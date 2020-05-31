@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Vngle`,
+    siteUrl: `https://www.vngle.com/`,
     description: `"Various angles" on local news driven by you.`,
     author: `Kenneth Chen`,
   },
@@ -38,6 +39,12 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-96150653-1",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `vngle`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
