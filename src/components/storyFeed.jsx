@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
-import { Col, Spinner } from "react-bootstrap"
+import { Row, Col, Spinner } from "react-bootstrap"
 import { Link } from "gatsby"
+import styled from "styled-components"
 import Nanogram from "nanogram.js"
 import axios from "axios"
 
@@ -75,23 +76,76 @@ const StoryFeed = () => {
       }
       endMessage={<p>That's it my guy</p>}
       className="text-center"
+      style={{ overflow: "visible" }}
     >
-      {!loading &&
-        instaFeed.map(post => (
-          <Col key={post.node.id} lg md sm className="mb-4 p-0">
-            {/* use Gatsby Image on fetched images */}
-            <Link to={`/collegepark/${post.node.shortcode}`}>
-              <img
-                alt="post"
-                src={post.node.thumbnail_src}
-                width="100%"
-                className="shadow rounded"
-              />
-            </Link>
-          </Col>
-        ))}
+      <Row>
+        {!loading &&
+          instaFeed.map(post => {
+            const caption = post.node.edge_media_to_caption.edges[0].node.text
+
+            return (
+              <PostContainer
+                key={post.node.id}
+                lg={3}
+                md={4}
+                sm={6}
+                className="mb-4"
+              >
+                <p className="">{caption}</p>
+                <div className="shade-overlay shadow rounded">
+                  {/* use Gatsby Image on fetched images */}
+                  <img
+                    alt="post"
+                    src={post.node.thumbnail_src}
+                    width="100%"
+                    className="shadow"
+                  />
+                </div>
+                <Link
+                  to={`/collegepark/${post.node.shortcode}`}
+                  className="stretched-link"
+                />
+              </PostContainer>
+            )
+          })}
+      </Row>
     </InfiniteScroll>
   )
 }
+
+const PostContainer = styled(Col)`
+  position: relative;
+  text-align: left;
+  color: white;
+
+  & {
+    p {
+      position: absolute;
+      bottom: 0;
+      margin-left: 1rem;
+      max-width: 65%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+
+    img {
+      position: relative;
+      z-index: -1;
+    }
+
+    .shade-overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(33, 37, 41, 0) 0%,
+        rgba(33, 37, 41, 0.3) 70%,
+        rgba(33, 37, 41, 0.7) 100%
+      );
+      overflow: hidden;
+    }
+  }
+`
 
 export default StoryFeed
