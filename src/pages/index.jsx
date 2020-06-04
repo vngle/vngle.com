@@ -116,7 +116,7 @@ const IndexPage = () => {
           </HeroContainer>
         </Jumbotron>
 
-        <TownhallJumbotron bg={CPTownhallBg}>
+        <TownhallJumbotron bg={CPTownhallBg} className="rounded-0">
           <Container>
             <h1>College Park Online Townhall</h1>
             <p>
