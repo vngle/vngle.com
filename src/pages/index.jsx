@@ -26,6 +26,8 @@ import Instagram from "../../static/images/icons/instagram.svg"
 import Linkedin from "../../static/images/icons/linkedin.svg"
 import Twitter from "../../static/images/icons/twitter.svg"
 
+import CPTownhallBg from "../../static/images/cpth-bg.jpg"
+
 const IndexPage = () => {
   const [instaFeed, setInstaFeed] = useState(null)
 
@@ -113,6 +115,25 @@ const IndexPage = () => {
             </Row>
           </HeroContainer>
         </Jumbotron>
+
+        <TownhallJumbotron bg={CPTownhallBg}>
+          <Container>
+            <h1>College Park Online Townhall</h1>
+            <p>
+              You're officially invited to Councilman Roderick Gay's Ward 4
+              Virtual Townhall tomorrow. Feel free to pass on to others within
+              the community.
+            </p>
+            <p>
+              We anticipate a full house, and you will be able to ask questions
+              as well as participate via the Facebook Live stream or Zoom
+              call-in number. Please RSVP for additional details
+            </p>
+            <Button size="lg" href="https://bit.ly/cpward4">
+              RSVP Now!
+            </Button>
+          </Container>
+        </TownhallJumbotron>
 
         <Jumbotron className="bg-primary border-radius-0" as="section">
           <Container>
@@ -238,6 +259,17 @@ const LoadingWrapper = styled.div`
     width: 100px;
     height: 100px;
   }
+`
+
+const TownhallJumbotron = styled(Jumbotron)`
+  background: linear-gradient(
+      180deg,
+      rgba(33, 37, 41, 0) 0%,
+      rgba(33, 37, 41, 0.3) 0%,
+      rgba(33, 37, 41, 0.7) 100%
+    ),
+    url(${props => props.bg});
+  color: white;
 `
 
 export default IndexPage
