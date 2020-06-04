@@ -140,8 +140,8 @@ const PostContainer = styled(Col)`
       background: linear-gradient(
         180deg,
         rgba(33, 37, 41, 0) 0%,
-        rgba(33, 37, 41, 0.3) 70%,
-        rgba(33, 37, 41, 0.7) 100%
+        rgba(33, 37, 41, 0.5) 70%,
+        rgba(33, 37, 41, 0.9) 100%
       );
       overflow: hidden;
     }
