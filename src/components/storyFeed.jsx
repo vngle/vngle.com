@@ -48,6 +48,7 @@ const StoryFeed = () => {
 
       setInstaFeed([...instaFeed, ...data.edges])
       setInstaInfo(data.page_info)
+      console.log(data.page_info.has_next_page)
     } catch (error) {
       console.error(error)
 
@@ -74,7 +75,6 @@ const StoryFeed = () => {
           <span className="sr-only">Loading...</span>
         </Spinner>
       }
-      endMessage={<p>That's it my guy</p>}
       className="text-center"
       style={{ overflow: "visible" }}
     >
@@ -91,7 +91,7 @@ const StoryFeed = () => {
                 sm={6}
                 className="mb-4"
               >
-                <p className="">{caption}</p>
+                <p>{caption}</p>
                 <div className="shade-overlay shadow rounded">
                   {/* use Gatsby Image on fetched images */}
                   <img
