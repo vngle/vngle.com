@@ -6,6 +6,8 @@
 <h1 align="center">
   Vngle ("various angles")
 </h1>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ba4d769c-2311-41bb-bf9d-20989146d986/deploy-status)](https://app.netlify.com/sites/vngle/deploys)
+
 A decentralized grassroots news network for news deserts.
 
 # Problem
