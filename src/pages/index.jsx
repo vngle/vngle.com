@@ -73,7 +73,7 @@ const IndexPage = () => {
                 variant="primary"
                 href="https://forms.gle/N4XctTHnGx3yQUmaA"
               >
-                Highlight your C4C experience!
+                Highlight your experience!
               </Button>
             </Col>
             <Col lg={4} sm={12}>

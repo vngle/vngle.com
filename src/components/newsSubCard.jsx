@@ -11,11 +11,12 @@ import Twitter from "../../static/images/icons/twitter.svg"
 export default () => (
   <Card className="shadow-sm border-0" id="sub-card">
     <Card.Body>
-      <Card.Title as="h2" className="mb-3">
-        Sign up for community updates!
+      <Card.Title className="mb-3">
+        Sign up for your community updates!
       </Card.Title>
       <Card.Subtitle className="mb-4 font-weight-normal">
-        Get the latest local <b>COVID-19 updates</b> near you.
+        Get the latest on everything from <b>local campaigns</b> to{" "}
+        <b>COVID-19</b> near you.
       </Card.Subtitle>
       <MailchimpSubscribe
         url={process.env.GATSBY_MAILCHIMP_URL}
