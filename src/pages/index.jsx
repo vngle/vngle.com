@@ -60,7 +60,7 @@ const IndexPage = () => {
                 <h1 className="display-4">
                   <i>Cruise For a Cause</i>
                 </h1>
-                <p style={{ fontSize: "1.7rem" }}>
+                <p style={{ fontSize: "1.5rem" }}>
                   A driving demonstration to show <b>#BlackLivesMatter</b>. 100%
                   peaceful. 100% socially distant.{" "}
                   <a href="http://goo.gl/maps/9wpWgie9VR6zJEAG8">
@@ -76,7 +76,7 @@ const IndexPage = () => {
                 Highlight your C4C experience!
               </Button>
             </Col>
-            <Col lg={6} sm={12}>
+            <Col lg={4} sm={12}>
               <Image src={CruisePromo} width="100%" rounded />
             </Col>
           </Row>
