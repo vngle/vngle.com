@@ -60,24 +60,23 @@ const IndexPage = () => {
                 <h1 className="display-4">
                   <i>Cruise For a Cause</i>
                 </h1>
-                <p>
+                <p style={{ fontSize: "1.7rem" }}>
                   A driving demonstration to show <b>#BlackLivesMatter</b>. 100%
                   peaceful. 100% socially distant.{" "}
                   <a href="http://goo.gl/maps/9wpWgie9VR6zJEAG8">
                     Link to route
                   </a>
                 </p>
-                <p></p>
               </div>
               <Button
-                size="md"
+                size="lg"
                 variant="primary"
                 href="https://forms.gle/N4XctTHnGx3yQUmaA"
               >
-                Share your experience!
+                Highlight your C4C experience!
               </Button>
             </Col>
-            <Col md={4} sm={12}>
+            <Col lg={6} sm={12}>
               <Image src={CruisePromo} width="100%" rounded />
             </Col>
           </Row>
@@ -167,10 +166,11 @@ const IndexPage = () => {
         <Container as="section">
           <Row className="align-items-center mb-4">
             <Col lg="auto" md="auto" sm="auto" xs="auto">
-              <img
+              <Image
                 alt="Instagram post"
                 src={instaFeed.profile.profile_pic_url}
                 width="70px"
+                roundedCircle
               />
             </Col>
             <Col>
@@ -182,7 +182,12 @@ const IndexPage = () => {
               <Col key={post.node.id} lg={3} md={4} sm={6} className="mb-4">
                 <a href={`https://www.instagram.com/p/${post.node.shortcode}`}>
                   {/* use Gatsby Image */}
-                  <img alt="post" src={post.node.thumbnail_src} width="100%" />
+                  <Image
+                    alt="post"
+                    src={post.node.thumbnail_src}
+                    width="100%"
+                    thumbnail
+                  />
                 </a>
               </Col>
             ))}
