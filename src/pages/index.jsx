@@ -64,9 +64,14 @@ const IndexPage = () => {
                   A driving demonstration to show <b>#BlackLivesMatter</b>. 100%
                   peaceful. 100% socially distant.
                 </p>
+                <p>
+                  <a href="http://goo.gl/maps/9wpWgie9VR6zJEAG8">
+                    Link to route
+                  </a>
+                </p>
               </div>
               <Button
-                size="lg"
+                size="md"
                 variant="primary"
                 href="https://forms.gle/N4XctTHnGx3yQUmaA"
               >
