@@ -64,7 +64,7 @@ export default () => (
       </Col>
     </Row>
 
-    <Row as={Col} className="justify-content-center mt-3">
+    <Col className="justify-content-center mt-3">
       <p>
         Copyright {new Date().getFullYear()},{" "}
         <Link to="/" title="Vngle">
@@ -72,7 +72,7 @@ export default () => (
         </Link>
         . All rights reserved.
       </p>
-    </Row>
+    </Col>
   </Container>
 )
 
