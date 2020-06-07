@@ -62,13 +62,12 @@ const IndexPage = () => {
                 </h1>
                 <p>
                   A driving demonstration to show <b>#BlackLivesMatter</b>. 100%
-                  peaceful. 100% socially distant.
-                </p>
-                <p>
+                  peaceful. 100% socially distant.{" "}
                   <a href="http://goo.gl/maps/9wpWgie9VR6zJEAG8">
                     Link to route
                   </a>
                 </p>
+                <p></p>
               </div>
               <Button
                 size="md"
