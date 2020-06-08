@@ -7,7 +7,6 @@ import {
   Col,
   Button,
   Image,
-  Carousel,
   Spinner,
 } from "react-bootstrap"
 import styled from "styled-components"
@@ -17,6 +16,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import NewsSubCard from "../components/newsSubCard"
 import Typed from "../components/typed"
+import ScrollXContainer from "../components/scrollXContainer"
 
 import HeroImg from "../../static/images/hero.svg"
 import MozillaLogo from "../../static/images/mozilla.png"
@@ -82,6 +82,51 @@ const IndexPage = () => {
           </Row>
         </Container>
       </Jumbotron>
+
+      {instaFeed === null ? (
+        <LoadingWrapper className="d-flex flex-column justify-content-center">
+          <SEO title="Various angles on local news driven by you" />
+          <Spinner animation="grow" variant="primary" className="m-auto">
+            <span className="sr-only">Loading...</span>
+          </Spinner>
+        </LoadingWrapper>
+      ) : (
+        <Jumbotron className="bg-light">
+          <Container>
+            <Row className="align-items-center mb-4">
+              <Col lg="auto" md="auto" sm="auto" xs="auto">
+                <Image
+                  alt="Instagram post"
+                  src={instaFeed.profile.profile_pic_url}
+                  width="70px"
+                  roundedCircle
+                />
+              </Col>
+              <Col>
+                <h2>@vnglestories</h2>
+              </Col>
+            </Row>
+            <Row>
+              <ScrollXContainer>
+                {instaFeed.profile.edge_owner_to_timeline_media.edges.map(
+                  post => (
+                    <a
+                      href={`https://www.instagram.com/p/${post.node.shortcode}`}
+                    >
+                      <Image
+                        alt="post"
+                        src={post.node.thumbnail_src}
+                        width="100%"
+                        thumbnail
+                      />
+                    </a>
+                  )
+                )}
+              </ScrollXContainer>
+            </Row>
+          </Container>
+        </Jumbotron>
+      )}
 
       <Jumbotron className="py-5 bg-primary rounded-0">
         <HeroContainer>
@@ -154,46 +199,6 @@ const IndexPage = () => {
           </Col>
         </Row>
       </HeroContainer>
-
-      {instaFeed === null ? (
-        <LoadingWrapper className="d-flex flex-column justify-content-center">
-          <SEO title="Various angles on local news driven by you" />
-          <Spinner animation="grow" variant="primary" className="m-auto">
-            <span className="sr-only">Loading...</span>
-          </Spinner>
-        </LoadingWrapper>
-      ) : (
-        <Container as="section">
-          <Row className="align-items-center mb-4">
-            <Col lg="auto" md="auto" sm="auto" xs="auto">
-              <Image
-                alt="Instagram post"
-                src={instaFeed.profile.profile_pic_url}
-                width="70px"
-                roundedCircle
-              />
-            </Col>
-            <Col>
-              <h2>@vnglestories</h2>
-            </Col>
-          </Row>
-          <Row>
-            {instaFeed.profile.edge_owner_to_timeline_media.edges.map(post => (
-              <Col key={post.node.id} lg={3} md={4} sm={6} className="mb-4">
-                <a href={`https://www.instagram.com/p/${post.node.shortcode}`}>
-                  {/* use Gatsby Image */}
-                  <Image
-                    alt="post"
-                    src={post.node.thumbnail_src}
-                    width="100%"
-                    thumbnail
-                  />
-                </a>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      )}
 
       <Container as="section" className="my-4">
         <Row as={Col} className="justify-content-center">
