@@ -19,7 +19,7 @@ const TypedText = ({ strings, config }) => {
 }
 
 TypedText.propTypes = {
-  string: PropTypes.array.isRequired,
+  strings: PropTypes.array.isRequired,
   config: PropTypes.object.isRequired,
 }
 

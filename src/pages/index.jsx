@@ -23,7 +23,7 @@ import MozillaLogo from "../../static/images/mozilla.png"
 import ColumbiaLogo from "../../static/images/columbia-tamer.png"
 import GoodieNationLogo from "../../static/images/goodie-nation.png"
 
-import CruisePromo from "../../static/images/cruise-promo.png"
+import MusicEvent from "../../static/images/music-event.png"
 
 const IndexPage = () => {
   const [instaFeed, setInstaFeed] = useState(null)
@@ -52,34 +52,16 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Various angles on local news driven by you" />
 
-      <Jumbotron className="bg-dark text-light rounded-0 mb-0">
-        <Container>
-          <Row>
-            <Col className="d-flex flex-column align-items-start justify-content-center mb-5">
-              <div>
-                <h1 className="display-4">
-                  <i>Cruise For a Cause</i>
-                </h1>
-                <p style={{ fontSize: "1.5rem" }}>
-                  A driving demonstration to show <b>#BlackLivesMatter</b>. 100%
-                  peaceful. 100% socially distant.{" "}
-                  <a href="http://goo.gl/maps/9wpWgie9VR6zJEAG8">
-                    Link to route
-                  </a>
-                </p>
-              </div>
-              <Button
-                size="lg"
-                variant="primary"
-                href="https://forms.gle/N4XctTHnGx3yQUmaA"
-              >
-                Highlight your experience!
-              </Button>
-            </Col>
-            <Col lg={4} sm={12}>
-              <Image src={CruisePromo} width="100%" rounded />
-            </Col>
-          </Row>
+      <Jumbotron className="bg-dark rounded-0">
+        <Container className="text-center">
+          <Image src={MusicEvent} width="100%" rounded className="mb-4" />
+          <Button
+            size="lg"
+            variant="primary"
+            href="https://forms.gle/N4XctTHnGx3yQUmaA"
+          >
+            Share your story
+          </Button>
         </Container>
       </Jumbotron>
 
@@ -112,6 +94,7 @@ const IndexPage = () => {
                   post => (
                     <a
                       href={`https://www.instagram.com/p/${post.node.shortcode}`}
+                      key={post.node.id}
                     >
                       <Image
                         alt="post"
