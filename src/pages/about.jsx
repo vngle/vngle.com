@@ -11,7 +11,7 @@ export default () => (
   <Layout>
     <SEO title="About Us" />
 
-    <Jumbotron className="bg-primary rounded-0" as="section">
+    <Jumbotron className="bg-primary" as="section">
       <Container>
         <h1>
           We cover the stories you don’t hear and the perspectives you don’t

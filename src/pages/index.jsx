@@ -52,7 +52,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Various angles on local news driven by you" />
 
-      <Jumbotron className="bg-dark rounded-0">
+      <Jumbotron className="bg-dark">
         <Container className="text-center">
           <Image src={MusicEvent} width="100%" rounded className="mb-4" />
           <Button
@@ -111,7 +111,7 @@ const IndexPage = () => {
         </Jumbotron>
       )}
 
-      <Jumbotron className="py-5 bg-primary rounded-0">
+      <Jumbotron className="py-5 bg-primary">
         <HeroContainer>
           <Row>
             <Col

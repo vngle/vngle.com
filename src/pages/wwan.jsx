@@ -36,7 +36,7 @@ export default () => (
   <Layout>
     <SEO title="Where we are now" />
 
-    <Jumbotron className="bg-primary rounded-0" as="section">
+    <Jumbotron className="bg-primary" as="section">
       <Container>
         <h1>
           <em>Where We Are Now</em> is our national docuseries to develop
