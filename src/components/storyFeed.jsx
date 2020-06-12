@@ -30,7 +30,7 @@ const StoryFeed = () => {
   // may want to switch to GraphQL
   const fetchNext = async () => {
     const endpoint = "https://www.instagram.com/graphql/query/"
-    const queryHash = "44efc15d3c13342d02df0b5a9fa3d33f" // is this permanent?
+    const queryHash = "3913773caadd10357fba8b1ef4c89be3" // is this permanent?
 
     try {
       const response = await axios.get(endpoint, {
@@ -48,7 +48,6 @@ const StoryFeed = () => {
 
       setInstaFeed([...instaFeed, ...data.edges])
       setInstaInfo(data.page_info)
-      console.log(data.page_info.has_next_page)
     } catch (error) {
       console.error(error)
 

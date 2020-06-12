@@ -4,3 +4,13 @@
 .jumbotron {
   border-radius: 0;
 }
+
+.highlight {
+  background-image: linear-gradient(
+    map-get($theme-colors, "primary"),
+    map-get($theme-colors, "primary")
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 0.4em;
+  background-position: 0 88%;
+}
