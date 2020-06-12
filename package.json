@@ -30,6 +30,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-infinite-scroll-component": "^5.0.5",
+    "react-insta-stories": "^2.0.2",
     "react-mailchimp-subscribe": "^2.1.0",
     "styled-components": "^5.1.1",
     "typed.js": "^2.0.11",
