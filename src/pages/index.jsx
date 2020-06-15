@@ -201,7 +201,9 @@ const IndexPage = () => {
                   order: i % 2 !== 0 && "first",
                 }}
               >
-                <h3 className="bg-secondary rounded-circle">{i + 1}</h3>
+                <h3 className="bg-secondary rounded-circle mx-lg-0 mx-auto">
+                  {i + 1}
+                </h3>
                 <h2>{title}</h2>
                 <p>{description}</p>
               </Col>
