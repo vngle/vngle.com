@@ -2,22 +2,12 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import {
-  Container,
-  Navbar,
-  Nav,
-  Dropdown,
-  Button,
-  Alert,
-} from "react-bootstrap"
+import { Container, Navbar, Nav, Dropdown, Button } from "react-bootstrap"
 
 import Logo from "../../static/images/logo.png"
 
 const Header = ({ siteTitle }) => (
   <StyledHeader>
-    <Alert variant="primary" className="mb-0 py-2 text-center">
-      "Various angles" of grassroots local news driven by you!
-    </Alert>
     <Navbar collapseOnSelect expand="lg" className="p-4">
       <Container>
         <Navbar.Brand>
@@ -92,7 +82,6 @@ const StyledHeader = styled.header`
           font-weight: bold;
           font-size: 1.25rem;
           margin-left: 1rem;
-          margin-right: 1rem;
 
           .nav-link {
             padding: 0;

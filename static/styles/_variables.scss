@@ -7,7 +7,7 @@
 // When updating variables, make sure to update styled-component theme in layout.js too
 $theme-colors: (
   "primary": #ffcc35,
-  "secondary": #41a9ff,
+  "secondary": #0419c1,
   "light": #f7f7f7,
   "dark": #1e1c21,
 );
@@ -20,3 +20,19 @@ $headings-font-family: "Playfair Display", serif;
 $body-bg: map-get($theme-colors, "light");
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// override react-awesome-slider variables
+@import "../../node_modules/react-awesome-slider/src/core/constants.scss";
+
+.#{$root-element} {
+  --slider-height-percentage: 55%;
+  --slider-transition-duration: 300ms;
+  --organic-arrow-thickness: 6px;
+  --organic-arrow-border-radius: 30px;
+  --organic-arrow-height: 25px;
+  --organic-arrow-color: #6a6a6a;
+  --control-button-background: transparent;
+  --control-button-width: 15%;
+  --loader-bar-color: #ffcc34;
+  --loader-bar-height: 3px;
+}

@@ -1,187 +1,230 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import {
   Jumbotron,
   Container,
-  Card,
   Row,
   Col,
   Button,
   Image,
-  Spinner,
+  Badge,
 } from "react-bootstrap"
 import styled from "styled-components"
-import Nanogram from "nanogram.js"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import NewsSubCard from "../components/newsSubCard"
-import Typed from "../components/typed"
-import ScrollXContainer from "../components/scrollXContainer"
+import NewsSubCard from "../components/landing/newsSubCard"
+import StorySlider from "../components/landing/storySlider"
+import SimpleSubForm from "../components/landing/simpleSubForm"
+import ActionCard from "../components/landing/actionCard"
 
-import HeroImg from "../../static/images/hero.svg"
-import MozillaLogo from "../../static/images/mozilla.png"
-import ColumbiaLogo from "../../static/images/columbia-tamer.png"
-import GoodieNationLogo from "../../static/images/goodie-nation.png"
-
-import MusicEvent from "../../static/images/music-event.png"
+import World from "../../static/images/landing/world.svg"
+import Culture from "../../static/images/landing/culture.svg"
+import Transparent from "../../static/images/landing/transparent.svg"
+import Search from "../../static/images/landing/search.svg"
+import Request from "../../static/images/landing/request.svg"
+import Capture from "../../static/images/landing/capture.svg"
+import Distribute from "../../static/images/landing/distribute.svg"
+import MozillaLogo from "../../static/images/landing/mozilla.png"
+import ColumbiaLogo from "../../static/images/landing/columbia-tamer.png"
+import GoodieNationLogo from "../../static/images/landing/goodie-nation.png"
 
 const IndexPage = () => {
-  const [instaFeed, setInstaFeed] = useState(null)
-  const TypedJsOptions = {
-    typeSpeed: 40,
-    backSpeed: 40,
-    backDelay: 3000,
-    loop: true,
-    showCursor: false,
-  }
-
-  // fetch insta data w/ Nanogram.js before
-  // may componentize in future
-  useEffect(() => {
-    const fetchInstaFeed = async () => {
-      const instaParser = new Nanogram()
-      const response = await instaParser.getMediaByUsername("vnglestories")
-
-      setInstaFeed(response)
-    }
-
-    fetchInstaFeed()
-  }, [])
+  const heroBtnText = ["Request Coverage", "Report a Story"]
+  const mainFeatureData = [
+    {
+      imgSrc: Culture,
+      title: "Cross-Cultural Authenticity",
+      description:
+        "Reporting on stories from all sides of cities to ensure holistic representation.",
+    },
+    {
+      imgSrc: Transparent,
+      title: "Credible Transparency",
+      description:
+        "There’s no agenda, just real stories from real people on the communities they love.",
+      offset: 1,
+    },
+    {
+      imgSrc: Search,
+      title: "Vetted + Verifiable ",
+      description:
+        "Our reality reporters are vetted and their stories are verified by communities.",
+      offset: 1,
+    },
+  ]
+  const processData = [
+    {
+      title: "Local coverage requested",
+      description:
+        "Know something that’s under reported? Whether it’s a protest, a local election, or just a high school game, Vngle’s got you covered.",
+      imgSrc: Request,
+    },
+    {
+      title: "Reality reporters assigned",
+      description:
+        "After a request is accepted, we match it with a local reality reporter based on their location and area of expertise.",
+      imgSrc: Capture,
+    },
+    {
+      title: "Stories captured + circulated",
+      description:
+        "After a story is captured, it’s made public and distributed across its home community and any others that would benefit from the information.",
+      imgSrc: Distribute,
+    },
+  ]
+  const actionCardData = [
+    {
+      title: "I need coverage",
+      text: (
+        <>
+          Know a topic that's underreported near you? <br /> Text "COVERAGE" to{" "}
+          <b>(678) 995-5121</b> OR
+        </>
+      ),
+      btn: {
+        href:
+          "https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform",
+        text: "Request Coverage",
+      },
+    },
+    {
+      title: "I have a story",
+      text: (
+        <>
+          Have a community story or experience to share? <br />
+          We'd love to feature it.
+        </>
+      ),
+      btn: {
+        href:
+          "https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true",
+        text: "Report a Story",
+      },
+    },
+  ]
 
   return (
     <Layout>
       <SEO title="Various angles on local news driven by you" />
 
-      <Jumbotron className="bg-dark">
-        <Container className="text-center">
-          <Image src={MusicEvent} width="100%" rounded className="mb-4" />
-          <Button
-            size="lg"
-            variant="primary"
-            href="https://forms.gle/N4XctTHnGx3yQUmaA"
-          >
-            Share your story
-          </Button>
-        </Container>
-      </Jumbotron>
-
-      {instaFeed === null ? (
-        <LoadingWrapper className="d-flex flex-column justify-content-center">
-          <SEO title="Various angles on local news driven by you" />
-          <Spinner animation="grow" variant="primary" className="m-auto">
-            <span className="sr-only">Loading...</span>
-          </Spinner>
-        </LoadingWrapper>
-      ) : (
-        <Jumbotron className="bg-light">
-          <Container>
-            <Row className="align-items-center mb-4">
-              <Col lg="auto" md="auto" sm="auto" xs="auto">
-                <Image
-                  alt="Instagram post"
-                  src={instaFeed.profile.profile_pic_url}
-                  width="70px"
-                  roundedCircle
-                />
-              </Col>
-              <Col>
-                <h2>@vnglestories</h2>
-              </Col>
-            </Row>
+      <HeroContainer>
+        <Row>
+          <Col className="first text-md-left text-center" md={6} sm={12}>
+            <h1 className="display-4 font-weight-bolder mb-4">
+              Local Reality News
+              <br />
+              <span className="highlight">For the People</span>
+              <br />
+              <span className="highlight">By the People</span>
+            </h1>
             <Row>
-              <ScrollXContainer>
-                {instaFeed.profile.edge_owner_to_timeline_media.edges.map(
-                  post => (
-                    <a
-                      href={`https://www.instagram.com/p/${post.node.shortcode}`}
-                      key={post.node.id}
-                    >
-                      <Image
-                        alt="post"
-                        src={post.node.thumbnail_src}
-                        width="100%"
-                        thumbnail
-                      />
-                    </a>
-                  )
-                )}
-              </ScrollXContainer>
+              {heroBtnText.map((text, i) => (
+                <Col className="mb-4" xl={6} lg={12} key={i}>
+                  <Button>{text}</Button>
+                </Col>
+              ))}
             </Row>
-          </Container>
-        </Jumbotron>
-      )}
-
-      <Jumbotron className="py-5 bg-primary">
-        <HeroContainer>
-          <Row>
-            <Col
-              className="d-flex flex-column justify-content-center text-center"
-              lg
-              md
-              sm
-            >
-              <Image
-                alt="Man reading newspaper"
-                src={HeroImg}
-                className="hero-img"
-              />
-            </Col>
-            <Col lg={6} md={12} sm={12} xs={12}>
-              <NewsSubCard />
-            </Col>
-          </Row>
-        </HeroContainer>
-      </Jumbotron>
-
-      <HeroContainer className="py-5">
-        <h1 className="text-center display-4 font-weight-bolder mb-5">
-          Connecting{" "}
-          <span className="highlight">
-            <Typed
-              strings={["community activists", "residents", "organizations"]}
-              config={TypedJsOptions}
-            />
-          </span>{" "}
-          <br />
-          to local grassroots affairs and beyond
-        </h1>
-        <Row className="card-row">
-          <Col lg={6} sm={12}>
-            <Card>
-              <Card.Body>
-                <Card.Title>I need coverage</Card.Title>
-                <Card.Text>
-                  Know a topic that's underreported near you? <br /> Text
-                  "COVERAGE" to <b>(678) 995-5121</b> OR
-                </Card.Text>
-                <Button
-                  size="lg"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform"
-                >
-                  Request Coverage
-                </Button>
-              </Card.Body>
-            </Card>
+            <Subtitle className="mb-4">
+              Watch raw stories from those in the midst of what’s happening. We
+              cover “various angles”, giving you all the viewpoints you don’t
+              hear and coverage you don’t get.{" "}
+              <Badge variant="primary">Sign up today</Badge>
+            </Subtitle>
           </Col>
-          <Col lg={6} sm={12}>
-            <Card>
-              <Card.Body>
-                <Card.Title>I have a story</Card.Title>
-                <Card.Text>
-                  Have a community story or experience to share? <br />
-                  We'd love to feature it
-                </Card.Text>
-                <Button
-                  size="lg"
-                  href="https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true"
-                >
-                  Share a Story
-                </Button>
-              </Card.Body>
-            </Card>
+          <Col>
+            {/* Consider hiding form in small screen sizes */}
+            <NewsSubCard />
           </Col>
         </Row>
       </HeroContainer>
+
+      {/* <Jumbotron className="bg-primary py-4">
+        <Container>
+          <Row className="align-items-center">
+            <Col md={2}>
+              <Image src={CityLogo} alt="City logo" width="100%" />
+            </Col>
+            <Col>
+              <h1>
+                <i>Greatest Artist On the Southside</i>
+              </h1>
+            </Col>
+            <Col md={2}>
+              <Button variant="outline-dark">Learn More</Button>
+            </Col>
+          </Row>
+        </Container>
+      </Jumbotron> */}
+
+      <TopFeatureContainer>
+        <Title className="display-3">
+          The real scoop from real people, sharing their truth on what’s
+          happening.
+        </Title>
+        <Subtitle className="mb-5">
+          We bring you authentic on-the-ground perspectives that mainstream
+          media won’t. Our cross-cultural coverage highlights the diverse
+          experiences and realities people face. It puts you in the shoes of
+          people from all walks of life.
+        </Subtitle>
+        <StorySlider />
+        <Image src={World} alt="World map" />
+      </TopFeatureContainer>
+
+      <MainFeatureContainer className="my-5">
+        <Title className="display-3 mb-5">
+          Bringing you “various angles” of coverage through
+        </Title>
+        <Row>
+          {mainFeatureData.map(({ imgSrc, title, description, offset }, i) => (
+            <Col key={i} lg={{ offset }} md sm={8} className="mb-md-0 mb-5">
+              <img src={imgSrc} alt="feature" width="80%" className="mb-3" />
+              <h3 className="font-weight-bold">{title}</h3>
+              <p>{description}</p>
+            </Col>
+          ))}
+        </Row>
+      </MainFeatureContainer>
+
+      <ProcessContainer>
+        <Jumbotron className="bg-primary shadow">
+          <h1 className="display-4">How Your Community is Covered</h1>
+          {processData.map(({ title, description, imgSrc }, i) => (
+            <Row className="text-center text-md-left" key={i}>
+              <Col md={{ offset: i % 2 !== 0 && 1 }}>
+                <Image src={imgSrc} alt="Process image" width="100%" />
+              </Col>
+              <Col
+                md={{
+                  span: 6,
+                  offset: i % 2 === 0 && 1,
+                  order: i % 2 !== 0 && "first",
+                }}
+              >
+                <h3 className="bg-secondary rounded-circle">{i + 1}</h3>
+                <h2>{title}</h2>
+                <p>{description}</p>
+              </Col>
+            </Row>
+          ))}
+        </Jumbotron>
+      </ProcessContainer>
+
+      <Container className="my-5 text-center">
+        <Title className="display-3 mb-5">
+          <i style={{ fontWeight: "100" }}>Your Community Needs You:</i>
+          <br />
+          Get Involved
+        </Title>
+        <SimpleSubForm />
+        <Row className="card-row">
+          {actionCardData.map((props, i) => (
+            <Col lg={6} sm={12} key={i}>
+              <ActionCard {...props}>{props.text}</ActionCard>
+            </Col>
+          ))}
+        </Row>
+      </Container>
 
       <Container as="section" className="my-4">
         <Row as={Col} className="justify-content-center">
@@ -218,61 +261,88 @@ const IndexPage = () => {
 }
 
 const HeroContainer = styled(Container)`
-  .highlight {
-    background-image: linear-gradient(
-      ${({ theme }) => theme.colors.primary},
-      ${({ theme }) => theme.colors.primary}
-    );
-    background-repeat: no-repeat;
-    background-size: 100% 0.4em;
-    background-position: 0 88%;
-  }
-
-  .hero-img {
-    width: calc(100px + 25vw);
-    margin: 0 auto;
-  }
+  margin-top: 2rem;
+  margin-bottom: 7rem;
 
   h1 {
-    line-height: 1.5em;
+    line-height: 1.4em;
   }
 
-  .card {
-    .card-title {
-      font-family: "Inter", sans-serif;
+  .row {
+    justify-content: center;
+  }
+
+  .first {
+    .btn {
+      font-size: 1.3rem;
+      padding: 0.5rem 2rem;
+      border-radius: 50px;
       font-weight: bold;
-      font-size: 2rem;
-    }
-
-    .card-subtitle {
-      font-family: "Inter", sans-serif;
     }
   }
+`
 
-  .card-row {
-    .card {
-      text-align: center;
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-      border: none;
-      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+const TopFeatureContainer = styled(Container)`
+  text-align: center;
+  margin-bottom: 7rem;
+
+  & > img {
+    width: 100%;
+    margin-top: -15vw;
+  }
+`
+
+const MainFeatureContainer = styled(Container)`
+  text-align: center;
+
+  h2 {
+    font-weight: 800;
+  }
+
+  .row {
+    justify-content: center;
+  }
+`
+
+const ProcessContainer = styled(Container)`
+  margin-bottom: 7rem;
+
+  .jumbotron {
+    border-radius: 1.25rem;
+    padding: 3rem;
+
+    h1 {
+      font-weight: 800;
+      margin-bottom: 3rem;
+    }
+
+    .row {
+      align-items: center;
       margin-bottom: 1rem;
+      padding: 1rem;
+      background: white;
+      border-radius: 1.25rem;
 
-      .card-body > * {
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
+      h3 {
+        margin-bottom: 1rem;
+        width: 1.5em;
+        height: 1.5em;
+        text-align: center;
+        color: white;
       }
     }
   }
 `
 
-const LoadingWrapper = styled.div`
-  height: 100vh;
+const Title = styled.h1`
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+`
 
-  & div {
-    width: 100px;
-    height: 100px;
-  }
+const Subtitle = styled.h2`
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.5em;
 `
 
 export default IndexPage

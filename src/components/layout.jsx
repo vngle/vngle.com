@@ -44,7 +44,7 @@ Layout.propTypes = {
 const theme = {
   colors: {
     primary: "#ffcc35",
-    secondary: "#41a9ff",
+    secondary: "#0419c1",
     light: "#f7f7f7",
     dark: "#1e1c21",
   },

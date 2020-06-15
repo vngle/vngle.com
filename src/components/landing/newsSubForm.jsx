@@ -70,13 +70,6 @@ export default ({ status, message, onSubmitted }) => {
     )
   }
 
-  /**
-   * TODO:
-   *  2. Conditional requirement (zip code required if location-based letter checked)
-   *  3. Display error messages
-   *  4. Better response message display
-   */
-
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Form.Group controlId="email">
@@ -96,14 +89,20 @@ export default ({ status, message, onSubmitted }) => {
         </Form.Control.Feedback>
       </Form.Group>
       <Form.Group controlId="zipCode">
-        <Form.Label>Zip Code</Form.Label>
+        <Form.Label>
+          Zip Code<span className="text-danger">*</span>
+        </Form.Label>
         <Form.Control
           type="text"
           placeholder="Enter zip code"
           name="ZIPCODE"
           value={formData.ZIPCODE}
           onChange={handleChange}
+          required
         />
+        <Form.Control.Feedback type="invalid">
+          Please provide a zip code
+        </Form.Control.Feedback>
       </Form.Group>
       <Form.Group>
         <Form.Label>Prefer text message updates instead?</Form.Label>

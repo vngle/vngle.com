@@ -6,5 +6,8 @@
 
 import "typeface-inter"
 import "typeface-playfair-display"
-import "bootstrap/dist/css/bootstrap.min.css"
+
+// not global but can't seem to override in component file
+import "react-awesome-slider/dist/styles.css"
+
 import "./static/styles/main.scss"
