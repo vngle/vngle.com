@@ -73,6 +73,7 @@ const StorySlider = () => {
                       autoPlay
                       muted
                       caption={caption}
+                      playsInline
                     />
                   ) : (
                     <img
