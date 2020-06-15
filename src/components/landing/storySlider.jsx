@@ -61,7 +61,7 @@ const StorySlider = () => {
       </CaptionCol>
       <Col lg={7}>
         <PhoneContainer className="shadow">
-          <AutoplaySlider {...sliderConfig} className="rounded">
+          <AutoplaySlider {...sliderConfig}>
             {instaFeed.map(post => {
               const caption = post.node.edge_media_to_caption.edges[0].node.text
 
@@ -114,6 +114,7 @@ const PhoneContainer = styled.div`
 
   div {
     border-radius: 1.25rem;
+    overflow: hidden;
   }
 `
 
