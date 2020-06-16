@@ -5,7 +5,7 @@ import { Container, Jumbotron } from "react-bootstrap"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Image from "../components/image"
-import StoryFeed from "../components/storyFeed"
+import StoryFeed from "../components/frontPage/storyFeed"
 
 export default () => (
   <Layout>
