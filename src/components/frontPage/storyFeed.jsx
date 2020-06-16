@@ -12,6 +12,8 @@ const StoryFeed = () => {
     has_next_page: true,
   })
   const [loading, setLoading] = useState(true)
+  const endpoint = "https://www.instagram.com/graphql/query/"
+  const queryHash = "3913773caadd10357fba8b1ef4c89be3" // is this permanent?
 
   // fetch insta using nanogram.js during initial component mount
   // may later change to use axios for simplicity
@@ -29,9 +31,6 @@ const StoryFeed = () => {
   // fetch more insta data when scroll to end
   // may want to switch to GraphQL
   const fetchNext = async () => {
-    const endpoint = "https://www.instagram.com/graphql/query/"
-    const queryHash = "3913773caadd10357fba8b1ef4c89be3" // is this permanent?
-
     try {
       const response = await axios.get(endpoint, {
         params: {
