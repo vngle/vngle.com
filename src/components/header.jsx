@@ -28,9 +28,9 @@ const Header = ({ siteTitle }) => (
                 About
               </Link>
             </Nav.Item>
-            <Nav.Link href="https://medium.com/vngle" eventkey="3">
+            {/* <Nav.Link href="https://medium.com/vngle" eventkey="3">
               Blog
-            </Nav.Link>
+            </Nav.Link> */}
             <Dropdown as={Nav.Item}>
               <Dropdown.Toggle as={Button}>Get Involved</Dropdown.Toggle>
               <Dropdown.Menu role="menu">
