@@ -42,15 +42,9 @@ export default () => (
           <Link to="/wwan" className="nav-link text-muted">
             Where We Are Now
           </Link>
-          <Nav.Link
-            href="https://docs.google.com/forms/d/1ymGkcekuWk_1SPl0r6lp9uleQKGbHE6dTx4aY1jrNT0/edit"
-            className="text-muted"
-          >
-            Tipline
-          </Nav.Link>
-          <Nav.Link href="https://medium.com/vngle" className="text-muted">
+          {/* <Nav.Link href="https://medium.com/vngle" className="text-muted">
             Blog
-          </Nav.Link>
+          </Nav.Link> */}
           <Link to="/about" className="text-muted nav-link">
             About
           </Link>
