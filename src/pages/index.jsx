@@ -29,7 +29,18 @@ import ColumbiaLogo from "../../static/images/landing/columbia-tamer.png"
 import GoodieNationLogo from "../../static/images/landing/goodie-nation.png"
 
 const IndexPage = () => {
-  const heroBtnText = ["Request Coverage", "Report a Story"]
+  const heroBtn = [
+    {
+      value: "Request Coverage",
+      href:
+        "https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform",
+    },
+    {
+      value: "Report a Story",
+      href:
+        "https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true",
+    },
+  ]
   const mainFeatureData = [
     {
       imgSrc: Culture,
@@ -84,21 +95,22 @@ const IndexPage = () => {
       btn: {
         href:
           "https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform",
-        text: "Request Coverage",
+        text: "Request coverage",
       },
     },
     {
-      title: "I have a story",
+      title: "I want to report",
       text: (
         <>
-          Have a community story or experience to share? <br />
-          We'd love to feature it.
+          Want to be a reality reporter for your community?
+          <br />
+          Click the button below.
         </>
       ),
       btn: {
         href:
           "https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true",
-        text: "Report a Story",
+        text: "Report a story",
       },
     },
   ]
@@ -118,9 +130,9 @@ const IndexPage = () => {
               <span className="highlight">By the People</span>
             </h1>
             <Row>
-              {heroBtnText.map((text, i) => (
+              {heroBtn.map(({ value, href }, i) => (
                 <Col className="mb-4" xl={6} lg={12} key={i}>
-                  <Button>{text}</Button>
+                  <Button href={href}>{value}</Button>
                 </Col>
               ))}
             </Row>
