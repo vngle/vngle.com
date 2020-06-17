@@ -6,14 +6,14 @@ import styled from "styled-components"
 import Nanogram from "nanogram.js"
 import axios from "axios"
 
-const StoryFeed = () => {
+const InstaFeed = () => {
   const [instaFeed, setInstaFeed] = useState([])
   const [instaInfo, setInstaInfo] = useState({
     has_next_page: true,
   })
   const [loading, setLoading] = useState(true)
   const endpoint = "https://www.instagram.com/graphql/query/"
-  const queryHash = "3913773caadd10357fba8b1ef4c89be3" // is this permanent?
+  const queryHash = "3913773caadd10357fba8b1ef4c89be3" // public; no need to hide
 
   // fetch insta using nanogram.js during initial component mount
   // may later change to use axios for simplicity
@@ -22,7 +22,15 @@ const StoryFeed = () => {
     const response = await instaParser.getMediaByUsername("vnglestories")
 
     if (response.ok) {
-      setInstaFeed(response.profile.edge_owner_to_timeline_media.edges)
+      setInstaFeed(
+        response.profile.edge_owner_to_timeline_media.edges.filter(
+          ({ node }) => {
+            const caption = node.edge_media_to_caption.edges[0].node.text
+
+            return caption.includes("#CollegePark")
+          }
+        )
+      )
       setInstaInfo(response.profile.edge_owner_to_timeline_media.page_info)
       setLoading(false)
     }
@@ -31,31 +39,35 @@ const StoryFeed = () => {
   // fetch more insta data when scroll to end
   // may want to switch to GraphQL
   const fetchNext = async () => {
-    try {
+    let nextFeed = []
+    let pageInfo = instaInfo
+
+    while (nextFeed.length === 0 && pageInfo.has_next_page) {
       const response = await axios.get(endpoint, {
         params: {
           query_hash: queryHash,
           variables: {
             id: "4046633900",
             first: 12,
-            after: instaInfo.end_cursor,
+            after: pageInfo.end_cursor,
           },
         },
       })
 
       const data = response.data.data.user.edge_owner_to_timeline_media
 
-      setInstaFeed([...instaFeed, ...data.edges])
-      setInstaInfo(data.page_info)
-    } catch (error) {
-      console.error(error)
+      nextFeed = data.edges.filter(({ node }) => {
+        const caption = node.edge_media_to_caption.edges[0].node.text
 
-      setInstaInfo({
-        ...instaInfo,
-        has_next_page: false,
+        return caption.includes("#CollegePark")
       })
+      pageInfo = data.page_info
+
+      console.log(nextFeed)
     }
 
+    setInstaFeed([...instaFeed, ...nextFeed])
+    setInstaInfo(pageInfo)
     setLoading(false)
   }
 
@@ -77,6 +89,7 @@ const StoryFeed = () => {
       style={{ overflow: "visible" }}
     >
       <Row>
+        {console.log(instaInfo)}
         {!loading &&
           instaFeed.map(post => {
             const caption = post.node.edge_media_to_caption.edges[0].node.text
@@ -146,4 +159,4 @@ const PostContainer = styled(Col)`
   }
 `
 
-export default StoryFeed
+export default InstaFeed

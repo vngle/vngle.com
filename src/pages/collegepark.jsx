@@ -5,7 +5,7 @@ import { Container, Jumbotron } from "react-bootstrap"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Image from "../components/image"
-import StoryFeed from "../components/frontPage/storyFeed"
+import InstaFeed from "../components/frontPage/instaFeed"
 
 export default () => (
   <Layout>
@@ -14,14 +14,12 @@ export default () => (
       <Image src="collegepark/cp.jpg" alt="Atlanta city view" bg />
       <h1 className="display-1 font-weight-bold">College Park</h1>
     </StyledJumbotron>
-    <ContentContainer>
-      <Container>
-        <div className="category-container">
-          <h1 className="display-3">Featured</h1>
-          <div className="ribbon" />
-        </div>
-        <StoryFeed />
-      </Container>
+    <ContentContainer fluid>
+      <div className="category-container">
+        <h1 className="display-3">Featured</h1>
+        <div className="ribbon" />
+      </div>
+      <InstaFeed />
     </ContentContainer>
   </Layout>
 )
@@ -37,7 +35,7 @@ const StyledJumbotron = styled(Jumbotron)`
   );
 `
 
-const ContentContainer = styled.div`
+const ContentContainer = styled(Container)`
   .category-container {
     display: flex;
     align-items: center;
