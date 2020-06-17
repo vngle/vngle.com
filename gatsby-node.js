@@ -12,6 +12,7 @@ exports.createPages = async ({ actions }) => {
   const userId = "4046633900"
   const maxNodePerRequest = 50
 
+  // because only have 1 front page now, allFeed = filtered CP feed
   let allFeed = []
   let feedMetadata = { has_next_page: true }
 
@@ -42,6 +43,12 @@ exports.createPages = async ({ actions }) => {
       console.error(error)
     }
   }
+
+  allFeed = allFeed.filter(({ node }) => {
+    const caption = node.edge_media_to_caption.edges[0].node.text
+
+    return caption.includes("#CollegePark")
+  })
 
   allFeed.forEach(post => {
     const slug = post.node.shortcode
