@@ -22,7 +22,6 @@
     "gatsby-plugin-styled-components": "^3.3.3",
     "gatsby-source-filesystem": "^2.3.10",
     "gatsby-transformer-sharp": "^2.5.4",
-    "nanogram.js": "^1.0.2",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",

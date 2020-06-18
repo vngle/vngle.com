@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
-import { Row, Col, Spinner } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import Nanogram from "nanogram.js"
 import axios from "axios"
 
 const InstaFeed = () => {
@@ -15,23 +14,30 @@ const InstaFeed = () => {
   const endpoint = "https://www.instagram.com/graphql/query/"
   const queryHash = "3913773caadd10357fba8b1ef4c89be3" // public; no need to hide
 
-  // fetch insta using nanogram.js during initial component mount
-  // may later change to use axios for simplicity
+  // fetch insta using axios
+  // merge with fetchNext() in future
   const fetchInstaFeed = async () => {
-    const instaParser = new Nanogram()
-    const response = await instaParser.getMediaByUsername("vnglestories")
+    const response = await axios.get(endpoint, {
+      params: {
+        query_hash: queryHash,
+        variables: {
+          id: "4046633900",
+          first: 50,
+        },
+      },
+    })
 
-    if (response.ok) {
+    if (response.status === 200) {
+      const data = response.data.data.user.edge_owner_to_timeline_media
+
       setInstaFeed(
-        response.profile.edge_owner_to_timeline_media.edges.filter(
-          ({ node }) => {
-            const caption = node.edge_media_to_caption.edges[0].node.text
+        data.edges.filter(({ node }) => {
+          const caption = node.edge_media_to_caption.edges[0].node.text
 
-            return caption.includes("#CollegePark")
-          }
-        )
+          return caption.includes("#CollegePark")
+        })
       )
-      setInstaInfo(response.profile.edge_owner_to_timeline_media.page_info)
+      setInstaInfo(data.page_info)
       setLoading(false)
     }
   }
@@ -62,8 +68,6 @@ const InstaFeed = () => {
         return caption.includes("#CollegePark")
       })
       pageInfo = data.page_info
-
-      console.log(nextFeed)
     }
 
     setInstaFeed([...instaFeed, ...nextFeed])
@@ -80,16 +84,10 @@ const InstaFeed = () => {
       dataLength={instaFeed.length}
       next={fetchNext}
       hasMore={instaInfo.has_next_page}
-      loader={
-        <Spinner animation="border" variant="primary" className="m-auto">
-          <span className="sr-only">Loading...</span>
-        </Spinner>
-      }
       className="text-center"
       style={{ overflow: "visible" }}
     >
       <Row>
-        {console.log(instaInfo)}
         {!loading &&
           instaFeed.map(post => {
             const caption = post.node.edge_media_to_caption.edges[0].node.text

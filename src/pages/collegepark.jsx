@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import { Container, Jumbotron } from "react-bootstrap"
+import { Container, Jumbotron, Row, Col } from "react-bootstrap"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import InstaFeed from "../components/frontPage/instaFeed"
+import NewsFeed from "../components/frontPage/newsFeed"
 
 export default () => (
   <Layout>
@@ -15,11 +16,22 @@ export default () => (
       <h1 className="display-1 font-weight-bold">College Park</h1>
     </StyledJumbotron>
     <ContentContainer fluid>
-      <div className="category-container">
-        <h1 className="display-3">Featured</h1>
-        <div className="ribbon" />
-      </div>
-      <InstaFeed />
+      <Row>
+        <Col lg={8} md={7} xs={12}>
+          <div className="category-container">
+            <h1 className="display-3">Featured</h1>
+            <div className="ribbon" />
+          </div>
+          <InstaFeed />
+        </Col>
+        <Col>
+          <div className="category-container">
+            <h1 className="display-3">News</h1>
+            <div className="ribbon" />
+          </div>
+          <NewsFeed />
+        </Col>
+      </Row>
     </ContentContainer>
   </Layout>
 )
