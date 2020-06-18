@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Vngle`,
@@ -28,7 +32,7 @@ module.exports = {
         short_name: `vngle`,
         start_url: `/`,
         background_color: `#f7f7f7`,
-        theme_color: `#FF54AC`,
+        theme_color: `#ffcc35`,
         display: `minimal-ui`,
         icon: `${__dirname}/static/images/logo-box.jpg`, // This path is relative to the root of the site.
       },
@@ -45,6 +49,14 @@ module.exports = {
       resolve: `gatsby-plugin-disqus`,
       options: {
         shortname: `vngle`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: process.env.CONTENTFUL_HOST,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
