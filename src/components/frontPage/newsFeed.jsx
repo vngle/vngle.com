@@ -37,7 +37,6 @@ const NewsFeed = () => {
         const thumbnail = article.image
           ? article.image.thumbnail.contentUrl
           : article.provider[0].image.thumbnail.contentUrl
-        const datePublished = new Date(article.datePublished)
 
         return (
           <Row
@@ -61,11 +60,7 @@ const NewsFeed = () => {
                   {article.name}
                 </a>
               </p>
-              <p className="mb-0 text-muted">
-                {article.provider[0].name} |{" "}
-                {`${datePublished.getMonth() +
-                  1}-${datePublished.getDate()}-${datePublished.getFullYear()}`}
-              </p>
+              <p className="mb-0 text-muted">{article.provider[0].name}</p>
             </Col>
           </Row>
         )
