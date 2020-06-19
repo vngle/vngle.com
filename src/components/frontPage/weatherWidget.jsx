@@ -32,6 +32,7 @@ const WeatherWidget = ({ cityId }) => {
         <img
           src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
           className="d-inline"
+          alt="weather icon"
         ></img>
         <b>{weatherData.main.temp}&deg;F</b>{" "}
         {weatherData.weather[0].description}
