@@ -1,13 +1,10 @@
 import React from "react"
 import { Card, Row } from "react-bootstrap"
+import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi"
 import styled from "styled-components"
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 
 import NewsSubForm from "./newsSubForm"
-import Facebook from "../../../static/images/icons/facebook.svg"
-import Instagram from "../../../static/images/icons/instagram.svg"
-import Linkedin from "../../../static/images/icons/linkedin.svg"
-import Twitter from "../../../static/images/icons/twitter.svg"
 
 export default () => (
   <StyledCard className="shadow-sm border-0" id="sub-card">
@@ -31,16 +28,16 @@ export default () => (
       />
       <Row className="justify-content-around mt-4">
         <a href="https://www.instagram.com/vnglestories/">
-          <img src={Instagram} alt="Instagram" />
+          <FiInstagram />
         </a>
         <a href="https://www.facebook.com/vnglestories/">
-          <img src={Facebook} alt="Facebook" />
+          <FiFacebook />
         </a>
         <a href="https://www.linkedin.com/company/vngle/">
-          <img src={Linkedin} alt="Linkedin" />
+          <FiLinkedin />
         </a>
         <a href="https://twitter.com/vnglestories">
-          <img src={Twitter} alt="Twitter" />
+          <FiTwitter />
         </a>
       </Row>
     </Card.Body>
@@ -56,5 +53,13 @@ const StyledCard = styled(Card)`
 
   .card-subtitle {
     font-family: "Inter", sans-serif;
+  }
+
+  .row {
+    font-size: 1.5rem;
+
+    a {
+      color: ${({ theme }) => theme.colors.dark};
+    }
   }
 `

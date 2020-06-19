@@ -1,32 +1,29 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Nav, Badge } from "react-bootstrap"
+import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi"
 import styled from "styled-components"
 
 import Logo from "../../static/images/logo.png"
-import Facebook from "../../static/images/icons/facebook.svg"
-import Instagram from "../../static/images/icons/instagram.svg"
-import Linkedin from "../../static/images/icons/linkedin.svg"
-import Twitter from "../../static/images/icons/twitter.svg"
 
 export default () => (
   <Container as="footer" className="text-center pt-5">
     <Row>
       <Col sm className="m-auto">
-        <Row className="justify-content-around mb-5">
+        <SocialRow className="justify-content-around mb-5">
           <a href="https://www.instagram.com/vnglestories/">
-            <img src={Instagram} alt="Instagram" />
+            <FiInstagram />
           </a>
           <a href="https://www.facebook.com/vnglestories/">
-            <img src={Facebook} alt="Facebook" />
+            <FiFacebook />
           </a>
           <a href="https://www.linkedin.com/company/vngle/">
-            <img src={Linkedin} alt="Linkedin" />
+            <FiLinkedin />
           </a>
           <a href="https://twitter.com/vnglestories">
-            <img src={Twitter} alt="Twitter" />
+            <FiTwitter />
           </a>
-        </Row>
+        </SocialRow>
         <div className="mb-4">
           <Link to="/">
             <img alt="Vngle logo" src={Logo} height={47} />
@@ -69,6 +66,14 @@ export default () => (
     </Col>
   </Container>
 )
+
+const SocialRow = styled(Row)`
+  font-size: 1.5rem;
+
+  a {
+    color: ${({ theme }) => theme.colors.dark};
+  }
+`
 
 const FooterNav = styled(Nav)`
   font-size: 14px;
