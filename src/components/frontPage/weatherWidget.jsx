@@ -8,7 +8,6 @@ const WeatherWidget = ({ cityId }) => {
   const fetchWeather = async reqConfig => {
     const resp = await axios(reqConfig)
 
-    console.log(resp.data)
     setWeatherData(resp.data)
   }
 
