@@ -50,7 +50,7 @@ const Header = ({ siteTitle }) => (
                 </Dropdown.Item>
                 <Dropdown.Item
                   role="menuitem"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform"
+                  href="https://blake680703.typeform.com/to/zwc2R2og"
                   eventkey="4.3"
                 >
                   Request Coverage

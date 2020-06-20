@@ -32,8 +32,7 @@ const IndexPage = () => {
   const heroBtn = [
     {
       value: "Request Coverage",
-      href:
-        "https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform",
+      href: "https://blake680703.typeform.com/to/zwc2R2og",
     },
     {
       value: "Report a Story",
@@ -93,8 +92,7 @@ const IndexPage = () => {
         </>
       ),
       btn: {
-        href:
-          "https://docs.google.com/forms/d/e/1FAIpQLSdn0-K37ukwXDy-A5KjNrvuGKAsGgbO-Aqk6i0uVllwf5SNNg/viewform",
+        href: "https://blake680703.typeform.com/to/zwc2R2og",
         text: "Request coverage",
       },
     },
