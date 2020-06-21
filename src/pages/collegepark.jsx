@@ -7,13 +7,15 @@ import moment from "moment"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
+import ActionButtonGroup from "../components/frontPage/actionBtnGroup"
 import InstaFeed from "../components/frontPage/instaFeed"
 import NewsFeed from "../components/frontPage/newsFeed"
 import WeatherWidget from "../components/frontPage/weatherWidget"
 
 export default () => (
   <Layout>
-    <SEO title="College Park Home" />
+    <SEO title="College Park's News" />
+
     <StyledJumbotron>
       <Image src="collegepark/cp.jpg" alt="Atlanta city view" bg />
       <Row className="align-items-end">
@@ -53,6 +55,8 @@ export default () => (
         </Col>
       </Row>
     </ContentContainer>
+
+    <ActionButtonGroup />
   </Layout>
 )
 
