@@ -75,6 +75,7 @@ const InstaFeed = () => {
     setLoading(false)
   }
 
+  // TOFIX: Memory leak when unmounted (moved to another page) and fetching in progress
   useEffect(() => {
     fetchInstaFeed()
   }, [])

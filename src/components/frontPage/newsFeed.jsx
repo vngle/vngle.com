@@ -15,9 +15,9 @@ const NewsFeed = () => {
   useEffect(() => {
     fetchNews({
       method: "get",
-      url: `${process.env.GATSBY_NEWS_URL}/news/search`,
+      url: `${process.env.NEWS_URL}/news/search`,
       headers: {
-        "ocp-apim-subscription-key": process.env.GATSBY_NEWS_KEY,
+        "ocp-apim-subscription-key": process.env.NEWS_KEY,
       },
       params: {
         q: "CollegePark AND georgia",

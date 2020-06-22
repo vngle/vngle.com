@@ -20,7 +20,7 @@ const WeatherWidget = ({ cityId }) => {
       params: {
         id: cityId,
         units: "imperial",
-        appid: process.env.GATSBY_WEATHER_API_KEY,
+        appid: process.env.WEATHER_API_KEY,
       },
     })
   }, [cityId])
@@ -29,7 +29,7 @@ const WeatherWidget = ({ cityId }) => {
     weatherData !== null && (
       <div>
         <img
-          src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
+          src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
           className="d-inline"
           alt="weather icon"
         ></img>
