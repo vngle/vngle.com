@@ -16,7 +16,7 @@ const ReportForm = ({ setFormSubmitted }) => {
   const [sending, setSending] = useState(false)
 
   const client = contentful.createClient({
-    accessToken: "CFPAT-gPUd81wht9Tw_R7mxd7EJWTBXlCOGjor37JX8G - lQsw",
+    accessToken: "CFPAT-gPUd81wht9Tw_R7mxd7EJWTBXlCOGjor37JX8G-lQsw",
   })
 
   const handleSubmit = async event => {
