@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import { Form, Button } from "react-bootstrap"
+import { Form, Button, Spinner } from "react-bootstrap"
 import * as contentful from "contentful-management"
 
 import Dropzone from "./dropzone"
 
-const ReportForm = () => {
+const ReportForm = ({ setFormSubmitted }) => {
   const [form, setForm] = useState({
     title: "",
     author: "",
@@ -13,6 +13,7 @@ const ReportForm = () => {
     campaign__blm: false,
   })
   const [mediaFiles, setMediaFiles] = useState([])
+  const [sending, setSending] = useState(false)
 
   const personalToken = process.env.CONTENTFUL_MANAGEMENT_TOKEN
   const client = contentful.createClient({
@@ -21,6 +22,7 @@ const ReportForm = () => {
 
   const handleSubmit = async event => {
     event.preventDefault()
+    setSending(true)
 
     const space = await client.getSpace(process.env.CONTENTFUL_SPACE_ID)
     const environment = await space.getEnvironment("master")
@@ -55,22 +57,24 @@ const ReportForm = () => {
       })
     )
 
-    environment.createEntry("story", {
-      fields: {
-        title: {
-          "en-US": form.title,
+    environment
+      .createEntry("story", {
+        fields: {
+          title: {
+            "en-US": form.title,
+          },
+          author: {
+            "en-US": form.author,
+          },
+          caption: {
+            "en-US": form.caption,
+          },
+          mediaContent: {
+            "en-US": mediaAssets,
+          },
         },
-        author: {
-          "en-US": form.author,
-        },
-        caption: {
-          "en-US": form.caption,
-        },
-        mediaContent: {
-          "en-US": mediaAssets,
-        },
-      },
-    })
+      })
+      .then(() => setFormSubmitted(true))
   }
 
   const handleChange = event => {
@@ -149,7 +153,7 @@ const ReportForm = () => {
       </Form.Group>
 
       <Button variant="primary" type="submit">
-        Submit
+        {sending ? <Spinner animation="border" size="sm" /> : "Submit"}
       </Button>
     </Form>
   )

@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 import { Button } from "react-bootstrap"
 import styled from "styled-components"
 import { FaPen, FaTimes, FaPaperPlane, FaPlus } from "react-icons/fa"
@@ -25,13 +26,15 @@ const ActionButtonGroup = () => {
           {
             position: "left",
             value: <FaPen />,
-            href: "#",
+            to: "/report",
           },
         ].map((btn, i) => (
           <Button
             className={`shadow btn-circle btn-${btn.position}`}
             key={i}
+            to={btn.to}
             href={btn.href}
+            as={btn.to && Link}
           >
             {btn.value}
           </Button>
