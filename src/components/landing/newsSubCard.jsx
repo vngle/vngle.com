@@ -17,7 +17,7 @@ export default () => (
         <b>local campaigns</b>, <b>protests</b>, to <b>COVID-19</b>.
       </Card.Subtitle>
       <MailchimpSubscribe
-        url={process.env.MAILCHIMP_URL}
+        url={process.env.GATSBY_MAILCHIMP_URL}
         render={({ subscribe, status, message }) => (
           <NewsSubForm
             status={status}

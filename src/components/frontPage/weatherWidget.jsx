@@ -20,7 +20,7 @@ const WeatherWidget = ({ cityId }) => {
       params: {
         id: cityId,
         units: "imperial",
-        appid: process.env.WEATHER_API_KEY,
+        appid: process.env.GATSBY_WEATHER_API_KEY,
       },
     })
   }, [cityId])

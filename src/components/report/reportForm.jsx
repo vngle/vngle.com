@@ -15,6 +15,8 @@ const ReportForm = ({ setFormSubmitted }) => {
   const [mediaFiles, setMediaFiles] = useState([])
   const [sending, setSending] = useState(false)
 
+  console.log(process.env.GATSBY_CONTENTFUL_MANAGEMENT_TOKEN)
+
   const client = contentful.createClient({
     accessToken: "CFPAT-gPUd81wht9Tw_R7mxd7EJWTBXlCOGjor37JX8G-lQsw",
   })
@@ -23,7 +25,7 @@ const ReportForm = ({ setFormSubmitted }) => {
     event.preventDefault()
     setSending(true)
 
-    const space = await client.getSpace(process.env.CONTENTFUL_SPACE_ID)
+    const space = await client.getSpace(process.env.GATSBY_CONTENTFUL_SPACE_ID)
     const environment = await space.getEnvironment("master")
 
     // wait for mediaAssets to upload before proceeding
