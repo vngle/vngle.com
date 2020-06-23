@@ -14,23 +14,6 @@ import Header from "./header"
 import Footer from "./footer"
 
 const Layout = ({ children }) => {
-  const createTheme = props => {
-    const styles = getComputedStyle(document.documentElement)
-
-    return {
-      // TODO: need to automate this more
-      colors: {
-        primary: styles.getPropertyValue("--primary"),
-        secondary: styles.getPropertyValue("--secondary"),
-        light: styles.getPropertyValue("--light"),
-        dark: styles.getPropertyValue("--dark"),
-        success: styles.getPropertyValue("--success"),
-        danger: styles.getPropertyValue("--danger"),
-      },
-      ...props,
-    }
-  }
-
   return (
     <StaticQuery
       query={graphql`
@@ -44,7 +27,7 @@ const Layout = ({ children }) => {
       `}
       render={data => (
         <>
-          <ThemeProvider theme={() => createTheme()}>
+          <ThemeProvider theme={theme}>
             <Header siteTitle={data.site.siteMetadata.title} />
             <main>{children}</main>
             <Footer />
@@ -53,6 +36,18 @@ const Layout = ({ children }) => {
       )}
     />
   )
+}
+
+// When updating theme, make sure to update variables in _variable.scss too
+const theme = {
+  colors: {
+    primary: "#ffcc35",
+    secondary: "#0419c1",
+    light: "#f7f7f7",
+    dark: "#1e1c21",
+    success: "#28a745",
+    danger: "#dc3545",
+  },
 }
 
 Layout.propTypes = {
