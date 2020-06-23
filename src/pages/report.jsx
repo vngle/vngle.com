@@ -31,8 +31,8 @@ const Report = () => {
               <FaSlack className="icon-slack" /> Request Slack Invitation
             </Button>
             <ul className="perk-list">
-              {perks.map(perk => (
-                <li>
+              {perks.map((perk, i) => (
+                <li key={i}>
                   <FcCheckmark />
                   {perk}
                 </li>
