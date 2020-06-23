@@ -15,10 +15,8 @@ const ReportForm = ({ setFormSubmitted }) => {
   const [mediaFiles, setMediaFiles] = useState([])
   const [sending, setSending] = useState(false)
 
-  console.log(process.env.GATSBY_CONTENTFUL_MANAGEMENT_TOKEN)
-
   const client = contentful.createClient({
-    accessToken: "CFPAT-gPUd81wht9Tw_R7mxd7EJWTBXlCOGjor37JX8G-lQsw",
+    accessToken: process.env.GATSBY_CONTENTFUL_MANAGEMENT_TOKEN,
   })
 
   const handleSubmit = async event => {
