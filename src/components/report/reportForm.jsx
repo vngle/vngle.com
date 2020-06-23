@@ -15,9 +15,8 @@ const ReportForm = ({ setFormSubmitted }) => {
   const [mediaFiles, setMediaFiles] = useState([])
   const [sending, setSending] = useState(false)
 
-  const personalToken = process.env.CONTENTFUL_MANAGEMENT_TOKEN
   const client = contentful.createClient({
-    accessToken: personalToken,
+    accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
   })
 
   const handleSubmit = async event => {
