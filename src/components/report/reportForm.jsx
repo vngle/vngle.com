@@ -8,6 +8,7 @@ const ReportForm = ({ setFormSubmitted }) => {
   const [form, setForm] = useState({
     title: "",
     author: "",
+    email: "",
     caption: "",
     campaign__covid: false,
     campaign__blm: false,
@@ -65,6 +66,10 @@ const ReportForm = ({ setFormSubmitted }) => {
           author: {
             "en-US": form.author,
           },
+          email: {
+            "en-US": form.email,
+          },
+
           caption: {
             "en-US": form.caption,
           },
@@ -111,6 +116,17 @@ const ReportForm = ({ setFormSubmitted }) => {
           value={form.auhor}
         />
       </Form.Group>
+      <Form.Group>
+        <Form.Label>Email address</Form.Label>
+        <Form.Control
+          type="email"
+          placeholder="Enter email address"
+          onChange={handleChange}
+          name="email"
+          value={form.email}
+        />
+      </Form.Group>
+
       <Form.Group>
         <Form.Label>Content Upload</Form.Label>
         <Dropzone files={mediaFiles} setFiles={setMediaFiles} />
