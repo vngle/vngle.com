@@ -27,8 +27,8 @@ const Report = () => {
             <h1 className="display-4">Thank you for submitting your story!</h1>
             <p>We will review your story and update you as soon as possible!</p>
             <h2>Meanwhile... Join the Vngle community!</h2>
-            <Button size="lg">
-              <FaSlack className="icon-slack" /> Request Slack Invitation
+            <Button size="lg" href="https://vngle.typeform.com/to/ml10m5DC">
+              <FaSlack className="icon-slack" /> Request Invitation
             </Button>
             <ul className="perk-list">
               {perks.map((perk, i) => (
