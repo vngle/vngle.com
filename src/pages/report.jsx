@@ -11,9 +11,9 @@ import ReportForm from "../components/report/reportForm"
 const Report = () => {
   const [formSubmitted, setFormSubmitted] = useState(false)
   const perks = [
-    "Help your community",
+    "Show off your city's culture",
     "Earn passive income",
-    "Bring your pet to work",
+    "Gain local influence",
   ]
 
   return (
@@ -85,7 +85,7 @@ const ConfirmDiv = styled.div`
     text-align: left;
 
     li {
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
 
     svg {
