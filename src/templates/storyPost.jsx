@@ -17,7 +17,7 @@ export default ({ pageContext: { post }, location }) => {
 
   return (
     <Layout>
-      <SEO title="College Park Home" />
+      <SEO title="College Park" />
       <Container>
         <Row>
           <Col md={6} sm={12} className="mb-3">
