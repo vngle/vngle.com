@@ -70,7 +70,7 @@ const createContentful = async (graphql, { createPage }) => {
       allContentfulCampaign: { edges: campaigns },
     },
   } = await graphql(`
-    query {
+    {
       allContentfulCampaign {
         edges {
           node {
