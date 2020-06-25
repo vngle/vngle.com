@@ -1,4 +1,5 @@
 import React from "react"
+import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import { Container, Jumbotron, Row, Col } from "react-bootstrap"
 import { FcBookmark } from "react-icons/fc"
@@ -12,7 +13,7 @@ import InstaFeed from "../components/frontPage/instaFeed"
 import NewsFeed from "../components/frontPage/newsFeed"
 import WeatherWidget from "../components/frontPage/weatherWidget"
 
-export default () => (
+export default ({ data }) => (
   <Layout>
     <SEO title="College Park's News" />
 
@@ -35,9 +36,46 @@ export default () => (
       </Row>
     </StyledJumbotron>
 
-    <Container fluid></Container>
-
     <ContentContainer fluid>
+      <Row>
+        <Col>
+          <div className="category-container">
+            <h1 className="display-3">Campaigns</h1>
+            <div className="ribbon" />
+          </div>
+          <Row className="align-items-center justify-content-center">
+            {data.allContentfulCampaign.edges.map(({ node: campaign }) => {
+              const bgSrc = campaign.cover.fixed.src
+
+              return (
+                <CampaignCol
+                  key={campaign.id}
+                  className="mb-4"
+                  sm={6}
+                  md={4}
+                  lg
+                  xl={3}
+                >
+                  <h1>{campaign.title}</h1>
+                  <div className="shade-overlay shadow rounded">
+                    {/* use Gatsby Image on fetched images */}
+                    <img
+                      alt="Campaign background"
+                      src={bgSrc}
+                      width="100%"
+                      className="shadow"
+                    />
+                  </div>
+                  <Link
+                    to={`/collegepark/${campaign.id}`}
+                    className="stretched-link"
+                  />
+                </CampaignCol>
+              )
+            })}
+          </Row>
+        </Col>
+      </Row>
       <Row>
         <Col lg={8} md={7} xs={12}>
           <div className="category-container">
@@ -59,6 +97,27 @@ export default () => (
     <ActionButtonGroup />
   </Layout>
 )
+
+export const query = graphql`
+  {
+    allContentfulCampaign {
+      edges {
+        node {
+          title
+          description {
+            description
+          }
+          cover {
+            fixed {
+              src
+            }
+          }
+          id
+        }
+      }
+    }
+  }
+`
 
 const StyledJumbotron = styled(Jumbotron)`
   position: relative;
@@ -104,5 +163,37 @@ const ContentContainer = styled(Container)`
       height: 10px;
       margin-left: 10px;
     }
+  }
+`
+
+const CampaignCol = styled(Col)`
+  position: relative;
+  text-align: left;
+  color: white;
+
+  h1 {
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 65%;
+    overflow: hidden;
+  }
+
+  img {
+    position: relative;
+    z-index: -1;
+  }
+
+  .shade-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(33, 37, 41, 0) 0%,
+      rgba(33, 37, 41, 0.5) 70%,
+      rgba(33, 37, 41, 0.9) 100%
+    );
+    overflow: hidden;
   }
 `

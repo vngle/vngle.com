@@ -128,33 +128,31 @@ const PostContainer = styled(Col)`
   text-align: left;
   color: white;
 
-  & {
-    p {
-      position: absolute;
-      bottom: 0;
-      margin-left: 1rem;
-      max-width: 65%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3;
-    }
+  p {
+    position: absolute;
+    bottom: 0;
+    margin-left: 1rem;
+    max-width: 65%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
 
-    img {
-      position: relative;
-      z-index: -1;
-    }
+  img {
+    position: relative;
+    z-index: -1;
+  }
 
-    .shade-overlay {
-      background: linear-gradient(
-        180deg,
-        rgba(33, 37, 41, 0) 0%,
-        rgba(33, 37, 41, 0.5) 70%,
-        rgba(33, 37, 41, 0.9) 100%
-      );
-      overflow: hidden;
-    }
+  .shade-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(33, 37, 41, 0) 0%,
+      rgba(33, 37, 41, 0.5) 70%,
+      rgba(33, 37, 41, 0.9) 100%
+    );
+    overflow: hidden;
   }
 `
 

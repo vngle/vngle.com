@@ -6,7 +6,7 @@
 
 const axios = require(`axios`)
 
-exports.createPages = async ({ actions }) => {
+const createInsta = async ({ createPage }) => {
   const endpoint = "https://www.instagram.com/graphql/query/"
   const queryHash = "3913773caadd10357fba8b1ef4c89be3"
   const userId = "4046633900"
@@ -14,7 +14,9 @@ exports.createPages = async ({ actions }) => {
 
   // because only have 1 front page now, allFeed = filtered CP feed
   let allFeed = []
-  let feedMetadata = { has_next_page: true }
+  let feedMetadata = {
+    has_next_page: true,
+  }
 
   // fetch all posts from instagram
   while (feedMetadata.has_next_page) {
@@ -53,10 +55,82 @@ exports.createPages = async ({ actions }) => {
   allFeed.forEach(post => {
     const slug = post.node.shortcode
 
-    actions.createPage({
+    createPage({
+      // NO hard code city page in the future
       path: `/collegepark/${slug}/`,
       component: require.resolve(`./src/templates/storyPost.jsx`),
       context: { post },
     })
   })
+}
+
+const createContentful = async (graphql, { createPage }) => {
+  const {
+    data: {
+      allContentfulCampaign: { edges: campaigns },
+    },
+  } = await graphql(`
+    query {
+      allContentfulCampaign {
+        edges {
+          node {
+            title
+            id
+            description {
+              description
+            }
+            cover {
+              file {
+                details {
+                  size
+                }
+              }
+              fluid {
+                src
+              }
+            }
+            stories {
+              title
+              author
+              email
+              id
+              mediaContent {
+                fixed {
+                  src
+                }
+                file {
+                  contentType
+                }
+                id
+              }
+              caption {
+                caption
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  campaigns.forEach(({ node: campaign }) => {
+    createPage({
+      path: `/collegepark/${campaign.id}`,
+      component: require.resolve(`./src/templates/campaign.jsx`),
+      context: { campaign },
+    })
+
+    campaign.stories !== null &&
+      campaign.stories.forEach(story => {
+        createPage({
+          path: `/collegepark/${campaign.id}/${story.id}`,
+          component: require.resolve(`./src/templates/story.jsx`),
+          context: { story },
+        })
+      })
+  })
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+  await Promise.all([createInsta(actions), createContentful(graphql, actions)])
 }
