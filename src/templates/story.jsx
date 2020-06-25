@@ -55,7 +55,12 @@ export default ({ pageContext: { story }, location }) => {
             } else {
               mediaElement = (
                 <audio>
-                  <track />
+                  <track
+                    src=""
+                    kind="captions"
+                    srcLang="en"
+                    label="english_captions"
+                  />
                 </audio>
               )
             }
