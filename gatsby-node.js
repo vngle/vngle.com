@@ -65,11 +65,7 @@ const createInsta = async ({ createPage }) => {
 }
 
 const createContentful = async (graphql, { createPage }) => {
-  const {
-    data: {
-      allContentfulCampaign: { edges: campaigns },
-    },
-  } = await graphql(`
+  const query = graphql(`
     {
       allContentfulCampaign {
         edges {
@@ -112,6 +108,12 @@ const createContentful = async (graphql, { createPage }) => {
       }
     }
   `)
+
+  const {
+    data: {
+      allContentfulCampaign: { edges: campaigns },
+    },
+  } = await query
 
   campaigns.forEach(({ node: campaign }) => {
     createPage({
