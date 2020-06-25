@@ -64,10 +64,12 @@ const createInsta = async ({ createPage }) => {
   })
 }
 
-exports.createPages = async ({ graphql, actions }) => {
-  await createInsta(actions)
-
-  const result = await graphql(`
+const createContentful = async (graphql, { createPage }) => {
+  const {
+    data: {
+      allContentfulCampaign: { edges: campaigns },
+    },
+  } = await graphql(`
     {
       allContentfulCampaign {
         edges {
@@ -111,14 +113,8 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const {
-    data: {
-      allContentfulCampaign: { edges: campaigns },
-    },
-  } = result
-
   campaigns.forEach(({ node: campaign }) => {
-    actions.createPage({
+    createPage({
       path: `/collegepark/${campaign.id}`,
       component: require.resolve(`./src/templates/campaign.jsx`),
       context: { campaign },
@@ -126,11 +122,15 @@ exports.createPages = async ({ graphql, actions }) => {
 
     campaign.stories !== null &&
       campaign.stories.forEach(story => {
-        actions.createPage({
+        createPage({
           path: `/collegepark/${campaign.id}/${story.id}`,
           component: require.resolve(`./src/templates/story.jsx`),
           context: { story },
         })
       })
   })
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+  await Promise.all([createInsta(actions), createContentful(graphql, actions)])
 }
