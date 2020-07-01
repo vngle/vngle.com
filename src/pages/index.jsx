@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import {
   Jumbotron,
   Container,
@@ -148,23 +149,27 @@ const IndexPage = () => {
         </Row>
       </HeroContainer>
 
-      {/* <Jumbotron className="bg-primary py-4">
+      <Jumbotron className="bg-primary py-5 mb-5">
         <Container>
-          <Row className="align-items-center">
-            <Col md={2}>
-              <Image src={CityLogo} alt="City logo" width="100%" />
+          <Row className="align-items-center justify-content-center">
+            <Col xs="auto">
+              <Subtitle className="mb-sm-0 mb-4 mx-auto">
+                Our first city front page is live!
+              </Subtitle>
             </Col>
-            <Col>
-              <h1>
-                <i>Greatest Artist On the Southside</i>
-              </h1>
-            </Col>
-            <Col md={2}>
-              <Button variant="outline-dark">Learn More</Button>
+            <Col xs="auto">
+              <Button
+                variant="outline-dark"
+                size="md"
+                as={Link}
+                to="/collegepark"
+              >
+                See Coverage Now
+              </Button>
             </Col>
           </Row>
         </Container>
-      </Jumbotron> */}
+      </Jumbotron>
 
       <TopFeatureContainer>
         <Title className="display-3">
@@ -274,7 +279,7 @@ const IndexPage = () => {
 
 const HeroContainer = styled(Container)`
   margin-top: 2rem;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
 
   h1 {
     line-height: 1.4em;
