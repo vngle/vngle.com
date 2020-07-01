@@ -45,7 +45,8 @@ export default ({ data }) => (
           </div>
           <Row className="align-items-center justify-content-center">
             {data.allContentfulCampaign.edges.map(({ node: campaign }) => {
-              const bgSrc = campaign.cover.fixed.src
+              // if no cover image specified, a div with primary background color is used as fallback
+              const bgSrc = campaign.cover && campaign.cover.fixed.src
 
               return (
                 <CampaignCol
@@ -55,16 +56,21 @@ export default ({ data }) => (
                   md={4}
                   lg
                   xl={3}
+                  hasCover={bgSrc}
                 >
                   <h1>{campaign.title}</h1>
                   <div className="shade-overlay shadow rounded">
-                    {/* use Gatsby Image on fetched images */}
-                    <img
-                      alt="Campaign background"
-                      src={bgSrc}
-                      width="100%"
-                      className="shadow"
-                    />
+                    {/* use Gatsby Image on fetched images? */}
+
+                    {bgSrc === null ? (
+                      <div className="bg" />
+                    ) : (
+                      <img
+                        alt="Campaign background"
+                        src={bgSrc}
+                        className="bg"
+                      />
+                    )}
                   </div>
                   <Link
                     to={`/collegepark/${campaign.id}`}
@@ -182,9 +188,13 @@ const CampaignCol = styled(Col)`
     overflow: hidden;
   }
 
-  img {
+  .bg {
     position: relative;
     z-index: -1;
+    margin: 0 auto;
+    background: ${({ theme }) => theme.colors.primary};
+    width: ${({ hasCover }) => hasCover && "100%"};
+    height: ${({ hasCover }) => (hasCover ? "100%" : "250px")};
   }
 
   .shade-overlay {
