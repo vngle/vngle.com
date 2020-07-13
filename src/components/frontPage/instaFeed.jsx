@@ -12,7 +12,7 @@ const InstaFeed = () => {
   })
   const [loading, setLoading] = useState(true)
   const endpoint = "https://www.instagram.com/graphql/query/"
-  const queryHash = "3913773caadd10357fba8b1ef4c89be3" // public; no need to hide
+  const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1" // public; no need to hide
 
   // fetch insta using axios
   // merge with fetchNext() in future

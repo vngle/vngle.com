@@ -8,7 +8,7 @@ const axios = require(`axios`)
 
 const createInsta = async ({ createPage }) => {
   const endpoint = "https://www.instagram.com/graphql/query/"
-  const queryHash = "3913773caadd10357fba8b1ef4c89be3"
+  const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1"
   const userId = "4046633900"
   const maxNodePerRequest = 50
 

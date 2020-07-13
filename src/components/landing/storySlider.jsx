@@ -25,7 +25,7 @@ const StorySlider = () => {
   useEffect(() => {
     const fetchInstaFeed = async () => {
       const endpoint = "https://www.instagram.com/graphql/query/"
-      const queryHash = "3913773caadd10357fba8b1ef4c89be3" // is this permanent?
+      const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1" // is this permanent?
 
       try {
         const response = await axios.get(endpoint, {
