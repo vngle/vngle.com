@@ -62,12 +62,14 @@ const StorySlider = () => {
       <Col lg={7}>
         <PhoneContainer className="shadow">
           <AutoplaySlider {...sliderConfig}>
-            {instaFeed.map(post => {
-              const caption = post.node.edge_media_to_caption.edges[0].node.text
+            {instaFeed
+              .filter(post => post.node.is_video)
+              .map(post => {
+                const caption =
+                  post.node.edge_media_to_caption.edges[0].node.text
 
-              return (
-                <div key={post.node.id}>
-                  {post.node.is_video ? (
+                return (
+                  <div key={post.node.id}>
                     <SlideVideo
                       src={post.node.video_url}
                       autoPlay
@@ -75,17 +77,9 @@ const StorySlider = () => {
                       caption={caption}
                       playsInline
                     />
-                  ) : (
-                    <img
-                      src={post.node.display_url}
-                      alt={caption}
-                      caption={caption}
-                      width="100%"
-                    />
-                  )}
-                </div>
-              )
-            })}
+                  </div>
+                )
+              })}
           </AutoplaySlider>
         </PhoneContainer>
       </Col>
