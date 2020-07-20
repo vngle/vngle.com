@@ -10,4 +10,4 @@ import "typeface-playfair-display"
 // not global but can't seem to override in component file
 import "react-awesome-slider/dist/styles.css"
 
-import "./static/styles/main.scss"
+import "./static/scss/main.scss"
