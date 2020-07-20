@@ -76,6 +76,7 @@ const StorySlider = () => {
                       muted
                       caption={caption}
                       playsInline
+                      loop
                     />
                   </div>
                 )
