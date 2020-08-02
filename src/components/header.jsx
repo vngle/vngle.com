@@ -82,16 +82,7 @@ const StyledHeader = styled.header`
           font-weight: bold;
           font-size: 1.25rem;
           margin-left: 1rem;
-
-          .nav-link {
-            padding: 0;
-            margin: 0;
-          }
-
-          .nav-link:hover {
-            color: ${props => props.theme.colors.dark};
-            transition: color 0.3s;
-          }
+          transition: color 0.3s;
         }
 
         .nav-link:hover {
