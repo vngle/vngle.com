@@ -12,7 +12,6 @@ export default () => {
   const team = [
     { name: "Blake Stoner", position: "Founder & Chief Reporter" },
     { name: "Jaime Fernandez", position: "Strategy & Partnerships" },
-    { name: "Jingwa Fohba", position: "Community Design" },
     { name: "Matthew Ramsay", position: "Operations & Outreach" },
     { name: "Kenneth Chen", position: "Technology Lead" },
   ].map((profile, i) => {
