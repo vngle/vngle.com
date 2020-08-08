@@ -57,6 +57,7 @@ const NewsFeed = () => {
                   href={article.url}
                   className="text-decoration-none text-dark stretched-link"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   {article.name}
                 </a>
