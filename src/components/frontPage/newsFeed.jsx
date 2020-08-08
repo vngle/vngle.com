@@ -56,6 +56,7 @@ const NewsFeed = () => {
                 <a
                   href={article.url}
                   className="text-decoration-none text-dark stretched-link"
+                  target="_blank"
                 >
                   {article.name}
                 </a>

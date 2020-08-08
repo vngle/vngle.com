@@ -38,7 +38,7 @@ export default () => (
 
     <Jumbotron className="bg-primary" as="section">
       <Container>
-        <h1>
+        <h1 className="mb-0">
           <em>Where We Are Now</em> is our national docuseries to develop
           grassroots news across America.
         </h1>

@@ -56,7 +56,7 @@ export default ({ data }) => (
                   md={4}
                   lg
                   xl={3}
-                  hasCover={bgSrc}
+                  hascover={bgSrc}
                 >
                   <h1>{campaign.title}</h1>
                   <div className="shade-overlay shadow rounded">
@@ -193,8 +193,8 @@ const CampaignCol = styled(Col)`
     z-index: -1;
     margin: 0 auto;
     background: ${({ theme }) => theme.colors.primary};
-    width: ${({ hasCover }) => hasCover && "100%"};
-    height: ${({ hasCover }) => (hasCover ? "100%" : "250px")};
+    width: ${({ hascover }) => hascover && "100%"};
+    height: ${({ hascover }) => (hascover ? "100%" : "250px")};
   }
 
   .shade-overlay {

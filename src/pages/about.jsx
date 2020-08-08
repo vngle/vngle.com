@@ -24,12 +24,13 @@ export default () => {
 
       <Jumbotron className="bg-primary" as="section">
         <Container>
-          <h1>
+          <h1 className="mb-0">
             We cover the stories you don’t hear and the perspectives you don’t
             get.
           </h1>
         </Container>
       </Jumbotron>
+
       <Container as="article">
         <section>
           <h2>“Various angles” on news for communities by communities.</h2>
