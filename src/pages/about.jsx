@@ -1,5 +1,6 @@
 import React from "react"
 import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -95,7 +96,11 @@ export default () => {
               <Col lg={4} md={6} xs={12} key={i} className="text-center mb-4">
                 <h2>{profile.name}</h2>
                 <p>{profile.position}</p>
-                <img src={profile.img} alt="Profile of team members" />
+                <ProfileImg
+                  src={profile.img}
+                  alt="Profile of team members"
+                  width="100%"
+                />
               </Col>
             ))}
           </Row>
@@ -104,3 +109,8 @@ export default () => {
     </Layout>
   )
 }
+
+const ProfileImg = styled.img`
+  border-radius: 50%;
+  border: 10px solid ${props => props.theme.colors.primary};
+`

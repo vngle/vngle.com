@@ -1,6 +1,6 @@
-import Blake from "./blake.png"
-import Jaime from "./jaime.png"
-import Kenneth from "./kenneth.png"
-import Matthew from "./matthew.png"
+import Blake from "./blake.jpg"
+import Jaime from "./jaime.jpg"
+import Kenneth from "./kenneth.jpg"
+import Matthew from "./matthew.jpg"
 
 export default [Blake, Jaime, Matthew, Kenneth]

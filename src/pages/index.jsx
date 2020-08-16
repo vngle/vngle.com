@@ -21,13 +21,17 @@ import ActionCard from "../components/landing/actionCard"
 import World from "../../static/images/landing/world.svg"
 import Culture from "../../static/images/landing/culture.svg"
 import Transparent from "../../static/images/landing/transparent.svg"
+
 import Search from "../../static/images/landing/search.svg"
 import Request from "../../static/images/landing/request.svg"
 import Capture from "../../static/images/landing/capture.svg"
 import Distribute from "../../static/images/landing/distribute.svg"
+
 import MozillaLogo from "../../static/images/landing/mozilla.png"
 import ColumbiaLogo from "../../static/images/landing/columbia-tamer.png"
 import GoodieNationLogo from "../../static/images/landing/goodie-nation.png"
+import EnvisionLogo from "../../static/images/landing/envision.png"
+import DivIncLogo from "../../static/images/landing/divinc.png"
 
 const IndexPage = () => {
   const heroBtn = [
@@ -111,6 +115,33 @@ const IndexPage = () => {
           "https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true",
         text: "Report a story",
       },
+    },
+  ]
+  const workedWithData = [
+    {
+      src: MozillaLogo,
+      alt: "Mozilla logo",
+      href: "https://builders.mozilla.community/",
+    },
+    {
+      src: ColumbiaLogo,
+      alt: "Columbia Tamer Center logo",
+      href: "https://www8.gsb.columbia.edu/socialenterprise/",
+    },
+    {
+      src: EnvisionLogo,
+      alt: "Envision logo",
+      href: "https://www.envisionaccelerator.com/",
+    },
+    {
+      src: DivIncLogo,
+      alt: "DivInc logo",
+      href: "https://www.divinc.org/apply",
+    },
+    {
+      src: GoodieNationLogo,
+      alt: "Goodie Nation logo",
+      href: "https://goodienation.org/",
     },
   ]
 
@@ -248,29 +279,15 @@ const IndexPage = () => {
           <h1 className="mb-4">Who We've Worked With</h1>
         </Row>
         <Row className="align-items-center text-center">
-          <Col lg sm={12}>
-            <a href="https://www.mozilla.org">
-              <img alt="Mozilla logo" src={MozillaLogo} width={200} />
-            </a>
-          </Col>
-          <Col lg sm={12}>
-            <a href="https://www8.gsb.columbia.edu/socialenterprise/">
-              <img
-                alt="Columbia Tamer Center logo"
-                src={ColumbiaLogo}
-                width={200}
-              />
-            </a>
-          </Col>
-          <Col lg sm={12}>
-            <a href="https://goodienation.org/">
-              <img
-                alt="Goodie Nation logo"
-                src={GoodieNationLogo}
-                width={200}
-              />
-            </a>
-          </Col>
+          {workedWithData.map(({ src, alt, href }, i) => {
+            return (
+              <Col md={4} sm={12} className="mb-5">
+                <a href={href}>
+                  <img alt={alt} src={src} width={200} />
+                </a>
+              </Col>
+            )
+          })}
         </Row>
       </Container>
     </Layout>
