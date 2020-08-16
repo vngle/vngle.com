@@ -71,3 +71,6 @@ yarn-error.log
 
 # IntelijIDEA
 .idea
+
+# Local Netlify folder
+.netlify
