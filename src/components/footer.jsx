@@ -1,8 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Container, Row, Col, Nav, Badge } from "react-bootstrap"
 import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi"
 import styled from "styled-components"
+
+import Link from "../components/link"
 
 import Logo from "../../static/images/logo.png"
 
@@ -36,12 +37,15 @@ export default () => (
           <Nav.Item className="pb-2 text-uppercase font-weight-bold">
             Vngle
           </Nav.Item>
+          <Link
+            to="https://www.notion.so/vngle/Careers-Vngle-ef8a5667e86b4c129a88538d04ae3f00"
+            className="nav-link text-muted"
+          >
+            Careers
+          </Link>
           <Link to="/wwan" className="nav-link text-muted">
             Where We Are Now
           </Link>
-          {/* <Nav.Link href="https://medium.com/vngle" className="text-muted">
-            Blog
-          </Nav.Link> */}
           <Link to="/about" className="text-muted nav-link">
             About
           </Link>

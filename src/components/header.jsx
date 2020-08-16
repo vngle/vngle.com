@@ -1,68 +1,73 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import { Container, Navbar, Nav, Dropdown, Button } from "react-bootstrap"
 
 import Logo from "../../static/images/logo.png"
+import Link from "./link"
 
-const Header = ({ siteTitle }) => (
-  <StyledHeader>
-    <Navbar collapseOnSelect expand="lg" className="p-4">
-      <Container>
-        <Navbar.Brand>
-          <Link to="/" title={siteTitle}>
-            <img alt="Vngle logo" src={Logo} height="47" />
-          </Link>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse className="justify-content-end text-center">
-          <Nav>
-            <Nav.Item>
-              <Link to="/wwan" className="nav-link" eventkey="1">
-                Where We Are Now
-              </Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Link to="/about" className="nav-link" eventkey="2">
-                About
-              </Link>
-            </Nav.Item>
-            {/* <Nav.Link href="https://medium.com/vngle" eventkey="3">
-              Blog
-            </Nav.Link> */}
-            <Dropdown as={Nav.Item}>
-              <Dropdown.Toggle as={Button}>Get Involved</Dropdown.Toggle>
-              <Dropdown.Menu role="menu">
-                <Dropdown.Item
-                  role="menuitem"
-                  href="http://eepurl.com/g1cJk5"
-                  eventkey="4.1"
-                >
-                  Subscribe For Updates
-                </Dropdown.Item>
-                <Dropdown.Item
-                  role="menuitem"
-                  href="https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true"
-                  eventkey="4.2"
-                >
-                  Report a Story
-                </Dropdown.Item>
-                <Dropdown.Item
-                  role="menuitem"
-                  href="https://blake680703.typeform.com/to/zwc2R2og"
-                  eventkey="4.3"
-                >
-                  Request Coverage
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  </StyledHeader>
-)
+const Header = ({ siteTitle }) => {
+  const navLinks = [
+    { name: "College Park", to: "/collegepark" },
+    {
+      name: "Careers",
+      to:
+        "https://www.notion.so/vngle/Careers-Vngle-ef8a5667e86b4c129a88538d04ae3f00",
+    },
+    { name: "Where We Are Now", to: "/wwan" },
+    { name: "About", to: "/about" },
+  ]
+  const dropdownLinks = [
+    { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
+    { name: "Report a Story", to: "/report" },
+    {
+      name: "Request Coverage",
+      to: "https://blake680703.typeform.com/to/zwc2R2og",
+    },
+  ]
+
+  return (
+    <StyledHeader>
+      <Navbar collapseOnSelect expand="lg" className="p-4">
+        <Container>
+          <Navbar.Brand>
+            <Link to="/" title={siteTitle}>
+              <img alt="Vngle logo" src={Logo} height="47" />
+            </Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse className="justify-content-end text-center">
+            <Nav>
+              {navLinks.map((link, i) => {
+                return (
+                  <Nav.Item as="div" key={i} className="mx-lg-2">
+                    <Link to={link.to} className="nav-link">
+                      {link.name}
+                    </Link>
+                  </Nav.Item>
+                )
+              })}
+              <Dropdown as={Nav.Item}>
+                <Dropdown.Toggle as={Button} className="ml-lg-2">
+                  Get Involved
+                </Dropdown.Toggle>
+                <Dropdown.Menu role="menu">
+                  {dropdownLinks.map((link, i) => {
+                    return (
+                      <Dropdown.Item as="div" key={i} role="menu-item">
+                        <Link to={link.to}>{link.name}</Link>
+                      </Dropdown.Item>
+                    )
+                  })}
+                </Dropdown.Menu>
+              </Dropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </StyledHeader>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
@@ -81,13 +86,17 @@ const StyledHeader = styled.header`
           color: ${props => props.theme.colors.dark};
           font-weight: bold;
           font-size: 1.25rem;
-          margin-left: 1rem;
           transition: color 0.3s;
         }
 
         .nav-link:hover {
           color: ${props => props.theme.colors.primary};
           transition: color 0.3s;
+        }
+
+        .dropdown-item a {
+          color: ${props => props.theme.colors.dark};
+          text-decoration: none;
         }
       }
 
