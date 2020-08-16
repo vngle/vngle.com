@@ -97,7 +97,7 @@ const IndexPage = () => {
         </>
       ),
       btn: {
-        href: "https://blake680703.typeform.com/to/zwc2R2og",
+        to: "https://blake680703.typeform.com/to/zwc2R2og",
         text: "Request coverage",
       },
     },
@@ -111,8 +111,7 @@ const IndexPage = () => {
         </>
       ),
       btn: {
-        href:
-          "https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true",
+        to: "/report",
         text: "Report a story",
       },
     },
@@ -281,7 +280,7 @@ const IndexPage = () => {
         <Row className="align-items-center text-center">
           {workedWithData.map(({ src, alt, href }, i) => {
             return (
-              <Col md={4} sm={12} className="mb-5">
+              <Col md={4} sm={12} className="mb-5" key={i}>
                 <a href={href}>
                   <img alt={alt} src={src} width={200} />
                 </a>

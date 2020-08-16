@@ -2,13 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import { Card, Button } from "react-bootstrap"
 
+import Link from "../../components/link"
+
 const ActionCard = ({ title, text, btn }) => {
   return (
     <StyledCard>
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{text}</Card.Text>
-        <Button size="lg" href={btn.href}>
+        <Button size="lg" to={btn.to} as={Link}>
           {btn.text}
         </Button>
       </Card.Body>
