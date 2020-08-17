@@ -37,7 +37,10 @@ export default () => (
           <Nav.Item className="pb-2 text-uppercase font-weight-bold">
             Vngle
           </Nav.Item>
-          <Link to="/careers" className="nav-link text-muted">
+          <Link
+            to="https://www.notion.so/vngle/Careers-Vngle-ef8a5667e86b4c129a88538d04ae3f00"
+            className="nav-link text-muted"
+          >
             Careers
           </Link>
           <Link to="/wwan" className="nav-link text-muted">
