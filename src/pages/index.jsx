@@ -54,17 +54,15 @@ const IndexPage = () => {
     },
     {
       imgSrc: Transparent,
-      title: "Credible Transparency",
+      title: "Credible & Verifiable Transparency",
       description:
         "There’s no agenda, just real stories from real people on the communities they love.",
-      offset: 1,
     },
     {
       imgSrc: Search,
-      title: "Vetted + Verifiable ",
+      title: "Aggregated Vetted Sources",
       description:
         "Our reality reporters are vetted and their stories are verified by communities.",
-      offset: 1,
     },
   ]
   const processData = [
