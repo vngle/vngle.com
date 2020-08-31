@@ -147,8 +147,8 @@ const IndexPage = () => {
       <SEO title="Various angles on local news driven by you" />
 
       <HeroContainer>
-        <Row>
-          <Col className="first text-md-left text-center" md={6} sm={12}>
+        <Row className="row-intro">
+          <Col className="col-intro text-md-left text-center" md={6} sm={12}>
             <h1 className="display-4 font-weight-bolder mb-4">
               Local Reality News
               <br />
@@ -170,6 +170,19 @@ const IndexPage = () => {
               <Badge variant="primary">Sign up today</Badge>
             </Subtitle>
           </Col>
+          <Col className="col-hook">
+            <div className="embed-responsive embed-responsive-4by3">
+              <iframe
+                src="https://www.youtube.com/embed/nRzsnAdlqOc?autoplay=1&modestbranding=1&mute=1"
+                title="Vngle promo video"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="embed-responsive-item"
+              ></iframe>
+            </div>
+          </Col>
+        </Row>
+        <Row>
           <Col>
             {/* Consider hiding form in small screen sizes */}
             <NewsSubCard />
@@ -303,13 +316,32 @@ const HeroContainer = styled(Container)`
     justify-content: center;
   }
 
-  .first {
+  .row-intro {
+    margin-bottom: 3rem;
+  }
+
+  .col-intro {
     .btn {
       font-size: 1.3rem;
       padding: 0.5rem 2rem;
       border-radius: 50px;
       font-weight: bold;
     }
+  }
+
+  .col-hook {
+    display: flex;
+    align-items: center;
+    background-color: ${props => props.theme.colors.primary};
+    background-clip: content-box;
+    border-radius: 40px;
+    transition: all 0.2s;
+  }
+
+  .col-hook:hover {
+    filter: drop-shadow(0 1rem 3rem rgba(0, 0, 0, 0.175));
+    border-radius: 0px;
+    transition: all 0.2s;
   }
 `
 
