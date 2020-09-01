@@ -14,8 +14,6 @@ export default ({ pageContext: { story }, location }) => {
     identifier: story.id,
   }
 
-  console.log(story)
-
   return (
     <Layout>
       <SEO title="College Park" />

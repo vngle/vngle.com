@@ -31,11 +31,15 @@ export default ({ pageContext: { campaign } }) => {
                 <StoryCol key={story.id} md={"auto"} className="mb-4">
                   <p>{story.caption.caption}</p>
                   <div className="shade-overlay shadow rounded">
-                    <img
-                      alt="story"
-                      src={story.mediaContent[0].fixed.src}
-                      className="shadow"
-                    />
+                    {story.mediaContent[0].fixed ? (
+                      <img
+                        alt="story"
+                        src={story.mediaContent[0].fixed.src}
+                        className="shadow"
+                      />
+                    ) : (
+                      <div className="bg-no-thumbnail" />
+                    )}
                   </div>
                   <Link
                     to={`/collegepark/${campaign.id}/${story.id}`}
@@ -107,6 +111,12 @@ const StoryCol = styled(Col)`
     width: 100%;
     position: relative;
     z-index: -1;
+  }
+
+  .bg-no-thumbnail {
+    background: ${props => props.theme.colors.primary};
+    width: 300px;
+    height: 300px;
   }
 
   .shade-overlay {
