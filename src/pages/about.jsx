@@ -41,6 +41,13 @@ export default () => {
             that get limited to no news coverage, by capturing human-interests
             stories that go underrepresented.
           </p>
+          <blockquote class="blockquote">
+            <p>
+              “Vngle's mission is to build a more interconnected society, by
+              ensuring every person in every city has diverse local coverage.”
+            </p>
+          </blockquote>
+
           <Figure className="d-block">
             <Figure.Image
               alt="Vngle definition"

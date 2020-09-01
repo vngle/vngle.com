@@ -49,11 +49,8 @@ export default () => (
           <Link to="/about" className="text-muted nav-link">
             About
           </Link>
-          <Link
-            to="https://docs.google.com/document/d/1UEmXK_fVO8WXzFNiEKG86t8Gs-Yd0QywUKWEW6vHcTg/edit"
-            className="text-muted nav-link"
-          >
-            Privacy Policy
+          <Link to="/privacy" className="text-muted nav-link">
+            Privacy
           </Link>
           <Nav.Link
             href="https://docs.google.com/forms/d/e/1FAIpQLScpXPlS3MOqr9-P5E4A_F2JFt4dfspI-OY2W-xlAPWUOT9yoA/viewform"
