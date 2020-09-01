@@ -19,16 +19,16 @@ export default ({ pageContext: { campaign } }) => {
           </Col>
         </Row>
       </StyledJumbotron>
-      <Container>
+      <Container fluid>
         {campaign.stories === null ? (
           <h1 className="text-muted text-center">
             No stories reported at the moment. Come back later!
           </h1>
         ) : (
-          <Row>
+          <StoryRow>
             {campaign.stories.map(story => {
               return (
-                <StoryCol key={story.id} lg={3} md={4} sm={6} className="mb-4">
+                <StoryCol key={story.id} md={"auto"} className="mb-4">
                   <p>{story.caption.caption}</p>
                   <div className="shade-overlay shadow rounded">
                     <img
@@ -44,7 +44,7 @@ export default ({ pageContext: { campaign } }) => {
                 </StoryCol>
               )
             })}
-          </Row>
+          </StoryRow>
         )}
       </Container>
     </Layout>
@@ -80,7 +80,13 @@ const StyledJumbotron = styled(Jumbotron)`
   }
 `
 
+const StoryRow = styled(Row)`
+  align-items: center;
+`
+
 const StoryCol = styled(Col)`
+  display: flex;
+  align-items: flex-end;
   position: relative;
   text-align: left;
   color: white;

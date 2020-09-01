@@ -100,6 +100,7 @@ const createContentful = async (graphql, { createPage }) => {
                 }
                 file {
                   contentType
+                  url
                 }
                 id
               }

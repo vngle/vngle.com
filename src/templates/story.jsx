@@ -14,6 +14,8 @@ export default ({ pageContext: { story }, location }) => {
     identifier: story.id,
   }
 
+  console.log(story)
+
   return (
     <Layout>
       <SEO title="College Park" />
@@ -41,7 +43,10 @@ export default ({ pageContext: { story }, location }) => {
                     autoPlay
                     playsInline
                   >
-                    <source type={content.file.contentType} />
+                    <source
+                      src={content.file.url}
+                      type={content.file.contentType}
+                    />
                     Sorry, your browser doesn't support embedded videos.
                     <track
                       src=""
