@@ -96,11 +96,13 @@ const StyledJumbotron = styled(Jumbotron)`
 
 const StoryRow = styled(Row)`
   align-items: center;
+  justify-content: center;
 `
 
 const StoryCol = styled(Col)`
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   position: relative;
   text-align: left;
   color: white;
