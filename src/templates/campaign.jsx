@@ -2,11 +2,28 @@ import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Jumbotron } from "react-bootstrap"
 import styled from "styled-components"
+import VideoThumbnail from "react-video-thumbnail"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 
 export default ({ pageContext: { campaign } }) => {
+  console.log(campaign)
+
+  const createThumbnail = ({ file, fixed }) => {
+    if (file.contentType.startsWith("image")) {
+      return <img alt="story" src={fixed.src} className="shadow" />
+    } else if (file.contentType.startsWith("video")) {
+      return (
+        <VideoThumbnailContainer>
+          <VideoThumbnail videoUrl={file.url} />
+        </VideoThumbnailContainer>
+      )
+    } else {
+      return <NoThumbnailDiv />
+    }
+  }
+
   return (
     <Layout>
       <SEO title={campaign.title} />
@@ -29,22 +46,15 @@ export default ({ pageContext: { campaign } }) => {
             {campaign.stories.map(story => {
               return (
                 <StoryCol key={story.id} md={"auto"} className="mb-4">
-                  <p>{story.caption.caption}</p>
-                  <div className="shade-overlay shadow rounded">
-                    {story.mediaContent[0].fixed ? (
-                      <img
-                        alt="story"
-                        src={story.mediaContent[0].fixed.src}
-                        className="shadow"
-                      />
-                    ) : (
-                      <div className="bg-no-thumbnail" />
-                    )}
+                  <div className="story-container shadow rounded">
+                    <p>{story.caption.caption}</p>
+
+                    {createThumbnail(story.mediaContent[0])}
+                    <Link
+                      to={`/collegepark/${campaign.id}/${story.id}`}
+                      className="stretched-link"
+                    />
                   </div>
-                  <Link
-                    to={`/collegepark/${campaign.id}/${story.id}`}
-                    className="stretched-link"
-                  />
                 </StoryCol>
               )
             })}
@@ -113,13 +123,8 @@ const StoryCol = styled(Col)`
     z-index: -1;
   }
 
-  .bg-no-thumbnail {
-    background: ${props => props.theme.colors.primary};
-    width: 300px;
-    height: 300px;
-  }
-
-  .shade-overlay {
+  .story-container {
+    position: relative;
     background: linear-gradient(
       180deg,
       rgba(33, 37, 41, 0) 0%,
@@ -128,4 +133,14 @@ const StoryCol = styled(Col)`
     );
     overflow: hidden;
   }
+`
+
+const VideoThumbnailContainer = styled.div`
+  width: 300px;
+`
+
+const NoThumbnailDiv = styled.div`
+  background: ${props => props.theme.colors.primary};
+  width: 300px;
+  height: 300px;
 `
