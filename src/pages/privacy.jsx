@@ -11,7 +11,7 @@ export default () => {
 
       <Jumbotron className="bg-primary" as="section">
         <Container>
-          <h1 className="mb-0">Vngle Privacy Policy</h1>
+          <h1 className="mb-0">Our Privacy Policy</h1>
         </Container>
       </Jumbotron>
 

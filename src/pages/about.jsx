@@ -41,11 +41,11 @@ export default () => {
             that get limited to no news coverage, by capturing human-interests
             stories that go underrepresented.
           </p>
-          <blockquote class="blockquote">
-            <p>
+          <blockquote class="blockquote font-weight-bold font-italic font-serif text-center">
+            <h2>
               “Vngle's mission is to build a more interconnected society, by
               ensuring every person in every city has diverse local coverage.”
-            </p>
+            </h2>
           </blockquote>
 
           <Figure className="d-block">
