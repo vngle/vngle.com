@@ -62,9 +62,9 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/vngle/vngle.com"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/vngle/vngle.com/issues"
   }
 }
