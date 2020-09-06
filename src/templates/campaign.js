@@ -8,8 +8,6 @@ import SEO from "../components/Seo";
 import Layout from "../components/Layout";
 
 export default ({ pageContext: { campaign } }) => {
-  console.log(campaign);
-
   const createThumbnail = ({ file, fixed }) => {
     if (file.contentType.startsWith("image")) {
       return <img alt="story" src={fixed.src} className="shadow" />;

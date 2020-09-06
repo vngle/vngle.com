@@ -35,8 +35,6 @@ const NewsFeed = () => {
   ) : (
     <div>
       {newsFeed.map((article, i) => {
-        console.log(article);
-
         let Thumbnail;
 
         // fallback logic for article card image
