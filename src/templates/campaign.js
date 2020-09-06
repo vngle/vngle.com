@@ -4,8 +4,6 @@ import { Container, Row, Col, Jumbotron } from "react-bootstrap";
 import styled from "styled-components";
 import VideoThumbnail from "react-video-thumbnail";
 
-import axios from "axios";
-
 import SEO from "../components/Seo";
 import Layout from "../components/Layout";
 
@@ -14,7 +12,6 @@ export default ({ pageContext: { campaign } }) => {
     if (file.contentType.startsWith("image")) {
       return <img alt="story" src={fixed.src} className="shadow" />;
     } else if (file.contentType.startsWith("video")) {
-      axios(file.url).then(resp => console.log(resp));
       return (
         <VideoThumbnailContainer>
           <VideoThumbnail videoUrl={file.url} />
