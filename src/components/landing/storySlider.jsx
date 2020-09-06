@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react"
-import { Row, Col, Spinner } from "react-bootstrap"
-import styled from "styled-components"
-import axios from "axios"
-import AwesomeSlider from "react-awesome-slider"
-import withAutoplay from "react-awesome-slider/dist/autoplay"
+import React, { useState, useEffect } from "react";
+import { Row, Col, Spinner } from "react-bootstrap";
+import styled from "styled-components";
+import axios from "axios";
+import AwesomeSlider from "react-awesome-slider";
+import withAutoplay from "react-awesome-slider/dist/autoplay";
 
-const AutoplaySlider = withAutoplay(AwesomeSlider)
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const StorySlider = () => {
-  const [instaFeed, setInstaFeed] = useState([])
-  const [caption, setCaption] = useState("")
-  const fetchNum = 12
+  const [instaFeed, setInstaFeed] = useState([]);
+  const [caption, setCaption] = useState("");
+  const fetchNum = 12;
 
   const sliderConfig = {
     bullets: false,
@@ -20,12 +20,12 @@ const StorySlider = () => {
       setCaption(instaFeed[0].node.edge_media_to_caption.edges[0].node.text),
     onTransitionStart: ({ nextMedia }) =>
       setCaption(nextMedia.children.props.caption),
-  }
+  };
 
   useEffect(() => {
     const fetchInstaFeed = async () => {
-      const endpoint = "https://www.instagram.com/graphql/query/"
-      const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1" // is this permanent?
+      const endpoint = "https://www.instagram.com/graphql/query/";
+      const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1"; // is this permanent?
 
       try {
         const response = await axios.get(endpoint, {
@@ -36,17 +36,17 @@ const StorySlider = () => {
               first: fetchNum,
             },
           },
-        })
+        });
 
-        const data = response.data.data.user.edge_owner_to_timeline_media.edges
-        setInstaFeed(data)
+        const data = response.data.data.user.edge_owner_to_timeline_media.edges;
+        setInstaFeed(data);
       } catch (error) {
-        console.error(error)
+        console.error(error);
       }
-    }
+    };
 
-    fetchInstaFeed()
-  }, [])
+    fetchInstaFeed();
+  }, []);
 
   return instaFeed.length === 0 ? (
     <LoadingWrapper className="d-flex flex-column justify-content-center">
@@ -66,7 +66,7 @@ const StorySlider = () => {
               .filter(post => post.node.is_video)
               .map(post => {
                 const caption =
-                  post.node.edge_media_to_caption.edges[0].node.text
+                  post.node.edge_media_to_caption.edges[0].node.text;
 
                 return (
                   <div key={post.node.id}>
@@ -79,20 +79,20 @@ const StorySlider = () => {
                       loop
                     />
                   </div>
-                )
+                );
               })}
           </AutoplaySlider>
         </PhoneContainer>
       </Col>
     </Row>
-  )
-}
+  );
+};
 
 const CaptionCol = styled(Col)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`
+`;
 
 const PhoneContainer = styled.div`
   border-color: #333;
@@ -111,7 +111,7 @@ const PhoneContainer = styled.div`
     border-radius: 1.25rem;
     overflow: hidden;
   }
-`
+`;
 
 const SlideVideo = styled.video`
   width: 100%;
@@ -120,7 +120,7 @@ const SlideVideo = styled.video`
   top: 0;
   left: 0;
   object-fit: cover;
-`
+`;
 
 const LoadingWrapper = styled.div`
   height: 50vh;
@@ -129,6 +129,6 @@ const LoadingWrapper = styled.div`
     width: 100px;
     height: 100px;
   }
-`
+`;
 
-export default StorySlider
+export default StorySlider;

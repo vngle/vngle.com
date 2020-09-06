@@ -1,10 +1,10 @@
-import PropTypes from "prop-types"
-import React from "react"
-import styled from "styled-components"
-import { Container, Navbar, Nav, Dropdown, Button } from "react-bootstrap"
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+import { Container, Navbar, Nav, Dropdown, Button } from "react-bootstrap";
 
-import Logo from "../../static/images/logo.png"
-import Link from "./link"
+import Logo from "../../static/images/logo.png";
+import Link from "./link";
 
 const Header = ({ siteTitle }) => {
   const navLinks = [
@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => {
     },
     { name: "Where We Are Now", to: "/wwan" },
     { name: "About", to: "/about" },
-  ]
+  ];
   const dropdownLinks = [
     { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
     { name: "Report a Story", to: "/report" },
@@ -24,7 +24,7 @@ const Header = ({ siteTitle }) => {
       name: "Request Coverage",
       to: "https://blake680703.typeform.com/to/zwc2R2og",
     },
-  ]
+  ];
 
   return (
     <StyledHeader>
@@ -45,7 +45,7 @@ const Header = ({ siteTitle }) => {
                       {link.name}
                     </Link>
                   </Nav.Item>
-                )
+                );
               })}
               <Dropdown as={Nav.Item}>
                 <Dropdown.Toggle as={Button} className="ml-lg-2">
@@ -57,7 +57,7 @@ const Header = ({ siteTitle }) => {
                       <Dropdown.Item as="div" key={i} role="menu-item">
                         <Link to={link.to}>{link.name}</Link>
                       </Dropdown.Item>
-                    )
+                    );
                   })}
                 </Dropdown.Menu>
               </Dropdown>
@@ -66,16 +66,16 @@ const Header = ({ siteTitle }) => {
         </Container>
       </Navbar>
     </StyledHeader>
-  )
-}
+  );
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
 const StyledHeader = styled.header`
   & {
@@ -110,6 +110,6 @@ const StyledHeader = styled.header`
       }
     }
   }
-`
+`;
 
-export default Header
+export default Header;

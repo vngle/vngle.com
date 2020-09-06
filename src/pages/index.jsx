@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 import {
   Jumbotron,
   Container,
@@ -8,30 +8,30 @@ import {
   Button,
   Image,
   Badge,
-} from "react-bootstrap"
-import styled from "styled-components"
+} from "react-bootstrap";
+import styled from "styled-components";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import NewsSubCard from "../components/landing/newsSubCard"
-import StorySlider from "../components/landing/storySlider"
-import SimpleSubForm from "../components/landing/simpleSubForm"
-import ActionCard from "../components/landing/actionCard"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import NewsSubCard from "../components/landing/newsSubCard";
+import StorySlider from "../components/landing/storySlider";
+import SimpleSubForm from "../components/landing/simpleSubForm";
+import ActionCard from "../components/landing/actionCard";
 
-import World from "../../static/images/landing/world.svg"
-import Culture from "../../static/images/landing/culture.svg"
-import Transparent from "../../static/images/landing/transparent.svg"
+import World from "../../static/images/landing/world.svg";
+import Culture from "../../static/images/landing/culture.svg";
+import Transparent from "../../static/images/landing/transparent.svg";
 
-import Search from "../../static/images/landing/search.svg"
-import Request from "../../static/images/landing/request.svg"
-import Capture from "../../static/images/landing/capture.svg"
-import Distribute from "../../static/images/landing/distribute.svg"
+import Search from "../../static/images/landing/search.svg";
+import Request from "../../static/images/landing/request.svg";
+import Capture from "../../static/images/landing/capture.svg";
+import Distribute from "../../static/images/landing/distribute.svg";
 
-import MozillaLogo from "../../static/images/landing/mozilla.png"
-import ColumbiaLogo from "../../static/images/landing/columbia-tamer.png"
-import GoodieNationLogo from "../../static/images/landing/goodie-nation.png"
-import EnvisionLogo from "../../static/images/landing/envision.png"
-import DivIncLogo from "../../static/images/landing/divinc.png"
+import MozillaLogo from "../../static/images/landing/mozilla.png";
+import ColumbiaLogo from "../../static/images/landing/columbia-tamer.png";
+import GoodieNationLogo from "../../static/images/landing/goodie-nation.png";
+import EnvisionLogo from "../../static/images/landing/envision.png";
+import DivIncLogo from "../../static/images/landing/divinc.png";
 
 const IndexPage = () => {
   const heroBtn = [
@@ -44,7 +44,7 @@ const IndexPage = () => {
       href:
         "https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true",
     },
-  ]
+  ];
   const mainFeatureData = [
     {
       imgSrc: Culture,
@@ -64,7 +64,7 @@ const IndexPage = () => {
       description:
         "Our reality reporters are vetted and their stories are verified by communities.",
     },
-  ]
+  ];
   const processData = [
     {
       title: "Local coverage requested",
@@ -84,7 +84,7 @@ const IndexPage = () => {
         "After a story is captured, it’s made public and distributed across its home community and any others that would benefit from the information.",
       imgSrc: Distribute,
     },
-  ]
+  ];
   const actionCardData = [
     {
       title: "I need coverage",
@@ -113,7 +113,7 @@ const IndexPage = () => {
         text: "Report a story",
       },
     },
-  ]
+  ];
   const workedWithData = [
     {
       src: MozillaLogo,
@@ -140,7 +140,7 @@ const IndexPage = () => {
       alt: "Goodie Nation logo",
       href: "https://goodienation.org/",
     },
-  ]
+  ];
 
   return (
     <Layout>
@@ -296,13 +296,13 @@ const IndexPage = () => {
                   <img alt={alt} src={src} width={200} />
                 </a>
               </Col>
-            )
+            );
           })}
         </Row>
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 const HeroContainer = styled(Container)`
   margin-top: 2rem;
@@ -343,7 +343,7 @@ const HeroContainer = styled(Container)`
     border-radius: 0px;
     transition: all 0.2s;
   }
-`
+`;
 
 const TopFeatureContainer = styled(Container)`
   text-align: center;
@@ -353,7 +353,7 @@ const TopFeatureContainer = styled(Container)`
     width: 100%;
     margin-top: -15vw;
   }
-`
+`;
 
 const MainFeatureContainer = styled(Container)`
   text-align: center;
@@ -365,7 +365,7 @@ const MainFeatureContainer = styled(Container)`
   .row {
     justify-content: center;
   }
-`
+`;
 
 const ProcessContainer = styled(Container)`
   margin-bottom: 7rem;
@@ -395,17 +395,17 @@ const ProcessContainer = styled(Container)`
       }
     }
   }
-`
+`;
 
 const Title = styled.h1`
   font-family: "Inter", sans-serif;
   font-weight: 800;
-`
+`;
 
 const Subtitle = styled.h2`
   font-family: "Inter", sans-serif;
   font-size: clamp(1rem, 2vw, 1.5rem);
   line-height: 1.5em;
-`
+`;
 
-export default IndexPage
+export default IndexPage;

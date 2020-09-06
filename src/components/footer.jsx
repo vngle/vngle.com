@@ -1,11 +1,11 @@
-import React from "react"
-import { Container, Row, Col, Nav, Badge } from "react-bootstrap"
-import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi"
-import styled from "styled-components"
+import React from "react";
+import { Container, Row, Col, Nav, Badge } from "react-bootstrap";
+import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
+import styled from "styled-components";
 
-import Link from "../components/link"
+import Link from "../components/link";
 
-import Logo from "../../static/images/logo.png"
+import Logo from "../../static/images/logo.png";
 
 export default () => (
   <Container as="footer" className="text-center pt-5">
@@ -72,7 +72,7 @@ export default () => (
       </p>
     </Col>
   </Container>
-)
+);
 
 const SocialRow = styled(Row)`
   font-size: 1.5rem;
@@ -80,7 +80,7 @@ const SocialRow = styled(Row)`
   a {
     color: ${({ theme }) => theme.colors.dark};
   }
-`
+`;
 
 const FooterNav = styled(Nav)`
   font-size: 14px;
@@ -88,4 +88,4 @@ const FooterNav = styled(Nav)`
   & .nav-link .badge {
     font-size: 14px;
   }
-`
+`;

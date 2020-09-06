@@ -1,13 +1,13 @@
-import React from "react"
-import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap"
-import styled from "styled-components"
+import React from "react";
+import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap";
+import styled from "styled-components";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import VngleDef from "../../static/images/about/vngle-def.png"
-import Blake from "../../static/images/about/blake-portrait.png"
-import Team from "../../static/images/about/profiles"
+import VngleDef from "../../static/images/about/vngle-def.png";
+import Blake from "../../static/images/about/blake-portrait.png";
+import Team from "../../static/images/about/profiles";
 
 export default () => {
   const team = [
@@ -16,8 +16,8 @@ export default () => {
     { name: "Matthew Ramsay", position: "Operations & Outreach" },
     { name: "Kenneth Chen", position: "Technology Lead" },
   ].map((profile, i) => {
-    return { ...profile, img: Team[i] }
-  })
+    return { ...profile, img: Team[i] };
+  });
 
   return (
     <Layout>
@@ -114,10 +114,10 @@ export default () => {
         </section>
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 const ProfileImg = styled.img`
   border-radius: 50%;
   border: 10px solid ${props => props.theme.colors.primary};
-`
+`;

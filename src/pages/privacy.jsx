@@ -1,8 +1,8 @@
-import React from "react"
-import { Container, Jumbotron } from "react-bootstrap"
+import React from "react";
+import { Container, Jumbotron } from "react-bootstrap";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 export default () => {
   return (
@@ -280,5 +280,5 @@ export default () => {
         </section>
       </Container>
     </Layout>
-  )
-}
+  );
+};

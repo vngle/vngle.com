@@ -4,30 +4,30 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const axios = require(`axios`)
+const axios = require(`axios`);
 
 const createInsta = async ({ createPage }) => {
-  const endpoint = "https://www.instagram.com/graphql/query/"
-  const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1"
-  const userId = "4046633900"
-  const maxNodePerRequest = 50
+  const endpoint = "https://www.instagram.com/graphql/query/";
+  const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1";
+  const userId = "4046633900";
+  const maxNodePerRequest = 50;
 
   // because only have 1 front page now, allFeed = filtered CP feed
-  let allFeed = []
+  let allFeed = [];
   let feedMetadata = {
     has_next_page: true,
-  }
+  };
 
   // fetch all posts from instagram
   while (feedMetadata.has_next_page) {
     variables = {
       id: userId,
       first: maxNodePerRequest,
-    }
+    };
 
     // if no end_cursor in metadata then don't include in request
     if (feedMetadata.hasOwnProperty("end_cursor")) {
-      variables.after = feedMetadata.end_cursor
+      variables.after = feedMetadata.end_cursor;
     }
 
     try {
@@ -36,33 +36,33 @@ const createInsta = async ({ createPage }) => {
           query_hash: queryHash,
           variables,
         },
-      })
-      const data = response.data.data.user.edge_owner_to_timeline_media
+      });
+      const data = response.data.data.user.edge_owner_to_timeline_media;
 
-      allFeed = [...allFeed, ...data.edges]
-      feedMetadata = data.page_info
+      allFeed = [...allFeed, ...data.edges];
+      feedMetadata = data.page_info;
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
   }
 
   allFeed = allFeed.filter(({ node }) => {
-    const caption = node.edge_media_to_caption.edges[0].node.text
+    const caption = node.edge_media_to_caption.edges[0].node.text;
 
-    return caption.includes("#CollegePark")
-  })
+    return caption.includes("#CollegePark");
+  });
 
   allFeed.forEach(post => {
-    const slug = post.node.shortcode
+    const slug = post.node.shortcode;
 
     createPage({
       // NO hard code city page in the future
       path: `/collegepark/${slug}/`,
       component: require.resolve(`./src/templates/storyPost.jsx`),
       context: { post },
-    })
-  })
-}
+    });
+  });
+};
 
 const createContentful = async (graphql, { createPage }) => {
   const {
@@ -112,14 +112,14 @@ const createContentful = async (graphql, { createPage }) => {
         }
       }
     }
-  `)
+  `);
 
   campaigns.forEach(({ node: campaign }) => {
     createPage({
       path: `/collegepark/${campaign.id}`,
       component: require.resolve(`./src/templates/campaign.jsx`),
       context: { campaign },
-    })
+    });
 
     campaign.stories !== null &&
       campaign.stories.forEach(story => {
@@ -127,11 +127,11 @@ const createContentful = async (graphql, { createPage }) => {
           path: `/collegepark/${campaign.id}/${story.id}`,
           component: require.resolve(`./src/templates/story.jsx`),
           context: { story },
-        })
-      })
-  })
-}
+        });
+      });
+  });
+};
 
 exports.createPages = async ({ graphql, actions }) => {
-  await Promise.all([createInsta(actions), createContentful(graphql, actions)])
-}
+  await Promise.all([createInsta(actions), createContentful(graphql, actions)]);
+};

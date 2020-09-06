@@ -1,11 +1,11 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
-import { Button } from "react-bootstrap"
-import styled from "styled-components"
-import { FaPen, FaTimes, FaPaperPlane, FaPlus } from "react-icons/fa"
+import React, { useState } from "react";
+import { Link } from "gatsby";
+import { Button } from "react-bootstrap";
+import styled from "styled-components";
+import { FaPen, FaTimes, FaPaperPlane, FaPlus } from "react-icons/fa";
 
 const ActionButtonGroup = () => {
-  const [isCollapsed, setIsCollapsed] = useState(true)
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
     <ButtonGroup>
@@ -40,8 +40,8 @@ const ActionButtonGroup = () => {
           </Button>
         ))}
     </ButtonGroup>
-  )
-}
+  );
+};
 
 const ButtonGroup = styled.div`
   .btn-circle {
@@ -72,5 +72,5 @@ const ButtonGroup = styled.div`
     bottom: 25px;
     right: 100px;
   }
-`
-export default ActionButtonGroup
+`;
+export default ActionButtonGroup;

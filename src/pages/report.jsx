@@ -1,20 +1,20 @@
-import React, { useState } from "react"
-import { Container, Button } from "react-bootstrap"
-import { FcOk, FcCheckmark } from "react-icons/fc"
-import { FaSlack } from "react-icons/fa"
-import styled from "styled-components"
+import React, { useState } from "react";
+import { Container, Button } from "react-bootstrap";
+import { FcOk, FcCheckmark } from "react-icons/fc";
+import { FaSlack } from "react-icons/fa";
+import styled from "styled-components";
 
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import ReportForm from "../components/report/reportForm"
+import SEO from "../components/seo";
+import Layout from "../components/layout";
+import ReportForm from "../components/report/reportForm";
 
 const Report = () => {
-  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const perks = [
     "Show off your city's culture",
     "Earn passive income",
     "Gain local influence",
-  ]
+  ];
 
   return (
     <Layout>
@@ -47,8 +47,8 @@ const Report = () => {
         )}
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 const ConfirmDiv = styled.div`
   text-align: center;
@@ -93,6 +93,6 @@ const ConfirmDiv = styled.div`
       margin-bottom: 5px;
     }
   }
-`
+`;
 
-export default Report
+export default Report;

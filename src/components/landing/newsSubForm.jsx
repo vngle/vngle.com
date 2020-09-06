@@ -1,7 +1,7 @@
-import React, { useState } from "react"
-import { Form, Button, Spinner } from "react-bootstrap"
-import styled from "styled-components"
-import DOMPurify from "dompurify"
+import React, { useState } from "react";
+import { Form, Button, Spinner } from "react-bootstrap";
+import styled from "styled-components";
+import DOMPurify from "dompurify";
 
 export default ({ status, message, onSubmitted }) => {
   const [formData, setFormData] = useState({
@@ -9,56 +9,56 @@ export default ({ status, message, onSubmitted }) => {
     ZIPCODE: "",
     NUMBER: "",
     "group[293774][4]": false,
-  })
-  const [validated, setValidated] = useState(false)
+  });
+  const [validated, setValidated] = useState(false);
 
   const handleSubmit = event => {
-    const form = event.currentTarget
+    const form = event.currentTarget;
     const submitData = {
       EMAIL: formData.EMAIL,
       ZIPCODE: formData.ZIPCODE,
       NUMBER: formData.NUMBER,
-    }
+    };
 
     // don't send checkbox status if unchecked
     // Mailchimp will populate field if any value is sent
     if (formData["group[293774][4]"]) {
-      submitData["group[293774][4]"] = formData["group[293774][4]"]
+      submitData["group[293774][4]"] = formData["group[293774][4]"];
     }
 
     if (!form.checkValidity()) {
-      event.stopPropagation()
+      event.stopPropagation();
     }
 
-    event.preventDefault()
-    setValidated(true)
-    onSubmitted(submitData)
-  }
+    event.preventDefault();
+    setValidated(true);
+    onSubmitted(submitData);
+  };
 
   const handleChange = event => {
-    const name = event.target.name
+    const name = event.target.name;
     const value =
       event.target.type === "checkbox"
         ? event.target.checked
-        : event.target.value
+        : event.target.value;
 
     setFormData({
       ...formData,
       [name]: value,
-    })
-  }
+    });
+  };
 
-  let respMessage
+  let respMessage;
 
   if (status === "success") {
     respMessage = (
       <Form.Group>
         <Form.Label className="text-success">{message}</Form.Label>
       </Form.Group>
-    )
+    );
   } else if (status === "error") {
     // Sanitize innerHTML to prevent potential XSS attacks
-    const cleanMessage = DOMPurify.sanitize(message)
+    const cleanMessage = DOMPurify.sanitize(message);
 
     respMessage = (
       <Form.Group>
@@ -67,7 +67,7 @@ export default ({ status, message, onSubmitted }) => {
           dangerouslySetInnerHTML={{ __html: cleanMessage }}
         ></Form.Label>
       </Form.Group>
-    )
+    );
   }
 
   return (
@@ -155,9 +155,9 @@ export default ({ status, message, onSubmitted }) => {
         we reach them.
       </MutedMsg>
     </Form>
-  )
-}
+  );
+};
 
 const MutedMsg = styled(Form.Text)`
   font-size: 10px;
-`
+`;

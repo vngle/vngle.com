@@ -1,19 +1,19 @@
-import React from "react"
-import { Container, Row, Col, Image } from "react-bootstrap"
-import { Disqus } from "gatsby-plugin-disqus"
+import React from "react";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import { Disqus } from "gatsby-plugin-disqus";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import useSiteMetadata from "../hooks/use-site-metadata"
+import useSiteMetadata from "../hooks/use-site-metadata";
 
 export default ({ pageContext: { post }, location }) => {
-  const { siteUrl } = useSiteMetadata()
+  const { siteUrl } = useSiteMetadata();
   const disqusConfig = {
     url: `${siteUrl}${location.pathname}`,
     identifier: post.node.id,
-  }
-  const caption = post.node.edge_media_to_caption.edges[0].node.text
+  };
+  const caption = post.node.edge_media_to_caption.edges[0].node.text;
 
   return (
     <Layout>
@@ -58,5 +58,5 @@ export default ({ pageContext: { post }, location }) => {
         </Row>
       </Container>
     </Layout>
-  )
-}
+  );
+};

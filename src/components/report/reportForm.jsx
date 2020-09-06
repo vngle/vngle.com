@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import { Form, Button, Spinner } from "react-bootstrap"
-import * as contentful from "contentful-management"
+import React, { useState } from "react";
+import { Form, Button, Spinner } from "react-bootstrap";
+import * as contentful from "contentful-management";
 
-import Dropzone from "./dropzone"
+import Dropzone from "./dropzone";
 
 const ReportForm = ({ setFormSubmitted }) => {
   const [form, setForm] = useState({
@@ -12,20 +12,20 @@ const ReportForm = ({ setFormSubmitted }) => {
     caption: "",
     campaign__covid: false,
     campaign__blm: false,
-  })
-  const [mediaFiles, setMediaFiles] = useState([])
-  const [sending, setSending] = useState(false)
+  });
+  const [mediaFiles, setMediaFiles] = useState([]);
+  const [sending, setSending] = useState(false);
 
   const client = contentful.createClient({
     accessToken: process.env.GATSBY_CONTENTFUL_MANAGEMENT_TOKEN,
-  })
+  });
 
   const handleSubmit = async event => {
-    event.preventDefault()
-    setSending(true)
+    event.preventDefault();
+    setSending(true);
 
-    const space = await client.getSpace(process.env.GATSBY_CONTENTFUL_SPACE_ID)
-    const environment = await space.getEnvironment("master")
+    const space = await client.getSpace(process.env.GATSBY_CONTENTFUL_SPACE_ID);
+    const environment = await space.getEnvironment("master");
 
     // wait for mediaAssets to upload before proceeding
     const mediaAssets = await Promise.all(
@@ -43,9 +43,9 @@ const ReportForm = ({ setFormSubmitted }) => {
               },
             },
           },
-        })
+        });
 
-        newAsset = await newAsset.processForAllLocales()
+        newAsset = await newAsset.processForAllLocales();
 
         return {
           sys: {
@@ -53,9 +53,9 @@ const ReportForm = ({ setFormSubmitted }) => {
             linkType: "Asset",
             id: newAsset.sys.id,
           },
-        }
+        };
       })
-    )
+    );
 
     environment
       .createEntry("story", {
@@ -78,21 +78,21 @@ const ReportForm = ({ setFormSubmitted }) => {
           },
         },
       })
-      .then(() => setFormSubmitted(true))
-  }
+      .then(() => setFormSubmitted(true));
+  };
 
   const handleChange = event => {
-    const name = event.target.name
+    const name = event.target.name;
     const value =
       event.target.type === "checkbox"
         ? event.target.checked
-        : event.target.value
+        : event.target.value;
 
     setForm({
       ...form,
       [name]: value,
-    })
-  }
+    });
+  };
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -171,7 +171,7 @@ const ReportForm = ({ setFormSubmitted }) => {
         {sending ? <Spinner animation="border" size="sm" /> : "Submit"}
       </Button>
     </Form>
-  )
-}
+  );
+};
 
-export default ReportForm
+export default ReportForm;

@@ -1,5 +1,5 @@
-import React from "react"
-import { Link as GatsbyLink } from "gatsby"
+import React from "react";
+import { Link as GatsbyLink } from "gatsby";
 
 /**
  * Wrapper around gatsby-link to return normal anchor element when "to" attribute is an external link
@@ -26,7 +26,7 @@ const Link = ({
   // Tailor the following test to your environment.
   // This example assumes that any internal link (intended for Gatsby)
   // will start with exactly one slash, and that anything else is external.
-  const isGatsbyLink = /^\/(?!\/)/.test(to) && !external
+  const isGatsbyLink = /^\/(?!\/)/.test(to) && !external;
 
   // Use Gatsby Link for internal links, and <a> for others
   if (isGatsbyLink) {
@@ -39,14 +39,14 @@ const Link = ({
       >
         {children}
       </GatsbyLink>
-    )
+    );
   }
 
   return (
     <a href={to} {...other}>
       {children}
     </a>
-  )
-}
+  );
+};
 
-export default Link
+export default Link;

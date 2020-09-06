@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Card, Button } from "react-bootstrap"
+import React from "react";
+import styled from "styled-components";
+import { Card, Button } from "react-bootstrap";
 
-import Link from "../../components/link"
+import Link from "../../components/link";
 
 const ActionCard = ({ title, text, btn }) => {
   return (
@@ -15,8 +15,8 @@ const ActionCard = ({ title, text, btn }) => {
         </Button>
       </Card.Body>
     </StyledCard>
-  )
-}
+  );
+};
 
 const StyledCard = styled(Card)`
   text-align: center;
@@ -40,6 +40,6 @@ const StyledCard = styled(Card)`
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
-`
+`;
 
-export default ActionCard
+export default ActionCard;

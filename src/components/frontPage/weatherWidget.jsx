@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react"
-import axios from "axios"
-import PropTypes from "prop-types"
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import PropTypes from "prop-types";
 
 const WeatherWidget = ({ cityId }) => {
-  const [weatherData, setWeatherData] = useState(null)
+  const [weatherData, setWeatherData] = useState(null);
 
   const fetchWeather = async reqConfig => {
-    const resp = await axios(reqConfig)
+    const resp = await axios(reqConfig);
 
-    setWeatherData(resp.data)
-  }
+    setWeatherData(resp.data);
+  };
 
   useEffect(() => {
-    const endpoint = "https://api.openweathermap.org/data/2.5/weather"
+    const endpoint = "https://api.openweathermap.org/data/2.5/weather";
 
     fetchWeather({
       method: "get",
@@ -22,8 +22,8 @@ const WeatherWidget = ({ cityId }) => {
         units: "imperial",
         appid: process.env.GATSBY_WEATHER_API_KEY,
       },
-    })
-  }, [cityId])
+    });
+  }, [cityId]);
 
   return (
     weatherData !== null && (
@@ -37,11 +37,11 @@ const WeatherWidget = ({ cityId }) => {
         {weatherData.weather[0].description}
       </div>
     )
-  )
-}
+  );
+};
 
 WeatherWidget.propTypes = {
   cityId: PropTypes.number.isRequired,
-}
+};
 
-export default WeatherWidget
+export default WeatherWidget;

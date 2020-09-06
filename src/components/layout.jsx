@@ -5,13 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
-import { ThemeProvider } from "styled-components"
+import React from "react";
+import PropTypes from "prop-types";
+import { StaticQuery, graphql } from "gatsby";
+import { ThemeProvider } from "styled-components";
 
-import Header from "./header"
-import Footer from "./footer"
+import Header from "./header";
+import Footer from "./footer";
 
 const Layout = ({ children }) => {
   return (
@@ -35,8 +35,8 @@ const Layout = ({ children }) => {
         </>
       )}
     />
-  )
-}
+  );
+};
 
 // When updating theme, make sure to update variables in _variable.scss too
 const theme = {
@@ -48,10 +48,10 @@ const theme = {
     success: "#28a745",
     danger: "#dc3545",
   },
-}
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

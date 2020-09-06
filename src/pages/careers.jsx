@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const CareersPage = () => {
   return (
@@ -9,7 +9,7 @@ const CareersPage = () => {
       </a>
       for now!
     </>
-  )
-}
+  );
+};
 
-export default CareersPage
+export default CareersPage;

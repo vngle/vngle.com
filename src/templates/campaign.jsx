@@ -1,28 +1,28 @@
-import React from "react"
-import { Link } from "gatsby"
-import { Container, Row, Col, Jumbotron } from "react-bootstrap"
-import styled from "styled-components"
-import VideoThumbnail from "react-video-thumbnail"
+import React from "react";
+import { Link } from "gatsby";
+import { Container, Row, Col, Jumbotron } from "react-bootstrap";
+import styled from "styled-components";
+import VideoThumbnail from "react-video-thumbnail";
 
-import SEO from "../components/seo"
-import Layout from "../components/layout"
+import SEO from "../components/seo";
+import Layout from "../components/layout";
 
 export default ({ pageContext: { campaign } }) => {
-  console.log(campaign)
+  console.log(campaign);
 
   const createThumbnail = ({ file, fixed }) => {
     if (file.contentType.startsWith("image")) {
-      return <img alt="story" src={fixed.src} className="shadow" />
+      return <img alt="story" src={fixed.src} className="shadow" />;
     } else if (file.contentType.startsWith("video")) {
       return (
         <VideoThumbnailContainer>
           <VideoThumbnail videoUrl={file.url} />
         </VideoThumbnailContainer>
-      )
+      );
     } else {
-      return <NoThumbnailDiv />
+      return <NoThumbnailDiv />;
     }
-  }
+  };
 
   return (
     <Layout>
@@ -56,14 +56,14 @@ export default ({ pageContext: { campaign } }) => {
                     />
                   </div>
                 </StoryCol>
-              )
+              );
             })}
           </StoryRow>
         )}
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 const StyledJumbotron = styled(Jumbotron)`
   position: relative;
@@ -92,12 +92,12 @@ const StyledJumbotron = styled(Jumbotron)`
   h1 {
     font-weight: 800;
   }
-`
+`;
 
 const StoryRow = styled(Row)`
   align-items: center;
   justify-content: center;
-`
+`;
 
 const StoryCol = styled(Col)`
   display: flex;
@@ -135,14 +135,14 @@ const StoryCol = styled(Col)`
     );
     overflow: hidden;
   }
-`
+`;
 
 const VideoThumbnailContainer = styled.div`
   width: 300px;
-`
+`;
 
 const NoThumbnailDiv = styled.div`
   background: ${props => props.theme.colors.primary};
   width: 300px;
   height: 300px;
-`
+`;

@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react"
-import InfiniteScroll from "react-infinite-scroll-component"
-import { Row, Col } from "react-bootstrap"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import axios from "axios"
+import React, { useState, useEffect } from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { Row, Col } from "react-bootstrap";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import axios from "axios";
 
 const InstaFeed = () => {
-  const [instaFeed, setInstaFeed] = useState([])
+  const [instaFeed, setInstaFeed] = useState([]);
   const [instaInfo, setInstaInfo] = useState({
     has_next_page: true,
-  })
-  const [loading, setLoading] = useState(true)
-  const endpoint = "https://www.instagram.com/graphql/query/"
-  const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1" // public; no need to hide
+  });
+  const [loading, setLoading] = useState(true);
+  const endpoint = "https://www.instagram.com/graphql/query/";
+  const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1"; // public; no need to hide
 
   // fetch insta using axios
   // merge with fetchNext() in future
@@ -25,28 +25,28 @@ const InstaFeed = () => {
           first: 50,
         },
       },
-    })
+    });
 
     if (response.status === 200) {
-      const data = response.data.data.user.edge_owner_to_timeline_media
+      const data = response.data.data.user.edge_owner_to_timeline_media;
 
       setInstaFeed(
         data.edges.filter(({ node }) => {
-          const caption = node.edge_media_to_caption.edges[0].node.text
+          const caption = node.edge_media_to_caption.edges[0].node.text;
 
-          return caption.includes("#CollegePark")
+          return caption.includes("#CollegePark");
         })
-      )
-      setInstaInfo(data.page_info)
-      setLoading(false)
+      );
+      setInstaInfo(data.page_info);
+      setLoading(false);
     }
-  }
+  };
 
   // fetch more insta data when scroll to end
   // may want to switch to GraphQL
   const fetchNext = async () => {
-    let nextFeed = []
-    let pageInfo = instaInfo
+    let nextFeed = [];
+    let pageInfo = instaInfo;
 
     while (nextFeed.length === 0 && pageInfo.has_next_page) {
       const response = await axios.get(endpoint, {
@@ -58,27 +58,27 @@ const InstaFeed = () => {
             after: pageInfo.end_cursor,
           },
         },
-      })
+      });
 
-      const data = response.data.data.user.edge_owner_to_timeline_media
+      const data = response.data.data.user.edge_owner_to_timeline_media;
 
       nextFeed = data.edges.filter(({ node }) => {
-        const caption = node.edge_media_to_caption.edges[0].node.text
+        const caption = node.edge_media_to_caption.edges[0].node.text;
 
-        return caption.includes("#CollegePark")
-      })
-      pageInfo = data.page_info
+        return caption.includes("#CollegePark");
+      });
+      pageInfo = data.page_info;
     }
 
-    setInstaFeed([...instaFeed, ...nextFeed])
-    setInstaInfo(pageInfo)
-    setLoading(false)
-  }
+    setInstaFeed([...instaFeed, ...nextFeed]);
+    setInstaInfo(pageInfo);
+    setLoading(false);
+  };
 
   // TOFIX: Memory leak when unmounted (moved to another page) and fetching in progress
   useEffect(() => {
-    fetchInstaFeed()
-  }, [])
+    fetchInstaFeed();
+  }, []);
 
   return (
     <InfiniteScroll
@@ -91,7 +91,7 @@ const InstaFeed = () => {
       <Row>
         {!loading &&
           instaFeed.map(post => {
-            const caption = post.node.edge_media_to_caption.edges[0].node.text
+            const caption = post.node.edge_media_to_caption.edges[0].node.text;
 
             return (
               <PostContainer
@@ -116,12 +116,12 @@ const InstaFeed = () => {
                   className="stretched-link"
                 />
               </PostContainer>
-            )
+            );
           })}
       </Row>
     </InfiniteScroll>
-  )
-}
+  );
+};
 
 const PostContainer = styled(Col)`
   position: relative;
@@ -154,6 +154,6 @@ const PostContainer = styled(Col)`
     );
     overflow: hidden;
   }
-`
+`;
 
-export default InstaFeed
+export default InstaFeed;

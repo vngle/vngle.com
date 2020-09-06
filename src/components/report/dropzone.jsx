@@ -1,6 +1,6 @@
-import React, { useEffect } from "react"
-import { useDropzone } from "react-dropzone"
-import styled from "styled-components"
+import React, { useEffect } from "react";
+import { useDropzone } from "react-dropzone";
+import styled from "styled-components";
 
 const Dropzone = ({ files, setFiles }) => {
   const {
@@ -19,9 +19,9 @@ const Dropzone = ({ files, setFiles }) => {
             preview: URL.createObjectURL(file),
           })
         ),
-      ])
+      ]);
     },
-  })
+  });
 
   // const thumbs = files.map(file => (
   //   <Thumb key={file.name}>
@@ -31,15 +31,15 @@ const Dropzone = ({ files, setFiles }) => {
   //   </Thumb>
   // ))
 
-  const fileList = files.map(file => <li key={file.path}>{file.path}</li>)
+  const fileList = files.map(file => <li key={file.path}>{file.path}</li>);
 
   useEffect(
     () => () => {
       // Make sure to revoke the data uris to avoid memory leaks
-      files.forEach(file => URL.revokeObjectURL(file.preview))
+      files.forEach(file => URL.revokeObjectURL(file.preview));
     },
     [files]
-  )
+  );
 
   return (
     <>
@@ -54,21 +54,21 @@ const Dropzone = ({ files, setFiles }) => {
         <ul>{fileList}</ul>
       </ThumbsContainer>
     </>
-  )
-}
+  );
+};
 
 const getColor = props => {
   if (props.isDragAccept) {
-    return props.theme.colors.success
+    return props.theme.colors.success;
   }
   if (props.isDragReject) {
-    return props.theme.colors.danger
+    return props.theme.colors.danger;
   }
   if (props.isDragActive) {
-    return props.theme.colors.primary
+    return props.theme.colors.primary;
   }
-  return "#eeeeee"
-}
+  return "#eeeeee";
+};
 
 const Container = styled.div`
   flex: 1;
@@ -84,14 +84,14 @@ const Container = styled.div`
   color: #bdbdbd;
   outline: none;
   transition: border 0.24s ease-in-out;
-`
+`;
 
 const ThumbsContainer = styled.aside`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 16px;
-`
+`;
 
 // const Thumb = styled.div`
 //   display: "inline-flex";
@@ -117,4 +117,4 @@ const ThumbsContainer = styled.aside`
 //   }
 // `
 
-export default Dropzone
+export default Dropzone;

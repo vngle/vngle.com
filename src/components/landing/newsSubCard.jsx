@@ -1,10 +1,10 @@
-import React from "react"
-import { Card, Row } from "react-bootstrap"
-import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi"
-import styled from "styled-components"
-import MailchimpSubscribe from "react-mailchimp-subscribe"
+import React from "react";
+import { Card, Row } from "react-bootstrap";
+import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
+import styled from "styled-components";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 
-import NewsSubForm from "./newsSubForm"
+import NewsSubForm from "./newsSubForm";
 
 export default () => (
   <StyledCard className="shadow-sm border-0" id="sub-card">
@@ -42,7 +42,7 @@ export default () => (
       </Row>
     </Card.Body>
   </StyledCard>
-)
+);
 
 const StyledCard = styled(Card)`
   .card-title {
@@ -62,4 +62,4 @@ const StyledCard = styled(Card)`
       color: ${({ theme }) => theme.colors.dark};
     }
   }
-`
+`;

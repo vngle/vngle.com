@@ -1,5 +1,5 @@
-import React from "react"
-import { Form, InputGroup, Button } from "react-bootstrap"
+import React from "react";
+import { Form, InputGroup, Button } from "react-bootstrap";
 
 const SimpleSubForm = () => {
   return (
@@ -16,7 +16,7 @@ const SimpleSubForm = () => {
         </InputGroup.Append>
       </InputGroup>
     </Form>
-  )
-}
+  );
+};
 
-export default SimpleSubForm
+export default SimpleSubForm;

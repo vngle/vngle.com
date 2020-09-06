@@ -1,17 +1,17 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import styled from "styled-components"
-import { Container, Jumbotron, Row, Col } from "react-bootstrap"
-import { FcBookmark } from "react-icons/fc"
-import moment from "moment"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import styled from "styled-components";
+import { Container, Jumbotron, Row, Col } from "react-bootstrap";
+import { FcBookmark } from "react-icons/fc";
+import moment from "moment";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Image from "../components/image"
-import ActionButtonGroup from "../components/frontPage/actionBtnGroup"
-import InstaFeed from "../components/frontPage/instaFeed"
-import NewsFeed from "../components/frontPage/newsFeed"
-import WeatherWidget from "../components/frontPage/weatherWidget"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Image from "../components/image";
+import ActionButtonGroup from "../components/frontPage/actionBtnGroup";
+import InstaFeed from "../components/frontPage/instaFeed";
+import NewsFeed from "../components/frontPage/newsFeed";
+import WeatherWidget from "../components/frontPage/weatherWidget";
 
 export default ({ data }) => (
   <Layout>
@@ -46,7 +46,7 @@ export default ({ data }) => (
           <Row className="align-items-center justify-content-center">
             {data.allContentfulCampaign.edges.map(({ node: campaign }) => {
               // if no cover image specified, a div with primary background color is used as fallback
-              const bgSrc = campaign.cover && campaign.cover.fixed.src
+              const bgSrc = campaign.cover && campaign.cover.fixed.src;
 
               return (
                 <CampaignCol
@@ -77,7 +77,7 @@ export default ({ data }) => (
                     className="stretched-link"
                   />
                 </CampaignCol>
-              )
+              );
             })}
           </Row>
         </Col>
@@ -102,7 +102,7 @@ export default ({ data }) => (
 
     <ActionButtonGroup />
   </Layout>
-)
+);
 
 export const query = graphql`
   {
@@ -123,7 +123,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const StyledJumbotron = styled(Jumbotron)`
   position: relative;
@@ -149,7 +149,7 @@ const StyledJumbotron = styled(Jumbotron)`
   .row {
     align-items: center;
   }
-`
+`;
 
 const ContentContainer = styled(Container)`
   .category-container {
@@ -170,7 +170,7 @@ const ContentContainer = styled(Container)`
       margin-left: 10px;
     }
   }
-`
+`;
 
 const CampaignCol = styled(Col)`
   position: relative;
@@ -206,4 +206,4 @@ const CampaignCol = styled(Col)`
     );
     overflow: hidden;
   }
-`
+`;

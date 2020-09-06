@@ -4,10 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-import "typeface-inter"
-import "typeface-playfair-display"
+import "typeface-inter";
+import "typeface-playfair-display";
 
 // not global but can't seem to override in component file
-import "react-awesome-slider/dist/styles.css"
+import "react-awesome-slider/dist/styles.css";
 
-import "./static/scss/main.scss"
+import "./static/scss/main.scss";

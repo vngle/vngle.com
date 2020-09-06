@@ -1,18 +1,18 @@
-import React from "react"
-import { Container, Row, Col, Image } from "react-bootstrap"
-import { Disqus } from "gatsby-plugin-disqus"
+import React from "react";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import { Disqus } from "gatsby-plugin-disqus";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import useSiteMetadata from "../hooks/use-site-metadata"
+import useSiteMetadata from "../hooks/use-site-metadata";
 
 export default ({ pageContext: { story }, location }) => {
-  const { siteUrl } = useSiteMetadata()
+  const { siteUrl } = useSiteMetadata();
   const disqusConfig = {
     url: `${siteUrl}${location.pathname}`,
     identifier: story.id,
-  }
+  };
 
   return (
     <Layout>
@@ -20,7 +20,7 @@ export default ({ pageContext: { story }, location }) => {
       <Container>
         <Row>
           {story.mediaContent.map(content => {
-            let mediaElement
+            let mediaElement;
 
             if (content.file.contentType.includes("image/")) {
               mediaElement = (
@@ -31,7 +31,7 @@ export default ({ pageContext: { story }, location }) => {
                   rounded
                   className="shadow"
                 />
-              )
+              );
             } else if (content.file.contentType.includes("video/")) {
               mediaElement = (
                 <div className="embed-responsive embed-responsive-16by9 rounded shadow">
@@ -54,7 +54,7 @@ export default ({ pageContext: { story }, location }) => {
                     />
                   </video>
                 </div>
-              )
+              );
             } else {
               mediaElement = (
                 <audio>
@@ -65,13 +65,13 @@ export default ({ pageContext: { story }, location }) => {
                     label="english_captions"
                   />
                 </audio>
-              )
+              );
             }
             return (
               <Col xs={12} sm={6} lg={4} className="mb-3" key={content.id}>
                 {mediaElement}
               </Col>
-            )
+            );
           })}
         </Row>
         <Row>
@@ -86,5 +86,5 @@ export default ({ pageContext: { story }, location }) => {
         </Row>
       </Container>
     </Layout>
-  )
-}
+  );
+};

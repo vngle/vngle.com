@@ -1,12 +1,12 @@
-import React from "react"
-import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap"
+import React from "react";
+import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import Wwan from "../../static/images/wwan.png"
-import VngleRV from "../../static/images/vngle-rv.png"
-import WwanPodcastTeaser from "../../static/images/wwan-podcast-teaser.png"
+import Wwan from "../../static/images/wwan.png";
+import VngleRV from "../../static/images/vngle-rv.png";
+import WwanPodcastTeaser from "../../static/images/wwan-podcast-teaser.png";
 
 const citiesTraveled = [
   "Atlanta, GA",
@@ -30,7 +30,7 @@ const citiesTraveled = [
   "New Orleans, LA",
   "U.S. Virgin Islands (St Croix/St Thomas)",
   "San Juan, Puerto Rico",
-]
+];
 
 export default () => (
   <Layout>
@@ -116,4 +116,4 @@ export default () => (
       </Figure>
     </Container>
   </Layout>
-)
+);
