@@ -12,6 +12,7 @@ export default ({ pageContext: { campaign } }) => {
     if (file.contentType.startsWith("image")) {
       return <img alt="story" src={fixed.src} className="shadow" />;
     } else if (file.contentType.startsWith("video")) {
+      fetch(file.url).then(resp => console.log(resp));
       return (
         <VideoThumbnailContainer>
           <VideoThumbnail videoUrl={file.url} />
