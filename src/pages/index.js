@@ -11,12 +11,12 @@ import {
 } from "react-bootstrap";
 import styled from "styled-components";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import NewsSubCard from "../components/landing/newsSubCard";
-import StorySlider from "../components/landing/storySlider";
-import SimpleSubForm from "../components/landing/simpleSubForm";
-import ActionCard from "../components/landing/actionCard";
+import Layout from "../components/Layout";
+import SEO from "../components/Seo";
+import NewsSubCard from "../components/landing/NewsSubCard";
+import StorySlider from "../components/landing/StorySlider";
+import SimpleSubForm from "../components/landing/SimpleSubForm";
+import ActionCard from "../components/landing/ActionCard";
 
 import World from "../../static/images/landing/world.svg";
 import Culture from "../../static/images/landing/culture.svg";

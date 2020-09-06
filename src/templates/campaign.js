@@ -4,8 +4,8 @@ import { Container, Row, Col, Jumbotron } from "react-bootstrap";
 import styled from "styled-components";
 import VideoThumbnail from "react-video-thumbnail";
 
-import SEO from "../components/seo";
-import Layout from "../components/layout";
+import SEO from "../components/Seo";
+import Layout from "../components/Layout";
 
 export default ({ pageContext: { campaign } }) => {
   console.log(campaign);

@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap";
 import styled from "styled-components";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../components/Layout";
+import SEO from "../components/Seo";
 
 import VngleDef from "../../static/images/about/vngle-def.png";
 import Blake from "../../static/images/about/blake-portrait.png";

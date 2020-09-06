@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../components/Layout";
+import SEO from "../components/Seo";
 
 import Wwan from "../../static/images/wwan.png";
 import VngleRV from "../../static/images/vngle-rv.png";

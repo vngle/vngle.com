@@ -5,13 +5,13 @@ import { Container, Jumbotron, Row, Col } from "react-bootstrap";
 import { FcBookmark } from "react-icons/fc";
 import moment from "moment";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Image from "../components/image";
-import ActionButtonGroup from "../components/frontPage/actionBtnGroup";
-import InstaFeed from "../components/frontPage/instaFeed";
-import NewsFeed from "../components/frontPage/newsFeed";
-import WeatherWidget from "../components/frontPage/weatherWidget";
+import Layout from "../components/Layout";
+import SEO from "../components/Seo";
+import Image from "../components/Image";
+import ActionButtonGroup from "../components/frontPage/ActionBtnGroup";
+import InstaFeed from "../components/frontPage/InstaFeed";
+import NewsFeed from "../components/frontPage/NewsFeed";
+import WeatherWidget from "../components/frontPage/WeatherWidget";
 
 export default ({ data }) => (
   <Layout>

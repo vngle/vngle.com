@@ -58,7 +58,7 @@ const createInsta = async ({ createPage }) => {
     createPage({
       // NO hard code city page in the future
       path: `/collegepark/${slug}/`,
-      component: require.resolve(`./src/templates/storyPost.jsx`),
+      component: require.resolve(`./src/templates/storyPost`),
       context: { post },
     });
   });
@@ -117,7 +117,7 @@ const createContentful = async (graphql, { createPage }) => {
   campaigns.forEach(({ node: campaign }) => {
     createPage({
       path: `/collegepark/${campaign.id}`,
-      component: require.resolve(`./src/templates/campaign.jsx`),
+      component: require.resolve(`./src/templates/campaign`),
       context: { campaign },
     });
 
@@ -125,7 +125,7 @@ const createContentful = async (graphql, { createPage }) => {
       campaign.stories.forEach(story => {
         createPage({
           path: `/collegepark/${campaign.id}/${story.id}`,
-          component: require.resolve(`./src/templates/story.jsx`),
+          component: require.resolve(`./src/templates/story`),
           context: { story },
         });
       });

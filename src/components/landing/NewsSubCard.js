@@ -4,7 +4,7 @@ import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
 import styled from "styled-components";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
-import NewsSubForm from "./newsSubForm";
+import NewsSubForm from "./NewsSubForm";
 
 export default () => (
   <StyledCard className="shadow-sm border-0" id="sub-card">

@@ -4,9 +4,9 @@ import { FcOk, FcCheckmark } from "react-icons/fc";
 import { FaSlack } from "react-icons/fa";
 import styled from "styled-components";
 
-import SEO from "../components/seo";
-import Layout from "../components/layout";
-import ReportForm from "../components/report/reportForm";
+import SEO from "../components/Seo";
+import Layout from "../components/Layout";
+import ReportForm from "../components/report/ReportForm";
 
 const Report = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);

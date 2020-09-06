@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { Disqus } from "gatsby-plugin-disqus";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../components/Layout";
+import SEO from "../components/Seo";
 
-import useSiteMetadata from "../hooks/use-site-metadata";
+import useSiteMetadata from "../hooks/useSiteMetadata";
 
 export default ({ pageContext: { story }, location }) => {
   const { siteUrl } = useSiteMetadata();

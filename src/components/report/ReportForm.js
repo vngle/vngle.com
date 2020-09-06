@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Spinner } from "react-bootstrap";
 import * as contentful from "contentful-management";
 
-import Dropzone from "./dropzone";
+import Dropzone from "./Dropzone";
 
 const ReportForm = ({ setFormSubmitted }) => {
   const [form, setForm] = useState({

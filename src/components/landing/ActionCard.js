@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Card, Button } from "react-bootstrap";
 
-import Link from "../../components/link";
+import Link from "../Link";
 
 const ActionCard = ({ title, text, btn }) => {
   return (

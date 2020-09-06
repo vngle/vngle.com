@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Container, Navbar, Nav, Dropdown, Button } from "react-bootstrap";
 
 import Logo from "../../static/images/logo.png";
-import Link from "./link";
+import Link from "./Link";
 
 const Header = ({ siteTitle }) => {
   const navLinks = [

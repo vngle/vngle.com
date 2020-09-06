@@ -3,7 +3,7 @@ import { Container, Row, Col, Nav, Badge } from "react-bootstrap";
 import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
 import styled from "styled-components";
 
-import Link from "../components/link";
+import Link from "./Link";
 
 import Logo from "../../static/images/logo.png";
 
