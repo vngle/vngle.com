@@ -81,9 +81,9 @@ export default () => {
             </Col>
           </Row>
           <p>
-            There’s 3,143 counties in the United States and over 2,000 are
-            considered news deserts. Blake noticed this problem as he was
-            registering people to vote in Ferguson, MO.
+            Over 64% of the United States is considered a news desert. Blake
+            noticed this problem as he was registering people to vote in
+            Ferguson, MO.
           </p>
           <p>
             As he went door to door, Blake began asking locals of Ferguson their
