@@ -64,7 +64,7 @@ export default () => {
         </StyledRow>
 
         <VideoContainer>
-          <h1 className="font-sans-serif display-5">
+          <h1 className="display-5">
             Pritchett's Press Conference Responding to Arrest
           </h1>
           <h2>
@@ -83,7 +83,7 @@ export default () => {
         </VideoContainer>
 
         <VideoContainer>
-          <h1 className="font-sans-serif display-5">
+          <h1 className="display-5">
             Pritchett's Qualifying Process for GA State Senate
           </h1>
           <h2>
@@ -121,6 +121,7 @@ const VideoContainer = styled.div`
 
   h1 {
     font-weight: 500;
+    font-family: "Inter", sans-serif;
   }
 
   h2 {
