@@ -64,9 +64,13 @@ export default () => {
         </StyledRow>
 
         <VideoContainer>
-          <h1 className="font-sans-serif display-4">
-            Pritchett Press Conference
+          <h1 className="font-sans-serif display-5">
+            Pritchett's Press Conference Responding to Arrest
           </h1>
+          <h2>
+            Vngle covered Linda Pritchett's full press conference following her
+            home eviction.
+          </h2>
           <div className="embed-responsive embed-responsive-4by3 rounded">
             <iframe
               src="https://www.youtube.com/embed/QO5TmVo1lZo?modestbranding=1"
@@ -79,7 +83,13 @@ export default () => {
         </VideoContainer>
 
         <VideoContainer>
-          <h1 className="font-sans-serif display-4">Qualifying Video</h1>
+          <h1 className="font-sans-serif display-5">
+            Pritchett's Qualifying Process for GA State Senate
+          </h1>
+          <h2>
+            Our team covered Linda's qualifying process as she officially
+            entered the election.
+          </h2>
           <div className="embed-responsive embed-responsive-4by3 rounded">
             <iframe
               src="https://www.youtube.com/embed/zqHwPFoz7-Y?modestbranding=1"
@@ -111,5 +121,11 @@ const VideoContainer = styled.div`
 
   h1 {
     font-weight: 500;
+  }
+
+  h2 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
   }
 `;
