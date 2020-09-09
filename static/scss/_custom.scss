@@ -1,8 +1,12 @@
 // Custom global styles
 // styled-components is used for component-level styles
 
+h1 {
+  margin-bottom: 0.5em;
+}
+
 h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1em;
 }
 
 p {
@@ -25,7 +29,7 @@ p {
 }
 
 .font-sans-serif {
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .font-serif {
