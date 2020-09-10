@@ -23,7 +23,7 @@ export default () => {
 
       <Jumbotron className="bg-primary" as="section">
         <Container>
-          <h1 className="display-3">Linda Pritchett</h1>
+          <h1 className="display-3 font-weight-bold">Linda Pritchett</h1>
           <h2 className="mb-0 font-sans-serif">
             Candidate for GA State Senator in District 39
           </h2>
@@ -73,7 +73,7 @@ export default () => {
           </h2>
           <div className="embed-responsive embed-responsive-4by3 rounded">
             <iframe
-              src="https://www.youtube.com/embed/QO5TmVo1lZo?modestbranding=1"
+              src="https://www.youtube.com/embed/QO5TmVo1lZo?autoplay=1&modestbranding=1&mute=1"
               title="Pritchett press conference"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
