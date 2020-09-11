@@ -35,25 +35,30 @@ export default () => {
           <Col>
             <p>
               Linda Pritchett is an active member of the Fulton County
-              Democratic Committees as a Post Seat Holder, and the South Metro
-              Democratic Women Council. In 2018, she was elected to serve as a
-              State Committee Member of the Democratic Party of Georgia. This
-              year Linda serves as the Secretary of the Latino Caucus of the
-              Democratic Party. She is a recipient of President Barack Obama's
-              Lifetime Achievement Award for Service.
+              Democratic Committee as a Post Seat Holder, and the South Metro
+              Democratic Women Council. She has also been appointed to both the
+              Grant Evaluation and the Community Services Committee in Fulton
+              County. In 2018, she was elected to serve as a State Committee
+              Member of the Democratic Party of Georgia. This year Linda serves
+              as the Secretary of the Latino Caucus of the Democratic Party. She
+              is a recipient of President Barack Obama's Lifetime Achievement
+              Award for Service.
             </p>
             <p>
               Professionally, Linda has been a Certified Paralegal for over 15
               years and a former Life Insurance Agency Owner specializing
-              Government Employee Benefits. She has also been appointed to the
-              Community Services Program and the Grant Evaluation Committee in
-              Fulton County. Over the last seven years, she has worked as
-              Treasurer for State Senator Donzella James and as a Legislative
-              Aide to State Representative Sandra Scott as well as Constituent
-              Services liaison to for State Representative Ronnie Mabra.
+              Government Employee Benefits.{" "}
+              <a href="https://vote4linda.com/">
+                Learn more about Pritchett here
+              </a>
+              .
             </p>
           </Col>
-          <Col md={{ span: 4, offset: 1 }}>
+          <Col
+            lg={{ span: 4, offset: 1, order: "last" }}
+            xs={{ span: 12, order: "first" }}
+            className="mb-4"
+          >
             <Image
               rounded
               src={PritchettHeadshot}
