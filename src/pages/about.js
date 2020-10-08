@@ -6,7 +6,6 @@ import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 
 import VngleDef from "../../static/images/about/vngle-def.png";
-import Blake from "../../static/images/about/blake-portrait.png";
 import Team from "../../static/images/about/profiles";
 
 export default () => {
