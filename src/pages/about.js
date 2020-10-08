@@ -65,19 +65,20 @@ export default () => {
             bringing hyperlocal depth to pressing matters and supplying active
             stories with viewpoints from all sides of communities.
           </p>
-          <Row className="pt-4">
+          <Row className="my-4">
             <Col className="m-auto" sm>
-              <h2>We ensure all communities get proper representation</h2>
-              <p>It all started with this guy:</p>
+              <h2>The concept of Vngle started in Ferguson, Missouri</h2>
             </Col>
             <Col sm>
-              <Figure>
-                <Figure.Image
-                  src={Blake}
-                  alt="Portrait of founder Blake Stoner"
-                  width={400}
-                />
-              </Figure>
+              <div className="embed-responsive embed-responsive-4by3 rounded">
+                <iframe
+                  src="https://www.youtube.com/embed/OrAt9NfUrmE?autoplay=1&modestbranding=1"
+                  title="Pritchett press conference"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="embed-responsive-item"
+                ></iframe>
+              </div>
             </Col>
           </Row>
           <p>
