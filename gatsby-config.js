@@ -5,9 +5,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Vngle`,
-    siteUrl: `https://www.vngle.com/`,
-    description: `"Various angles" on local news driven by you.`,
+    description: `Vngle brings you grassroots reality coverage on pressing underrepresented stories happening across America from “various angles”. Join us and let’s bring “various angles” of raw local news coverage to your city next.`,
+    siteUrl: `https://www.vngle.com`,
+    image: `/images/logo-banner.png`,
     author: `Kenneth Chen`,
+    twitterUsername: `@vnglestories`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

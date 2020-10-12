@@ -144,7 +144,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Various angles on local news driven by you" />
+      <SEO title="Grassroots Reality News Coverage Across America" />
 
       <HeroContainer>
         <Row className="row-intro">

@@ -19,7 +19,10 @@ export default () => {
 
   return (
     <Layout>
-      <SEO title="Linda Pritchett" />
+      <SEO
+        title="Linda Pritchett, Candidate for GA State Senator in District 39"
+        description="Grassroots coverage on Linda Pritchett’s campaign for Georgia State Senate Seat in District 39. Listen to her intimate response to the eviction and arrest during her press conference (it’s a Vngle exclusive)."
+      />
 
       <Jumbotron className="bg-primary" as="section">
         <Container>

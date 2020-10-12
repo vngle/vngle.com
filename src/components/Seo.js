@@ -9,8 +9,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+import { useLocation } from "@reach/router";
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, image, article }) {
+  const { pathname } = useLocation();
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,14 +20,20 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
+            siteUrl
+            defaultImage: image
             author
+            twitterUsername
           }
         }
       }
     `
   );
 
+  const url = `${site.siteMetadata.siteUrl}${pathname}`;
   const metaDescription = description || site.siteMetadata.description;
+  const img = `${site.siteMetadata.siteUrl}${image ||
+    site.siteMetadata.defaultImage}`;
 
   return (
     <Helmet
@@ -48,16 +56,24 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          property: `og:url`,
+          content: url,
+        },
+        {
           property: `og:type`,
-          content: `website`,
+          content: `${article ? "article" : "website"}`,
+        },
+        {
+          property: `og:image`,
+          content: img,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.twitterUsername,
         },
         {
           name: `twitter:title`,
@@ -67,12 +83,19 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `twitter:image`,
+          content: img,
+        },
       ].concat(meta)}
     />
   );
 }
 
 SEO.defaultProps = {
+  title: null,
+  image: null,
+  article: false,
   lang: `en`,
   meta: [],
   description: ``,
@@ -83,6 +106,8 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  article: PropTypes.bool,
 };
 
 export default SEO;

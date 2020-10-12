@@ -15,7 +15,10 @@ import WeatherWidget from "../components/frontPage/WeatherWidget";
 
 export default ({ data }) => (
   <Layout>
-    <SEO title="College Park's News" />
+    <SEO
+      title="College Park, Georgia Local News"
+      description="College Park, GA’s frontpage for local news and grassroots reality coverage."
+    />
 
     <StyledJumbotron>
       <Image src="collegepark/cp.jpg" alt="Atlanta city view" bg />

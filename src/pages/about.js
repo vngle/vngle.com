@@ -20,7 +20,10 @@ export default () => {
 
   return (
     <Layout>
-      <SEO title="About Us" />
+      <SEO
+        title="A Grassroots News Network"
+        description="Vngle is a decentralized grassroots news network covering pressing underrepresented reality coverage on cities across America. Our coverage is for the people, by the people."
+      />
 
       <Jumbotron className="bg-primary" as="section">
         <Container>
@@ -71,7 +74,7 @@ export default () => {
             <Col sm>
               <div className="embed-responsive embed-responsive-4by3 rounded">
                 <iframe
-                  src="https://www.youtube.com/embed/OrAt9NfUrmE?autoplay=1&modestbranding=1"
+                  src="https://www.youtube.com/embed/OrAt9NfUrmE?modestbranding=1"
                   title="Pritchett press conference"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen

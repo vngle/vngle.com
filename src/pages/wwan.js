@@ -34,7 +34,10 @@ const citiesTraveled = [
 
 export default () => (
   <Layout>
-    <SEO title="Where we are now" />
+    <SEO
+      title="Where We Are Now Series"
+      description="Where We Are Now is Vngle’s traveling series uncovering how America’s culture is changing from coast to coast. Let us know your thoughts on where we should go next."
+    />
 
     <Jumbotron className="bg-primary" as="section">
       <Container>
