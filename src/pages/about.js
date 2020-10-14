@@ -14,6 +14,7 @@ export default () => {
     { name: "Jaime Fernandez", position: "Strategy & Partnerships" },
     { name: "Matthew Ramsay", position: "Operations & Outreach" },
     { name: "Kenneth Chen", position: "Technology Lead" },
+    { name: "Majestic Gay", position: "Reporter in College Park, GA" },
   ].map((profile, i) => {
     return { ...profile, img: Team[i] };
   });
