@@ -32,6 +32,7 @@ import ColumbiaLogo from "../../static/images/landing/columbia-tamer.png";
 import GoodieNationLogo from "../../static/images/landing/goodie-nation.png";
 import EnvisionLogo from "../../static/images/landing/envision.png";
 import DivIncLogo from "../../static/images/landing/divinc.png";
+import CollegeParkLogo from "../../static/images/landing/cp-logo.png";
 
 const IndexPage = () => {
   const heroBtn = [
@@ -139,6 +140,11 @@ const IndexPage = () => {
       src: GoodieNationLogo,
       alt: "Goodie Nation logo",
       href: "https://goodienation.org/",
+    },
+    {
+      src: CollegeParkLogo,
+      alt: "College Park (GA) logo",
+      href: "https://www.collegeparkga.com/",
     },
   ];
 
