@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => {
   const navLinks = [
     { name: "College Park", to: "/collegepark" },
     {
-      name: "Careers",
+      name: "Jobs",
       to:
         "https://www.notion.so/vngle/Careers-Vngle-ef8a5667e86b4c129a88538d04ae3f00",
     },

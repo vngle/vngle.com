@@ -33,7 +33,7 @@ export default () => (
         </div>
       </Col>
       <Col className="text-center" sm>
-        <FooterNav className="flex-column">
+        <FooterNav>
           <Nav.Item className="pb-2 text-uppercase font-weight-bold">
             Vngle
           </Nav.Item>
@@ -41,7 +41,10 @@ export default () => (
             to="https://www.notion.so/vngle/Careers-Vngle-ef8a5667e86b4c129a88538d04ae3f00"
             className="nav-link text-muted"
           >
-            Careers
+            Jobs
+          </Link>
+          <Link to="/faq" className="nav-link text-muted">
+            FAQ
           </Link>
           <Link to="/wwan" className="nav-link text-muted">
             Where We Are Now
@@ -61,16 +64,17 @@ export default () => (
         </FooterNav>
       </Col>
     </Row>
-
-    <Col className="justify-content-center mt-3">
-      <p>
-        Copyright {new Date().getFullYear()},{" "}
-        <Link to="/" title="Vngle">
-          Vngle
-        </Link>
-        . All rights reserved.
-      </p>
-    </Col>
+    <Row>
+      <Col className="justify-content-center mt-3">
+        <p>
+          Copyright {new Date().getFullYear()},{" "}
+          <Link to="/" title="Vngle">
+            Vngle
+          </Link>
+          . All rights reserved.
+        </p>
+      </Col>
+    </Row>
   </Container>
 );
 
@@ -83,6 +87,9 @@ const SocialRow = styled(Row)`
 `;
 
 const FooterNav = styled(Nav)`
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 200px;
   font-size: 14px;
 
   & .nav-link .badge {
