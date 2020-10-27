@@ -66,6 +66,7 @@ export default () => (
     </Row>
     <Row>
       <Col className="justify-content-center mt-3">
+        <p>3707 Main Street Suite #39, Atlanta, GA 30337, United States</p>
         <p>
           Copyright {new Date().getFullYear()},{" "}
           <Link to="/" title="Vngle">
