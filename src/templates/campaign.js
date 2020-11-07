@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { Container, Row, Col, Jumbotron } from "react-bootstrap";
 import styled from "styled-components";
 import VideoThumbnail from "react-video-thumbnail";
@@ -7,7 +7,12 @@ import VideoThumbnail from "react-video-thumbnail";
 import SEO from "../components/Seo";
 import Layout from "../components/Layout";
 
-export default ({ pageContext: { campaign } }) => {
+export default ({
+  pageContext: { title, id, cover, description },
+  data: {
+    allContentfulStory: { nodes: stories },
+  },
+}) => {
   const createThumbnail = ({ file, fixed }) => {
     if (file.contentType.startsWith("image")) {
       return <img alt="story" src={fixed.src} className="shadow" />;
@@ -24,32 +29,32 @@ export default ({ pageContext: { campaign } }) => {
 
   return (
     <Layout>
-      <SEO title={campaign.title} />
+      <SEO title={title} />
       <StyledJumbotron>
-        <img src={campaign.cover.fluid.src} alt="Campaign banner" />
+        <img src={cover.fluid.src} alt="Campaign banner" />
         <Row>
           <Col xs={12} md={8}>
-            <h1 className="display-3">{campaign.title}</h1>
-            <p>{campaign.description.description}</p>
+            <h1 className="display-3">{title}</h1>
+            <p>{description.description}</p>
           </Col>
         </Row>
       </StyledJumbotron>
       <Container fluid>
-        {campaign.stories === null ? (
+        {stories === null ? (
           <h1 className="text-muted text-center">
             No stories reported at the moment. Come back later!
           </h1>
         ) : (
           <StoryRow>
-            {campaign.stories.map(story => {
+            {stories.map(story => {
               return (
                 <StoryCol key={story.id} md={"auto"} className="mb-4">
                   <div className="story-container shadow rounded">
-                    <p>{story.caption.caption}</p>
+                    <p>{story.title}</p>
 
                     {createThumbnail(story.mediaContent[0])}
                     <Link
-                      to={`/collegepark/${campaign.id}/${story.id}`}
+                      to={`/stories/${story.slug}`}
                       className="stretched-link"
                     />
                   </div>
@@ -62,6 +67,29 @@ export default ({ pageContext: { campaign } }) => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  query Story($id: String) {
+    allContentfulStory(
+      filter: { campaigns: { elemMatch: { id: { eq: $id } } } }
+    ) {
+      nodes {
+        title
+        slug
+        id
+        mediaContent {
+          file {
+            contentType
+            url
+          }
+          fixed {
+            src
+          }
+        }
+      }
+    }
+  }
+`;
 
 const StyledJumbotron = styled(Jumbotron)`
   position: relative;

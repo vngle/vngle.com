@@ -209,7 +209,7 @@ const IndexPage = () => {
                 variant="outline-dark"
                 size="md"
                 as={Link}
-                to="/collegepark"
+                to="/college-park-georgia"
               >
                 See Coverage Now
               </Button>

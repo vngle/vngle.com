@@ -7,22 +7,25 @@ import SEO from "../components/Seo";
 
 import useSiteMetadata from "../hooks/useSiteMetadata";
 
-export default ({ pageContext: { story }, location }) => {
+export default ({
+  pageContext: { title, author, id, caption, mediaContent },
+  location,
+}) => {
   const { siteUrl } = useSiteMetadata();
   const disqusConfig = {
     url: `${siteUrl}${location.pathname}`,
-    identifier: story.id,
+    identifier: id,
   };
 
   return (
     <Layout>
-      <SEO title="College Park" />
+      <SEO title={title} />
       <Container>
         <Row>
-          {story.mediaContent.map(content => {
+          {mediaContent.map(content => {
             let mediaElement;
 
-            if (content.file.contentType.includes("image/")) {
+            if (content.file.contentType.includes("image")) {
               mediaElement = (
                 <Image
                   src={content.fixed.src}
@@ -32,7 +35,7 @@ export default ({ pageContext: { story }, location }) => {
                   className="shadow"
                 />
               );
-            } else if (content.file.contentType.includes("video/")) {
+            } else if (content.file.contentType.includes("video")) {
               mediaElement = (
                 <div className="embed-responsive embed-responsive-16by9 rounded shadow">
                   <video
@@ -67,6 +70,7 @@ export default ({ pageContext: { story }, location }) => {
                 </audio>
               );
             }
+
             return (
               <Col xs={12} sm={6} lg={4} className="mb-3" key={content.id}>
                 {mediaElement}
@@ -76,7 +80,7 @@ export default ({ pageContext: { story }, location }) => {
         </Row>
         <Row>
           <Col>
-            <p className="mb-5">{story.caption.caption}</p>
+            <p className="mb-5">{caption}</p>
           </Col>
         </Row>
         <Row>

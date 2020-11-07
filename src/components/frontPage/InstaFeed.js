@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import axios from "axios";
 
-const InstaFeed = () => {
+const InstaFeed = ({ hashTags }) => {
   const [instaFeed, setInstaFeed] = useState([]);
   const [instaInfo, setInstaInfo] = useState({
     has_next_page: true,
@@ -13,34 +13,7 @@ const InstaFeed = () => {
   const [loading, setLoading] = useState(true);
   const endpoint = "https://www.instagram.com/graphql/query/";
   const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1"; // public; no need to hide
-
-  // fetch insta using axios
-  // merge with fetchNext() in future
-  const fetchInstaFeed = async () => {
-    const response = await axios.get(endpoint, {
-      params: {
-        query_hash: queryHash,
-        variables: {
-          id: "4046633900",
-          first: 50,
-        },
-      },
-    });
-
-    if (response.status === 200) {
-      const data = response.data.data.user.edge_owner_to_timeline_media;
-
-      setInstaFeed(
-        data.edges.filter(({ node }) => {
-          const caption = node.edge_media_to_caption.edges[0].node.text;
-
-          return caption.includes("#CollegePark");
-        })
-      );
-      setInstaInfo(data.page_info);
-      setLoading(false);
-    }
-  };
+  const hashTagString = hashTags.map(hashTag => `#${hashTag}`).join(" ");
 
   // fetch more insta data when scroll to end
   // may want to switch to GraphQL
@@ -65,7 +38,7 @@ const InstaFeed = () => {
       nextFeed = data.edges.filter(({ node }) => {
         const caption = node.edge_media_to_caption.edges[0].node.text;
 
-        return caption.includes("#CollegePark");
+        return caption.includes(hashTagString);
       });
       pageInfo = data.page_info;
     }
@@ -77,8 +50,36 @@ const InstaFeed = () => {
 
   // TOFIX: Memory leak when unmounted (moved to another page) and fetching in progress
   useEffect(() => {
+    // fetch insta using axios
+    // merge with fetchNext() in future
+    const fetchInstaFeed = async () => {
+      const response = await axios.get(endpoint, {
+        params: {
+          query_hash: queryHash,
+          variables: {
+            id: "4046633900",
+            first: 50,
+          },
+        },
+      });
+
+      if (response.status === 200) {
+        const data = response.data.data.user.edge_owner_to_timeline_media;
+
+        setInstaFeed(
+          data.edges.filter(({ node }) => {
+            const caption = node.edge_media_to_caption.edges[0].node.text;
+
+            return caption.includes(hashTagString);
+          })
+        );
+        setInstaInfo(data.page_info);
+        setLoading(false);
+      }
+    };
+
     fetchInstaFeed();
-  }, []);
+  }, [hashTagString]);
 
   return (
     <InfiniteScroll
@@ -112,7 +113,7 @@ const InstaFeed = () => {
                   />
                 </div>
                 <Link
-                  to={`/collegepark/${post.node.shortcode}`}
+                  to={`/stories/${post.node.shortcode}`}
                   className="stretched-link"
                 />
               </PostContainer>

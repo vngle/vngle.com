@@ -8,7 +8,7 @@ import Link from "./Link";
 
 const Header = ({ siteTitle }) => {
   const navLinks = [
-    { name: "College Park", to: "/collegepark" },
+    { name: "College Park", to: "/college-park-georgia" },
     {
       name: "Jobs",
       to:

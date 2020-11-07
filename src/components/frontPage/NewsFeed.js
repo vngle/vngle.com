@@ -4,7 +4,7 @@ import { FaNewspaper } from "react-icons/fa";
 import styled from "styled-components";
 import axios from "axios";
 
-const NewsFeed = () => {
+const NewsFeed = ({ query }) => {
   const [newsFeed, setNewsFeed] = useState(null);
 
   const fetchNews = async reqConfig => {
@@ -21,10 +21,10 @@ const NewsFeed = () => {
         "ocp-apim-subscription-key": process.env.GATSBY_NEWS_KEY,
       },
       params: {
-        q: "CollegePark AND georgia",
+        q: query,
       },
     });
-  }, []);
+  }, [query]);
 
   return newsFeed === null ? (
     <LoadingWrapper className="d-flex flex-column justify-content-center">

@@ -7,27 +7,31 @@ import moment from "moment";
 
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
-import Image from "../components/Image";
 import ActionButtonGroup from "../components/frontPage/ActionBtnGroup";
 import InstaFeed from "../components/frontPage/InstaFeed";
 import NewsFeed from "../components/frontPage/NewsFeed";
 import WeatherWidget from "../components/frontPage/WeatherWidget";
 
-export default ({ data }) => (
+export default ({
+  pageContext: { cityId, cityName, coverImage, state },
+  data: {
+    allContentfulCampaign: { nodes: campaigns },
+  },
+}) => (
   <Layout>
     <SEO
-      title="College Park, Georgia Local News"
-      description="College Park, GA’s frontpage for local news and grassroots reality coverage."
+      title={`${cityName}, ${state} Local News`}
+      description={`${cityName}, ${state}’s frontpage for local news and grassroots reality coverage.`}
     />
 
     <StyledJumbotron>
-      <Image src="collegepark/cp.jpg" alt="Atlanta city view" bg />
+      <CoverImage src={coverImage.fluid.src} alt="" />
       <Row className="align-items-end">
         <Col>
-          <h1 className="display-1">College Park</h1>
+          <h1 className="display-1">{cityName}</h1>
           <Row as={Col}>
             {moment().format("dddd, MMMM D, YYYY")}
-            <WeatherWidget cityId={4188815} />
+            <WeatherWidget cityId={cityId} />
           </Row>
         </Col>
         <Col md="auto">
@@ -43,17 +47,17 @@ export default ({ data }) => (
       <Row>
         <Col>
           <div className="category-container">
-            <h1 className="display-3">Campaigns</h1>
+            <h1 className="display-3">Popular</h1>
             <div className="ribbon" />
           </div>
           <Row className="align-items-center justify-content-center">
-            {data.allContentfulCampaign.edges.map(({ node: campaign }) => {
+            {campaigns.map(campaign => {
               // if no cover image specified, a div with primary background color is used as fallback
               const bgSrc = campaign.cover && campaign.cover.fixed.src;
 
               return (
                 <CampaignCol
-                  key={campaign.id}
+                  key={campaign.slug}
                   className="mb-4"
                   sm={6}
                   md={4}
@@ -76,7 +80,7 @@ export default ({ data }) => (
                     )}
                   </div>
                   <Link
-                    to={`/collegepark/${campaign.id}`}
+                    to={`/campaigns/${campaign.slug}`}
                     className="stretched-link"
                   />
                 </CampaignCol>
@@ -88,17 +92,17 @@ export default ({ data }) => (
       <Row>
         <Col lg={8} md={7} xs={12}>
           <div className="category-container">
-            <h1 className="display-3">Featured</h1>
+            <h1 className="display-3">Stories</h1>
             <div className="ribbon" />
           </div>
-          <InstaFeed />
+          <InstaFeed hashTags={[cityName.replace(/\s/g, "")]} />
         </Col>
         <Col>
           <div className="category-container">
             <h1 className="display-3">News</h1>
             <div className="ribbon" />
           </div>
-          <NewsFeed />
+          <NewsFeed query={`${cityName} AND ${state}`} />
         </Col>
       </Row>
     </ContentContainer>
@@ -108,21 +112,21 @@ export default ({ data }) => (
 );
 
 export const query = graphql`
-  {
-    allContentfulCampaign {
-      edges {
-        node {
-          title
-          description {
-            description
-          }
-          cover {
-            fixed {
-              src
-            }
-          }
-          id
+  query Campaign($id: String) {
+    allContentfulCampaign(
+      filter: { frontPages: { elemMatch: { id: { eq: $id } } } }
+    ) {
+      nodes {
+        title
+        description {
+          description
         }
+        cover {
+          fixed {
+            src
+          }
+        }
+        slug
       }
     }
   }
@@ -152,6 +156,16 @@ const StyledJumbotron = styled(Jumbotron)`
   .row {
     align-items: center;
   }
+`;
+
+const CoverImage = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
 `;
 
 const ContentContainer = styled(Container)`

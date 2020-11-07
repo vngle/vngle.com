@@ -46,67 +46,99 @@ const createInsta = async ({ createPage }) => {
     }
   }
 
-  allFeed = allFeed.filter(({ node }) => {
-    const caption = node.edge_media_to_caption.edges[0].node.text;
-
-    return caption.includes("#CollegePark");
-  });
-
-  allFeed.forEach(post => {
-    const slug = post.node.shortcode;
-
-    createPage({
-      // NO hard code city page in the future
-      path: `/collegepark/${slug}/`,
-      component: require.resolve(`./src/templates/storyPost`),
-      context: { post },
-    });
-  });
+  allFeed.forEach(
+    ({
+      node: {
+        id,
+        edge_media_to_caption,
+        is_video,
+        display_url,
+        video_url,
+        shortcode,
+      },
+    }) => {
+      createPage({
+        path: `/stories/${shortcode}`,
+        component: require.resolve(`./src/templates/story`),
+        context: {
+          title: `${edge_media_to_caption.edges[0].node.text.substring(
+            0,
+            15
+          )}...`,
+          author: "@VngleStories",
+          id,
+          caption: edge_media_to_caption.edges[0].node.text,
+          mediaContent: [
+            {
+              id,
+              file: {
+                contentType: is_video ? "video/mp4" : "image/jpeg",
+                url: video_url,
+              },
+              fixed: { src: display_url },
+            },
+          ],
+        },
+      });
+    }
+  );
 };
 
 const createContentful = async (graphql, { createPage }) => {
   const {
     data: {
-      allContentfulCampaign: { edges: campaigns },
+      allContentfulFrontPage: { nodes: frontPages },
+      allContentfulCampaign: { nodes: campaigns },
+      allContentfulStory: { nodes: stories },
     },
   } = await graphql(`
     {
+      allContentfulFrontPage {
+        nodes {
+          cityId
+          id
+          slug
+          cityName
+          coverImage {
+            fluid {
+              src
+            }
+          }
+          state
+        }
+      }
       allContentfulCampaign {
-        edges {
-          node {
-            title
+        nodes {
+          title
+          id
+          slug
+          cover {
+            fluid {
+              src
+            }
+          }
+          description {
+            description
+          }
+        }
+      }
+      allContentfulStory {
+        nodes {
+          title
+          author
+          id
+          slug
+          caption {
+            caption
+          }
+          mediaContent {
             id
-            description {
-              description
+            file {
+              url
+              contentType
             }
-            cover {
-              file {
-                details {
-                  size
-                }
-              }
-              fluid {
-                src
-              }
-            }
-            stories {
-              title
-              author
-              email
-              id
-              mediaContent {
-                fixed {
-                  src
-                }
-                file {
-                  contentType
-                  url
-                }
-                id
-              }
-              caption {
-                caption
-              }
+            fixed {
+              src
             }
           }
         }
@@ -114,21 +146,45 @@ const createContentful = async (graphql, { createPage }) => {
     }
   `);
 
-  campaigns.forEach(({ node: campaign }) => {
+  frontPages.forEach(({ cityId, cityName, coverImage, id, state, slug }) => {
     createPage({
-      path: `/collegepark/${campaign.id}`,
-      component: require.resolve(`./src/templates/campaign`),
-      context: { campaign },
+      path: `${slug}`,
+      component: require.resolve(`./src/templates/frontPage`),
+      context: {
+        cityId,
+        cityName,
+        coverImage,
+        id,
+        state,
+      },
     });
+  });
 
-    campaign.stories !== null &&
-      campaign.stories.forEach(story => {
-        createPage({
-          path: `/collegepark/${campaign.id}/${story.id}`,
-          component: require.resolve(`./src/templates/story`),
-          context: { story },
-        });
-      });
+  campaigns.forEach(({ title, id, cover, description, slug }) => {
+    createPage({
+      path: `/campaigns/${slug}`,
+      component: require.resolve(`./src/templates/campaign`),
+      context: {
+        title,
+        id,
+        cover,
+        description,
+      },
+    });
+  });
+
+  stories.forEach(({ title, author, id, slug, caption, mediaContent }) => {
+    createPage({
+      path: `/stories/${slug}`,
+      component: require.resolve(`./src/templates/story`),
+      context: {
+        title,
+        author,
+        id,
+        caption: caption.caption,
+        mediaContent,
+      },
+    });
   });
 };
 
