@@ -24,6 +24,7 @@ const Header = ({ siteTitle }) => {
       name: "Request Coverage",
       to: "https://blake680703.typeform.com/to/zwc2R2og",
     },
+    { name: "Become an Ally", to: "/ally" },
   ];
 
   return (
