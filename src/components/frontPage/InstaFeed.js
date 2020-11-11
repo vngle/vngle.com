@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Spinner } from "react-bootstrap";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import axios from "axios";
@@ -50,6 +50,7 @@ const InstaFeed = ({ hashTags }) => {
   };
 
   // TOFIX: Memory leak when unmounted (moved to another page) and fetching in progress
+  // fetch Instagram feed data at initial render
   useEffect(() => {
     // fetch insta using axios
     // merge with fetchNext() in future
@@ -82,6 +83,13 @@ const InstaFeed = ({ hashTags }) => {
     fetchInstaFeed();
   }, [hashTagString]);
 
+  // when insta feed & info is updated, check if feed is empty. If yes, try fetching next batch
+  useEffect(() => {
+    if (instaFeed.length === 0 && instaInfo.has_next_page) {
+      fetchNext();
+    }
+  }, [instaFeed, instaInfo, hashTagString]);
+
   return (
     <InfiniteScroll
       dataLength={instaFeed.length}
@@ -89,6 +97,7 @@ const InstaFeed = ({ hashTags }) => {
       hasMore={instaInfo.has_next_page}
       className="text-center"
       style={{ overflow: "visible" }}
+      scrollThreshold={0.5}
     >
       <Row>
         {!loading &&

@@ -142,7 +142,9 @@ const ReportForm = ({ setFormSubmitted }) => {
         />
       </Form.Group>
       <Form.Group>
-        <Form.Label>Campaigns</Form.Label>
+        <Form.Label>
+          Click one of the following if it a popular topic
+        </Form.Label>
         <Form.Group>
           <Form.Check
             type="checkbox"

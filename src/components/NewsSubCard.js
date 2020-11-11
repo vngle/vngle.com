@@ -63,8 +63,8 @@ const StyledCard = styled(Card)`
 `;
 
 NewsSubCard.propTypes = {
-  title: PropTypes.element,
-  subtitle: PropTypes.element,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 NewsSubCard.defaultProps = {
