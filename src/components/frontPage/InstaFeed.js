@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "gatsby";
@@ -156,5 +157,13 @@ const PostContainer = styled(Col)`
     overflow: hidden;
   }
 `;
+
+InstaFeed.propTypes = {
+  hashTags: PropTypes.array,
+};
+
+InstaFeed.defaultProps = {
+  hashTags: [],
+};
 
 export default InstaFeed;

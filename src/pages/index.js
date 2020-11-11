@@ -13,8 +13,8 @@ import styled from "styled-components";
 
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
-import NewsSubCard from "../components/landing/NewsSubCard";
-import StorySlider from "../components/landing/StorySlider";
+import NewsSubCard from "../components/NewsSubCard";
+import StorySlider from "../components/StorySlider";
 import SimpleSubForm from "../components/landing/SimpleSubForm";
 import ActionCard from "../components/landing/ActionCard";
 

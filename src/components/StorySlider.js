@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { Row, Col, Spinner } from "react-bootstrap";
 import styled from "styled-components";
 import axios from "axios";
@@ -7,15 +8,15 @@ import withAutoplay from "react-awesome-slider/dist/autoplay";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
-const StorySlider = () => {
+const StorySlider = ({ fetchNum, interval, hashTags }) => {
   const [instaFeed, setInstaFeed] = useState([]);
   const [caption, setCaption] = useState("");
-  const fetchNum = 12;
+  const hashTagString = hashTags.map(hashTag => `#${hashTag}`).join(" ");
 
   const sliderConfig = {
     bullets: false,
     play: true,
-    interval: 5000,
+    interval: interval,
     onFirstMount: () =>
       setCaption(instaFeed[0].node.edge_media_to_caption.edges[0].node.text),
     onTransitionStart: ({ nextMedia }) =>
@@ -38,7 +39,16 @@ const StorySlider = () => {
           },
         });
 
-        const data = response.data.data.user.edge_owner_to_timeline_media.edges;
+        let data = response.data.data.user.edge_owner_to_timeline_media.edges;
+
+        if (hashTagString) {
+          data = data.filter(({ node }) => {
+            const caption = node.edge_media_to_caption.edges[0].node.text;
+
+            return caption.includes(hashTagString);
+          });
+        }
+
         setInstaFeed(data);
       } catch (error) {
         console.error(error);
@@ -130,5 +140,17 @@ const LoadingWrapper = styled.div`
     height: 100px;
   }
 `;
+
+StorySlider.propTypes = {
+  fetchNum: PropTypes.number,
+  interval: PropTypes.number,
+  hashTags: PropTypes.array,
+};
+
+StorySlider.defaultProps = {
+  fetchNum: 12,
+  interval: 5000,
+  hashTags: [],
+};
 
 export default StorySlider;

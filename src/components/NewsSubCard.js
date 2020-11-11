@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Card, Row } from "react-bootstrap";
 import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
 import styled from "styled-components";
@@ -6,15 +7,12 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 import NewsSubForm from "./NewsSubForm";
 
-export default () => (
+const NewsSubCard = ({ title, subtitle }) => (
   <StyledCard className="shadow-sm border-0" id="sub-card">
     <Card.Body>
-      <Card.Title className="mb-3">
-        Get the pulse of what's going on near you!
-      </Card.Title>
+      <Card.Title className="mb-3">{title}</Card.Title>
       <Card.Subtitle className="mb-4 font-weight-normal">
-        Sign up for hyper-local stories on everything from{" "}
-        <b>local campaigns</b>, <b>protests</b>, to <b>COVID-19</b>.
+        {subtitle}
       </Card.Subtitle>
       <MailchimpSubscribe
         url={process.env.GATSBY_MAILCHIMP_URL}
@@ -63,3 +61,20 @@ const StyledCard = styled(Card)`
     }
   }
 `;
+
+NewsSubCard.propTypes = {
+  title: PropTypes.element,
+  subtitle: PropTypes.element,
+};
+
+NewsSubCard.defaultProps = {
+  title: "Get the pulse of what's going on near you!",
+  subtitle: (
+    <>
+      Sign up for hyper-local stories on everything from <b>local campaigns</b>,{" "}
+      <b>protests</b>, to <b>COVID-19</b>.
+    </>
+  ),
+};
+
+export default NewsSubCard;

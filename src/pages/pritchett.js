@@ -7,7 +7,7 @@ import PritchettHeadshot from "../../static/images/pritchett-headshot.jpg";
 
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
-import NewsSubCard from "../components/landing/NewsSubCard";
+import NewsSubCard from "../components/NewsSubCard";
 import useSiteMetadata from "../hooks/useSiteMetadata";
 
 export default () => {
