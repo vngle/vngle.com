@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Jumbotron, Row, Col } from "react-bootstrap";
+import { Container, Jumbotron, Row, Col, Button } from "react-bootstrap";
 import styled from "styled-components";
 
 import Layout from "../components/Layout";
@@ -61,7 +61,18 @@ export default () => {
         </Row>
         <Row>
           <Col md={4}>
-            <h3 className="font-sans-serif">Media Kit</h3>
+            <Button size="lg">
+              <h3 className="font-sans-serif mb-0">
+                <a
+                  href="https://drive.google.com/drive/folders/1n7C32CWUbqJBjEyfClIY-JU3n3sgMXQa?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Media Kit
+                </a>
+              </h3>
+            </Button>
           </Col>
           <Col></Col>
         </Row>
