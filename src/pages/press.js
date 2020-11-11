@@ -59,6 +59,12 @@ export default () => {
             ))}
           </Col>
         </Row>
+        <Row>
+          <Col md={4}>
+            <h3 className="font-sans-serif">Media Kit</h3>
+          </Col>
+          <Col></Col>
+        </Row>
       </Container>
     </Layout>
   );

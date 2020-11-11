@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { Row, Col, Spinner } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import axios from "axios";
@@ -18,7 +18,7 @@ const InstaFeed = ({ hashTags }) => {
 
   // fetch more insta data when scroll to end
   // may want to switch to GraphQL
-  const fetchNext = async () => {
+  const fetchNext = useCallback(async () => {
     let nextFeed = [];
     let pageInfo = instaInfo;
 
@@ -47,7 +47,7 @@ const InstaFeed = ({ hashTags }) => {
     setInstaFeed([...instaFeed, ...nextFeed]);
     setInstaInfo(pageInfo);
     setLoading(false);
-  };
+  }, [hashTagString, instaFeed, instaInfo]);
 
   // TOFIX: Memory leak when unmounted (moved to another page) and fetching in progress
   // fetch Instagram feed data at initial render
@@ -88,7 +88,7 @@ const InstaFeed = ({ hashTags }) => {
     if (instaFeed.length === 0 && instaInfo.has_next_page) {
       fetchNext();
     }
-  }, [instaFeed, instaInfo, hashTagString]);
+  }, [instaFeed, instaInfo, hashTagString, fetchNext]);
 
   return (
     <InfiniteScroll
