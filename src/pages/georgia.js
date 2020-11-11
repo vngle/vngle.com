@@ -1,5 +1,4 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
 import styled from "styled-components";
 import { Container, Jumbotron, Row, Col } from "react-bootstrap";
 
@@ -11,7 +10,7 @@ import NewsSubCard from "../components/NewsSubCard";
 const GeorgiaPage = () => {
   return (
     <Layout>
-      <SEO title={`Georgia`} description={``} />
+      <SEO title={`Georgia`} />
 
       <StyledJumbotron>
         <CoverImage src="https://source.unsplash.com/tjdu7p_PaEM" alt="" />

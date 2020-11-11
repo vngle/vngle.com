@@ -56,7 +56,7 @@ const StorySlider = ({ fetchNum, interval, hashTags }) => {
     };
 
     fetchInstaFeed();
-  }, []);
+  }, [fetchNum, hashTagString]);
 
   return instaFeed.length === 0 ? (
     <LoadingWrapper className="d-flex flex-column justify-content-center">
