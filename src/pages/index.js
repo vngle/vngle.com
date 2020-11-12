@@ -201,7 +201,7 @@ const IndexPage = () => {
           <Row className="align-items-center justify-content-center">
             <Col xs="auto">
               <Subtitle className="mb-sm-0 mb-4 mx-auto">
-                Our first city front page is live!
+                Check out our Georgia coverage!
               </Subtitle>
             </Col>
             <Col xs="auto">

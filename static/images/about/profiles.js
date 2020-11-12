@@ -5,4 +5,4 @@ import Matthew from "./matthew.jpg";
 import Majestic from "./majestic.png";
 import Marcus from "./marcus.jpg";
 
-export default [Blake, Jaime, Matthew, Kenneth, Marcus, Majestic];
+export default [Blake, Matthew, Jaime, Kenneth, Marcus, Majestic];

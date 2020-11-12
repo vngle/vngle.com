@@ -37,7 +37,7 @@ export default ({
         <Col md="auto">
           <h4>
             <FcBookmark />
-            Bookmark Me!
+            Beta Ver.
           </h4>
         </Col>
       </Row>

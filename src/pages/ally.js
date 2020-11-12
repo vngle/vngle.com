@@ -117,7 +117,7 @@ export default () => {
 
           <Button
             size="lg"
-            href="https://forms.gle/EYEDjR8HtMyrKomm7"
+            href="https://forms.gle/XQ7ZBAje4pksxdnDA"
             target="_blank"
             rel="noreferrer"
           >

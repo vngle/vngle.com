@@ -68,9 +68,11 @@ export default () => {
             </>
           ))}
           <p>
-            If there are any other areas you believe could use more clarity feel
-            free to leave us some feedback below, and our team will respond
-            accordingly.
+            <b>
+              If there are any other areas you believe could use more clarity
+              feel free to leave us some feedback below, and our team will
+              respond accordingly.
+            </b>
           </p>
         </section>
       </Container>
