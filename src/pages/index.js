@@ -205,12 +205,7 @@ const IndexPage = () => {
               </Subtitle>
             </Col>
             <Col xs="auto">
-              <Button
-                variant="outline-dark"
-                size="md"
-                as={Link}
-                to="/college-park-georgia"
-              >
+              <Button variant="outline-dark" size="md" as={Link} to="/georgia">
                 See Coverage Now
               </Button>
             </Col>
