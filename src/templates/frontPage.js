@@ -44,7 +44,7 @@ export default ({
     </StyledJumbotron>
 
     <ContentContainer fluid>
-      <Row>
+      {/* <Row>
         <Col>
           <div className="category-container">
             <h1 className="display-3">Popular</h1>
@@ -67,8 +67,6 @@ export default ({
                 >
                   <h1>{campaign.title}</h1>
                   <div className="shade-overlay shadow rounded">
-                    {/* use Gatsby Image on fetched images? */}
-
                     {bgSrc === null ? (
                       <div className="bg" />
                     ) : (
@@ -88,7 +86,7 @@ export default ({
             })}
           </Row>
         </Col>
-      </Row>
+      </Row> */}
       <Row>
         <Col lg={8} md={7} xs={12}>
           <div className="category-container">
