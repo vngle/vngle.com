@@ -11,11 +11,12 @@ import Team from "../../static/images/about/profiles";
 export default () => {
   const team = [
     { name: "Blake Stoner", position: "Founder & Chief Reporter" },
+    { name: "Carley Deardorff", position: "Communication Strategist" },
     { name: "Matthew Ramsay", position: "Director of Operations" },
     { name: "Jaime Fernandez", position: "Strategic Partnerships" },
-    { name: "Kenneth Chen", position: "Front End Developer" },
-    { name: "Marcus Figueiredo", position: "Sales" },
     { name: "Majestic Gay", position: "Reporter in College Park, GA" },
+    { name: "Marcus Figueiredo", position: "Sales" },
+    { name: "Kenneth Chen", position: "Front End Developer" },
   ].map((profile, i) => {
     return { ...profile, img: Team[i] };
   });
