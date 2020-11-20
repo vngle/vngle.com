@@ -73,6 +73,45 @@ export default () => {
 
         <VideoContainer>
           <h1 className="display-5">
+            Linda Pritchett built the bus stops on Old National Highway
+          </h1>
+          <h2>
+            Who built the new Marta benches that go down Old National Highway?
+            It was Linda Becquer Pritchett, candidate for GA Senate District 39.
+          </h2>
+          <div className="embed-responsive embed-responsive-4by3 rounded">
+            <iframe
+              src="https://www.youtube.com/embed/Na-4vCeJBpE?autoplay=1&modestbranding=1&mute=1"
+              title="Pritchett press conference"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="embed-responsive-item"
+            ></iframe>
+          </div>
+        </VideoContainer>
+
+        <VideoContainer>
+          <h1 className="display-5">
+            Pritchett: Vine City had gone neglected for far too long
+          </h1>
+          <h2>
+            Linda Pritchett says as State Senator of District 39 she will focus
+            on revitalizing areas like these. Check out our full coverage on her
+            campaign here: Vngle.com/Pritchett
+          </h2>
+          <div className="embed-responsive embed-responsive-4by3 rounded">
+            <iframe
+              src="https://www.youtube.com/embed/si_qBCdJgt8?autoplay=1&modestbranding=1&mute=1"
+              title="Pritchett press conference"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="embed-responsive-item"
+            ></iframe>
+          </div>
+        </VideoContainer>
+
+        <VideoContainer>
+          <h1 className="display-5">
             Pritchett's Press Conference Responding to Arrest
           </h1>
           <h2>
