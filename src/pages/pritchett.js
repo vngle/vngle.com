@@ -73,6 +73,46 @@ export default () => {
 
         <VideoContainer>
           <h1 className="display-5">
+            Linda Pritchett is endorsed by Bernie Sanders's Political Revolution
+            (Runoff on Dec 1st)
+          </h1>
+          <h2>
+            Bernie Sanders's organization Our Revolution has endorsed Linda
+            Pritchett for the December 1st runoff for Georgia's State Senate
+            seat in District 39.
+          </h2>
+          <div className="embed-responsive embed-responsive-4by3 rounded">
+            <iframe
+              src="https://www.youtube.com/embed/9CyDI9wfFZs?autoplay=1&modestbranding=1&mute=1"
+              title="Pritchett press conference"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="embed-responsive-item"
+            ></iframe>
+          </div>
+        </VideoContainer>
+
+        <VideoContainer>
+          <h1 className="display-5">
+            Georgia Voter Suppression in State Senate Runoff
+          </h1>
+          <h2>
+            Georgia voters have to use 2 machines to vote for the remainder of
+            John Lewis's term & State Senate in District 39.
+          </h2>
+          <div className="embed-responsive embed-responsive-4by3 rounded">
+            <iframe
+              src="https://www.youtube.com/embed/V1f6nbrk6wg?autoplay=1&modestbranding=1&mute=1"
+              title="Pritchett press conference"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="embed-responsive-item"
+            ></iframe>
+          </div>
+        </VideoContainer>
+
+        <VideoContainer>
+          <h1 className="display-5">
             Linda Pritchett built the bus stops on Old National Highway
           </h1>
           <h2>
