@@ -15,7 +15,7 @@ import Img from "gatsby-image";
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-/*
+/**
  * Note: the StaticQuery retrieves all files from image folder and find the exact image to put w/ src
  *       Will need to be deprecated later for performance
  */

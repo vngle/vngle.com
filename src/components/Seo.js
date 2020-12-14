@@ -1,6 +1,5 @@
 /**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
+ * SEO component that queries for data with Gatsby's useStaticQuery React hook
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
@@ -11,6 +10,15 @@ import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import { useLocation } from "@reach/router";
 
+/**
+ *
+ * @param {string} description Description of page
+ * @param {string} lang Language of website
+ * @param {object[]} meta Other metadata
+ * @param {string} title Title of page
+ * @param {string} image Location of site preview image in static folder
+ * @param {boolean} article Is this page an article?
+ */
 function SEO({ description, lang, meta, title, image, article }) {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(

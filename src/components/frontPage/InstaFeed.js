@@ -1,3 +1,7 @@
+/**
+ * Simple story feed on city front pages from IG data
+ */
+
 import React, { useState, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -6,6 +10,10 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import axios from "axios";
 
+/**
+ *
+ * @param {array} hashTags Filter in posts that have caption containing these hashtags (must be together and space-separated)
+ */
 const InstaFeed = ({ hashTags }) => {
   const [instaFeed, setInstaFeed] = useState([]);
   const [instaInfo, setInstaInfo] = useState({

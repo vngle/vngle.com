@@ -1,3 +1,7 @@
+/**
+ * Auto-play carousel of Instagram posts.
+ */
+
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Row, Col, Spinner } from "react-bootstrap";
@@ -8,6 +12,12 @@ import withAutoplay from "react-awesome-slider/dist/autoplay";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
+/**
+ *
+ * @param {number} fetchNum Number of posts to fetch from most recent
+ * @param {number} interval How long each slide lasts
+ * @param {array} hashTags Filter in posts that have caption containing these hashtags (must be together and space-separated)
+ */
 const StorySlider = ({ fetchNum, interval, hashTags }) => {
   const [instaFeed, setInstaFeed] = useState([]);
   const [caption, setCaption] = useState("");
@@ -23,6 +33,7 @@ const StorySlider = ({ fetchNum, interval, hashTags }) => {
       setCaption(nextMedia.children.props.caption),
   };
 
+  // fetch Instagram post data
   useEffect(() => {
     const fetchInstaFeed = async () => {
       const endpoint = "https://www.instagram.com/graphql/query/";

@@ -39,6 +39,7 @@ const Layout = ({ children }) => {
 };
 
 // When updating theme, make sure to update variables in _variable.scss too
+// TODO: Consider using Bootstrap theme CSS variables instead
 const theme = {
   colors: {
     primary: "#ffcc35",

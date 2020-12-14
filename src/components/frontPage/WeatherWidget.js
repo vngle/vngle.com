@@ -1,7 +1,17 @@
+/**
+ * Simple weather widget component.
+ * Uses OpenWeather current weather API: https://openweathermap.org/current
+ */
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 
+/**
+ *
+ * @param {string} cityId City ID to get weather at that location.
+ *                        List of city IDs: http://bulk.openweathermap.org/sample/
+ */
 const WeatherWidget = ({ cityId }) => {
   const [weatherData, setWeatherData] = useState(null);
 

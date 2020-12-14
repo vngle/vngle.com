@@ -1,3 +1,10 @@
+/**
+ * Site configuration options
+ *
+ * See: https://www.gatsbyjs.com/docs/gatsby-config/
+ */
+
+// specify what environmental variables to use (dev/prod)
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });

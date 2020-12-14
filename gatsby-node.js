@@ -1,24 +1,34 @@
 /**
- * Implement Gatsby's Node APIs in this file.
+ * Run during site build process to control site's data in GraphQL data layer.
+ * Generate pages for front pages, hot topics, and stories.
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
 const axios = require(`axios`);
 
+/**
+ * Async function to create Vngle story pages from @VngleStories Instagram posts.
+ *
+ * @param {function} createPage Function to create a page. Destructured from Gatsby's built-in actions object
+ */
 const createInsta = async ({ createPage }) => {
+  /**
+   * Variables needed to make HTTP GET requests to fetch IG posts
+   *
+   * NOT official Instagram API! This method of fetching needs to be deprecated soon
+   */
   const endpoint = "https://www.instagram.com/graphql/query/";
   const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1";
   const userId = "4046633900";
-  const maxNodePerRequest = 50;
+  const maxNodePerRequest = 50; // Max # of post data per request
 
-  // because only have 1 front page now, allFeed = filtered CP feed
   let allFeed = [];
   let feedMetadata = {
     has_next_page: true,
   };
 
-  // fetch all posts from instagram
+  // fetch all posts from instagram & store in allFeed
   while (feedMetadata.has_next_page) {
     variables = {
       id: userId,
@@ -46,6 +56,7 @@ const createInsta = async ({ createPage }) => {
     }
   }
 
+  // For each post in IG feed, extract necessary fields & create a page w/ them
   allFeed.forEach(
     ({
       node: {
@@ -84,7 +95,17 @@ const createInsta = async ({ createPage }) => {
   );
 };
 
+/**
+ * Async function to create pages from Contentful content models (Front Page, Campaign, Story)
+ *
+ * @param {function} graphql Function to create a GraphQL query to fetch data from Gatsby data layer
+ * @param {function} createPage Function to create a page. Destructured from Gatsby's built-in actions object
+ */
 const createContentful = async (graphql, { createPage }) => {
+  /**
+   * Fetch all necessary data to populate pages
+   * Create 3 arrays of GraphQL data node objects
+   */
   const {
     data: {
       allContentfulFrontPage: { nodes: frontPages },
@@ -188,6 +209,15 @@ const createContentful = async (graphql, { createPage }) => {
   });
 };
 
+/**
+ * Gatsby Node API to tell plugins to add pages
+ * createPages() calls functions that asynchronously fetch data needed to create pages
+ * and waits for all data to be fetched (Promise.all)
+ *
+ * See https://www.gatsbyjs.com/docs/node-apis/#createPages for more info
+ * @param {function} graphql Function to create a GraphQL query to fetch data from Gatsby data layer
+ * @param {function} actions Gatsby built-in object containing functions to manipulate website state
+ */
 exports.createPages = async ({ graphql, actions }) => {
   await Promise.all([createInsta(actions), createContentful(graphql, actions)]);
 };

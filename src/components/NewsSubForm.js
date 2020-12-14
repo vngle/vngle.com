@@ -1,9 +1,21 @@
+/**
+ * Form component to handle Mailchimp newsletter subscription.
+ * Passed to MailchimpSubscribe component.
+ */
+
 import React, { useState } from "react";
 import { Form, Button, Spinner } from "react-bootstrap";
 import styled from "styled-components";
 import DOMPurify from "dompurify";
 
-export default ({ status, message, onSubmitted }) => {
+/**
+ * All props are passed in by MailchimpSubscribe component
+ * @param {string} status Subscription status (success, error, or sending)
+ * @param {string} message Response message from Mailchimp
+ * @param {function} onSubmitted Function to be called on form submission. Usually used to call subscribe(formData)
+ */
+const NewsSubForm = ({ status, message, onSubmitted }) => {
+  // object key names are extracted from Mailchimp. Changing them will break the form.
   const [formData, setFormData] = useState({
     EMAIL: "",
     ZIPCODE: "",
@@ -20,7 +32,7 @@ export default ({ status, message, onSubmitted }) => {
       NUMBER: formData.NUMBER,
     };
 
-    // don't send checkbox status if unchecked
+    // only send checkbox status if checked
     // Mailchimp will populate field if any value is sent
     if (formData["group[293774][4]"]) {
       submitData["group[293774][4]"] = formData["group[293774][4]"];
@@ -50,6 +62,7 @@ export default ({ status, message, onSubmitted }) => {
 
   let respMessage;
 
+  // display message based on submission status
   if (status === "success") {
     respMessage = (
       <Form.Group>
@@ -57,7 +70,7 @@ export default ({ status, message, onSubmitted }) => {
       </Form.Group>
     );
   } else if (status === "error") {
-    // Sanitize innerHTML to prevent potential XSS attacks
+    // sanitize innerHTML to prevent potential XSS attacks
     const cleanMessage = DOMPurify.sanitize(message);
 
     respMessage = (
@@ -161,3 +174,5 @@ export default ({ status, message, onSubmitted }) => {
 const MutedMsg = styled(Form.Text)`
   font-size: 10px;
 `;
+
+export default NewsSubForm;

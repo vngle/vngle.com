@@ -1,9 +1,18 @@
+/**
+ * Simple local news feed.
+ * Uses Bing News Search API: https://www.microsoft.com/en-us/bing/apis/bing-news-search-api
+ */
+
 import React, { useState, useEffect } from "react";
 import { Row, Col, Spinner, Image } from "react-bootstrap";
 import { FaNewspaper } from "react-icons/fa";
 import styled from "styled-components";
 import axios from "axios";
 
+/**
+ *
+ * @param {string} query Search query used to fetch relevant news data
+ */
 const NewsFeed = ({ query }) => {
   const [newsFeed, setNewsFeed] = useState(null);
 
