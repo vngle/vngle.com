@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Jumbotron, Row, Col } from "react-bootstrap";
+import { Container, Jumbotron, Row, Col, Button } from "react-bootstrap";
 
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
@@ -22,7 +22,21 @@ const GeorgiaPage = () => {
       </StyledJumbotron>
 
       <Container>
-        <StorySlider fetchNum={50} interval={10000} hashTags={["Georgia"]} />
+        <div className="mb-5">
+          <StorySlider fetchNum={50} interval={10000} hashTags={["Georgia"]} />
+        </div>
+        <Row className="my-5">
+          <Col md={8}>
+            Want to share your story with us? Schedule your a time and we’ll
+            handle the rest. If you want our team to come out to your community,
+            just let us know via vngle@vngle.com
+          </Col>
+          <Col>
+            <Button size="lg" href="https://calendly.com/vngle/georgia">
+              Sign Up
+            </Button>
+          </Col>
+        </Row>
         <NewsSubCard />
       </Container>
     </Layout>
