@@ -29,7 +29,7 @@ const GeorgiaPage = () => {
           <Col md={8}>
             Want to share your story with us? Schedule your a time and we’ll
             handle the rest. If you want our team to come out to your community,
-            just let us know via vngle@vngle.com
+            just let us know via info@vngle.com
           </Col>
           <Col>
             <Button size="lg" href="https://calendly.com/vngle/georgia">
