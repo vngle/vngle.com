@@ -1,3 +1,7 @@
+/**
+ * Template page for Vngle hot topics (formerly called campaigns)
+ */
+
 import React from "react";
 import { Link, graphql } from "gatsby";
 import { Container, Row, Col, Jumbotron } from "react-bootstrap";
@@ -7,12 +11,20 @@ import VideoThumbnail from "react-video-thumbnail";
 import SEO from "../components/Seo";
 import Layout from "../components/Layout";
 
+/**
+ *
+ * @param {object} pageContext Data about page passed from createPage() function
+ * @param {object} data Data retrieved by GraphQL query to be used on this page
+ *                      on all stories associated with particular hot topic
+ */
 export default ({
   pageContext: { title, id, cover, description },
   data: {
     allContentfulStory: { nodes: stories },
   },
 }) => {
+  // Contentful cannot generate video thumbnails. As a workaround, we are using react-video-thumbnail to generate them.
+  // Need to be replaced in the future with a more elegant solution.
   const createThumbnail = ({ file, fixed }) => {
     if (file.contentType.startsWith("image")) {
       return <img alt="story" src={fixed.src} className="shadow" />;

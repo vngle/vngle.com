@@ -1,16 +1,25 @@
+/**
+ * Story report form.
+ * Currently allows anyone to upload stories (Contentful entires) to Contentful.
+ */
+
 import React, { useState } from "react";
 import { Form, Button, Spinner } from "react-bootstrap";
 import * as contentful from "contentful-management";
 
 import Dropzone from "./Dropzone";
 
+/**
+ *
+ * @param {function} setFormSubmitted Set form submission status of parent component
+ */
 const ReportForm = ({ setFormSubmitted }) => {
   const [form, setForm] = useState({
     title: "",
     author: "",
     email: "",
     caption: "",
-    campaign__covid: false,
+    campaign__covid: false, // these campaign booleans shouldn't be hard-coded ideally
     campaign__blm: false,
   });
   const [mediaFiles, setMediaFiles] = useState([]);
@@ -20,6 +29,7 @@ const ReportForm = ({ setFormSubmitted }) => {
     accessToken: process.env.GATSBY_CONTENTFUL_MANAGEMENT_TOKEN,
   });
 
+  // use Contentful Management API to upload to Contentful Space
   const handleSubmit = async event => {
     event.preventDefault();
     setSending(true);

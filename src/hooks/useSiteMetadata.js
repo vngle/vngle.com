@@ -1,3 +1,7 @@
+/**
+ * Custom React hook that returns the site medata configured in gatsby-config.js
+ */
+
 import { useStaticQuery, graphql } from "gatsby";
 
 const useSiteMetadata = () => {

@@ -1,3 +1,7 @@
+/**
+ * File drag and drop zone for media file upload
+ */
+
 import React, { useEffect } from "react";
 import { useDropzone } from "react-dropzone";
 import styled from "styled-components";
@@ -35,7 +39,7 @@ const Dropzone = ({ files, setFiles }) => {
 
   useEffect(
     () => () => {
-      // Make sure to revoke the data uris to avoid memory leaks
+      // Make sure to revoke the data URIs to avoid memory leaks
       files.forEach(file => URL.revokeObjectURL(file.preview));
     },
     [files]

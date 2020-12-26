@@ -1,3 +1,7 @@
+/**
+ * Card wrapper around NewsSubForm (aka. present form as a card).
+ */
+
 import React from "react";
 import PropTypes from "prop-types";
 import { Card, Row } from "react-bootstrap";

@@ -1,3 +1,7 @@
+/**
+ * Template page for Vngle stories
+ */
+
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { Disqus } from "gatsby-plugin-disqus";
@@ -7,11 +11,18 @@ import SEO from "../components/Seo";
 
 import useSiteMetadata from "../hooks/useSiteMetadata";
 
+/**
+ *
+ * @param {object} pageContext Data about page passed from createPage() function
+ * @param {object} location URL location info of this page
+ */
 export default ({
   pageContext: { title, author, id, caption, mediaContent },
   location,
 }) => {
   const { siteUrl } = useSiteMetadata();
+
+  // configure Disqus to enable public commenting and engagement
   const disqusConfig = {
     url: `${siteUrl}${location.pathname}`,
     identifier: id,

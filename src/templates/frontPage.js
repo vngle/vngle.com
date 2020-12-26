@@ -1,3 +1,7 @@
+/**
+ * Template page for Vngle city front pages
+ */
+
 import React from "react";
 import { Link, graphql } from "gatsby";
 import styled from "styled-components";
@@ -12,6 +16,11 @@ import InstaFeed from "../components/frontPage/InstaFeed";
 import NewsFeed from "../components/frontPage/NewsFeed";
 import WeatherWidget from "../components/frontPage/WeatherWidget";
 
+/**
+ *
+ * @param {object} pageContext Data about page passed from createPage() function
+ * @param {object} data Data retrieved by GraphQL query to be used on this page
+ */
 export default ({
   pageContext: { cityId, cityName, coverImage, state },
   data: {
