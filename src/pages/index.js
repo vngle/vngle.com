@@ -37,7 +37,7 @@ import CollegeParkLogo from "../../static/images/landing/cp-logo.png";
 const IndexPage = () => {
   const heroBtn = [
     {
-      value: "Request Coverage",
+      value: "Request a Story",
       href: "https://blake680703.typeform.com/to/zwc2R2og",
     },
     {
@@ -70,7 +70,7 @@ const IndexPage = () => {
     {
       title: "Local coverage requested",
       description:
-        "Know something that’s under reported? Whether it’s a protest, a local election, or just a high school game, Vngle’s got you covered.",
+        "Know something that’s going under reported? Whether it’s a local election, a protest, or just a high school game, Vngle’s got you covered.",
       imgSrc: Request,
     },
     {
@@ -97,7 +97,7 @@ const IndexPage = () => {
       ),
       btn: {
         to: "https://blake680703.typeform.com/to/zwc2R2og",
-        text: "Request coverage",
+        text: "Request a Story",
       },
     },
     {
@@ -155,8 +155,8 @@ const IndexPage = () => {
       <HeroContainer>
         <Row className="row-intro">
           <Col className="col-intro text-md-left text-center" md={6} sm={12}>
-            <h1 className="display-4 font-weight-bolder mb-4">
-              Local Reality News
+            <h1 className="display-5 font-weight-bolder mb-4">
+              Various Angles of Nonpartisan Reality News
               <br />
               <span className="highlight">For the People</span>
               <br />
@@ -170,10 +170,20 @@ const IndexPage = () => {
               ))}
             </Row>
             <Subtitle className="mb-4">
-              Watch raw stories from those in the midst of what’s happening. We
-              cover “various angles”, giving you all the viewpoints you don’t
-              hear and coverage you don’t get.{" "}
-              <Badge variant="primary">Sign up today</Badge>
+              Watch authentic stories from real people in the midst of what’s
+              happening. We bring you <b>various angles</b> of nonpartisan
+              coverage to give you all the stories you don’t hear and the
+              viewpoints you don’t get.{" "}
+              <Badge variant="primary">
+                <a
+                  href="http://eepurl.com/g1cJk5"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  style={{ color: "black" }}
+                >
+                  Sign up today
+                </a>
+              </Badge>
             </Subtitle>
           </Col>
           <Col className="col-hook">
@@ -191,7 +201,10 @@ const IndexPage = () => {
         <Row>
           <Col>
             {/* Consider hiding form in small screen sizes */}
-            <NewsSubCard />
+            <NewsSubCard
+              title="Get the nonpartisan pulse on what's going on near you."
+              subtitle="Sign up for balanced coverage on everything from local campaigns, state politics, to COVID-19 updates."
+            />
           </Col>
         </Row>
       </HeroContainer>

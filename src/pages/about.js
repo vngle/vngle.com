@@ -32,8 +32,8 @@ export default () => {
       <Jumbotron className="bg-primary" as="section">
         <Container>
           <h1 className="mb-0">
-            We cover the stories you don’t hear and the perspectives you don’t
-            get.
+            We give balanced coverage to all sides and perspectives to create
+            common understanding around what’s happening.
           </h1>
         </Container>
       </Jumbotron>
@@ -42,15 +42,17 @@ export default () => {
         <section>
           <h2>“Various angles” on news for communities by communities.</h2>
           <p>
-            Vngle is a decentralized grassroots news network bringing coverage
-            to underreported parts of society. We address news deserts, areas
-            that get limited to no news coverage, by capturing human-interests
-            stories that go underrepresented.
+            Vngle stands for “various angles”, and it’s a nonpartisan grassroots
+            reality news network bringing coverage to underrepresented parts of
+            society. We address news deserts, areas that get little to no daily
+            or fair news coverage, by capturing human-interest stories from
+            every angle. We ensure no perspective goes underreported.
           </p>
           <blockquote className="blockquote font-weight-bold font-italic font-serif text-center">
             <h2>
-              “Vngle's mission is to build a more interconnected society, by
-              ensuring every person in every city has diverse local coverage.”
+              “Vngle's mission is to help build a more interconnected society,
+              by connecting every person with diverse comprehensive coverage on
+              what’s happening around them.”
             </h2>
           </blockquote>
 
@@ -65,15 +67,15 @@ export default () => {
             </Figure.Caption>
           </Figure>
           <p>
-            Through partnering with communities, we provide grassroots coverage
-            and reporting tools to areas that have little to no daily news. Our
-            grassroots reporting serves as the last mile for local coverage,
-            bringing hyperlocal depth to pressing matters and supplying active
-            stories with viewpoints from all sides of communities.
+            Through partnering with communities, we provide nonpartisan reality
+            coverage and reporting tools to areas that have little to no daily
+            or fair news coverage. Our grassroots reporting serves as the last
+            mile for pressing comprehensive coverage through supplying active
+            stories with viewpoints from all sides.
           </p>
           <Row className="my-4">
             <Col className="m-auto" sm>
-              <h2>The concept of Vngle started in Ferguson, Missouri</h2>
+              <h2>The concept of Vngle was born in Ferguson, Missouri</h2>
             </Col>
             <Col sm>
               <div className="embed-responsive embed-responsive-4by3 rounded">
@@ -88,19 +90,19 @@ export default () => {
             </Col>
           </Row>
           <p>
-            Over 64% of the United States is considered a news desert. Blake
-            noticed this problem as he was registering people to vote in
+            Over 64% of the United States is considered a news desert, and Blake
+            Stoner noticed this problem as he was registering people to vote in
             Ferguson, MO.
           </p>
           <p>
-            As he went door to door, Blake began asking locals of Ferguson their
-            point of view on what they thought about the city and he found many
-            of their experiences shocking. They revealed stories that news
-            organizations weren’t covering. Soon Blake found himself wondering
-            if local communities across America were under reported on too.
+            As he went door to door, he learned what was happening across the
+            city from local perspectives, and realized so many of the
+            experiences were shockingly going unreported. That collective gap
+            revealed to Blake that many pressing stories across America are not
+            being properly covered from all sides.
           </p>
           <p>
-            <b>That curiosity led to Vngle.</b>
+            <b>That inspired Blake to start Vngle.</b>
           </p>
         </section>
         <section>
