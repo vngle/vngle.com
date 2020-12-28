@@ -91,7 +91,7 @@ const IndexPage = () => {
       title: "I need coverage",
       text: (
         <>
-          Know a topic that's underreported near you? <br /> Text "COVERAGE" to{" "}
+          Know a topic that's underreported near you? <br /> Text "STORY" to{" "}
           <b>(678) 995-5121</b> OR
         </>
       ),
@@ -155,7 +155,7 @@ const IndexPage = () => {
       <HeroContainer>
         <Row className="row-intro">
           <Col className="col-intro text-md-left text-center" md={6} sm={12}>
-            <h1 className="display-5 font-weight-bolder mb-4">
+            <h1 className="display-4 font-weight-bolder mb-4">
               Various Angles of Nonpartisan Reality News
               <br />
               <span className="highlight">For the People</span>
