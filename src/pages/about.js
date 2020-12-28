@@ -40,13 +40,15 @@ export default () => {
 
       <Container as="article">
         <section>
-          <h2>“Various angles” on news for communities by communities.</h2>
           <p>
-            Vngle stands for “various angles”, and it’s a nonpartisan grassroots
-            reality news network bringing coverage to underrepresented parts of
-            society. We address news deserts, areas that get little to no daily
-            or fair news coverage, by capturing human-interest stories from
-            every angle. We ensure no perspective goes underreported.
+            <b>
+              Vngle stands for “various angles”, and it’s a nonpartisan
+              grassroots reality news network bringing coverage to
+              underrepresented parts of society.
+            </b>{" "}
+            We address news deserts, areas that get little to no daily or fair
+            news coverage, by capturing human-interest stories from every angle.
+            We ensure no perspective goes underreported.
           </p>
           <blockquote className="blockquote font-weight-bold font-italic font-serif text-center">
             <h2>
@@ -96,7 +98,7 @@ export default () => {
           </p>
           <p>
             As he went door to door, he learned what was happening across the
-            city from local perspectives, and realized so many of the
+            city from local perspectives, and realized so many of their
             experiences were shockingly going unreported. That collective gap
             revealed to Blake that many pressing stories across America are not
             being properly covered from all sides.
