@@ -14,20 +14,18 @@ import styled from "styled-components";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import NewsSubCard from "../components/NewsSubCard";
-import InstaFeed from "../components/frontPage/InstaFeed";
 import StorySlider from "../components/StorySlider";
 import SimpleSubForm from "../components/landing/SimpleSubForm";
 import ActionCard from "../components/landing/ActionCard";
 
+import GaFlag from "../../static/images/landing/ga-flag.svg";
 import World from "../../static/images/landing/world.svg";
 import Culture from "../../static/images/landing/culture.svg";
 import Transparent from "../../static/images/landing/transparent.svg";
-
 import Search from "../../static/images/landing/search.svg";
 import Request from "../../static/images/landing/request.svg";
 import Capture from "../../static/images/landing/capture.svg";
 import Distribute from "../../static/images/landing/distribute.svg";
-
 import MozillaLogo from "../../static/images/landing/mozilla.png";
 import ColumbiaLogo from "../../static/images/landing/columbia-tamer.png";
 import GoodieNationLogo from "../../static/images/landing/goodie-nation.png";
@@ -210,17 +208,16 @@ const IndexPage = () => {
         </Row>
       </HeroContainer>
 
-      <Container as="section">
-        <Title className="display-3">
-          Here's a peak into some of the latest reality stories from across
-          Georgia
-        </Title>
-        <InstaFeed hashTags={["Georgia"]} isPreview={true} />
-      </Container>
-
       <Jumbotron className="bg-primary py-5 mb-5">
         <Container>
           <Row className="align-items-center justify-content-center">
+            <Col xs={1}>
+              <img
+                src={GaFlag}
+                alt="flag of the state of Georgia"
+                width="100%"
+              />
+            </Col>
             <Col xs="auto">
               <Subtitle className="mb-sm-0 mb-4 mx-auto">
                 Check out our Georgia coverage!
