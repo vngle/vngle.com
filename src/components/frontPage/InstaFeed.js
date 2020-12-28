@@ -11,10 +11,11 @@ import styled from "styled-components";
 import axios from "axios";
 
 /**
- *
+ * @param {integer} postPerReq Number of posts to get in 1 request. Default is 12
  * @param {array} hashTags Filter in posts that have caption containing these hashtags (must be together and space-separated)
+ * @param {bool} isPreview Decide whether to fetch all stories or just the first [postPerReq] posts. Default is false
  */
-const InstaFeed = ({ hashTags }) => {
+const InstaFeed = ({ postPerReq, hashTags, isPreview }) => {
   const [instaFeed, setInstaFeed] = useState([]);
   const [instaInfo, setInstaInfo] = useState({
     has_next_page: true,
@@ -27,6 +28,12 @@ const InstaFeed = ({ hashTags }) => {
   // fetch more insta data when scroll to end
   // may want to switch to GraphQL
   const fetchNext = useCallback(async () => {
+    if (isPreview) {
+      setInstaInfo({ has_next_page: false });
+
+      return;
+    }
+
     let nextFeed = [];
     let pageInfo = instaInfo;
 
@@ -36,7 +43,7 @@ const InstaFeed = ({ hashTags }) => {
           query_hash: queryHash,
           variables: {
             id: "4046633900",
-            first: 12,
+            first: postPerReq,
             after: pageInfo.end_cursor,
           },
         },
@@ -68,7 +75,7 @@ const InstaFeed = ({ hashTags }) => {
           query_hash: queryHash,
           variables: {
             id: "4046633900",
-            first: 50,
+            first: postPerReq,
           },
         },
       });
@@ -176,11 +183,15 @@ const PostContainer = styled(Col)`
 `;
 
 InstaFeed.propTypes = {
+  postPerReq: PropTypes.number,
   hashTags: PropTypes.array,
+  isPreview: PropTypes.bool,
 };
 
 InstaFeed.defaultProps = {
+  postPerReq: 12,
   hashTags: [],
+  isPreview: false,
 };
 
 export default InstaFeed;

@@ -37,7 +37,10 @@ const GeorgiaPage = () => {
             </Button>
           </Col>
         </Row>
-        <NewsSubCard />
+        <NewsSubCard
+          title="Get the nonpartisan pulse on what's going on near you."
+          subtitle="Sign up for balanced coverage on everything from local campaigns, state politics, to COVID-19 updates."
+        />
       </Container>
     </Layout>
   );

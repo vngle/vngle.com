@@ -14,6 +14,7 @@ import styled from "styled-components";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import NewsSubCard from "../components/NewsSubCard";
+import InstaFeed from "../components/frontPage/InstaFeed";
 import StorySlider from "../components/StorySlider";
 import SimpleSubForm from "../components/landing/SimpleSubForm";
 import ActionCard from "../components/landing/ActionCard";
@@ -150,12 +151,12 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Grassroots Reality News Coverage Across America" />
+      <SEO title="Nonpartisan Grassroots Reality News" />
 
       <HeroContainer>
         <Row className="row-intro">
           <Col className="col-intro text-md-left text-center" md={6} sm={12}>
-            <h1 className="display-4 font-weight-bolder mb-4">
+            <h1 className="display-5 font-weight-bolder mb-4">
               Various Angles of Nonpartisan Reality News
               <br />
               <span className="highlight">For the People</span>
@@ -208,6 +209,14 @@ const IndexPage = () => {
           </Col>
         </Row>
       </HeroContainer>
+
+      <Container as="section">
+        <Title className="display-3">
+          Here's a peak into some of the latest reality stories from across
+          Georgia
+        </Title>
+        <InstaFeed hashTags={["Georgia"]} isPreview={true} />
+      </Container>
 
       <Jumbotron className="bg-primary py-5 mb-5">
         <Container>
