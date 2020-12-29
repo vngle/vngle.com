@@ -28,6 +28,12 @@ const InstaFeed = ({ postPerReq, hashTags, isPreview }) => {
   // fetch more insta data when scroll to end
   // may want to switch to GraphQL
   const fetchNext = useCallback(async () => {
+    if (isPreview) {
+      setInstaInfo({ has_next_page: false });
+
+      return;
+    }
+
     let nextFeed = [];
     let pageInfo = instaInfo;
 
@@ -87,8 +93,6 @@ const InstaFeed = ({ postPerReq, hashTags, isPreview }) => {
         setInstaInfo(data.page_info);
         setLoading(false);
       }
-
-      if (isPreview) setInstaInfo({ has_next_page: false });
     };
 
     fetchInstaFeed();
