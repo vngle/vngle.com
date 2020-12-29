@@ -62,7 +62,7 @@ const InstaFeed = ({ postPerReq, hashTags, isPreview }) => {
     setInstaFeed([...instaFeed, ...nextFeed]);
     setInstaInfo(pageInfo);
     setLoading(false);
-  }, [postPerReq, hashTagString, instaFeed, instaInfo]);
+  }, [postPerReq, isPreview, hashTagString, instaFeed, instaInfo]);
 
   // TOFIX: Memory leak when unmounted (moved to another page) and fetching in progress
   // fetch Instagram feed data at initial render
@@ -96,7 +96,7 @@ const InstaFeed = ({ postPerReq, hashTags, isPreview }) => {
     };
 
     fetchInstaFeed();
-  }, [postPerReq, hashTagString, isPreview]);
+  }, [postPerReq, hashTagString]);
 
   // when insta feed & info is updated, check if feed is empty. If yes, try fetching next batch
   useEffect(() => {

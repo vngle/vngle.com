@@ -211,7 +211,7 @@ const IndexPage = () => {
       <Jumbotron className="bg-primary py-5 mb-5">
         <Container>
           <Row className="align-items-center justify-content-center">
-            <Col xs={1}>
+            <Col md={1} sm={2} xs={3}>
               <img
                 src={GaFlag}
                 alt="flag of the state of Georgia"
