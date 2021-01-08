@@ -34,7 +34,7 @@ const Header = ({ siteTitle }) => {
         <Container>
           <Navbar.Brand>
             <Link to="/" title={siteTitle}>
-              <img alt="Vngle logo" src={Logo} height="47" />
+              <img alt="Vngle logo" src={Logo} height="70" />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
