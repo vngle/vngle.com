@@ -22,7 +22,7 @@ const InstaFeed = ({ postPerReq, hashTags, isPreview }) => {
   });
   const [loading, setLoading] = useState(true);
   const endpoint = "https://www.instagram.com/graphql/query/";
-  const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1"; // public; no need to hide
+  const queryHash = "003056d32c2554def87228bc3fd9668a"; // public; no need to hide
   const hashTagString = hashTags.map(hashTag => `#${hashTag}`).join(" ");
 
   // fetch more insta data when scroll to end

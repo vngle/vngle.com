@@ -19,7 +19,7 @@ const createInsta = async ({ createPage }) => {
    * NOT official Instagram API! This method of fetching needs to be deprecated soon
    */
   const endpoint = "https://www.instagram.com/graphql/query/";
-  const queryHash = "15bf78a4ad24e33cbd838fdb31353ac1";
+  const queryHash = "003056d32c2554def87228bc3fd9668a";
   const userId = "4046633900";
   const maxNodePerRequest = 50; // Max # of post data per request
 
