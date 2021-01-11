@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Kenneth Chen",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.11.1",
     "bootstrap": "^4.5.3",
     "contentful-management": "^5.28.0",
