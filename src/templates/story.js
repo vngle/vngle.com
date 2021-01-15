@@ -83,7 +83,13 @@ export default ({
             }
 
             return (
-              <Col xs={12} sm={6} lg={4} className="mb-3" key={content.id}>
+              <Col
+                xs={12}
+                sm={6}
+                lg={4}
+                className="mb-3 mx-auto"
+                key={content.id}
+              >
                 {mediaElement}
               </Col>
             );
