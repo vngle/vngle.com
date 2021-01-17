@@ -21,7 +21,7 @@ const createInsta = async ({ createPage }) => {
   const endpoint = "https://www.instagram.com/graphql/query/";
   const queryHash = "003056d32c2554def87228bc3fd9668a";
   const userId = "4046633900";
-  const maxNodePerRequest = 50; // Max # of post data per request
+  const maxNodePerRequest = 12; // Max # of post data per request
 
   let allFeed = [];
   let feedMetadata = {
