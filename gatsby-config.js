@@ -10,7 +10,6 @@ require("dotenv").config({
 });
 
 module.exports = {
-  flags: { PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: {
     title: `Vngle`,
     description: `Vngle brings you grassroots reality coverage on pressing underrepresented stories happening across America from “various angles”. Join us and let’s bring “various angles” of raw local news coverage to your city next.`,
