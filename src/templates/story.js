@@ -5,6 +5,7 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { Disqus } from "gatsby-plugin-disqus";
+import "styled-components/macro";
 
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
@@ -32,6 +33,17 @@ export default ({
     <Layout>
       <SEO title={title} />
       <Container>
+        <Row>
+          <Col>
+            <p
+              css={`
+                font-weight: 500;
+              `}
+            >
+              {caption}
+            </p>
+          </Col>
+        </Row>
         <Row>
           {mediaContent.map(content => {
             let mediaElement;
@@ -83,22 +95,11 @@ export default ({
             }
 
             return (
-              <Col
-                xs={12}
-                sm={6}
-                lg={4}
-                className="mb-3 mx-auto"
-                key={content.id}
-              >
+              <Col xs={12} sm={6} className="mb-3 mx-auto" key={content.id}>
                 {mediaElement}
               </Col>
             );
           })}
-        </Row>
-        <Row>
-          <Col>
-            <p className="mb-5">{caption}</p>
-          </Col>
         </Row>
         <Row>
           <Col>
