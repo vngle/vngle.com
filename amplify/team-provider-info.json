@@ -1,0 +1,41 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-vngleweb-prod-231338-authRole",
+      "UnauthRoleArn": "arn:aws:iam::990573712671:role/amplify-vngleweb-prod-231338-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::990573712671:role/amplify-vngleweb-prod-231338-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-vngleweb-prod-231338-deployment",
+      "UnauthRoleName": "amplify-vngleweb-prod-231338-unauthRole",
+      "StackName": "amplify-vngleweb-prod-231338",
+      "StackId": "arn:aws:cloudformation:us-east-1:990573712671:stack/amplify-vngleweb-prod-231338/837412d0-66b8-11eb-91e0-12f4ed1177e6",
+      "AmplifyAppId": "d38qy9qpivpnwc"
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-vngleweb-dev-231920-authRole",
+      "UnauthRoleArn": "arn:aws:iam::990573712671:role/amplify-vngleweb-dev-231920-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::990573712671:role/amplify-vngleweb-dev-231920-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-vngleweb-dev-231920-deployment",
+      "UnauthRoleName": "amplify-vngleweb-dev-231920-unauthRole",
+      "StackName": "amplify-vngleweb-dev-231920",
+      "StackId": "arn:aws:cloudformation:us-east-1:990573712671:stack/amplify-vngleweb-dev-231920/4df84030-66b9-11eb-8664-0a7cec156b01",
+      "AmplifyAppId": "d38qy9qpivpnwc"
+    }
+  },
+  "test": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-vngleweb-test-232124-authRole",
+      "UnauthRoleArn": "arn:aws:iam::990573712671:role/amplify-vngleweb-test-232124-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::990573712671:role/amplify-vngleweb-test-232124-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-vngleweb-test-232124-deployment",
+      "UnauthRoleName": "amplify-vngleweb-test-232124-unauthRole",
+      "StackName": "amplify-vngleweb-test-232124",
+      "StackId": "arn:aws:cloudformation:us-east-1:990573712671:stack/amplify-vngleweb-test-232124/981c8180-66b9-11eb-ab73-0e08a9d5c471",
+      "AmplifyAppId": "d38qy9qpivpnwc"
+    }
+  }
+}
