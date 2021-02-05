@@ -10,6 +10,17 @@
       "StackName": "amplify-vngleweb-prod-231338",
       "StackId": "arn:aws:cloudformation:us-east-1:990573712671:stack/amplify-vngleweb-prod-231338/837412d0-66b8-11eb-91e0-12f4ed1177e6",
       "AmplifyAppId": "d38qy9qpivpnwc"
+    },
+    "categories": {
+      "auth": {
+        "vngleweb16f5322c": {},
+        "userPoolGroups": {}
+      },
+      "video": {
+        "storyvodstreams": {
+          "s3UUID": "20awcmcv7zuz"
+        }
+      }
     }
   },
   "dev": {
