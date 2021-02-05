@@ -219,5 +219,5 @@ const createContentful = async (graphql, { createPage }) => {
  * @param {function} actions Gatsby built-in object containing functions to manipulate website state
  */
 exports.createPages = async ({ graphql, actions }) => {
-  await Promise.all([createInsta(actions), createContentful(graphql, actions)]);
+  await Promise.all([createContentful(graphql, actions)]);
 };

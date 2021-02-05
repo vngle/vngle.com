@@ -1,0 +1,37 @@
+type vodAsset
+  @model(subscriptions: { level: public })
+  @auth(
+    rules: [
+      {
+        allow: groups
+        groups: ["Admin"]
+        operations: [create, update, delete, read]
+      }
+      { allow: public, operations: [read] }
+    ]
+  ) {
+  id: ID!
+  title: String
+  caption: String
+  author: String
+  tags: [String]
+
+  #DO NOT EDIT
+  video: videoObject @connection
+}
+
+#DO NOT EDIT
+type videoObject
+  @model
+  @auth(
+    rules: [
+      {
+        allow: groups
+        groups: ["Admin"]
+        operations: [create, update, delete, read]
+      }
+      { allow: public, operations: [read] }
+    ]
+  ) {
+  id: ID!
+}

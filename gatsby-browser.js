@@ -12,3 +12,8 @@ import "react-awesome-slider/dist/styles.css";
 
 // Sass entry point
 import "./static/scss/main.scss";
+
+import Amplify from "aws-amplify";
+import awsconfig from "./src/aws-exports";
+
+Amplify.configure(awsconfig);
