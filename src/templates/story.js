@@ -5,6 +5,7 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { Disqus } from "gatsby-plugin-disqus";
+import ReactPlayer from "react-player";
 import "styled-components/macro";
 
 import Layout from "../components/Layout";
@@ -18,7 +19,7 @@ import useSiteMetadata from "../hooks/useSiteMetadata";
  * @param {object} location URL location info of this page
  */
 export default ({
-  pageContext: { title, author, id, caption, mediaContent },
+  pageContext: { title, author, id, caption, video, src },
   location,
 }) => {
   const { siteUrl } = useSiteMetadata();
@@ -45,7 +46,11 @@ export default ({
           </Col>
         </Row>
         <Row>
-          {mediaContent.map(content => {
+          <Col xs={12} sm={6} className="mb-3 mx-auto">
+            <ReactPlayer url={src} controls width="100" height="100%" />
+          </Col>
+
+          {/* {mediaContent.map(content => {
             let mediaElement;
 
             if (content.file.contentType.includes("image")) {
@@ -99,7 +104,7 @@ export default ({
                 {mediaElement}
               </Col>
             );
-          })}
+          })} */}
         </Row>
         <Row>
           <Col>

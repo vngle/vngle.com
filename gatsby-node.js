@@ -5,94 +5,60 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const axios = require(`axios`);
+// taken manually from aws-video-exports. How to require this?
+const awsOutputVideo =
+  "storyvodstreams-prod-output-20awcmcv7zuz.s3.us-east-1.amazonaws.com";
 
-/**
- * Async function to create Vngle story pages from @VngleStories Instagram posts.
- *
- * @param {function} createPage Function to create a page. Destructured from Gatsby's built-in actions object
- */
-const createInsta = async ({ createPage }) => {
-  /**
-   * Variables needed to make HTTP GET requests to fetch IG posts
-   *
-   * NOT official Instagram API! This method of fetching needs to be deprecated soon
-   */
-  const endpoint = "https://www.instagram.com/graphql/query/";
-  const queryHash = "003056d32c2554def87228bc3fd9668a";
-  const userId = "4046633900";
-  const maxNodePerRequest = 24; // Max # of post data per request
+const createStories = async (graphql, { createPage }) => {
+  let items = [];
+  let nextToken = "init";
 
-  let allFeed = [];
-  let feedMetadata = {
-    has_next_page: true,
-  };
-
-  // fetch all posts from instagram & store in allFeed
-  while (feedMetadata.has_next_page) {
-    variables = {
-      id: userId,
-      first: maxNodePerRequest,
-    };
-
-    // if no end_cursor in metadata then don't include in request
-    if (feedMetadata.hasOwnProperty("end_cursor")) {
-      variables.after = feedMetadata.end_cursor;
-    }
-
-    try {
-      const response = await axios.get(endpoint, {
-        params: {
-          query_hash: queryHash,
-          variables,
+  while (nextToken !== null) {
+    const {
+      data: {
+        allStory: {
+          listVodAssets: { nextToken: newNextToken, items: newItems },
         },
-      });
-      const data = response.data.data.user.edge_owner_to_timeline_media;
+      },
+    } = await graphql(`
+      {
+        allStory${nextToken !== "init" ? `(nextToken: ${nextToken})` : ""} {
+          listVodAssets {
+            nextToken
+            items {
+              author
+              caption
+              id
+              tags
+              title
+              video {
+                id
+              }
+            }
+          }
+        }
+      }
+    `);
 
-      allFeed = [...allFeed, ...data.edges];
-      feedMetadata = data.page_info;
-    } catch (error) {
-      console.error(error);
-    }
+    // update nextToken
+    nextToken = newNextToken;
+    items = [...items, ...newItems].map(item => {
+      return {
+        ...item,
+        src: `https://${awsOutputVideo}/${item.video.id}/${item.video.id}.m3u8`,
+        type: "application/x-mpegURL",
+      };
+    });
   }
 
-  // For each post in IG feed, extract necessary fields & create a page w/ them
-  allFeed.forEach(
-    ({
-      node: {
-        id,
-        edge_media_to_caption,
-        is_video,
-        display_url,
-        video_url,
-        shortcode,
-      },
-    }) => {
-      createPage({
-        path: `/stories/${shortcode}`,
-        component: require.resolve(`./src/templates/story`),
-        context: {
-          title: `${edge_media_to_caption.edges[0].node.text.substring(
-            0,
-            15
-          )}...`,
-          author: "@VngleStories",
-          id,
-          caption: edge_media_to_caption.edges[0].node.text,
-          mediaContent: [
-            {
-              id,
-              file: {
-                contentType: is_video ? "video/mp4" : "image/jpeg",
-                url: video_url,
-              },
-              fixed: { src: display_url },
-            },
-          ],
-        },
-      });
-    }
-  );
+  items.forEach(item => {
+    console.log(item.id);
+    createPage({
+      path: `/stories/${item.id}`,
+      component: require.resolve(`./src/templates/story`),
+      context: item,
+    });
+  });
 };
 
 /**
@@ -219,5 +185,8 @@ const createContentful = async (graphql, { createPage }) => {
  * @param {function} actions Gatsby built-in object containing functions to manipulate website state
  */
 exports.createPages = async ({ graphql, actions }) => {
-  await Promise.all([createContentful(graphql, actions)]);
+  await Promise.all([
+    createStories(graphql, actions),
+    createContentful(graphql, actions),
+  ]);
 };
