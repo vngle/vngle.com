@@ -69,6 +69,18 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "Story",
+        fieldName: "allStory",
+        url:
+          "https://luz7nngkczcchiekqx5xinl3te.appsync-api.us-east-1.amazonaws.com/graphql",
+        headers: {
+          "x-api-key": "da2-kridzenngrcsrn55mau3sqv2ru",
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
