@@ -7,7 +7,7 @@ type vodAsset
         groups: ["Admin"]
         operations: [create, update, delete, read]
       }
-      { allow: private, operations: [read] }
+      { allow: public, operations: [read] }
     ]
   ) {
   id: ID!
@@ -30,7 +30,7 @@ type videoObject
         groups: ["Admin"]
         operations: [create, update, delete, read]
       }
-      { allow: private, operations: [read] }
+      { allow: public, operations: [read] }
     ]
   ) {
   id: ID!

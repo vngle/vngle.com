@@ -26,7 +26,8 @@
     },
     "categories": {
       "auth": {
-        "vngleweb16f5322c": {}
+        "vngleweb16f5322c": {},
+        "userPoolGroups": {}
       },
       "video": {
         "storyvodstreams": {

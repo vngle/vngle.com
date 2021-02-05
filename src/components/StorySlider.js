@@ -6,70 +6,32 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Row, Col, Spinner } from "react-bootstrap";
 import styled from "styled-components";
-import axios from "axios";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
+import Amplify, { API, graphqlOperation } from "aws-amplify";
+import * as queries from "../graphql/queries";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
-/**
- *
- * @param {number} fetchNum Number of posts to fetch from most recent
- * @param {number} interval How long each slide lasts
- * @param {array} hashTags Filter in posts that have caption containing these hashtags (must be together and space-separated)
- */
-const StorySlider = ({ fetchNum, interval, hashTags }) => {
-  const [instaFeed, setInstaFeed] = useState([]);
-  const [caption, setCaption] = useState("");
-  const hashTagString = hashTags.map(hashTag => `#${hashTag}`).join(" ");
+const StorySlider = () => {
+  const [items, setItems] = useState([]);
+  const [nextToken, setNextToken] = useState([]);
 
-  const sliderConfig = {
-    bullets: false,
-    play: true,
-    interval: interval,
-    onFirstMount: () =>
-      setCaption(instaFeed[0].node.edge_media_to_caption.edges[0].node.text),
-    onTransitionStart: ({ nextMedia }) =>
-      setCaption(nextMedia.children.props.caption),
-  };
-
-  // fetch Instagram post data
   useEffect(() => {
-    const fetchInstaFeed = async () => {
-      const endpoint = "https://www.instagram.com/graphql/query/";
-      const queryHash = "003056d32c2554def87228bc3fd9668a";
-
-      try {
-        const response = await axios.get(endpoint, {
-          params: {
-            query_hash: queryHash,
-            variables: {
-              id: "4046633900",
-              first: fetchNum,
-            },
-          },
-        });
-
-        let data = response.data.data.user.edge_owner_to_timeline_media.edges;
-
-        if (hashTagString) {
-          data = data.filter(({ node }) => {
-            const caption = node.edge_media_to_caption.edges[0].node.text;
-
-            return caption.includes(hashTagString);
-          });
-        }
-
-        setInstaFeed(data);
-      } catch (error) {
-        console.error(error);
+    const fetchVod = async () => {
+      const assets = await API.graphql(graphqlOperation(queries.listVodAssets));
+      let { nextToken } = assets.data.listVodAssets;
+      if (nextToken === undefined) {
+        nextToken = "";
       }
+      setItems(assets.data.listVodAssets.items);
+      setNextToken(nextToken);
     };
 
-    fetchInstaFeed();
-  }, [fetchNum, hashTagString]);
+    fetchVod();
+  }, []);
 
-  return instaFeed.length === 0 ? (
+  return false ? (
     <LoadingWrapper className="d-flex flex-column justify-content-center">
       <Spinner animation="grow" variant="primary" className="m-auto">
         <span className="sr-only">Loading...</span>
@@ -78,31 +40,12 @@ const StorySlider = ({ fetchNum, interval, hashTags }) => {
   ) : (
     <Row>
       <CaptionCol className="text-lg-left text-center">
-        <p>{caption}</p>
+        <p>Hi</p>
       </CaptionCol>
       <Col lg={7}>
         <PhoneContainer className="shadow">
-          <AutoplaySlider {...sliderConfig}>
-            {instaFeed
-              .filter(post => post.node.is_video)
-              .map(post => {
-                const caption =
-                  post.node.edge_media_to_caption.edges[0].node.text;
-
-                return (
-                  <div key={post.node.id}>
-                    <SlideVideo
-                      src={post.node.video_url}
-                      autoPlay
-                      muted
-                      caption={caption}
-                      playsInline
-                      loop
-                    />
-                  </div>
-                );
-              })}
-          </AutoplaySlider>
+          <AutoplaySlider></AutoplaySlider>
+          {console.log(items)}
         </PhoneContainer>
       </Col>
     </Row>

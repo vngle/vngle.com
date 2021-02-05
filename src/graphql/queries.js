@@ -9,13 +9,13 @@ export const getVodAsset = /* GraphQL */ `
       caption
       author
       tags
+      createdAt
+      updatedAt
       video {
         id
         createdAt
         updatedAt
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -32,24 +32,15 @@ export const listVodAssets = /* GraphQL */ `
         caption
         author
         tags
+        createdAt
+        updatedAt
         video {
           id
           createdAt
           updatedAt
         }
-        createdAt
-        updatedAt
       }
       nextToken
-    }
-  }
-`;
-export const getVideoObject = /* GraphQL */ `
-  query GetVideoObject($id: ID!) {
-    getVideoObject(id: $id) {
-      id
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -66,6 +57,15 @@ export const listVideoObjects = /* GraphQL */ `
         updatedAt
       }
       nextToken
+    }
+  }
+`;
+export const getVideoObject = /* GraphQL */ `
+  query GetVideoObject($id: ID!) {
+    getVideoObject(id: $id) {
+      id
+      createdAt
+      updatedAt
     }
   }
 `;

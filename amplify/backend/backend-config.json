@@ -35,7 +35,15 @@
               "userPoolId": "authvngleweb16f5322c"
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "API_KEY",
+              "apiKeyConfig": {
+                "apiKeyExpirationDays": 7,
+                "description": "Story public API"
+              }
+            }
+          ]
         }
       }
     }

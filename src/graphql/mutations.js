@@ -12,13 +12,13 @@ export const createVodAsset = /* GraphQL */ `
       caption
       author
       tags
+      createdAt
+      updatedAt
       video {
         id
         createdAt
         updatedAt
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -33,13 +33,13 @@ export const updateVodAsset = /* GraphQL */ `
       caption
       author
       tags
+      createdAt
+      updatedAt
       video {
         id
         createdAt
         updatedAt
       }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -54,13 +54,13 @@ export const deleteVodAsset = /* GraphQL */ `
       caption
       author
       tags
+      createdAt
+      updatedAt
       video {
         id
         createdAt
         updatedAt
       }
-      createdAt
-      updatedAt
     }
   }
 `;
