@@ -52,7 +52,6 @@ const createStories = async (graphql, { createPage }) => {
   }
 
   items.forEach(item => {
-    console.log(item.id);
     createPage({
       path: `/stories/${item.id}`,
       component: require.resolve(`./src/templates/story`),
