@@ -24,7 +24,8 @@ const GeorgiaPage = () => {
 
       <Container>
         <div className="mb-5">
-          <StorySlider fetchNum={50} interval={10000} hashTags={["Georgia"]} />
+          <h1>Page under construction. Come back soon!</h1>
+          {/* <StorySlider fetchNum={50} interval={10000} hashTags={["Georgia"]} /> */}
         </div>
         <Row className="my-5">
           <Col md={8}>
@@ -44,13 +45,13 @@ const GeorgiaPage = () => {
         />
       </Container>
 
-      <Container as="section" className="mt-5">
+      {/* <Container as="section" className="mt-5">
         <h1 className="display-4">
           Here's a peak into some of the latest reality stories from across
           Georgia
         </h1>
         <InstaFeed hashTags={["Georgia"]} isPreview={true} />
-      </Container>
+      </Container> */}
     </Layout>
   );
 };

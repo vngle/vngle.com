@@ -243,8 +243,8 @@ const IndexPage = () => {
           experiences and realities people face. It puts you in the shoes of
           people from all walks of life.
         </Subtitle>
-        <StorySlider />
-        <Image src={World} alt="World map" />
+        {/* <StorySlider /> */}
+        <Image src={World} alt="World map" style={{ marginTop: "3rem" }} />
       </TopFeatureContainer>
 
       <MainFeatureContainer className="my-5">
