@@ -21,9 +21,11 @@ const InstaFeed = () => {
   // fetch more insta data when scroll to end
   // may want to switch to GraphQL
   const fetchNext = useCallback(async () => {
-    const assets = await API.graphql(
-      graphqlOperation(queries.listVodAssets, { instaInfo })
-    );
+    const assets = await API.graphql({
+      query: queries.listVodAssets,
+      variables: { instaInfo },
+      authMode: "API_KEY",
+    });
     const newItems = instaFeed.concat(assets.data.listVodAssets.items);
     let newNextToken = assets.data.listVodAssets.nextToken;
     if (newNextToken === null) {
@@ -39,7 +41,10 @@ const InstaFeed = () => {
   // fetch Instagram feed data at initial render
   useEffect(() => {
     const fetchVod = async () => {
-      const assets = await API.graphql(graphqlOperation(queries.listVodAssets));
+      const assets = await API.graphql({
+        query: queries.listVodAssets,
+        authMode: "API_KEY",
+      });
       let { nextToken } = assets.data.listVodAssets;
       if (nextToken === null) {
         nextToken = "";
