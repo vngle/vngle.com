@@ -29,7 +29,10 @@ const StorySlider = () => {
 
   useEffect(() => {
     const fetchVod = async () => {
-      const assets = await API.graphql(graphqlOperation(queries.listVodAssets));
+      const assets = await API.graphql({
+        query: queries.listVodAssets,
+        authMode: "API_KEY",
+      });
       let { nextToken } = assets.data.listVodAssets;
       if (nextToken === null) {
         nextToken = "";
