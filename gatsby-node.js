@@ -93,21 +93,6 @@ const createContentful = async (graphql, { createPage }) => {
           state
         }
       }
-      allContentfulCampaign {
-        nodes {
-          title
-          id
-          slug
-          cover {
-            fluid {
-              src
-            }
-          }
-          description {
-            description
-          }
-        }
-      }
       allContentfulStory {
         nodes {
           title
@@ -132,6 +117,25 @@ const createContentful = async (graphql, { createPage }) => {
     }
   `);
 
+  /**
+   *       allContentfulCampaign {
+        nodes {
+          title
+          id
+          slug
+          cover {
+            fluid {
+              src
+            }
+          }
+          description {
+            description
+          }
+        }
+      }
+
+   */
+
   frontPages.forEach(({ cityId, cityName, coverImage, id, state, slug }) => {
     createPage({
       path: `${slug}`,
@@ -142,19 +146,6 @@ const createContentful = async (graphql, { createPage }) => {
         coverImage,
         id,
         state,
-      },
-    });
-  });
-
-  campaigns.forEach(({ title, id, cover, description, slug }) => {
-    createPage({
-      path: `/campaigns/${slug}`,
-      component: require.resolve(`./src/templates/campaign`),
-      context: {
-        title,
-        id,
-        cover,
-        description,
       },
     });
   });
