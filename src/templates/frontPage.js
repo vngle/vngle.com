@@ -23,9 +23,9 @@ import WeatherWidget from "../components/frontPage/WeatherWidget";
  */
 export default ({
   pageContext: { cityId, cityName, coverImage, state },
-  data: {
-    allContentfulCampaign: { nodes: campaigns },
-  },
+  // data: {
+  //   allContentfulCampaign: { nodes: campaigns },
+  // },
 }) => (
   <Layout>
     <SEO
@@ -119,26 +119,26 @@ export default ({
   </Layout>
 );
 
-export const query = graphql`
-  query Campaign($id: String) {
-    allContentfulCampaign(
-      filter: { frontPages: { elemMatch: { id: { eq: $id } } } }
-    ) {
-      nodes {
-        title
-        description {
-          description
-        }
-        cover {
-          fixed {
-            src
-          }
-        }
-        slug
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query Campaign($id: String) {
+//     allContentfulCampaign(
+//       filter: { frontPages: { elemMatch: { id: { eq: $id } } } }
+//     ) {
+//       nodes {
+//         title
+//         description {
+//           description
+//         }
+//         cover {
+//           fixed {
+//             src
+//           }
+//         }
+//         slug
+//       }
+//     }
+//   }
+// `;
 
 const StyledJumbotron = styled(Jumbotron)`
   position: relative;
