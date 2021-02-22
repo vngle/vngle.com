@@ -237,13 +237,13 @@ const IndexPage = () => {
           The real scoop from real people, sharing their truth on what’s
           happening.
         </Title>
-        <Subtitle className="mb-5">
+        <Subtitle>
           We bring you authentic on-the-ground perspectives that mainstream
           media won’t. Our cross-cultural coverage highlights the diverse
           experiences and realities people face. It puts you in the shoes of
           people from all walks of life.
         </Subtitle>
-        {/* <StorySlider /> */}
+        <StorySlider />
         <Image src={World} alt="World map" style={{ marginTop: "3rem" }} />
       </TopFeatureContainer>
 

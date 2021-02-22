@@ -86,7 +86,7 @@ const InstaFeed = () => {
                   {/* use Gatsby Image on fetched images */}
                   <img
                     alt="post"
-                    src={`https://${awsvideo.awsOutputVideo}/_thumbnails/${video.id}-thumb.0000000.jpg`}
+                    src={`https://${awsvideo.awsOutputVideo}/${video.id}/${video.id}-thumb.0000000.jpg`}
                     width="100%"
                     className="shadow"
                   />

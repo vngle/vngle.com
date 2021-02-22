@@ -18,8 +18,8 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 const StorySlider = () => {
   const [items, setItems] = useState([]);
   const [caption, setCaption] = useState("");
-  const [nextToken, setNextToken] = useState([]);
   const sliderConfig = {
+    interval: 5000,
     bullets: false,
     play: true,
     onFirstMount: () => setCaption(items[0].caption),
@@ -33,10 +33,6 @@ const StorySlider = () => {
         query: queries.listVodAssets,
         authMode: "API_KEY",
       });
-      let { nextToken } = assets.data.listVodAssets;
-      if (nextToken === null) {
-        nextToken = "";
-      }
 
       const items = assets.data.listVodAssets.items.map(item => {
         return {
@@ -47,7 +43,6 @@ const StorySlider = () => {
       });
 
       setItems(items);
-      setNextToken(nextToken);
     };
 
     fetchVod();
@@ -60,30 +55,31 @@ const StorySlider = () => {
       </Spinner>
     </LoadingWrapper>
   ) : (
-    <Row>
-      <CaptionCol className="text-lg-left text-center">
-        <p>{caption}</p>
-      </CaptionCol>
-      <Col lg={7}>
-        <PhoneContainer className="shadow">
-          <AutoplaySlider {...sliderConfig}>
-            {items.map((source, i) => (
-              <div key={i}>
-                <SlideVideo
-                  url={source.src}
-                  playing
-                  muted
-                  loop
-                  width="100%"
-                  height="100%"
-                />
-              </div>
-            ))}
-          </AutoplaySlider>
-        </PhoneContainer>
-      </Col>
-    </Row>
-  );
+      <Row>
+        <CaptionCol className="text-lg-left text-center">
+          <p>{caption}</p>
+        </CaptionCol>
+        <Col lg={7}>
+          <PhoneContainer className="shadow">
+            <AutoplaySlider {...sliderConfig}>
+              {items.map((source, i) => (
+                <div key={i}>
+                  <SlideVideo
+                    url={source.src}
+                    playing
+                    muted
+                    loop
+                    width="100%"
+                    height="100%"
+                    caption={source.caption}
+                  />
+                </div>
+              ))}
+            </AutoplaySlider>
+          </PhoneContainer>
+        </Col>
+      </Row>
+    );
 };
 
 const CaptionCol = styled(Col)`
