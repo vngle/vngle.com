@@ -74,7 +74,6 @@ const createContentful = async (graphql, { createPage }) => {
   const {
     data: {
       allContentfulFrontPage: { nodes: frontPages },
-      allContentfulCampaign: { nodes: campaigns },
       allContentfulStory: { nodes: stories },
     },
   } = await graphql(`
