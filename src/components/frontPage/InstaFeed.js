@@ -78,10 +78,10 @@ const InstaFeed = () => {
     >
       <Row>
         {!loading &&
-          instaFeed.map(({ id, caption, video }) => {
+          instaFeed.map(({ id, title, video }) => {
             return (
               <PostContainer key={id} lg={3} md={4} sm={6} className="mb-4">
-                <p>{caption}</p>
+                <p>{title}</p>
                 <div className="shade-overlay shadow rounded">
                   {/* use Gatsby Image on fetched images */}
                   <img
