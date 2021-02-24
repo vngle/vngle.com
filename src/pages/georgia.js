@@ -7,7 +7,7 @@ import StorySlider from "../components/StorySlider";
 import NewsSubCard from "../components/NewsSubCard";
 import InstaFeed from "../components/frontPage/InstaFeed";
 
-import GaFlag from '../../static/images/landing/ga-flag.svg';
+import GaFlag from "../../static/images/landing/ga-flag.svg";
 
 const GeorgiaPage = () => {
   return (
@@ -43,7 +43,12 @@ const GeorgiaPage = () => {
           title="Get the nonpartisan pulse on what's going on near you."
           subtitle="Sign up for balanced coverage on everything from local campaigns, state politics, to COVID-19 updates."
         />
-        <img src={GaFlag} alt="" width="60%" className="shadow my-5 d-block mx-auto" />
+        <img
+          src={GaFlag}
+          alt=""
+          width="60%"
+          className="shadow my-5 d-block mx-auto"
+        />
       </Container>
 
       <Container as="section" className="mt-5">
@@ -51,7 +56,7 @@ const GeorgiaPage = () => {
           Here's a peak into some of the latest reality stories from across
           Georgia
         </h1>
-        <InstaFeed hashTags={["Georgia"]} isPreview={true} />
+        <InstaFeed filter={[]} isPreview={true} />
       </Container>
     </Layout>
   );

@@ -15,6 +15,7 @@ class Admin extends React.Component {
     super(props);
     this.state = {
       titleVal: "",
+      tagsVal: "",
       descVal: "",
       groups: [],
       progress: 0,
@@ -54,6 +55,7 @@ class Admin extends React.Component {
   handleChange(event) {
     const { value } = event.target;
     const { name } = event.target;
+
     this.setState({
       [name]: value,
     });
@@ -76,15 +78,22 @@ class Admin extends React.Component {
     API.graphql(graphqlOperation(createVideoObject, videoObject)).then(
       (response, error) => {
         if (error === undefined) {
-          const { titleVal, descVal, file, fileName } = this.state;
+          const { titleVal, tagsVal, descVal, file, fileName } = this.state;
           const fileExtension = fileName.toLowerCase().split(".");
           const videoAsset = {
             input: {
               title: titleVal,
               caption: descVal,
+              tags: tagsVal
+                .trim()
+                .replaceAll(/,\s+/g, ",")
+                .replaceAll(/\s+/g, "")
+                .toLowerCase()
+                .split(","),
               vodAssetVideoId: uuid,
             },
           };
+
           API.graphql(graphqlOperation(createVodAsset, videoAsset));
           Storage.put(
             `${uuid}.${fileExtension[fileExtension.length - 1]}`,
@@ -108,7 +117,7 @@ class Admin extends React.Component {
   }
 
   createAdminPanel() {
-    const { groups, titleVal, descVal, progress } = this.state;
+    const { groups, titleVal, tagsVal, descVal, progress } = this.state;
     if (groups.includes("Admin")) {
       return (
         <div>
@@ -124,6 +133,14 @@ class Admin extends React.Component {
                   onChange={this.handleChange}
                 />
                 <br />
+                <input
+                  type="text"
+                  value={tagsVal}
+                  name="tagsVal"
+                  placeholder="Tags: College Park, COVID-19, BLM"
+                  onChange={this.handleChange}
+                />
+                <br />
                 <textarea
                   className="desTextA"
                   rows="4"
@@ -135,6 +152,7 @@ class Admin extends React.Component {
                 />
                 <br />
                 <FilePicker callbackFromParent={this.myCallback} />
+                <br />
                 <label htmlFor="submitButton" className="submitLabel">
                   Create Asset
                   <input

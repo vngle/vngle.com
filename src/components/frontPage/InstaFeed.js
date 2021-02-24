@@ -13,7 +13,7 @@ import * as queries from "../../graphql/queries";
 import awsvideo from "../../aws-video-exports";
 
 // TODO: rename to StoryFeed and refactor names
-const InstaFeed = () => {
+const InstaFeed = ({ filter }) => {
   const [instaFeed, setInstaFeed] = useState([]);
   const [instaInfo, setInstaInfo] = useState("init");
   const [loading, setLoading] = useState(true);
@@ -78,23 +78,30 @@ const InstaFeed = () => {
     >
       <Row>
         {!loading &&
-          instaFeed.map(({ id, title, video }) => {
-            return (
-              <PostContainer key={id} lg={3} md={4} sm={6} className="mb-4">
-                <p>{title}</p>
-                <div className="shade-overlay shadow rounded">
-                  {/* use Gatsby Image on fetched images */}
-                  <img
-                    alt="post"
-                    src={`https://${awsvideo.awsOutputVideo}/${video.id}/${video.id}-thumb.0000000.jpg`}
-                    width="100%"
-                    className="shadow"
-                  />
-                </div>
-                <Link to={`/stories/${id}`} className="stretched-link" />
-              </PostContainer>
-            );
-          })}
+          instaFeed
+            // TODO: this filter should be done at the GraphQL level?
+            .filter(({ tags }) =>
+              filter.every(tag =>
+                Array.isArray(tags) ? tags.includes(tag) : false
+              )
+            )
+            .map(({ id, title, video }) => {
+              return (
+                <PostContainer key={id} lg={3} md={4} sm={6} className="mb-4">
+                  <p>{title}</p>
+                  <div className="shade-overlay shadow rounded">
+                    {/* use Gatsby Image on fetched images */}
+                    <img
+                      alt="post"
+                      src={`https://${awsvideo.awsOutputVideo}/${video.id}/${video.id}-thumb.0000000.jpg`}
+                      width="100%"
+                      className="shadow"
+                    />
+                  </div>
+                  <Link to={`/stories/${id}`} className="stretched-link" />
+                </PostContainer>
+              );
+            })}
       </Row>
     </InfiniteScroll>
   );
@@ -135,13 +142,13 @@ const PostContainer = styled(Col)`
 
 InstaFeed.propTypes = {
   postPerReq: PropTypes.number,
-  hashTags: PropTypes.array,
+  filter: PropTypes.array,
   isPreview: PropTypes.bool,
 };
 
 InstaFeed.defaultProps = {
   postPerReq: 12,
-  hashTags: [],
+  filter: [],
   isPreview: false,
 };
 

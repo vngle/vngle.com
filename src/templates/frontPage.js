@@ -102,8 +102,7 @@ export default ({
             <h1 className="display-3">Stories</h1>
             <div className="ribbon" />
           </div>
-          <h1>Story feed under construction. Come back soon!</h1>
-          {/* <InstaFeed hashTags={[cityName.replace(/\s/g, "")]} postPerReq={50} /> */}
+          <InstaFeed filter={[cityName.replaceAll(/\s+/g, "").toLowerCase()]} />
         </Col>
         <Col>
           <div className="category-container">
