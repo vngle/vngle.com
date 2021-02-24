@@ -102,7 +102,7 @@ export default ({
             <h1 className="display-3">Stories</h1>
             <div className="ribbon" />
           </div>
-          <InstaFeed filter={[cityName.replaceAll(/\s+/g, "").toLowerCase()]} />
+          <InstaFeed filter={[cityName.replace(/\s+/g, "").toLowerCase()]} />
         </Col>
         <Col>
           <div className="category-container">
