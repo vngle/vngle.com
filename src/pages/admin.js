@@ -86,8 +86,8 @@ class Admin extends React.Component {
               caption: descVal,
               tags: tagsVal
                 .trim()
-                .replaceAll(/,\s+/g, ",")
-                .replaceAll(/\s+/g, "")
+                .replace(/,\s+/g, ",")
+                .replace(/\s+/g, "")
                 .toLowerCase()
                 .split(","),
               vodAssetVideoId: uuid,
