@@ -56,7 +56,7 @@ const GeorgiaPage = () => {
           Here's a peak into some of the latest reality stories from across
           Georgia
         </h1>
-        <InstaFeed filter={[]} isPreview={true} />
+        <InstaFeed filter={["georgia"]} isPreview={true} />
       </Container>
     </Layout>
   );
