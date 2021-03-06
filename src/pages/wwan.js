@@ -69,8 +69,7 @@ export default () => (
       <Container as="article" fluid>
         <Row>
           <Col md={6} sm={12}>
-            <h1>Story feed under construction. Come back soon!</h1>
-            {/* <InstaFeed hashTags={["WWAN"]} /> */}
+            <InstaFeed filter={["wwan"]} />
           </Col>
           <Col>
             <h2 className="mb-4">Cities we've traveled to thus far:</h2>
