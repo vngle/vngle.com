@@ -68,7 +68,6 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST,
       },
     },
-    `gatsby-plugin-netlify`,
     {
       resolve: "gatsby-source-graphql",
       options: {
