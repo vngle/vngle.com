@@ -15,7 +15,7 @@ import ReactPlayer from "react-player";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
-const StorySlider = () => {
+const StoryCarousel = () => {
   const [items, setItems] = useState([]);
   const [caption, setCaption] = useState("");
   const sliderConfig = {
@@ -55,31 +55,31 @@ const StorySlider = () => {
       </Spinner>
     </LoadingWrapper>
   ) : (
-      <Row>
-        <CaptionCol className="text-lg-left text-center">
-          <p>{caption}</p>
-        </CaptionCol>
-        <Col lg={7}>
-          <PhoneContainer className="shadow">
-            <AutoplaySlider {...sliderConfig}>
-              {items.map((source, i) => (
-                <div key={i}>
-                  <SlideVideo
-                    url={source.src}
-                    playing
-                    muted
-                    loop
-                    width="100%"
-                    height="100%"
-                    caption={source.caption}
-                  />
-                </div>
-              ))}
-            </AutoplaySlider>
-          </PhoneContainer>
-        </Col>
-      </Row>
-    );
+    <Row>
+      <CaptionCol className="text-lg-left text-center">
+        <p>{caption}</p>
+      </CaptionCol>
+      <Col lg={7}>
+        <PhoneContainer className="shadow">
+          <AutoplaySlider {...sliderConfig}>
+            {items.map((source, i) => (
+              <div key={i}>
+                <SlideVideo
+                  url={source.src}
+                  playing
+                  muted
+                  loop
+                  width="100%"
+                  height="100%"
+                  caption={source.caption}
+                />
+              </div>
+            ))}
+          </AutoplaySlider>
+        </PhoneContainer>
+      </Col>
+    </Row>
+  );
 };
 
 const CaptionCol = styled(Col)`
@@ -123,16 +123,16 @@ const LoadingWrapper = styled.div`
   }
 `;
 
-StorySlider.propTypes = {
+StoryCarousel.propTypes = {
   fetchNum: PropTypes.number,
   interval: PropTypes.number,
   hashTags: PropTypes.array,
 };
 
-StorySlider.defaultProps = {
+StoryCarousel.defaultProps = {
   fetchNum: 12,
   interval: 5000,
   hashTags: [],
 };
 
-export default StorySlider;
+export default StoryCarousel;
