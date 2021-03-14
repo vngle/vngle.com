@@ -42,15 +42,6 @@ const SliderContainer = styled.div`
   .swiper-wrapper {
     padding: 30px 0;
   }
-
-  .swiper-slide {
-    transition: 250ms all;
-
-    &:hover {
-      transform: scale(1.2);
-      z-index: 1;
-    }
-  }
 `;
 
 const NavButton = styled.div`

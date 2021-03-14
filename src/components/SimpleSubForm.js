@@ -14,10 +14,12 @@ const SimpleSubForm = () => {
       target="_blank"
       rel="noreferrer"
     >
-      <InputGroup className="mb-3">
+      <InputGroup>
         <Form.Control type="text" placeholder="Your zip code" name="ZIPCODE" />
         <InputGroup.Append>
-          <Button type="submit">Sign Up</Button>
+          <Button type="submit" variant="outline-dark">
+            Sign Up
+          </Button>
         </InputGroup.Append>
       </InputGroup>
     </Form>

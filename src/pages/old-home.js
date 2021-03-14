@@ -15,7 +15,7 @@ import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import NewsSubCard from "../components/NewsSubCard";
 import StorySlider from "../components/StoryCarousel";
-import SimpleSubForm from "../components/landing/SimpleSubForm";
+import SimpleSubForm from "../components/SimpleSubForm";
 import ActionCard from "../components/landing/ActionCard";
 
 import GaFlag from "../../static/images/landing/ga-flag.svg";
