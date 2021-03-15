@@ -8,7 +8,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { API, graphqlOperation } from "aws-amplify";
+import { API } from "aws-amplify";
 import * as queries from "../../graphql/queries";
 import awsvideo from "../../aws-video-exports";
 

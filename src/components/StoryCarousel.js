@@ -8,7 +8,7 @@ import { Row, Col, Spinner } from "react-bootstrap";
 import styled from "styled-components";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
-import { API, graphqlOperation } from "aws-amplify";
+import { API } from "aws-amplify";
 import * as queries from "../graphql/queries";
 import awsvideo from "../aws-video-exports";
 import ReactPlayer from "react-player";

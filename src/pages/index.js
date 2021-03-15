@@ -1,14 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
-import {
-  Jumbotron,
-  Container,
-  Row,
-  Col,
-  Button,
-  Image,
-  Badge,
-} from "react-bootstrap";
+import { Jumbotron, Container, Row, Col, Image } from "react-bootstrap";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import awsvideo from "../aws-video-exports";
@@ -16,11 +7,14 @@ import awsvideo from "../aws-video-exports";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import Slider from "../components/Slider";
+import Grid from "../components/Grid";
 import SimpleSubForm from "../components/SimpleSubForm";
 
 import World from "../../static/images/landing/world.svg";
 
-const IndexPage = ({ data: { storiesFeatured } }) => {
+const IndexPage = ({
+  data: { storiesFeatured, storiesGeorgia, storiesNational },
+}) => {
   return (
     <Layout>
       <SEO title="Nonpartisan Grassroots Reality News" />
@@ -58,6 +52,7 @@ const IndexPage = ({ data: { storiesFeatured } }) => {
         </Slider>
       </Container>
 
+      {/* Make this a component: CalloutBanner.js */}
       <Jumbotron className="bg-primary py-5 mb-5">
         <Container>
           <Row>
@@ -72,6 +67,20 @@ const IndexPage = ({ data: { storiesFeatured } }) => {
           </Row>
         </Container>
       </Jumbotron>
+
+      <Container fluid>
+        <h1 className="display-4 font-sans-serif text-center">
+          Georgia Stories
+        </h1>
+        <Grid items={storiesGeorgia.listVodAssets.items} />
+      </Container>
+
+      <Container fluid>
+        <h1 className="display-4 font-sans-serif text-center">
+          National Stories
+        </h1>
+        <Grid items={storiesNational.listVodAssets.items} />
+      </Container>
     </Layout>
   );
 };
@@ -90,7 +99,7 @@ const HeroContainer = styled(Container)`
     left: 0;
     right: 0;
     text-align: center;
-    opacity: 0.4;
+    opacity: 0.2;
   }
 `;
 
