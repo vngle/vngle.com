@@ -55,7 +55,7 @@ const IndexPage = ({
       {/* Make this a component: CalloutBanner.js */}
       <Jumbotron className="bg-primary py-5 mb-5">
         <Container>
-          <Row>
+          <Row xs={1} sm={2}>
             <Col>
               <h1 className="mb-0 font-sans-serif text-center">
                 Follow Our Stories!

@@ -14,10 +14,24 @@ const Slider = ({ children }) => {
     nextEl: ".swiper-next-button",
     prevEl: ".swiper-prev-button",
   };
+  const breakPoints = {
+    576: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  };
 
   return (
     <SliderContainer>
-      <Swiper spaceBetween={30} slidesPerView={3} navigation={navigation} a11y>
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={1}
+        navigation={navigation}
+        breakpoints={breakPoints}
+        a11y
+      >
         {children.map(child => {
           return <SwiperSlide key={child.key}>{child}</SwiperSlide>;
         })}
