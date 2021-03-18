@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Jumbotron, Container, Row, Col, Image } from "react-bootstrap";
 import styled from "styled-components";
 import { graphql } from "gatsby";
@@ -46,6 +47,7 @@ const IndexPage = ({
                   className="shadow"
                   rounded
                 />
+                <Link to={`/stories/${id}`} className="stretched-link" />
               </div>
             );
           })}
