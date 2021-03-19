@@ -44,6 +44,41 @@ export const listVodAssets = /* GraphQL */ `
     }
   }
 `;
+export const byTags = /* GraphQL */ `
+  query ByTags(
+    $tags: String
+    $createdAt: ModelStringKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelvodAssetFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    byTags(
+      tags: $tags
+      createdAt: $createdAt
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        title
+        caption
+        author
+        tags
+        createdAt
+        updatedAt
+        video {
+          id
+          createdAt
+          updatedAt
+        }
+      }
+      nextToken
+    }
+  }
+`;
 export const listVideoObjects = /* GraphQL */ `
   query ListVideoObjects(
     $filter: ModelvideoObjectFilterInput

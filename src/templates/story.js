@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { Disqus } from "gatsby-plugin-disqus";
 import ReactPlayer from "react-player";
 import "styled-components/macro";

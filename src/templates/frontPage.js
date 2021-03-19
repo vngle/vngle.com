@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import { Link, graphql } from "gatsby";
+// import { Link, graphql } from "gatsby";
 import styled from "styled-components";
 import { Container, Jumbotron, Row, Col } from "react-bootstrap";
 import { FcBookmark } from "react-icons/fc";
@@ -196,38 +196,38 @@ const ContentContainer = styled(Container)`
   }
 `;
 
-const CampaignCol = styled(Col)`
-  position: relative;
-  text-align: left;
-  color: white;
+// const CampaignCol = styled(Col)`
+//   position: relative;
+//   text-align: left;
+//   color: white;
 
-  h1 {
-    position: absolute;
-    bottom: 55px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 65%;
-    overflow: hidden;
-  }
+//   h1 {
+//     position: absolute;
+//     bottom: 55px;
+//     left: 0;
+//     right: 0;
+//     margin: 0 auto;
+//     text-align: center;
+//     max-width: 65%;
+//     overflow: hidden;
+//   }
 
-  .bg {
-    position: relative;
-    z-index: -1;
-    margin: 0 auto;
-    background: ${({ theme }) => theme.colors.primary};
-    width: ${({ hascover }) => hascover && "100%"};
-    height: ${({ hascover }) => (hascover ? "100%" : "250px")};
-  }
+//   .bg {
+//     position: relative;
+//     z-index: -1;
+//     margin: 0 auto;
+//     background: ${({ theme }) => theme.colors.primary};
+//     width: ${({ hascover }) => hascover && "100%"};
+//     height: ${({ hascover }) => (hascover ? "100%" : "250px")};
+//   }
 
-  .shade-overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(33, 37, 41, 0) 0%,
-      rgba(33, 37, 41, 0.5) 70%,
-      rgba(33, 37, 41, 0.9) 100%
-    );
-    overflow: hidden;
-  }
-`;
+//   .shade-overlay {
+//     background: linear-gradient(
+//       180deg,
+//       rgba(33, 37, 41, 0) 0%,
+//       rgba(33, 37, 41, 0.5) 70%,
+//       rgba(33, 37, 41, 0.9) 100%
+//     );
+//     overflow: hidden;
+//   }
+// `;
