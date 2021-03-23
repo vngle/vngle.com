@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => {
     {
       name: "Jobs",
       to:
-        "https://www.notion.so/vngle/Careers-Vngle-ef8a5667e86b4c129a88538d04ae3f00",
+        "https://www.notion.so/vngle/Jobs-Vngle-cbe85d3d0e074aeda5c860629a42ad86",
     },
     { name: "Where We Are Now", to: "/wwan" },
     { name: "About", to: "/about" },
