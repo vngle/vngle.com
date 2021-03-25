@@ -12,6 +12,13 @@ $theme-colors: (
   "dark": #1e1c21,
 );
 
+$container-max-widths: (
+  sm: 740px,
+  md: 920px,
+  lg: 1100px,
+  xl: 1516px,
+);
+
 $enable-shadows: true;
 $enable-responsive-font-sizes: true;
 
