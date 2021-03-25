@@ -56,7 +56,7 @@ export default () => (
           <Figure.Image
             alt="Where we are now poster"
             src={Wwan}
-            width="75%"
+            width="50%"
             className="d-block mx-auto"
           />
         </Figure>
@@ -68,7 +68,7 @@ export default () => (
 
       <Container as="article" fluid>
         <Row>
-          <Col md={6} sm={12}>
+          <Col xs={12}>
             <InstaFeed filter={["wwan"]} />
           </Col>
           <Col>
