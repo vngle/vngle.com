@@ -88,8 +88,8 @@ const InstaFeed = ({ filter }) => {
             .map(({ id, title, video }) => {
               return (
                 <PostContainer key={id} lg={3} md={4} sm={6} className="mb-4">
-                  <p>{title}</p>
                   <div className="shade-overlay shadow rounded">
+                    <p>{title}</p>
                     {/* use Gatsby Image on fetched images */}
                     <img
                       alt="post"
@@ -130,6 +130,7 @@ const PostContainer = styled(Col)`
   }
 
   .shade-overlay {
+    position: relative;
     background: linear-gradient(
       180deg,
       rgba(33, 37, 41, 0) 0%,

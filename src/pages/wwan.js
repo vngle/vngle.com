@@ -6,8 +6,6 @@ import SEO from "../components/Seo";
 import InstaFeed from "../components/frontPage/InstaFeed";
 
 import Wwan from "../../static/images/wwan.png";
-import VngleRV from "../../static/images/vngle-rv.png";
-import WwanPodcastTeaser from "../../static/images/wwan-podcast-teaser.png";
 
 const citiesTraveled = [
   "Atlanta, GA",
@@ -44,8 +42,10 @@ export default () => (
     <Jumbotron className="bg-primary" as="section">
       <Container>
         <h1 className="mb-0">
-          <em>Where We Are Now</em> is our national docuseries to develop
-          grassroots news across America.
+          <em>Where We Are Now</em> is our nonpartisan grassroots documentary
+          series to understand the state of America from cross cultural
+          perspectives across the country. The research done through it, helps
+          bring needed coverage to underrepresented parts of America.
         </h1>
       </Container>
     </Jumbotron>
@@ -60,15 +60,11 @@ export default () => (
             className="d-block mx-auto"
           />
         </Figure>
-        <h2 className="font-sans-serif mb-5">
-          WWAN is a docuseries-style assessment to understand how to address
-          America’s changing culture and growing news deserts.
-        </h2>
       </Container>
 
       <Container as="article" fluid>
         <Row>
-          <Col xs={12}>
+          <Col xs={12} lg={8}>
             <InstaFeed filter={["wwan"]} />
           </Col>
           <Col>
@@ -102,17 +98,6 @@ export default () => (
               conditions of communities across America while serving as a beacon
               for collective conversation.
             </p>
-            <Figure className="d-block">
-              <Figure.Image
-                alt="Where we are now poster"
-                src={VngleRV}
-                width="75%"
-                className="d-block mx-auto"
-              />
-              <Figure.Caption className="text-center">
-                We are working to create Vngle's mobile office
-              </Figure.Caption>
-            </Figure>
             <p>
               <strong>
                 Keep up with <u>Where We Are Now</u> by following @VngleStories
@@ -123,14 +108,6 @@ export default () => (
                 & <a href="https://twitter.com/vnglestories">Twitter</a>.
               </strong>
             </p>
-            <Figure className="d-block">
-              <Figure.Image
-                alt="Where we are now podcast teaser"
-                src={WwanPodcastTeaser}
-                className="d-block mx-auto"
-                width="75%"
-              />
-            </Figure>
           </Col>
         </Row>
       </Container>
