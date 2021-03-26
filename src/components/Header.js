@@ -85,19 +85,19 @@ const StyledHeader = styled.header`
       .navbar-nav {
         .nav-link,
         .btn {
-          color: ${props => props.theme.colors.dark};
+          color: var(--dark);
           font-weight: bold;
           font-size: 1.25rem;
           transition: color 0.3s;
         }
 
         .nav-link:hover {
-          color: ${props => props.theme.colors.primary};
+          color: var(--dark);
           transition: color 0.3s;
         }
 
         .dropdown-item a {
-          color: ${props => props.theme.colors.dark};
+          color: var(--dark);
           text-decoration: none;
         }
       }

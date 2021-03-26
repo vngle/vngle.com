@@ -61,7 +61,7 @@ const StyledCard = styled(Card)`
     font-size: 1.5rem;
 
     a {
-      color: ${({ theme }) => theme.colors.dark};
+      color: var(--dark);
     }
   }
 `;

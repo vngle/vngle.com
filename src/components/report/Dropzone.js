@@ -63,13 +63,13 @@ const Dropzone = ({ files, setFiles }) => {
 
 const getColor = props => {
   if (props.isDragAccept) {
-    return props.theme.colors.success;
+    return "var(--success)";
   }
   if (props.isDragReject) {
-    return props.theme.colors.danger;
+    return "var(--danger)";
   }
   if (props.isDragActive) {
-    return props.theme.colors.primary;
+    return "var(--primary)";
   }
   return "#eeeeee";
 };

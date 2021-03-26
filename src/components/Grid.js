@@ -4,26 +4,34 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import awsvideo from "../aws-video-exports";
+import moment from "moment";
 
 const Grid = ({ items }) => {
   return (
     <>
-      <Row>
-        {items.map(({ title, video, id }) => {
+      <Row xs={1} md={2} lg={3}>
+        {items.map(({ title, video, id, createdAt }) => {
           return (
-            <PostContainer key={id} lg={3} md={4} sm={6} className="mb-4">
-              <p>{title}</p>
-              <div className="shade-overlay shadow rounded">
-                {/* use Gatsby Image on fetched images */}
-                <img
-                  alt="post"
-                  src={`https://${awsvideo.awsOutputVideo}/${video.id}/${video.id}-thumb.0000000.jpg`}
-                  width="100%"
-                  className="shadow"
-                />
-              </div>
-              <Link to={`/stories/${id}`} className="stretched-link" />
-            </PostContainer>
+            <Col key={id} className="mb-4">
+              <Post className="rounded">
+                <div className="thumbnail-wrapper">
+                  <img
+                    alt="thumbnail"
+                    src={`https://${awsvideo.awsOutputVideo}/${video.id}/${video.id}-thumb.0000000.jpg`}
+                    width="100%"
+                  />
+                  <Link to={`/stories/${id}`} className="stretched-link" />
+                </div>
+                <div className="post-content">
+                  <h1>{title}</h1>
+
+                  <div className="post-content__meta">
+                    <p>VngleStories</p>
+                    <p>{moment(createdAt).calendar()}</p>
+                  </div>
+                </div>
+              </Post>
+            </Col>
           );
         })}
       </Row>
@@ -31,36 +39,35 @@ const Grid = ({ items }) => {
   );
 };
 
-const PostContainer = styled(Col)`
-  position: relative;
-  text-align: left;
-  color: white;
+const Post = styled.div`
+  overflow: hidden;
 
-  p {
-    position: absolute;
-    bottom: 0;
-    margin-left: 1rem;
-    max-width: 65%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-  }
-
-  img {
+  .thumbnail-wrapper {
     position: relative;
-    z-index: -1;
   }
 
-  .shade-overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(33, 37, 41, 0) 0%,
-      rgba(33, 37, 41, 0.5) 70%,
-      rgba(33, 37, 41, 0.9) 100%
-    );
-    overflow: hidden;
+  .post-content {
+    min-height: 250px;
+    padding: 1.5rem;
+    border: solid 2px var(--primary);
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1 {
+      color: var(--dark);
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    &__meta {
+      text-align: right;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
   }
 `;
 

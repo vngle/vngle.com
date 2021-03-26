@@ -65,7 +65,7 @@ const GeorgiaPage = () => {
 const StyledJumbotron = styled(Jumbotron)`
   position: relative;
   background-color: transparent;
-  color: ${props => props.theme.colors.light};
+  color: var(--light);
   background: linear-gradient(
     180deg,
     rgba(33, 37, 41, 0) 0%,

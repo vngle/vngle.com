@@ -130,5 +130,5 @@ export default () => {
 
 const ProfileImg = styled.img`
   border-radius: 50%;
-  border: 10px solid ${props => props.theme.colors.primary};
+  border: 10px solid var(--primary);
 `;

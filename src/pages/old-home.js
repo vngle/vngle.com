@@ -352,7 +352,7 @@ const HeroContainer = styled(Container)`
   .col-hook {
     display: flex;
     align-items: center;
-    background-color: ${props => props.theme.colors.primary};
+    background-color: var(--primary);
     background-clip: content-box;
     border-radius: 40px;
     transition: all 0.2s;

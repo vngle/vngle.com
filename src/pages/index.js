@@ -9,6 +9,7 @@ import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import Slider from "../components/Slider";
 import Grid from "../components/Grid";
+import List from "../components/List";
 import SimpleSubForm from "../components/SimpleSubForm";
 
 import World from "../../static/images/landing/world.svg";
@@ -70,18 +71,16 @@ const IndexPage = ({
         </Container>
       </Jumbotron>
 
-      <Container fluid>
-        <h1 className="display-4 font-sans-serif text-center">
-          Georgia Stories
-        </h1>
-        <Grid items={storiesGeorgia.listVodAssets.items} />
-      </Container>
+      <Container>
+        <div className="mb-5">
+          <FeedTitle>Georgia Stories</FeedTitle>
+          <Grid items={storiesGeorgia.listVodAssets.items} />
+        </div>
 
-      <Container fluid>
-        <h1 className="display-4 font-sans-serif text-center">
-          National Stories
-        </h1>
-        <Grid items={storiesNational.listVodAssets.items} />
+        <div>
+          <FeedTitle>National Stories</FeedTitle>
+          <List items={storiesNational.listVodAssets.items} />
+        </div>
       </Container>
     </Layout>
   );
@@ -105,6 +104,12 @@ const HeroContainer = styled(Container)`
   }
 `;
 
+const FeedTitle = styled.h1`
+  font-family: Inter, sans-serif;
+  text-align: center;
+  font-size: 4rem;
+`;
+
 export const query = graphql`
   {
     storiesFeatured: allStory {
@@ -112,6 +117,7 @@ export const query = graphql`
         items {
           title
           id
+          createdAt
           video {
             id
           }
@@ -123,6 +129,7 @@ export const query = graphql`
         items {
           title
           id
+          createdAt
           video {
             id
           }
@@ -130,10 +137,11 @@ export const query = graphql`
       }
     }
     storiesNational: allStory {
-      listVodAssets(limit: 10, filter: { tags: { contains: "usa" } }) {
+      listVodAssets(limit: 20, filter: { tags: { contains: "usa" } }) {
         items {
           title
           id
+          createdAt
           video {
             id
           }

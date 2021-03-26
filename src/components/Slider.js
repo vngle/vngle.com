@@ -59,7 +59,7 @@ const SliderContainer = styled.div`
 `;
 
 const NavButton = styled.div`
-  background: ${props => props.theme.colors.primary};
+  background: var(--primary);
   position: absolute;
   top: 50%;
   left: ${props => (props.prev ? "10px" : "auto")};
@@ -74,7 +74,7 @@ const NavButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${props => props.theme.colors.dark};
+  color: var(--dark);
 
   svg {
     width: 100%;
