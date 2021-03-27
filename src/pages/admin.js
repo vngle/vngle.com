@@ -82,6 +82,7 @@ class Admin extends React.Component {
           const fileExtension = fileName.toLowerCase().split(".");
           const videoAsset = {
             input: {
+              type: "Story",
               title: titleVal,
               caption: descVal,
               tags: tagsVal

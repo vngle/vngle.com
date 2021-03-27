@@ -8,6 +8,7 @@ export const createVodAsset = /* GraphQL */ `
   ) {
     createVodAsset(input: $input, condition: $condition) {
       id
+      type
       title
       caption
       author
@@ -29,6 +30,7 @@ export const updateVodAsset = /* GraphQL */ `
   ) {
     updateVodAsset(input: $input, condition: $condition) {
       id
+      type
       title
       caption
       author
@@ -50,6 +52,7 @@ export const deleteVodAsset = /* GraphQL */ `
   ) {
     deleteVodAsset(input: $input, condition: $condition) {
       id
+      type
       title
       caption
       author

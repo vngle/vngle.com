@@ -5,6 +5,7 @@ export const onCreateVodAsset = /* GraphQL */ `
   subscription OnCreateVodAsset {
     onCreateVodAsset {
       id
+      type
       title
       caption
       author
@@ -23,6 +24,7 @@ export const onUpdateVodAsset = /* GraphQL */ `
   subscription OnUpdateVodAsset {
     onUpdateVodAsset {
       id
+      type
       title
       caption
       author
@@ -41,6 +43,7 @@ export const onDeleteVodAsset = /* GraphQL */ `
   subscription OnDeleteVodAsset {
     onDeleteVodAsset {
       id
+      type
       title
       caption
       author

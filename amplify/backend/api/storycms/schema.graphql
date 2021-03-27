@@ -1,6 +1,6 @@
 type vodAsset
   @model(subscriptions: { level: public })
-  @key(name: "byTags", fields: ["tags", "createdAt"], queryField: "byTags")
+  @key(name: "byType", fields: ["type", "createdAt"], queryField: "byType")
   @auth(
     rules: [
       {
@@ -12,12 +12,12 @@ type vodAsset
     ]
   ) {
   id: ID!
+  type: String!
   title: String
   caption: String
   author: String
   tags: [String]
-  createdAt: AWSDateTime!
-  updatedAt: AWSDateTime!
+  createdAt: String!
 
   #DO NOT EDIT
   video: videoObject @connection
