@@ -40,10 +40,19 @@ const Grid = ({ items }) => {
 };
 
 const Post = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
 
   .thumbnail-wrapper {
     position: relative;
+    flex: 1;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .post-content {

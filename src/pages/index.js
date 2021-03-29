@@ -38,9 +38,9 @@ const IndexPage = ({
 
       <Container fluid>
         <Slider>
-          {storiesFeatured.listVodAssets.items.map(({ title, id, video }) => {
+          {storiesFeatured.byType.items.map(({ title, id, video }) => {
             return (
-              <div key={id}>
+              <SlideThumbnail key={id}>
                 <Image
                   alt={title}
                   src={`https://${awsvideo.awsOutputVideo}/${video.id}/${video.id}-thumb.0000000.jpg`}
@@ -49,7 +49,7 @@ const IndexPage = ({
                   rounded
                 />
                 <Link to={`/stories/${id}`} className="stretched-link" />
-              </div>
+              </SlideThumbnail>
             );
           })}
         </Slider>
@@ -74,12 +74,12 @@ const IndexPage = ({
       <Container>
         <div className="mb-5">
           <FeedTitle>Georgia Stories</FeedTitle>
-          <Grid items={storiesGeorgia.listVodAssets.items} />
+          <Grid items={storiesGeorgia.byType.items} />
         </div>
 
         <div>
           <FeedTitle>National Stories</FeedTitle>
-          <List items={storiesNational.listVodAssets.items} />
+          <List items={storiesNational.byType.items} />
         </div>
       </Container>
     </Layout>
@@ -104,6 +104,15 @@ const HeroContainer = styled(Container)`
   }
 `;
 
+const SlideThumbnail = styled.div`
+  height: 100%;
+
+  img {
+    height: inherit;
+    object-fit: cover;
+  }
+`;
+
 const FeedTitle = styled.h1`
   font-family: Inter, sans-serif;
   text-align: center;
@@ -113,7 +122,7 @@ const FeedTitle = styled.h1`
 export const query = graphql`
   {
     storiesFeatured: allStory {
-      listVodAssets(limit: 10) {
+      byType(type: "Story", sortDirection: DESC, limit: 10) {
         items {
           title
           id
@@ -125,7 +134,12 @@ export const query = graphql`
       }
     }
     storiesGeorgia: allStory {
-      listVodAssets(limit: 10, filter: { tags: { contains: "georgia" } }) {
+      byType(
+        type: "Story"
+        sortDirection: DESC
+        limit: 10
+        filter: { tags: { contains: "georgia" } }
+      ) {
         items {
           title
           id
@@ -137,7 +151,12 @@ export const query = graphql`
       }
     }
     storiesNational: allStory {
-      listVodAssets(limit: 20, filter: { tags: { contains: "usa" } }) {
+      byType(
+        type: "Story"
+        limit: 20
+        sortDirection: DESC
+        filter: { tags: { contains: "usa" } }
+      ) {
         items {
           title
           id

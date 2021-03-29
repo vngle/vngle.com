@@ -56,6 +56,10 @@ const SliderContainer = styled.div`
   .swiper-wrapper {
     padding: 30px 0;
   }
+
+  .swiper-slide {
+    height: auto;
+  }
 `;
 
 const NavButton = styled.div`
