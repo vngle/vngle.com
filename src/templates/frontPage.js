@@ -216,7 +216,7 @@ const ContentContainer = styled(Container)`
 //     position: relative;
 //     z-index: -1;
 //     margin: 0 auto;
-//     background: ${({ theme }) => theme.colors.primary};
+//     background: var(--primary);
 //     width: ${({ hascover }) => hascover && "100%"};
 //     height: ${({ hascover }) => (hascover ? "100%" : "250px")};
 //   }

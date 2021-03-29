@@ -87,13 +87,13 @@ const NewsContainer = styled.div`
   border-bottom: 1px solid gray;
 
   a {
-    color: ${({ theme }) => theme.colors.dark};
+    color: var(--dark);
     text-decoration: none;
     transition: color 0.25s;
   }
 
   a:hover {
-    color: ${({ theme }) => theme.colors.primary};
+    color: var(--primary);
     transition: color 0.25s;
   }
 `;
