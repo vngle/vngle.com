@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Jumbotron, Container, Row, Col, Image } from "react-bootstrap";
+import { Jumbotron, Container, Row, Col, Image, Button } from "react-bootstrap";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import awsvideo from "../aws-video-exports";
@@ -75,6 +75,11 @@ const IndexPage = ({
         <div className="mb-5">
           <FeedTitle>Georgia Stories</FeedTitle>
           <Grid items={storiesGeorgia.byType.items} />
+          <div className="text-center">
+            <Button as={Link} to="/georgia" size="lg" className="">
+              See more
+            </Button>
+          </div>
         </div>
 
         <div>
@@ -122,7 +127,11 @@ const FeedTitle = styled.h1`
 export const query = graphql`
   {
     storiesFeatured: allStory {
-      byType(type: "Story", sortDirection: DESC, limit: 10) {
+      byType(
+        type: "Story"
+        sortDirection: DESC
+        filter: { tags: { contains: "featured" } }
+      ) {
         items {
           title
           id

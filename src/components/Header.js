@@ -91,7 +91,7 @@ const StyledHeader = styled.header`
         }
 
         .nav-link:hover {
-          color: var(--dark);
+          color: var(--primary);
           transition: color 0.3s;
         }
 

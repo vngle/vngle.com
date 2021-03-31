@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import awsvideo from "../aws-video-exports";
 import moment from "moment";
+import { FcApproval } from "react-icons/fc";
 
 const Grid = ({ items }) => {
   return (
@@ -26,8 +27,10 @@ const Grid = ({ items }) => {
                   <h1>{title}</h1>
 
                   <div className="post-content__meta">
-                    <p>VngleStories</p>
-                    <p>{moment(createdAt).calendar()}</p>
+                    <p>
+                      VngleVerified <FcApproval />
+                    </p>
+                    {/* <p>{moment(createdAt).calendar()}</p> */}
                   </div>
                 </div>
               </Post>

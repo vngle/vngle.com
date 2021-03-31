@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import awsvideo from "../aws-video-exports";
 import moment from "moment";
+import { FcApproval } from "react-icons/fc";
 
 const List = ({ items }) => {
   return (
@@ -18,8 +19,10 @@ const List = ({ items }) => {
                   <h1>{title}</h1>
 
                   <div className="post-content__meta">
-                    <p>VngleStories</p>
-                    <p>{moment(createdAt).calendar()}</p>
+                    <p>
+                      VngleVerified <FcApproval />
+                    </p>
+                    {/* <p>{moment(createdAt).calendar()}</p> */}
                   </div>
                 </div>
                 <div className="thumbnail-wrapper">
@@ -71,6 +74,7 @@ const Post = styled.div`
   .thumbnail-wrapper {
     position: relative;
     max-width: 50%;
+    flex: 0 0 50%;
 
     img {
       height: 100%;
