@@ -1,37 +1,39 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import SwiperCore, { Navigation, A11y } from "swiper";
+import SwiperCore, { Navigation, A11y, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "swiper/components/navigation/navigation.scss";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-SwiperCore.use([Navigation, A11y]);
+SwiperCore.use([Navigation, A11y, Autoplay]);
 
 const Slider = ({ children }) => {
-  const navigation = {
-    nextEl: ".swiper-next-button",
-    prevEl: ".swiper-prev-button",
-  };
-  const breakPoints = {
-    576: {
-      slidesPerView: 2,
+  const config = {
+    spaceBetween: 30,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".swiper-next-button",
+      prevEl: ".swiper-prev-button",
     },
-    768: {
-      slidesPerView: 3,
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
     },
+    autoplay: {
+      disableOnInteraction: true,
+    },
+    a11y: true,
   };
 
   return (
     <SliderContainer>
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        navigation={navigation}
-        breakpoints={breakPoints}
-        a11y
-      >
+      <Swiper {...config}>
         {children.map(child => {
           return <SwiperSlide key={child.key}>{child}</SwiperSlide>;
         })}
