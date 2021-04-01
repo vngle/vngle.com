@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Jumbotron, Container, Row, Col, Image, Button } from "react-bootstrap";
+import { Container, Image, Button } from "react-bootstrap";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import awsvideo from "../aws-video-exports";
@@ -10,7 +10,7 @@ import SEO from "../components/Seo";
 import Slider from "../components/Slider";
 import Grid from "../components/Grid";
 import List from "../components/List";
-import SimpleSubForm from "../components/SimpleSubForm";
+import SubForm from "../components/SubForm";
 
 import World from "../../static/images/landing/world.svg";
 
@@ -32,6 +32,18 @@ const IndexPage = ({
           <br />
           <span className="highlight">By the People</span>
         </h1>
+
+        <div className="btn-container">
+          <Button size="lg" href="https://blake680703.typeform.com/to/zwc2R2og">
+            Request a story
+          </Button>
+          <Button
+            size="lg"
+            href="https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true"
+          >
+            Report a story
+          </Button>
+        </div>
 
         <img src={World} alt="" className="hero-img" />
       </HeroContainer>
@@ -55,21 +67,7 @@ const IndexPage = ({
         </Slider>
       </Container>
 
-      {/* Make this a component: CalloutBanner.js */}
-      <Jumbotron className="bg-primary py-5 mb-5">
-        <Container>
-          <Row xs={1} sm={2}>
-            <Col>
-              <h1 className="mb-0 font-sans-serif text-center">
-                Follow Our Stories!
-              </h1>
-            </Col>
-            <Col>
-              <SimpleSubForm />
-            </Col>
-          </Row>
-        </Container>
-      </Jumbotron>
+      <SubForm />
 
       <Container>
         <div className="mb-5">
@@ -94,6 +92,17 @@ const IndexPage = ({
 const HeroContainer = styled(Container)`
   position: relative;
   margin-top: 2rem;
+
+  .btn-container {
+    text-align: center;
+
+    .btn {
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
 
   .hero-img {
     width: 80%;
