@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { Container, Image, Button } from "react-bootstrap";
 import styled from "styled-components";
-import { graphql } from "gatsby";
+import Typed from "react-typed";
 import awsvideo from "../aws-video-exports";
 
 import Layout from "../components/Layout";
@@ -25,12 +25,21 @@ const IndexPage = ({
         <h1 className="display-4 font-weight-bolder text-center">
           Various Angles of
           <br />
-          Nonpartisan Reality News
+          Reality News Near You
         </h1>
         <h1 className="display-4 font-weight-bolder text-center">
-          <span className="highlight">For the People</span>
+          <span className="highlight">Nonpartisan</span>
           <br />
-          <span className="highlight">By the People</span>
+          <span className="highlight">
+            <Typed
+              strings={["For the People", "By the People"]}
+              typeSpeed={40}
+              backDelay={5000}
+              showCursor={false}
+              loop
+            />
+          </span>
+          <br />
         </h1>
 
         <div className="btn-container">

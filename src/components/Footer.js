@@ -29,7 +29,7 @@ export default () => (
           <Link to="/">
             <img alt="Vngle logo" src={Logo} height={47} />
           </Link>
-          <p className="mt-3">"Various angles" on your city.</p>
+          <p className="mt-3">"Various angles" of reality news near you.</p>
         </div>
       </Col>
       <Col className="text-center" sm>

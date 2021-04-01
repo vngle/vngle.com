@@ -163,9 +163,9 @@ const NewsSubForm = ({ status, message, onSubmitted }) => {
         )}
       </Button>
       <MutedMsg className="text-muted">
-        * We're currently operating in Georgia with more states coming soon.
-        Sign ups outside of Georgia will be invited to the Vngle community until
-        we reach them.
+        *We’re operating in Georgia with more states coming soon. Sign ups
+        outside of GA are invited to our national community newsletter until we
+        reach them.
       </MutedMsg>
     </Form>
   );

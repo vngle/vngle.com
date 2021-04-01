@@ -107,7 +107,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
       <Container>
         <Row>
           <Col xs={12} md={7} lg={6}>
-            <h1>Follow our stories!</h1>
+            <h1>Get free and balanced news near you</h1>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
               <Form.Row as={Row} xs={1} sm={2}>
                 {formData["group[293774][4]"] === true ? (
@@ -191,9 +191,9 @@ const SubForm = ({ status, message, onSubmitted }) => {
               {respMessage}
 
               <MutedMsg className="text-muted">
-                * We're currently operating in Georgia with more states coming
-                soon. Sign ups outside of Georgia will be invited when we reach
-                them.
+                * We’re operating in Georgia with more states coming soon. Sign
+                ups outside of GA are invited to our national community
+                newsletter until we reach them.
               </MutedMsg>
             </Form>
           </Col>
