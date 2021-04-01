@@ -138,7 +138,6 @@ const SlideThumbnail = styled.div`
   overflow: hidden;
   border-radius: 0.25rem;
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
-  border: none;
   transition: 0.2s;
 
   p {
