@@ -32,7 +32,7 @@ const IndexPage = ({
           <br />
           <span className="highlight">
             <Typed
-              strings={["For the People", "By the People"]}
+              strings={["By the People", "For the People"]}
               typeSpeed={40}
               backDelay={5000}
               showCursor={false}
