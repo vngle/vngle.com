@@ -22,11 +22,15 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
 
-        <script type="text/javascript" defer>
-          var _protocol = (("https:" == document.location.protocol) ? "
-          https://" : " http://"); var _site_hash_code =
-          "f318aadce9a499db26f3b6cff9a60606"; var _suid = 15623;
-        </script>
+        <script
+          type="text/javascript"
+          defer
+          dangerouslySetInnerHTML={{
+            __html: `var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                     var _site_hash_code = "f318aadce9a499db26f3b6cff9a60606";
+                     var _suid = 15623;`,
+          }}
+        />
         <script
           type="text/javascript"
           defer
