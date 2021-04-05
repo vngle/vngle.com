@@ -42,7 +42,7 @@ const Admin = () => {
         },
       },
     });
-  }, [groups]);
+  }, []);
 
   const myCallback = dataFromChild => {
     setFile({
