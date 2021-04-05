@@ -20,7 +20,6 @@ const IndexPage = ({
   return (
     <Layout>
       <SEO title="Nonpartisan Grassroots Reality News" />
-
       <HeroContainer>
         <h1 className="display-4 font-weight-bolder text-center">
           Various Angles of
@@ -43,7 +42,7 @@ const IndexPage = ({
         </h1>
 
         <div className="btn-container">
-          <Button size="lg" href="https://blake680703.typeform.com/to/zwc2R2og">
+          <Button size="lg" href="https://vngle.typeform.com/to/zwc2R2og">
             Request a story
           </Button>
           <Button
