@@ -101,7 +101,7 @@ export default () => {
 
         <Container>
           <section className="intro">
-            <Row>
+            <Row xs={1} md={2}>
               <Col className="intro__content">
                 <h1>
                   An ally is a <b>collaborative sponsor</b> aiming to extend
@@ -127,7 +127,7 @@ export default () => {
             <h1 className="font-sans-serif mb-5">
               Benefits of becoming an ally
             </h1>
-            <Row className="text-center">
+            <Row className="text-center" xs={1} md={3}>
               <Col>
                 <h1>
                   <FiActivity />
@@ -165,8 +165,8 @@ export default () => {
             Recent for-profit, non-profit, & local governmental allies
           </h1>
 
-          {allies.map(({ name, href, logoSrc, description }) => (
-            <Row>
+          {allies.map(({ name, href, logoSrc, description }, i) => (
+            <Row xs={1} md={2} key={i}>
               <Col className="examples__content">
                 <h2 className="font-sans-serif">{name}</h2>
                 <p>{description}</p>
@@ -199,6 +199,9 @@ const Styled = styled.div`
 
   .intro {
     &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 
