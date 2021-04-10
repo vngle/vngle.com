@@ -1,12 +1,16 @@
 import React from "react";
-import { Container, Jumbotron, Button } from "react-bootstrap";
+import styled from "styled-components";
+import { Container, Jumbotron, Button, Row, Col } from "react-bootstrap";
+import { FiActivity, FiCompass, FiGlobe } from "react-icons/fi";
 
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 
+import TeamSvg from "../../static/images/ally/team.svg";
 import ClubELogo from "../../static/images/ally/logo-club-e.png";
 import CouncilmanGay from "../../static/images/ally/councilman-gay.jpg";
 import OneTalentLogo from "../../static/images/ally/logo-one-talent.png";
+import { FiCloudDrizzle } from "react-icons/fi";
 
 export default () => {
   const allies = [
@@ -76,73 +80,133 @@ export default () => {
 
   return (
     <Layout>
-      <SEO title="Become an Ally" />
+      <Styled>
+        <SEO title="Become an Ally" />
 
-      <Jumbotron className="bg-primary" as="section">
+        <Jumbotron as="section" className="bg-primary title-banner">
+          <Container>
+            <h1 className="display-2">Become an Ally</h1>
+            <h2>Grow with Vngle in cities across America!</h2>
+            <Button
+              size="lg"
+              variant="dark"
+              href="https://forms.gle/XQ7ZBAje4pksxdnDA"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Become an ally today!
+            </Button>
+          </Container>
+        </Jumbotron>
+
         <Container>
-          <h1 className="mb-0">Grow with Vngle in cities across America!</h1>
+          <section className="intro">
+            <Row>
+              <Col className="intro__content">
+                <h1>
+                  An ally is a <b>collaborative sponsor</b> aiming to extend
+                  their presence across a desired geography.
+                </h1>
+                <p>
+                  Vngle partners with allies to grow awareness around their
+                  brands & initiatives in targeted areas. We know how to
+                  uniquely connect with communities, and we help our allies
+                  launch custom campaigns to deepen their relationship with
+                  diverse communities.
+                </p>
+              </Col>
+              <Col>
+                <img src={TeamSvg} alt="" />
+              </Col>
+            </Row>
+          </section>
         </Container>
-      </Jumbotron>
 
-      <Container as="article">
-        <section>
-          <p>
-            An ally is a <b>collaborative sponsor</b> aiming to extend their
-            presence across a desired geography.
-          </p>
-          <p>
-            Vngle partners with allies to grow awareness around their brands &
-            initiatives in targeted areas. We know how to uniquely connect with
-            communities, and we help our allies launch custom campaigns to
-            deepen their relationship with diverse communities.
-          </p>
-          <p>
-            <b>Some of the benefits of becoming an ally:</b>
-          </p>
-          <ul>
-            <li>
-              Tailored campaigns to collect insights and build your awareness
-              across your target cities.
-            </li>
-            <li>
-              “Various angles” of consultation ranging from strategic marketing,
-              grassroots campaigning, geopolitical strategy, and product
-              development.
-            </li>
-            <li>
-              Be seen as a social good community brand, through sponsoring
-              diverse local news coverage that your city needs.
-            </li>
-          </ul>
+        <Jumbotron className="bg-secondary text-light">
+          <Container>
+            <h1 className="font-sans-serif mb-5">
+              Benefits of becoming an ally
+            </h1>
+            <Row className="text-center">
+              <Col>
+                <h1>
+                  <FiActivity />
+                </h1>
+                <p>
+                  Tailored campaigns to collect insights and build your
+                  awareness across your target cities.
+                </p>
+              </Col>
+              <Col>
+                <h1>
+                  <FiCompass />
+                </h1>
+                <p>
+                  “Various angles” of consultation ranging from strategic
+                  marketing, grassroots campaigning, geopolitical strategy, and
+                  product development.
+                </p>
+              </Col>
+              <Col>
+                <h1>
+                  <FiGlobe />
+                </h1>
+                <p>
+                  Be seen as a social good community brand, through sponsoring
+                  diverse local news coverage that your city needs.
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </Jumbotron>
 
-          <Button
-            size="lg"
-            href="https://forms.gle/XQ7ZBAje4pksxdnDA"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Become an ally today!
-          </Button>
-          <p>
-            names? Email us: <a href="mailto:info@vngle.com">info@vngle.com</a>
-          </p>
-
-          <h2>
-            Examples of recent for-profit, non-profit, & local governmental
-            allies:
-          </h2>
+        <Container className="examples">
+          <h1 className="text-center">
+            Recent for-profit, non-profit, & local governmental allies
+          </h1>
 
           {allies.map(({ name, href, logoSrc, description }) => (
-            <>
-              <h3 className="font-sans-serif">{name}</h3>
-              <a href={href} className="mx-auto">
-                <img src={logoSrc} alt="" width="50%" className="my-4" />
-              </a>
-              {description}
-            </>
+            <Row>
+              <Col className="examples__content">
+                <h2 className="font-sans-serif">{name}</h2>
+                <p>{description}</p>
+              </Col>
+              <Col className="text-center">
+                <a href={href} className="mx-auto">
+                  <img src={logoSrc} alt="" width="50%" className="my-4" />
+                </a>
+              </Col>
+            </Row>
           ))}
-        </section>
-      </Container>
+        </Container>
+      </Styled>
     </Layout>
   );
 };
+
+const Styled = styled.div`
+  .title-banner {
+    text-align: center;
+
+    h1 {
+      font-weight: 900;
+    }
+
+    h2 {
+      font-family: "Inter", sans-serif;
+    }
+  }
+
+  .intro {
+    &__content {
+    }
+  }
+
+  .examples {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+`;
