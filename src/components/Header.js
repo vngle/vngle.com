@@ -20,12 +20,16 @@ const Header = ({ siteTitle }) => {
   ];
   const dropdownLinks = [
     { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
-    { name: "Report a Story", to: "/report" },
+    {
+      name: "Become a Reality Reporter",
+      to: "https://forms.gle/JuxuSvst9aJTiDAk6",
+    },
     {
       name: "Request Coverage",
-      to: "https://blake680703.typeform.com/to/zwc2R2og",
+      to: "https://vngle.typeform.com/to/zwc2R2og",
     },
     { name: "Become an Ally", to: "/ally" },
+    { name: "Submit a tip", to: "/report" },
   ];
 
   return (
