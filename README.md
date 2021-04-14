@@ -1,6 +1,6 @@
  <p align="center">
   <a href="https://www.vngle.com/">
-    <img alt="Vngle" src="./static/images/logo-box.jpg" width="80" />
+    <img alt="Vngle" src="./static/images/logo.png" width="80" />
   </a>
 </p>
 <h1 align="center">

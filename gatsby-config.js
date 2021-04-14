@@ -14,7 +14,7 @@ module.exports = {
     title: `Vngle`,
     description: `Vngle brings you grassroots reality coverage on pressing underrepresented stories happening across America from “various angles”. Join us and let’s bring “various angles” of raw local news coverage to your city next.`,
     siteUrl: `https://www.vngle.com`,
-    image: `/images/logo-box.jpg`,
+    image: `/images/logo.png`,
     author: `Kenneth Chen`,
     twitterUsername: `@vnglestories`,
   },
