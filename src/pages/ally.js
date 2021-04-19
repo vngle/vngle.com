@@ -10,7 +10,6 @@ import TeamSvg from "../../static/images/ally/team.svg";
 import ClubELogo from "../../static/images/ally/logo-club-e.png";
 import CouncilmanGay from "../../static/images/ally/councilman-gay.jpg";
 import OneTalentLogo from "../../static/images/ally/logo-one-talent.png";
-import { FiCloudDrizzle } from "react-icons/fi";
 
 export default () => {
   const allies = [
