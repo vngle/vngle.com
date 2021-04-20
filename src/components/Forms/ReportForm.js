@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import { Form, Button, Spinner } from "react-bootstrap";
 import * as contentful from "contentful-management";
 
-import Dropzone from "./Dropzone";
+import Dropzone from "../FilePickers/Dropzone";
 
 /**
  *

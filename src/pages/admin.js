@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Form, Col, Button } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 import { withAuthenticator } from "aws-amplify-react";
 import Amplify, { Auth, API, graphqlOperation, Storage } from "aws-amplify";
@@ -9,8 +9,8 @@ import "@aws-amplify/ui/dist/style.css";
 
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
-import FilePicker from "../components/FilePicker";
-import PopoverProgress from "../components/PopoverProgress";
+import FilePicker from "../components/FilePickers/VideoPicker";
+import ProgressModal from "../components/Modals/ProgressModal";
 
 const Admin = () => {
   const [form, setForm] = useState({
@@ -44,13 +44,6 @@ const Admin = () => {
     });
   }, []);
 
-  const myCallback = dataFromChild => {
-    setFile({
-      data: dataFromChild,
-      name: dataFromChild.name,
-    });
-  };
-
   const handleChange = event => {
     const { value } = event.target;
     const { name } = event.target;
@@ -61,7 +54,7 @@ const Admin = () => {
     });
   };
 
-  const submitFormHandler = event => {
+  const handleSubmit = event => {
     event.preventDefault();
 
     const uuid = uuidv4();
@@ -70,6 +63,34 @@ const Admin = () => {
         id: uuid,
       },
     };
+
+    // don't do anything if no file is chosen
+    // this should be validated before submit in the future
+
+    if (file.data === undefined) {
+      console.error("No file chosen");
+
+      return;
+    }
+
+    const fileExtension = file.name.toLowerCase().split(".");
+
+    Storage.put(
+      `${uuid}.${fileExtension[fileExtension.length - 1]}`,
+      file.data,
+      {
+        progressCallback: progress => {
+          const { loaded, total } = progress;
+          console.log(`Uploaded: ${progress.loaded}/${progress.total}`);
+          setProgress((loaded / total) * 100);
+        },
+        contentType: "video/*",
+      }
+    )
+      .then(() => console.log(`Successfully Uploaded: ${uuid}`))
+      .catch(err => console.log(`Error: ${err}`));
+
+    return;
 
     API.graphql(graphqlOperation(createVideoObject, videoObject)).then(
       (response, error) => {
@@ -110,64 +131,64 @@ const Admin = () => {
     );
   };
 
-  const createAdminPanel = () => {
-    return groups.includes("Admin") ? (
-      <div>
-        <header>
-          <h1 className="pageName">Admin Panel</h1>
-          <form onSubmit={submitFormHandler}>
-            <div>
-              <input
-                type="text"
-                value={form.title}
-                name="title"
-                placeholder="Title"
-                onChange={handleChange}
-              />
-              <br />
-              <input
-                type="text"
-                value={form.tags}
-                name="tags"
-                placeholder="Tags: College Park, COVID-19, BLM"
-                onChange={handleChange}
-              />
-              <br />
-              <textarea
-                className="desTextA"
-                rows="4"
-                cols="50"
-                value={form.caption}
-                name="caption"
-                placeholder="Caption"
-                onChange={handleChange}
-              />
-              <br />
-              <FilePicker callbackFromParent={myCallback} />
-              <br />
-              <label htmlFor="submitButton" className="submitLabel">
-                Create Asset
-                <input
-                  type="submit"
-                  className="submitButton"
-                  id="submitButton"
-                  value="Create Asset"
-                />
-              </label>
-              <PopoverProgress progress={progress} />
-            </div>
-          </form>
-        </header>
-      </div>
-    ) : (
-      <div>Not Authenticated</div>
-    );
-  };
-
   return (
     <Layout>
       <SEO title="Admin Panel" />
-      <Container>{createAdminPanel()}</Container>
+      <Container>
+        {groups.includes("Admin") ? (
+          <>
+            <h1>Admin Panel</h1>
+            <Form onSubmit={handleSubmit}>
+              <Form.Row>
+                <Form.Group as={Col}>
+                  <Form.Label>Title</Form.Label>
+                  <Form.Control
+                    type="text"
+                    value={form.title}
+                    name="title"
+                    placeholder="Title"
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+                <Form.Group as={Col}>
+                  <Form.Label>Tags</Form.Label>
+                  <Form.Control
+                    type="text"
+                    value={form.tags}
+                    name="tags"
+                    placeholder="Tags: College Park, COVID-19, BLM"
+                    onChange={handleChange}
+                  />
+                </Form.Group>
+              </Form.Row>
+              <Form.Group>
+                <Form.Label>Caption</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  value={form.caption}
+                  name="caption"
+                  placeholder="Caption"
+                  onChange={handleChange}
+                />
+              </Form.Group>
+              <Form.Group>
+                <FilePicker
+                  onPick={pickedFile => {
+                    setFile({
+                      data: pickedFile,
+                      name: pickedFile.name,
+                    });
+                  }}
+                />
+              </Form.Group>
+              <Button type="submit">Create Story Video</Button>
+            </Form>
+            <ProgressModal progress={progress} />
+          </>
+        ) : (
+          <>Not Authenticated</>
+        )}
+      </Container>
     </Layout>
   );
 };

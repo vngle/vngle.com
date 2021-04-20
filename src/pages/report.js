@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 import SEO from "../components/Seo";
 import Layout from "../components/Layout";
-import ReportForm from "../components/report/ReportForm";
+import ReportForm from "../components/Forms/ReportForm";
 
 const Report = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
