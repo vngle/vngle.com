@@ -17,6 +17,7 @@ export default () => {
       name: "Club E Atlanta",
       href: "https://www.clubeatlanta.com/",
       logoSrc: ClubELogo,
+      bg: "#DC2FB8",
       description: (
         <>
           <p>
@@ -40,6 +41,7 @@ export default () => {
       name: "One Talent Inc",
       href: "https://www.onetalent.org/",
       logoSrc: OneTalentLogo,
+      bg: "#03B7E6",
       description: (
         <>
           <p>
@@ -60,6 +62,7 @@ export default () => {
       name: "Councilmember Roderick Gay",
       href: "https://www.onetalent.org/",
       logoSrc: CouncilmanGay,
+      bg: "var(--primary)",
       description: (
         <>
           <p>
@@ -88,7 +91,6 @@ export default () => {
             <h2>Grow with Vngle in cities across America!</h2>
             <Button
               size="lg"
-              variant="dark"
               href="https://forms.gle/XQ7ZBAje4pksxdnDA"
               target="_blank"
               rel="noreferrer"
@@ -129,7 +131,7 @@ export default () => {
             <Row className="text-center" xs={1} md={3}>
               <Col>
                 <h1>
-                  <FiActivity />
+                  <FiActivity className="text-primary" />
                 </h1>
                 <p>
                   Tailored campaigns to collect insights and build your
@@ -138,7 +140,7 @@ export default () => {
               </Col>
               <Col>
                 <h1>
-                  <FiCompass />
+                  <FiCompass className="text-primary" />
                 </h1>
                 <p>
                   “Various angles” of consultation ranging from strategic
@@ -148,7 +150,7 @@ export default () => {
               </Col>
               <Col>
                 <h1>
-                  <FiGlobe />
+                  <FiGlobe className="text-primary" />
                 </h1>
                 <p>
                   Be seen as a social good community brand, through sponsoring
@@ -160,21 +162,26 @@ export default () => {
         </Jumbotron>
 
         <Container className="examples">
-          <h1 className="text-center">
+          <h1 className="text-center display-4">
             Recent for-profit, non-profit, & local governmental allies
           </h1>
 
-          {allies.map(({ name, href, logoSrc, description }, i) => (
-            <Row xs={1} md={2} key={i}>
+          {allies.map(({ name, href, logoSrc, description, bg }, i) => (
+            <Row xs={1} md={2} key={i} className="mb-4">
               <Col className="examples__content">
                 <h2 className="font-sans-serif">{name}</h2>
-                <p>{description}</p>
+                <>{description}</>
               </Col>
-              <Col className="text-center">
+              <LogoCol className="text-center shadow" bg={bg}>
                 <a href={href} className="mx-auto">
-                  <img src={logoSrc} alt="" width="50%" className="my-4" />
+                  <img
+                    src={logoSrc}
+                    alt=""
+                    width="50%"
+                    className="my-4 rounded"
+                  />
                 </a>
-              </Col>
+              </LogoCol>
             </Row>
           ))}
         </Container>
@@ -186,6 +193,10 @@ export default () => {
 const Styled = styled.div`
   .title-banner {
     text-align: center;
+    background-image: url(https://source.unsplash.com/1lfI7wkGWZ4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 
     h1 {
       font-weight: 900;
@@ -211,4 +222,9 @@ const Styled = styled.div`
       justify-content: center;
     }
   }
+`;
+
+const LogoCol = styled(Col)`
+  background-color: ${props => props.bg};
+  border-radius: 10px;
 `;
