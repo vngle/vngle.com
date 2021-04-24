@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import awsvideo from "../aws-video-exports";
-import moment from "moment";
 import { FcApproval } from "react-icons/fc";
 
 const Grid = ({ items }) => {

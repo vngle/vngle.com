@@ -90,8 +90,6 @@ const Admin = () => {
       .then(() => console.log(`Successfully Uploaded: ${uuid}`))
       .catch(err => console.log(`Error: ${err}`));
 
-    return;
-
     API.graphql(graphqlOperation(createVideoObject, videoObject)).then(
       (response, error) => {
         if (error === undefined) {
