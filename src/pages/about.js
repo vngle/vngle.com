@@ -37,7 +37,7 @@ const OldHomePage = () => {
   const heroBtn = [
     {
       value: "Request a Story",
-      href: "https://blake680703.typeform.com/to/zwc2R2og",
+      href: "https://vngle.typeform.com/to/zwc2R2og",
     },
     {
       value: "Report a Story",
@@ -155,11 +155,9 @@ const OldHomePage = () => {
         <Row className="row-intro">
           <Col className="col-intro text-md-left text-center" md={6} sm={12}>
             <h1 className="display-4 font-weight-bolder mb-4">
-              Various Angles of Nonpartisan Reality News
+              Cities need various angles of more inclusive coverage
               <br />
-              <span className="highlight">For the People</span>
-              <br />
-              <span className="highlight">By the People</span>
+              <span className="highlight">That's why we created Vngle</span>
             </h1>
             <Row>
               {heroBtn.map(({ value, href }, i) => (
@@ -169,10 +167,10 @@ const OldHomePage = () => {
               ))}
             </Row>
             <Subtitle className="mb-4">
-              Watch authentic stories from real people in the midst of what’s
-              happening. We bring you <b>various angles</b> of nonpartisan
-              coverage to give you all the stories you don’t hear and the
-              viewpoints you don’t get.{" "}
+              We’re a grassroots reality news network curating more
+              comprehensive & verifiable insights for local communities. We give
+              locals the training & tools needed to create a more diverse news
+              ecosystem for their area.{" "}
               <Badge variant="primary">
                 <a
                   href="http://eepurl.com/g1cJk5"
@@ -234,12 +232,12 @@ const OldHomePage = () => {
 
       <TopFeatureContainer>
         <Title className="display-3">
-          The real scoop from real people, sharing their truth on what’s
+          Get the real scoop from real locals, sharing their truth on what’s
           happening.
         </Title>
         <Subtitle>
           We bring you authentic on-the-ground perspectives that mainstream
-          media won’t. Our cross-cultural coverage highlights the diverse
+          media won’t. Our cross-cultural video coverage highlights the diverse
           experiences and realities people face. It puts you in the shoes of
           people from all walks of life.
         </Subtitle>

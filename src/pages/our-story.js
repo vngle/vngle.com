@@ -31,8 +31,9 @@ export default () => {
       <Jumbotron className="bg-primary" as="section">
         <Container>
           <h1 className="mb-0">
-            We give balanced coverage to all sides and perspectives to create
-            common understanding around what’s happening.
+            Through capturing various angles on cities, we’re creating balanced
+            nonpartisan narratives, and more verifiable insights into what’s
+            happening across them.
           </h1>
         </Container>
       </Jumbotron>
@@ -43,11 +44,12 @@ export default () => {
             <b>
               Vngle stands for “various angles”, and it’s a nonpartisan
               grassroots reality news network bringing coverage to
-              underrepresented parts of society.
+              underrepresented parts of society. We address news deserts, areas
+              that get little to no daily or fair news coverage, by capturing
+              human-interest stories from all angles.
             </b>{" "}
-            We address news deserts, areas that get little to no daily or fair
-            news coverage, by capturing human-interest stories from every angle.
-            We ensure no perspective goes underreported.
+            Our grassroots reporting serves as the last mile for curating
+            diverse local news for cities.
           </p>
           <blockquote className="blockquote font-weight-bold font-italic font-serif text-center">
             <h2>
@@ -67,13 +69,6 @@ export default () => {
               Definition of Vngle
             </Figure.Caption>
           </Figure>
-          <p>
-            Through partnering with communities, we provide nonpartisan reality
-            coverage and reporting tools to areas that have little to no daily
-            or fair news coverage. Our grassroots reporting serves as the last
-            mile for pressing comprehensive coverage through supplying active
-            stories with viewpoints from all sides.
-          </p>
           <Row className="my-4">
             <Col className="m-auto" sm>
               <h2>The concept of Vngle was born in Ferguson, Missouri</h2>
