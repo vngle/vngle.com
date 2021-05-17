@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => {
         "https://www.notion.so/vngle/Jobs-Vngle-cbe85d3d0e074aeda5c860629a42ad86",
     },
     { name: "About", to: "/about" },
-    { name: "Our Story", to: "/our-story" },
+    { name: "Our Team", to: "/our-team" },
   ];
   const dropdownLinks = [
     { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },

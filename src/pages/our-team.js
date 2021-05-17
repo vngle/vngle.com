@@ -12,7 +12,6 @@ export default () => {
   const team = [
     { name: "Blake Stoner", position: "Founder & Chief Reporter" },
     { name: "Carley Deardorff", position: "Communication Strategist" },
-    { name: "Matthew Ramsay", position: "Director of Operations" },
     { name: "Jaime Fernandez", position: "Strategic Partnerships" },
     { name: "Majestic Gay", position: "Reporter in College Park, GA" },
     { name: "Marcus Figueiredo", position: "Sales" },
