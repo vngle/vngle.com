@@ -16,7 +16,7 @@ export default () => {
     { name: "Majestic Gay", position: "Reporter in College Park, GA" },
     { name: "Marcus Figueiredo", position: "Sales" },
     { name: "Kenneth Chen", position: "Front End Developer" },
-    { name: "Devante Griffin", position: "Special Operations" },
+    { name: 'Devante "Don" Griffin', position: "Special Operations" },
   ].map((profile, i) => {
     return { ...profile, img: Team[i] };
   });
