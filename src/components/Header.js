@@ -17,6 +17,7 @@ const Header = ({ siteTitle }) => {
     },
     { name: "About", to: "/about" },
     { name: "Our Team", to: "/team" },
+    { name: "Terms of Use", to: "/terms" },
   ];
   const dropdownLinks = [
     { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },

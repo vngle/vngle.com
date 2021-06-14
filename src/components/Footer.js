@@ -55,6 +55,9 @@ export default () => (
           <Link to="/privacy" className="text-muted nav-link">
             Privacy
           </Link>
+          <Link to="/terms" className="text-muted nav-link">
+            Terms of Use
+          </Link>
           <Link to="/press" className="text-muted nav-link">
             Press
           </Link>
