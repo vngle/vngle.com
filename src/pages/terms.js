@@ -119,9 +119,14 @@ const TermsPage = () => {
               media, (3) make no modifications to any such information, and (4)
               not make any additional representations or warranties relating to
               such documents.
-              <strong>Intellectual Property Rights</strong>Except to the extent
-              expressly provided in these Terms of Use under the heading
-              &quot;Grant of License&quot;, you agree and acknowledge:
+            </p>
+            <p id="50897b02-2dc0-4da9-9aa7-66907e0139a7" className="">
+              <strong>Intellectual Property Rights</strong>
+            </p>
+            <p>
+              Except to the extent expressly provided in these Terms of Use
+              under the heading &quot;Grant of License&quot;, you agree and
+              acknowledge:
             </p>
             <ul
               id="420bda28-20b5-4cb5-a526-7056e439cbd0"
@@ -523,12 +528,14 @@ const TermsPage = () => {
               construed to confer any rights or remedies on any third parties.
             </p>
             <p id="03504c3f-a821-4865-b042-8fc8dc23cacc" className="">
-              <strong>Grant of License </strong>Vngle grants you a limited,
-              non-exclusive, non-transferable, non-assignable license (without
-              the right to sublicense) to access and use the Sites solely in a
-              commercially reasonable manner for your legitimate internal
-              business purposes and purposes otherwise consistent with these
-              Terms of Use.  You may not:
+              <strong>Grant of License</strong>
+            </p>
+            <p>
+              Vngle grants you a limited, non-exclusive, non-transferable,
+              non-assignable license (without the right to sublicense) to access
+              and use the Sites solely in a commercially reasonable manner for
+              your legitimate internal business purposes and purposes otherwise
+              consistent with these Terms of Use.  You may not:
             </p>
             <ul
               id="f4a851dc-78b9-4f26-8ee9-75217597e014"
@@ -570,15 +577,18 @@ const TermsPage = () => {
               </li>
             </ul>
             <p id="1d42f72e-e4dc-49f9-a67e-b94857871c8e" className="">
-              <strong>Copyright Agent </strong>Vngle respects the rights of all
-              copyright holders and in this regard, Vngle has adopted and
-              implemented a policy that provides for the removal from its Sites
-              of materials that infringe the rights of copyright holders.  If
-              you believe that your work has been copied in a way that
-              constitutes copyright infringement, please provide Vngle&#x27;s
-              Copyright Agent all of the following information required by the
-              Online Copyright Infringement Liability Limitation Act of the
-              Digital Millennium Copyright Act, 17 U.S.C. § 512:
+              <strong>Copyright Agent </strong>
+            </p>
+            <p>
+              Vngle respects the rights of all copyright holders and in this
+              regard, Vngle has adopted and implemented a policy that provides
+              for the removal from its Sites of materials that infringe the
+              rights of copyright holders.  If you believe that your work has
+              been copied in a way that constitutes copyright infringement,
+              please provide Vngle&#x27;s Copyright Agent all of the following
+              information required by the Online Copyright Infringement
+              Liability Limitation Act of the Digital Millennium Copyright Act,
+              17 U.S.C. § 512:
             </p>
             <ul
               id="6b17c030-d6a2-401c-8815-b367fddc951b"
@@ -649,29 +659,32 @@ const TermsPage = () => {
             <p id="94058ad0-129d-43ab-b786-406665df4c3c" className="">
               Copyright Agent{" "}
               <em>3707 Main Street Suite #39, College Park, Georgia 30337 </em>
-              Email: info<a href="mailto:CopyrightAgent@cat.com">@vngle.com</a>
+              Email: <a href="mailto:info@vngle.com">info@vngle.com</a>
             </p>
             <p id="210c496a-da18-44f6-8439-baaf1e654b9b" className="">
-              <strong>No Warranties </strong>VNGLE, ITS DIRECTORS, OFFICERS,
-              EMPLOYEES, SUPPLIERS, DEALERS, AFFILIATES, AGENTS AND LICENSORS
-              (THE &quot;<strong>VNGLE PARTIES</strong>&quot;) DISCLAIM ANY
-              RESPONSIBILITY FOR ANY HARM RESULTING FROM YOUR USE OF ANY SITE OR
-              CONTENT.  YOU EXPRESSLY UNDERSTAND AND AGREE THAT: (a) THE SITES
-              AND CONTENT ARE PROVIDED ON AN &quot;AS IS&quot;, &quot;WITH ALL
-              FAULTS&quot; AND &quot;AS AVAILABLE&quot; BASIS AND THE ENTIRE
-              RISK AS TO SATISFACTORY QUALITY, PERFORMANCE, ACCURACY AND EFFORT
-              IS WITH YOU; (b) TO THE FULLEST EXTENT PERMITTED BY APPLICABLE
-              LAW, VNGLE PARTIES MAKE NO REPRESENTATIONS, WARRANTIES OR
-              CONDITIONS, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING
-              WITHOUT LIMITATION, (1) WARRANTIES OF TITLE, MERCHANTABILITY,
-              FITNESS FOR A PARTICULAR PURPOSE, WORKMANLIKE EFFORT, ACCURACY,
-              QUIET ENJOYMENT, NO ENCUMBRANCES, NO LIENS AND NON-INFRINGEMENT,
-              (2) WARRANTIES ARISING THROUGH COURSE OF DEALINGS OR USAGE OF
-              TRADE, (3) WARRANTIES REGARDING THE SECURITY, RELIABILITY,
-              TIMELINESS, AND PERFORMANCE OF THE SITES AND CONTENT, AND (4)
-              WARRANTIES THAT ACCESS TO OR USE OF THE SITES OR CONTENT WILL MEET
-              YOUR REQUIREMENTS, BE UNINTERRUPTED OR ERROR-FREE; AND (c) THAT
-              YOU WILL ACCESS OR USE THE SITES AND CONTENT OFFERINGS AT YOUR OWN
+              <strong>No Warranties </strong>
+            </p>
+            <p>
+              VNGLE, ITS DIRECTORS, OFFICERS, EMPLOYEES, SUPPLIERS, DEALERS,
+              AFFILIATES, AGENTS AND LICENSORS (THE &quot;
+              <strong>VNGLE PARTIES</strong>&quot;) DISCLAIM ANY RESPONSIBILITY
+              FOR ANY HARM RESULTING FROM YOUR USE OF ANY SITE OR CONTENT.  YOU
+              EXPRESSLY UNDERSTAND AND AGREE THAT: (a) THE SITES AND CONTENT ARE
+              PROVIDED ON AN &quot;AS IS&quot;, &quot;WITH ALL FAULTS&quot; AND
+              &quot;AS AVAILABLE&quot; BASIS AND THE ENTIRE RISK AS TO
+              SATISFACTORY QUALITY, PERFORMANCE, ACCURACY AND EFFORT IS WITH
+              YOU; (b) TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, VNGLE
+              PARTIES MAKE NO REPRESENTATIONS, WARRANTIES OR CONDITIONS,
+              EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING WITHOUT
+              LIMITATION, (1) WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR
+              A PARTICULAR PURPOSE, WORKMANLIKE EFFORT, ACCURACY, QUIET
+              ENJOYMENT, NO ENCUMBRANCES, NO LIENS AND NON-INFRINGEMENT, (2)
+              WARRANTIES ARISING THROUGH COURSE OF DEALINGS OR USAGE OF TRADE,
+              (3) WARRANTIES REGARDING THE SECURITY, RELIABILITY, TIMELINESS,
+              AND PERFORMANCE OF THE SITES AND CONTENT, AND (4) WARRANTIES THAT
+              ACCESS TO OR USE OF THE SITES OR CONTENT WILL MEET YOUR
+              REQUIREMENTS, BE UNINTERRUPTED OR ERROR-FREE; AND (c) THAT YOU
+              WILL ACCESS OR USE THE SITES AND CONTENT OFFERINGS AT YOUR OWN
               DISCRETION AND RISK AND THAT YOU WILL BE SOLELY RESPONSIBLE FOR
               ANY DAMAGES TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS
               FROM SUCH ACCESS OR USE.  NOTWITHSTANDING YOUR USE OF THE SITES
@@ -683,24 +696,29 @@ const TermsPage = () => {
               THAT EXTEND BEYOND THOSE EXPRESSLY GRANTED IN THESE TERMS OF USE.
             </p>
             <p id="45dd42e4-0aeb-4a9a-a652-41dece3ecc08" className="">
-              <strong>Contractual Statute of Limitations</strong>You agree that
-              you will not assert against Vngle any claim or make a demand for
-              dispute resolution arising directly or indirectly under or in
-              connection with these Terms of Use that relates to, or assert as a
-              cause for action, any event which occurred more than 12 months
-              after the earliest date on which the facts are based were or
-              could, with the exercise of reasonable diligence, have been known
-              to you.
+              <strong>Contractual Statute of Limitations</strong>
+            </p>
+            <p>
+              You agree that you will not assert against Vngle any claim or make
+              a demand for dispute resolution arising directly or indirectly
+              under or in connection with these Terms of Use that relates to, or
+              assert as a cause for action, any event which occurred more than
+              12 months after the earliest date on which the facts are based
+              were or could, with the exercise of reasonable diligence, have
+              been known to you.
             </p>
             <p id="ac7d40ba-f2dd-43fb-b027-394f7936c9bb" className="">
-              <strong>Dispute Resolution and Mandatory Arbitration</strong>All
-              disputes, claims and controversies relating in any way to your use
-              of the Sites or Content, or to any products or services sold or
-              distributed by such Sites, or otherwise arising out of or relating
-              to these Terms of Use will be resolved by binding arbitration,
-              rather than in court, except that you may assert claims in small
-              claims court if your claims qualify.  The Federal Arbitration Act
-              and federal arbitration law apply to these Terms of Use.
+              <strong>Dispute Resolution and Mandatory Arbitration</strong>
+            </p>
+            <p>
+              All disputes, claims and controversies relating in any way to your
+              use of the Sites or Content, or to any products or services sold
+              or distributed by such Sites, or otherwise arising out of or
+              relating to these Terms of Use will be resolved by binding
+              arbitration, rather than in court, except that you may assert
+              claims in small claims court if your claims qualify.  The Federal
+              Arbitration Act and federal arbitration law apply to these Terms
+              of Use.
             </p>
             <p id="3edeadac-b3dc-4ffb-9e7f-0723b250ae68" className="">
               To begin an arbitration proceeding, you must send a letter
@@ -758,11 +776,13 @@ const TermsPage = () => {
               fees, incurred by the prevailing party.
             </p>
             <p id="e67db250-ae6e-4de8-b709-4e5993a61cff" className="">
-              <strong>Choice of Law; Severability</strong>These Terms of Use
-              shall be governed by the laws of the State of Georgia, U.S.A.
-              (regardless of the laws that might be applicable under its
-              principles of conflict of laws).  Each party submits to the
-              exclusive jurisdiction of the courts of that place.  If any
+              <strong>Choice of Law; Severability</strong>
+            </p>
+            <p>
+              These Terms of Use shall be governed by the laws of the State of
+              Georgia, U.S.A. (regardless of the laws that might be applicable
+              under its principles of conflict of laws).  Each party submits to
+              the exclusive jurisdiction of the courts of that place.  If any
               provision of these Terms of Use, or the application thereof, is
               determined by a court of competent jurisdiction to be invalid or
               unenforceable, such invalidity or unenforceability will not affect
