@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Form, Col, Button } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
-import { withAuthenticator } from "aws-amplify-react";
+import { withAuthenticator } from "@aws-amplify/ui-react";
 import Amplify, { Auth, API, graphqlOperation, Storage } from "aws-amplify";
 import awsvideoconfig from "../aws-video-exports";
 import { createVodAsset, createVideoObject } from "../graphql/mutations";

@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "author": "Kenneth Chen",
   "dependencies": {
-    "aws-amplify": "^3.4.3",
-    "aws-amplify-react": "^4.2.35",
+    "@aws-amplify/ui-react": "^1.2.6",
+    "aws-amplify": "^4.2.0",
     "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.13.2",
     "bootstrap": "^4.5.3",
