@@ -154,7 +154,7 @@ const OldHomePage = () => {
       <HeroContainer>
         <Row className="row-intro">
           <Col className="col-intro text-md-left text-center" md={6} sm={12}>
-            <h1 className="display-4 font-weight-bolder mb-4">
+            <h1 className="display-4 fw-bolder mb-4">
               Cities need various angles of more inclusive coverage
               <br />
               <span className="highlight">That's why we created Vngle</span>
@@ -253,7 +253,7 @@ const OldHomePage = () => {
           {mainFeatureData.map(({ imgSrc, title, description, offset }, i) => (
             <Col key={i} lg={{ offset }} md sm={8} className="mb-md-0 mb-5">
               <img src={imgSrc} alt="feature" width="80%" className="mb-3" />
-              <h3 className="font-weight-bold">{title}</h3>
+              <h3 className="fw-bold">{title}</h3>
               <p>{description}</p>
             </Col>
           ))}
@@ -350,7 +350,7 @@ const HeroContainer = styled(Container)`
   .col-hook {
     display: flex;
     align-items: center;
-    background-color: var(--primary);
+    background-color: var(--bs-primary);
     background-clip: content-box;
     border-radius: 40px;
     transition: all 0.2s;

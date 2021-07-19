@@ -48,14 +48,14 @@ const Post = styled.div`
   .post-content {
     flex-grow: 1;
     padding: 1.5rem;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--bs-primary);
     border-right: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     h1 {
-      color: var(--dark);
+      color: var(--bs-dark);
       font-size: clamp(1rem, 1.5vw, 1.5rem);
       font-weight: bold;
     }

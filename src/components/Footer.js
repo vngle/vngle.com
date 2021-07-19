@@ -11,7 +11,7 @@ const Footer = () => (
   <Container as="footer" className="text-center pt-5">
     <Row>
       <Col sm className="m-auto">
-        <SocialRow className="justify-content-around mb-5">
+        <SocialContainer className="mb-5">
           <a href="https://www.instagram.com/vnglestories/">
             <FiInstagram />
           </a>
@@ -24,7 +24,7 @@ const Footer = () => (
           <a href="https://twitter.com/vnglestories">
             <FiTwitter />
           </a>
-        </SocialRow>
+        </SocialContainer>
         <div className="mb-4">
           <Link to="/">
             <img alt="Vngle logo" src={Logo} height={47} />
@@ -34,9 +34,7 @@ const Footer = () => (
       </Col>
       <Col className="text-center" sm>
         <FooterNav>
-          <Nav.Item className="pb-2 text-uppercase font-weight-bold">
-            Vngle
-          </Nav.Item>
+          <Nav.Item className="pb-2 text-uppercase fw-bold">Vngle</Nav.Item>
           <Link
             to="https://www.notion.so/vngle/Careers-Vngle-ef8a5667e86b4c129a88538d04ae3f00"
             className="nav-link text-muted"
@@ -87,11 +85,13 @@ const Footer = () => (
 
 export default Footer;
 
-const SocialRow = styled(Row)`
+const SocialContainer = styled.div`
+  display: grid;
+  grid-auto-flow: column;
   font-size: 1.5rem;
 
   a {
-    color: var(--dark);
+    color: var(--bs-dark);
   }
 `;
 

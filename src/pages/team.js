@@ -51,7 +51,7 @@ const TeamPage = () => {
             Our grassroots reporting serves as the last mile for curating
             diverse local news for cities.
           </p>
-          <blockquote className="blockquote font-weight-bold font-italic font-serif text-center">
+          <blockquote className="blockquote fw-bold font-italic font-serif text-center">
             <h2>
               “Vngle's mission is to help build a more interconnected society,
               by connecting every person with diverse comprehensive coverage on
@@ -126,5 +126,5 @@ export default TeamPage;
 
 const ProfileImg = styled.img`
   border-radius: 50%;
-  border: 10px solid var(--primary);
+  border: 10px solid var(--bs-primary);
 `;

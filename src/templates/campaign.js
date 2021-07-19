@@ -106,7 +106,7 @@
 // const StyledJumbotron = styled(Jumbotron)`
 //   position: relative;
 //   background-color: transparent;
-//   color: var(--light);
+//   color: var(--bs-light);
 //   background: linear-gradient(
 //     180deg,
 //     rgba(33, 37, 41, 0) 0%,
@@ -180,7 +180,7 @@
 // `;
 
 // const NoThumbnailDiv = styled.div`
-//   background: var(--primary);
+//   background: var(--bs-primary);
 //   width: 300px;
 //   height: 300px;
 // `;

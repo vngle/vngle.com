@@ -15,9 +15,7 @@ const NewsSubCard = ({ title, subtitle }) => (
   <StyledCard className="shadow-sm border-0" id="sub-card">
     <Card.Body>
       <Card.Title className="mb-3">{title}</Card.Title>
-      <Card.Subtitle className="mb-4 font-weight-normal">
-        {subtitle}
-      </Card.Subtitle>
+      <Card.Subtitle className="mb-4 fw-normal">{subtitle}</Card.Subtitle>
       <MailchimpSubscribe
         url={process.env.GATSBY_MAILCHIMP_URL}
         render={({ subscribe, status, message }) => (
@@ -61,7 +59,7 @@ const StyledCard = styled(Card)`
     font-size: 1.5rem;
 
     a {
-      color: var(--dark);
+      color: var(--bs-dark);
     }
   }
 `;

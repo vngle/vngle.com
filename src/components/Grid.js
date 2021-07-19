@@ -60,14 +60,14 @@ const Post = styled.div`
   .post-content {
     min-height: 250px;
     padding: 1.5rem;
-    border: solid 2px var(--primary);
+    border: solid 2px var(--bs-primary);
     border-top: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     h1 {
-      color: var(--dark);
+      color: var(--bs-dark);
       font-size: 1.5rem;
       font-weight: bold;
     }

@@ -142,7 +142,7 @@ const FrontPageTemplate = ({
 const StyledJumbotron = styled(Jumbotron)`
   position: relative;
   background-color: transparent;
-  color: var(--light);
+  color: var(--bs-light);
   background: linear-gradient(
     180deg,
     rgba(33, 37, 41, 0) 0%,
@@ -188,7 +188,7 @@ const ContentContainer = styled(Container)`
     }
 
     .ribbon {
-      background: var(--primary);
+      background: var(--bs-primary);
       width: 100%;
       height: 10px;
       margin-left: 10px;
@@ -216,7 +216,7 @@ const ContentContainer = styled(Container)`
 //     position: relative;
 //     z-index: -1;
 //     margin: 0 auto;
-//     background: var(--primary);
+//     background: var(--bs-primary);
 //     width: ${({ hascover }) => hascover && "100%"};
 //     height: ${({ hascover }) => (hascover ? "100%" : "250px")};
 //   }

@@ -205,7 +205,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
 
 const StyledJumbotron = styled(Jumbotron)`
   background: rgba(255, 204, 52, 0.4);
-  border: 5px solid var(--primary);
+  border: 5px solid var(--bs-primary);
   margin: 3rem 0;
   padding-top: 2rem;
   padding-bottom: 2rem;

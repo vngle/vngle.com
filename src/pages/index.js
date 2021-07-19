@@ -21,12 +21,12 @@ const IndexPage = ({
     <Layout>
       <Seo title="Nonpartisan Grassroots Reality News" />
       <HeroContainer>
-        <h1 className="display-4 font-weight-bolder text-center">
+        <h1 className="display-4 fw-bolder text-center">
           Various Angles of
           <br />
           Reality News Near You
         </h1>
-        <h1 className="display-4 font-weight-bolder text-center">
+        <h1 className="display-4 fw-bolder text-center">
           <span className="highlight">Nonpartisan</span>
           <br />
           <span className="highlight">
@@ -159,7 +159,7 @@ const SlideThumbnail = styled.div`
   }
 
   &:hover {
-    border: 3px solid var(--primary);
+    border: 3px solid var(--bs-primary);
   }
 `;
 

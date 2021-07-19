@@ -103,7 +103,7 @@ const LoadingWrapper = styled.div`
 
 const NewsIcon = styled(FaNewspaper)`
   font-size: 50px;
-  color: var(--dark);
+  color: var(--bs-dark);
 `;
 
 export default NewsFeed;

@@ -26,7 +26,7 @@ export default function PritchettCampaignPage() {
 
       <Jumbotron className="bg-primary" as="section">
         <Container>
-          <h1 className="display-3 font-weight-bold">Linda Pritchett</h1>
+          <h1 className="display-3 fw-bold">Linda Pritchett</h1>
           <h2 className="mb-0 font-sans-serif">
             Candidate for GA State Senator in District 39
           </h2>

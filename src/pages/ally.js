@@ -62,7 +62,7 @@ export default function AllyPage() {
       name: "Councilmember Roderick Gay",
       href: "https://www.onetalent.org/",
       logoSrc: CouncilmanGay,
-      bg: "var(--primary)",
+      bg: "var(--bs-primary)",
       description: (
         <>
           <p>

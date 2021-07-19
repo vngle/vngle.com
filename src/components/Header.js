@@ -90,19 +90,19 @@ const StyledHeader = styled.header`
       .navbar-nav {
         .nav-link,
         .btn {
-          color: var(--dark);
+          color: var(--bs-dark);
           font-weight: bold;
           font-size: 1.25rem;
           transition: color 0.3s;
         }
 
         .nav-link:hover {
-          color: var(--primary);
+          color: var(--bs-primary);
           transition: color 0.3s;
         }
 
         .dropdown-item a {
-          color: var(--dark);
+          color: var(--bs-dark);
           text-decoration: none;
         }
       }
