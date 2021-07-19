@@ -6,7 +6,7 @@ import Typed from "react-typed";
 import awsvideo from "../aws-video-exports";
 
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import Slider from "../components/Slider";
 import Grid from "../components/Grid";
 import List from "../components/List";
@@ -19,7 +19,7 @@ const IndexPage = ({
 }) => {
   return (
     <Layout>
-      <SEO title="Nonpartisan Grassroots Reality News" />
+      <Seo title="Nonpartisan Grassroots Reality News" />
       <HeroContainer>
         <h1 className="display-4 font-weight-bolder text-center">
           Various Angles of

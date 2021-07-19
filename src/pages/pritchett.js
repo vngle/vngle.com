@@ -6,11 +6,11 @@ import { Disqus } from "gatsby-plugin-disqus";
 import PritchettHeadshot from "../../static/images/pritchett-headshot.jpg";
 
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import NewsSubCard from "../components/NewsSubCard";
 import useSiteMetadata from "../hooks/useSiteMetadata";
 
-export default () => {
+export default function PritchettCampaignPage() {
   const { siteUrl } = useSiteMetadata();
   const disqusConfig = {
     url: `${siteUrl}/pritchett`,
@@ -19,7 +19,7 @@ export default () => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Linda Pritchett, Candidate for GA State Senator in District 39"
         description="Grassroots coverage on Linda Pritchett’s campaign for Georgia State Senate Seat in District 39. Listen to her intimate response to the eviction and arrest during her press conference (it’s a Vngle exclusive)."
       />
@@ -197,7 +197,7 @@ export default () => {
       </Container>
     </Layout>
   );
-};
+}
 
 const StyledRow = styled(Row)`
   margin-bottom: 5rem;

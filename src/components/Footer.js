@@ -7,7 +7,7 @@ import Link from "./Link";
 
 import Logo from "../../static/images/logo.png";
 
-export default () => (
+const Footer = () => (
   <Container as="footer" className="text-center pt-5">
     <Row>
       <Col sm className="m-auto">
@@ -84,6 +84,8 @@ export default () => (
     </Row>
   </Container>
 );
+
+export default Footer;
 
 const SocialRow = styled(Row)`
   font-size: 1.5rem;

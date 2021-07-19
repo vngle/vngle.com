@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap";
 
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import InstaFeed from "../components/frontPage/InstaFeed";
 
 import Wwan from "../../static/images/wwan.png";
@@ -32,9 +32,9 @@ const citiesTraveled = [
   "San Juan, Puerto Rico",
 ];
 
-export default () => (
+const WwanPage = () => (
   <Layout>
-    <SEO
+    <Seo
       title="Where We Are Now Series"
       description="Where We Are Now is Vngle’s traveling series uncovering how America’s culture is changing from coast to coast. Let us know your thoughts on where we should go next."
     />
@@ -114,3 +114,5 @@ export default () => (
     </section>
   </Layout>
 );
+
+export default WwanPage;

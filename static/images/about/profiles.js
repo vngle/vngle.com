@@ -6,4 +6,6 @@ import Marcus from "./marcus.jpg";
 import Carley from "./carley.jpg";
 import Don from "./don.jpeg";
 
-export default [Blake, Carley, Jaime, Majestic, Marcus, Kenneth, Don];
+const profiles = [Blake, Carley, Jaime, Majestic, Marcus, Kenneth, Don];
+
+export default profiles;

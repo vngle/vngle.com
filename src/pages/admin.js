@@ -8,7 +8,7 @@ import { createVodAsset, createVideoObject } from "../graphql/mutations";
 import "@aws-amplify/ui/dist/style.css";
 
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import FilePicker from "../components/FilePickers/VideoPicker";
 import ProgressModal from "../components/Modals/ProgressModal";
 
@@ -131,7 +131,7 @@ const Admin = () => {
 
   return (
     <Layout>
-      <SEO title="Admin Panel" />
+      <Seo title="Admin Panel" />
       <Container>
         {groups.includes("Admin") ? (
           <>

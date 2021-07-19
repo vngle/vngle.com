@@ -3,12 +3,12 @@ import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap";
 import styled from "styled-components";
 
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 
 import VngleDef from "../../static/images/about/vngle-def.png";
 import Team from "../../static/images/about/profiles";
 
-export default () => {
+const TeamPage = () => {
   const team = [
     { name: "Blake Stoner", position: "Founder & Chief Reporter" },
     { name: "Carley Deardorff", position: "Communication Strategist" },
@@ -23,7 +23,7 @@ export default () => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title="A Grassroots News Network"
         description="Vngle is a decentralized grassroots news network covering pressing underrepresented reality coverage on cities across America. Our coverage is for the people, by the people."
       />
@@ -121,6 +121,8 @@ export default () => {
     </Layout>
   );
 };
+
+export default TeamPage;
 
 const ProfileImg = styled.img`
   border-radius: 50%;

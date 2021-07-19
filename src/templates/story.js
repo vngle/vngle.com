@@ -9,7 +9,7 @@ import ReactPlayer from "react-player";
 import "styled-components/macro";
 
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 
 import useSiteMetadata from "../hooks/useSiteMetadata";
 
@@ -18,7 +18,7 @@ import useSiteMetadata from "../hooks/useSiteMetadata";
  * @param {object} pageContext Data about page passed from createPage() function
  * @param {object} location URL location info of this page
  */
-export default ({
+const StoryTemplate = ({
   pageContext: { title, author, id, caption, video, src },
   location,
 }) => {
@@ -32,7 +32,7 @@ export default ({
 
   return (
     <Layout>
-      <SEO title={title} />
+      <Seo title={title} />
       <Container>
         <Row>
           <Col>
@@ -115,3 +115,5 @@ export default ({
     </Layout>
   );
 };
+
+export default StoryTemplate;

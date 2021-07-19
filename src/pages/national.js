@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Jumbotron, Row, Col, Button } from "react-bootstrap";
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import StorySlider from "../components/StoryCarousel";
 import NewsSubCard from "../components/NewsSubCard";
 import InstaFeed from "../components/frontPage/InstaFeed";
@@ -10,7 +10,7 @@ import InstaFeed from "../components/frontPage/InstaFeed";
 const NationalPage = () => {
   return (
     <Layout>
-      <SEO title={`United States`} />
+      <Seo title={`United States`} />
 
       <StyledJumbotron>
         <CoverImage src="https://source.unsplash.com/1lefgZFxtBU" alt="" />

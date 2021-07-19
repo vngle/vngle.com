@@ -4,7 +4,7 @@ import { FcOk, FcCheckmark } from "react-icons/fc";
 import { FaSlack } from "react-icons/fa";
 import styled from "styled-components";
 
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import ReportForm from "../components/Forms/ReportForm";
 
@@ -18,7 +18,7 @@ const Report = () => {
 
   return (
     <Layout>
-      <SEO title="Report a story" />
+      <Seo title="Report a story" />
 
       <Container>
         {formSubmitted ? (

@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Jumbotron } from "react-bootstrap";
 
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 
-export default () => {
+export default function PrivacyPage() {
   return (
     <Layout>
-      <SEO title="Privacy Policy" />
+      <Seo title="Privacy Policy" />
 
       <Jumbotron className="bg-primary" as="section">
         <Container>
@@ -281,4 +281,4 @@ export default () => {
       </Container>
     </Layout>
   );
-};
+}

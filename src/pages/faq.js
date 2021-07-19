@@ -2,9 +2,9 @@ import React from "react";
 import { Container, Jumbotron } from "react-bootstrap";
 
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 
-export default () => {
+export default function FaqPage() {
   const faq = [
     {
       question: "What does the term grassroots mean?",
@@ -46,7 +46,7 @@ export default () => {
 
   return (
     <Layout>
-      <SEO title="Grassroots FAQs" />
+      <Seo title="Grassroots FAQs" />
 
       <Jumbotron className="bg-primary" as="section">
         <Container>
@@ -78,4 +78,4 @@ export default () => {
       </Container>
     </Layout>
   );
-};
+}

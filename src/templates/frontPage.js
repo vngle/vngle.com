@@ -10,7 +10,7 @@ import { FcBookmark } from "react-icons/fc";
 import moment from "moment";
 
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import ActionButtonGroup from "../components/frontPage/ActionBtnGroup";
 import InstaFeed from "../components/frontPage/InstaFeed";
 import NewsFeed from "../components/frontPage/NewsFeed";
@@ -21,14 +21,14 @@ import WeatherWidget from "../components/frontPage/WeatherWidget";
  * @param {object} pageContext Data about page passed from createPage() function
  * @param {object} data Data retrieved by GraphQL query to be used on this page
  */
-export default ({
+const FrontPageTemplate = ({
   pageContext: { cityId, cityName, coverImage, state },
   // data: {
   //   allContentfulCampaign: { nodes: campaigns },
   // },
 }) => (
   <Layout>
-    <SEO
+    <Seo
       title={`${cityName}, ${state} Local News`}
       description={`${cityName}, ${state}’s frontpage for local news and grassroots reality coverage.`}
     />
@@ -231,3 +231,5 @@ const ContentContainer = styled(Container)`
 //     overflow: hidden;
 //   }
 // `;
+
+export default FrontPageTemplate;

@@ -4,14 +4,14 @@ import { Container, Jumbotron, Button, Row, Col } from "react-bootstrap";
 import { FiActivity, FiCompass, FiGlobe } from "react-icons/fi";
 
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 
 import TeamSvg from "../../static/images/ally/team.svg";
 import ClubELogo from "../../static/images/ally/logo-club-e.png";
 import CouncilmanGay from "../../static/images/ally/councilman-gay.jpg";
 import OneTalentLogo from "../../static/images/ally/logo-one-talent.png";
 
-export default () => {
+export default function AllyPage() {
   const allies = [
     {
       name: "Club E Atlanta",
@@ -83,7 +83,7 @@ export default () => {
   return (
     <Layout>
       <Styled>
-        <SEO title="Become an Ally" />
+        <Seo title="Become an Ally" />
 
         <Jumbotron as="section" className="bg-primary title-banner">
           <Container>
@@ -188,7 +188,7 @@ export default () => {
       </Styled>
     </Layout>
   );
-};
+}
 
 const Styled = styled.div`
   .title-banner {

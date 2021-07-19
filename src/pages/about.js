@@ -12,7 +12,7 @@ import {
 import styled from "styled-components";
 
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import NewsSubCard from "../components/NewsSubCard";
 import StorySlider from "../components/StoryCarousel";
 import SimpleSubForm from "../components/SubForm";
@@ -149,7 +149,7 @@ const OldHomePage = () => {
 
   return (
     <Layout>
-      <SEO title="Nonpartisan Grassroots Reality News" />
+      <Seo title="Nonpartisan Grassroots Reality News" />
 
       <HeroContainer>
         <Row className="row-intro">

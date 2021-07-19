@@ -3,9 +3,9 @@ import { Container, Jumbotron, Row, Col, Button } from "react-bootstrap";
 import styled from "styled-components";
 
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 
-export default () => {
+export default function PressPage() {
   const data = [
     {
       title:
@@ -33,7 +33,7 @@ export default () => {
 
   return (
     <Layout>
-      <SEO title="Press" />
+      <Seo title="Press" />
 
       <Jumbotron className="bg-primary" as="section">
         <Container>
@@ -79,7 +79,7 @@ export default () => {
       </Container>
     </Layout>
   );
-};
+}
 
 const NewsContainer = styled.div`
   padding-top: 1rem;
