@@ -34,12 +34,14 @@ const Footer = () => (
       </Col>
       <Col className="text-center" sm>
         <FooterNav>
-          <Nav.Item className="pb-2 text-uppercase fw-bold">Vngle</Nav.Item>
           <Link
             to="https://www.notion.so/vngle/Careers-Vngle-ef8a5667e86b4c129a88538d04ae3f00"
             className="nav-link text-muted"
           >
             Jobs
+          </Link>
+          <Link to="/vngleforcities" className="nav-link text-muted">
+            For Cities
           </Link>
           <Link to="/faq" className="nav-link text-muted">
             FAQ

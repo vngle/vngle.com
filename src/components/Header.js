@@ -12,11 +12,11 @@ const Header = ({ siteTitle }) => {
     { name: "College Park", to: "/college-park-georgia" },
     {
       name: "Jobs",
-      to:
-        "https://www.notion.so/vngle/Jobs-Vngle-cbe85d3d0e074aeda5c860629a42ad86",
+      to: "https://www.notion.so/vngle/Jobs-Vngle-cbe85d3d0e074aeda5c860629a42ad86",
     },
     { name: "About", to: "/about" },
     { name: "Our Team", to: "/team" },
+    { name: "For Cities", to: "/vngleforcities" },
   ];
   const dropdownLinks = [
     { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
