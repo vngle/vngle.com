@@ -4,8 +4,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { Card, Row } from "react-bootstrap";
-import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
+import Card from "react-bootstrap/Card";
 import styled from "styled-components";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
@@ -22,24 +21,10 @@ const NewsSubCard = ({ title, subtitle }) => (
           <NewsSubForm
             status={status}
             message={message}
-            onSubmitted={formData => subscribe(formData)}
+            onSubmitted={(formData) => subscribe(formData)}
           />
         )}
       />
-      <Row className="justify-content-around mt-4">
-        <a href="https://www.instagram.com/vnglestories/">
-          <FiInstagram />
-        </a>
-        <a href="https://www.facebook.com/vnglestories/">
-          <FiFacebook />
-        </a>
-        <a href="https://www.linkedin.com/company/vngle/">
-          <FiLinkedin />
-        </a>
-        <a href="https://twitter.com/vnglestories">
-          <FiTwitter />
-        </a>
-      </Row>
     </Card.Body>
   </StyledCard>
 );

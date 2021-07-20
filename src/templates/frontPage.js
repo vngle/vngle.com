@@ -5,7 +5,7 @@
 import React from "react";
 // import { Link, graphql } from "gatsby";
 import styled from "styled-components";
-import { Container, Jumbotron, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { FcBookmark } from "react-icons/fc";
 import moment from "moment";
 
@@ -33,23 +33,23 @@ const FrontPageTemplate = ({
       description={`${cityName}, ${state}’s frontpage for local news and grassroots reality coverage.`}
     />
 
-    <StyledJumbotron>
+    <StyledJumbotron className="mb-4">
       <CoverImage src={coverImage.fluid.src} alt="" />
-      <Row className="align-items-end">
-        <Col>
-          <h1 className="display-1">{cityName}</h1>
-          <Row as={Col}>
+      <Container>
+        <Row className="align-items-end">
+          <Col>
+            <h1 className="display-1">{cityName}</h1>
             {moment().format("dddd, MMMM D, YYYY")}
             <WeatherWidget cityId={cityId} />
-          </Row>
-        </Col>
-        <Col md="auto">
-          <h4>
-            <FcBookmark />
-            Beta Ver.
-          </h4>
-        </Col>
-      </Row>
+          </Col>
+          <Col md="auto">
+            <h4>
+              <FcBookmark />
+              Beta Ver.
+            </h4>
+          </Col>
+        </Row>
+      </Container>
     </StyledJumbotron>
 
     <ContentContainer fluid>
@@ -139,7 +139,7 @@ const FrontPageTemplate = ({
 //   }
 // `;
 
-const StyledJumbotron = styled(Jumbotron)`
+const StyledJumbotron = styled.section`
   position: relative;
   background-color: transparent;
   color: var(--bs-light);

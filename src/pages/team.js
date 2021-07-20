@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap";
+import { Container, Row, Col, Figure } from "react-bootstrap";
 import styled from "styled-components";
 
 import Layout from "../components/Layout";
@@ -28,7 +28,7 @@ const TeamPage = () => {
         description="Vngle is a decentralized grassroots news network covering pressing underrepresented reality coverage on cities across America. Our coverage is for the people, by the people."
       />
 
-      <Jumbotron className="bg-primary" as="section">
+      <section className="bg-primary p-5 mb-5" as="section">
         <Container>
           <h1 className="mb-0">
             Through capturing various angles on cities, we’re creating balanced
@@ -36,7 +36,7 @@ const TeamPage = () => {
             happening across them.
           </h1>
         </Container>
-      </Jumbotron>
+      </section>
 
       <Container as="article">
         <section>
@@ -74,13 +74,12 @@ const TeamPage = () => {
               <h2>The concept of Vngle was born in Ferguson, Missouri</h2>
             </Col>
             <Col sm>
-              <div className="embed-responsive embed-responsive-4by3 rounded">
+              <div className="ratio ratio-4x3 rounded">
                 <iframe
                   src="https://www.youtube.com/embed/OrAt9NfUrmE?modestbranding=1"
                   title="Pritchett press conference"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  className="embed-responsive-item"
                 ></iframe>
               </div>
             </Col>

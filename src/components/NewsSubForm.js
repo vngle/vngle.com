@@ -24,7 +24,7 @@ const NewsSubForm = ({ status, message, onSubmitted }) => {
   });
   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     const form = event.currentTarget;
     const submitData = {
       EMAIL: formData.EMAIL,
@@ -47,7 +47,7 @@ const NewsSubForm = ({ status, message, onSubmitted }) => {
     onSubmitted(submitData);
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const name = event.target.name;
     const value =
       event.target.type === "checkbox"
@@ -84,90 +84,92 @@ const NewsSubForm = ({ status, message, onSubmitted }) => {
   }
 
   return (
-    <Form noValidate validated={validated} onSubmit={handleSubmit}>
-      <Form.Group controlId="email">
-        <Form.Label>
-          Email address<span className="text-danger">*</span>
-        </Form.Label>
-        <Form.Control
-          type="email"
-          placeholder="Enter email"
-          name="EMAIL"
-          value={formData.EMAIL}
-          onChange={handleChange}
-          required
-        />
-        <Form.Control.Feedback type="invalid">
-          Please provide a valid email address
-        </Form.Control.Feedback>
-      </Form.Group>
-      <Form.Group controlId="zipCode">
-        <Form.Label>
-          Zip Code<span className="text-danger">*</span>
-        </Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Enter zip code"
-          name="ZIPCODE"
-          value={formData.ZIPCODE}
-          onChange={handleChange}
-          required
-        />
-        <Form.Control.Feedback type="invalid">
-          Please provide a zip code
-        </Form.Control.Feedback>
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Prefer text message updates instead?</Form.Label>
-
-        <Form.Group>
-          <Form.Check
-            type="checkbox"
-            id="sms-confirm"
-            label="Yes! Do not send updates to my email"
-            name="group[293774][4]"
-            checked={formData["group[293774][4]"]}
-            onChange={handleChange}
-            inline
-            custom
-          />
-        </Form.Group>
-      </Form.Group>
-      {formData["group[293774][4]"] === true && (
-        <Form.Group controlId="number">
+    <>
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form.Group controlId="email">
           <Form.Label>
-            Phone Number<span className="text-danger">*</span>
+            Email address<span className="text-danger">*</span>
+          </Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Enter email"
+            name="EMAIL"
+            value={formData.EMAIL}
+            onChange={handleChange}
+            required
+          />
+          <Form.Control.Feedback type="invalid">
+            Please provide a valid email address
+          </Form.Control.Feedback>
+        </Form.Group>
+        <Form.Group controlId="zipCode">
+          <Form.Label>
+            Zip Code<span className="text-danger">*</span>
           </Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter cell phone number"
-            name="NUMBER"
-            value={formData.NUMBER}
+            placeholder="Enter zip code"
+            name="ZIPCODE"
+            value={formData.ZIPCODE}
             onChange={handleChange}
-            required={formData["group[293774][4]"]}
+            required
           />
           <Form.Control.Feedback type="invalid">
-            Please provide a phone number to receive updates through text
-            messages
+            Please provide a zip code
           </Form.Control.Feedback>
         </Form.Group>
-      )}
+        <Form.Group>
+          <Form.Label>Prefer text message updates instead?</Form.Label>
 
-      {respMessage}
-
-      <Button type="submit" block>
-        {status === "sending" ? (
-          <Spinner animation="border" size="sm" />
-        ) : (
-          "Subscribe"
+          <Form.Group>
+            <Form.Check
+              type="checkbox"
+              id="sms-confirm"
+              label="Yes! Do not send updates to my email"
+              name="group[293774][4]"
+              checked={formData["group[293774][4]"]}
+              onChange={handleChange}
+              inline
+              custom
+            />
+          </Form.Group>
+        </Form.Group>
+        {formData["group[293774][4]"] === true && (
+          <Form.Group controlId="number">
+            <Form.Label>
+              Phone Number<span className="text-danger">*</span>
+            </Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter cell phone number"
+              name="NUMBER"
+              value={formData.NUMBER}
+              onChange={handleChange}
+              required={formData["group[293774][4]"]}
+            />
+            <Form.Control.Feedback type="invalid">
+              Please provide a phone number to receive updates through text
+              messages
+            </Form.Control.Feedback>
+          </Form.Group>
         )}
-      </Button>
+
+        {respMessage}
+
+        <Button type="submit" block className="mt-3">
+          {status === "sending" ? (
+            <Spinner animation="border" size="sm" />
+          ) : (
+            "Subscribe"
+          )}
+        </Button>
+      </Form>
       <MutedMsg className="text-muted">
         *We’re operating in Georgia with more states coming soon. Sign ups
         outside of GA are invited to our national community newsletter until we
         reach them.
       </MutedMsg>
-    </Form>
+    </>
   );
 };
 

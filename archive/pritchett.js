@@ -5,10 +5,10 @@ import { Disqus } from "gatsby-plugin-disqus";
 
 import PritchettHeadshot from "../../static/images/pritchett-headshot.jpg";
 
-import Layout from "../components/Layout";
-import Seo from "../components/Seo";
-import NewsSubCard from "../components/NewsSubCard";
-import useSiteMetadata from "../hooks/useSiteMetadata";
+import Layout from "../src/components/Layout";
+import Seo from "../src/components/Seo";
+import NewsSubCard from "../src/components/NewsSubCard";
+import useSiteMetadata from "../src/hooks/useSiteMetadata";
 
 export default function PritchettCampaignPage() {
   const { siteUrl } = useSiteMetadata();

@@ -20,7 +20,7 @@ const MailChimpForm = () => {
         <SubForm
           status={status}
           message={message}
-          onSubmitted={formData => subscribe(formData)}
+          onSubmitted={(formData) => subscribe(formData)}
         />
       )}
     />
@@ -43,7 +43,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
   });
   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     const form = event.currentTarget;
     const submitData = {
       EMAIL: formData.EMAIL,
@@ -66,7 +66,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
     onSubmitted(submitData);
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const name = event.target.name;
     const value =
       event.target.type === "checkbox"
@@ -164,7 +164,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
                 </Form.Group>
               </Form.Row>
 
-              <Form.Row>
+              <Row className="mt-3">
                 <Form.Group as={Col} xs="auto">
                   <Button type="submit" variant="dark">
                     {status === "sending" ? (
@@ -186,7 +186,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
                     custom
                   />
                 </Form.Group>
-              </Form.Row>
+              </Row>
 
               {respMessage}
 

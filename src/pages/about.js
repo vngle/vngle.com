@@ -19,7 +19,6 @@ import SimpleSubForm from "../components/SubForm";
 import ActionCard from "../components/landing/ActionCard";
 
 import GaFlag from "../../static/images/landing/ga-flag.svg";
-import World from "../../static/images/landing/world.svg";
 import Culture from "../../static/images/landing/culture.svg";
 import Transparent from "../../static/images/landing/transparent.svg";
 import Search from "../../static/images/landing/search.svg";
@@ -41,8 +40,7 @@ const OldHomePage = () => {
     },
     {
       value: "Report a Story",
-      href:
-        "https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true",
+      href: "https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true",
     },
   ];
   const mainFeatureData = [
@@ -184,13 +182,12 @@ const OldHomePage = () => {
             </Subtitle>
           </Col>
           <Col className="col-hook">
-            <div className="embed-responsive embed-responsive-4by3">
+            <div className="ratio ratio-4x3">
               <iframe
                 src="https://www.youtube.com/embed/nRzsnAdlqOc?autoplay=1&modestbranding=1&mute=1"
                 title="Vngle promo video"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="embed-responsive-item"
               ></iframe>
             </div>
           </Col>
@@ -242,16 +239,15 @@ const OldHomePage = () => {
           people from all walks of life.
         </Subtitle>
         <StorySlider />
-        <Image src={World} alt="World map" />
       </TopFeatureContainer>
 
       <MainFeatureContainer className="my-5">
         <Title className="display-3 mb-5">
-          Bringing you “various angles” of coverage through
+          Bring you “various angles” of coverage through
         </Title>
         <Row>
           {mainFeatureData.map(({ imgSrc, title, description, offset }, i) => (
-            <Col key={i} lg={{ offset }} md sm={8} className="mb-md-0 mb-5">
+            <Col key={i} md={4} sm={8} className="mb-md-0 mb-5">
               <img src={imgSrc} alt="feature" width="80%" className="mb-3" />
               <h3 className="fw-bold">{title}</h3>
               <p>{description}</p>
@@ -275,9 +271,7 @@ const OldHomePage = () => {
                   order: i % 2 !== 0 && "first",
                 }}
               >
-                <h3 className="bg-secondary rounded-circle mx-lg-0 mx-auto">
-                  {i + 1}
-                </h3>
+                <h3 className="bg-secondary rounded-circle mx-auto">{i + 1}</h3>
                 <h2>{title}</h2>
                 <p>{description}</p>
               </Col>
@@ -350,10 +344,6 @@ const HeroContainer = styled(Container)`
   .col-hook {
     display: flex;
     align-items: center;
-    background-color: var(--bs-primary);
-    background-clip: content-box;
-    border-radius: 40px;
-    transition: all 0.2s;
   }
 
   .col-hook:hover {
