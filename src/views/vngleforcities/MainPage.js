@@ -42,7 +42,11 @@ const MainPage = () => {
       <Section background="#1ee592">
         <FcConferenceCall />
         <Heading>Interested in becoming a local partner?</Heading>
-        <Button size="lg" variant="light">
+        <Button
+          size="lg"
+          variant="light"
+          href="https://forms.gle/e6y4Gkna5S9kymdE8"
+        >
           Let's talk
         </Button>
       </Section>
@@ -65,7 +69,11 @@ const MainPage = () => {
             engaging grassroots content strategy to help you stay connected to,
             and have a presence among the people you seek to serve.
           </p>
-          <Button size="lg" variant="light">
+          <Button
+            size="lg"
+            variant="light"
+            href="https://forms.gle/e6y4Gkna5S9kymdE8"
+          >
             Let's cover you
           </Button>
         </Col>
@@ -90,7 +98,11 @@ const MainPage = () => {
             census service: we craft and deploy strategic field plans to reach
             local areas directly to gain or relay updated information.
           </p>
-          <Button size="lg" variant="light">
+          <Button
+            size="lg"
+            variant="light"
+            href="https://forms.gle/e6y4Gkna5S9kymdE8"
+          >
             Let's engage your city
           </Button>
         </Col>
@@ -117,7 +129,11 @@ const MainPage = () => {
             from working across 21+ cities to give you an advantage in devising
             positive strategies to address your current challenges.
           </p>
-          <Button size="lg" variant="light">
+          <Button
+            size="lg"
+            variant="light"
+            href="https://forms.gle/e6y4Gkna5S9kymdE8"
+          >
             Let's work
           </Button>
         </Col>
@@ -129,7 +145,7 @@ const MainPage = () => {
         </Col>
       </SplitSection>
 
-      <Section>
+      <Section className="text-center">
         <Heading center>
           <FcDepartment />
         </Heading>
@@ -143,7 +159,7 @@ const MainPage = () => {
           environment they may find themselves in. Our team can help you do
           that.
         </Heading>
-        <Button size="lg" className="d-block mx-auto">
+        <Button size="lg" href="https://forms.gle/e6y4Gkna5S9kymdE8">
           Let's talk
         </Button>
       </Section>
