@@ -9,7 +9,7 @@ const MainPage = () => {
   return (
     <MainPageContainer>
       <SplitSection background="var(--bs-primary)" className="gy-3">
-        <Col md={6} xs={12}>
+        <Col md={6}>
           <div className="content p-md-5">
             <p className="sup">Vngle for Cities</p>
             <Heading>
@@ -18,7 +18,7 @@ const MainPage = () => {
             </Heading>
           </div>
         </Col>
-        <Col className="image" md={6} xs={12}>
+        <Col className="image" md={6}>
           <StaticImage
             src="https://source.unsplash.com/XV81dRUMzpo"
             alt="City of Atlanta, GA"
@@ -58,7 +58,7 @@ const MainPage = () => {
       </Section>
 
       <SplitSection background="#3cf" className="gy-3">
-        <Col md={6} xs={12}>
+        <Col md={6}>
           <div className="content p-md-5">
             <p className="sup">COVERAGE</p>
             <Heading>
@@ -82,7 +82,7 @@ const MainPage = () => {
             </Button>
           </div>
         </Col>
-        <Col className="image" md={6} xs={12}>
+        <Col className="image" md={6}>
           <StaticImage
             src="https://source.unsplash.com/SRReffF4vFA"
             alt="Journalist with a camera"
@@ -91,7 +91,7 @@ const MainPage = () => {
       </SplitSection>
 
       <SplitSection background="#ff52db" className="gy-3">
-        <Col md={6} md={{ order: "last" }}>
+        <Col md={{ span: 6, order: "last" }}>
           <div className="content p-md-5">
             <p className="sup">ENGAGE</p>
             <Heading>
@@ -213,6 +213,9 @@ const SplitSection = styled(Row)`
 
     .gatsby-image-wrapper {
       height: 100%;
+    }
+
+    img {
       border-radius: 10px;
     }
   }
