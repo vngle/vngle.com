@@ -26,7 +26,7 @@ const MainPage = () => {
         </Col>
       </SplitSection>
 
-      <Section width="90%" className="p-md-5">
+      <Section className="p-md-5">
         <Heading weight="500" lineHeight="1.3em">
           Substantive local impact comes from grassroots up approaches, not top
           down thinking.{" "}
@@ -224,7 +224,7 @@ const SplitSection = styled(Row)`
 const Section = styled.section`
   margin-top: 2rem;
   margin-bottom: 2rem;
-  padding: 1rem;
+  padding: 2rem;
   width: ${(props) => props.width};
   background: ${(props) => props.background};
   border-radius: 10px;
