@@ -26,7 +26,7 @@ const MainPage = () => {
         </Col>
       </SplitSection>
 
-      <Section width="90%" className="p-md-4">
+      <Section width="90%" className="p-md-5">
         <Heading weight="500" lineHeight="1.3em">
           Substantive local impact comes from grassroots up approaches, not top
           down thinking.{" "}
