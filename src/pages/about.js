@@ -11,12 +11,13 @@ import {
 } from "react-bootstrap";
 import styled from "styled-components";
 
-import Layout from "../components/Layout";
-import Seo from "../components/Seo";
-import NewsSubCard from "../components/NewsSubCard";
-import StorySlider from "../components/StoryCarousel";
-import SimpleSubForm from "../components/SubForm";
-import ActionCard from "../components/landing/ActionCard";
+import Layout from "@components/Layout";
+import Seo from "@components/Seo";
+import NewsSubCard from "@components/NewsSubCard";
+import StorySlider from "@components/StoryCarousel";
+import SimpleSubForm from "@components/SubForm";
+import ActionCard from "@components/landing/ActionCard";
+import ClientLogoGrid from "@components/ClientLogoGrid";
 
 import GaFlag from "../../static/images/landing/ga-flag.svg";
 import Culture from "../../static/images/landing/culture.svg";
@@ -25,12 +26,6 @@ import Search from "../../static/images/landing/search.svg";
 import Request from "../../static/images/landing/request.svg";
 import Capture from "../../static/images/landing/capture.svg";
 import Distribute from "../../static/images/landing/distribute.svg";
-import MozillaLogo from "../../static/images/landing/mozilla.png";
-import ColumbiaLogo from "../../static/images/landing/columbia-tamer.png";
-import GoodieNationLogo from "../../static/images/landing/goodie-nation.png";
-import EnvisionLogo from "../../static/images/landing/envision.png";
-import DivIncLogo from "../../static/images/landing/divinc.png";
-import CollegeParkLogo from "../../static/images/landing/cp-logo.png";
 
 const OldHomePage = () => {
   const heroBtn = [
@@ -110,38 +105,6 @@ const OldHomePage = () => {
         to: "/report",
         text: "Report a story",
       },
-    },
-  ];
-  const workedWithData = [
-    {
-      src: MozillaLogo,
-      alt: "Mozilla logo",
-      href: "https://builders.mozilla.community/",
-    },
-    {
-      src: ColumbiaLogo,
-      alt: "Columbia Tamer Center logo",
-      href: "https://www8.gsb.columbia.edu/socialenterprise/",
-    },
-    {
-      src: EnvisionLogo,
-      alt: "Envision logo",
-      href: "https://www.envisionaccelerator.com/",
-    },
-    {
-      src: DivIncLogo,
-      alt: "DivInc logo",
-      href: "https://www.divinc.org/apply",
-    },
-    {
-      src: GoodieNationLogo,
-      alt: "Goodie Nation logo",
-      href: "https://goodienation.org/",
-    },
-    {
-      src: CollegeParkLogo,
-      alt: "College Park (GA) logo",
-      href: "https://www.collegeparkga.com/",
     },
   ];
 
@@ -300,17 +263,7 @@ const OldHomePage = () => {
         <Row as={Col} className="justify-content-center">
           <h1 className="mb-4">Who We've Worked With</h1>
         </Row>
-        <Row className="align-items-center text-center">
-          {workedWithData.map(({ src, alt, href }, i) => {
-            return (
-              <Col md={4} sm={12} className="mb-5" key={i}>
-                <a href={href}>
-                  <img alt={alt} src={src} width={200} />
-                </a>
-              </Col>
-            );
-          })}
-        </Row>
+        <ClientLogoGrid />
       </Container>
     </Layout>
   );
