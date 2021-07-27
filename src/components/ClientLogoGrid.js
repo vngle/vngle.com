@@ -10,6 +10,11 @@ import CollegeParkLogo from "../../static/images/landing/cp-logo.png";
 
 const workedWithData = [
   {
+    src: CollegeParkLogo,
+    alt: "College Park (GA) logo",
+    href: "https://www.collegeparkga.com/",
+  },
+  {
     src: MozillaLogo,
     alt: "Mozilla logo",
     href: "https://builders.mozilla.community/",
@@ -33,11 +38,6 @@ const workedWithData = [
     src: GoodieNationLogo,
     alt: "Goodie Nation logo",
     href: "https://goodienation.org/",
-  },
-  {
-    src: CollegeParkLogo,
-    alt: "College Park (GA) logo",
-    href: "https://www.collegeparkga.com/",
   },
 ];
 
