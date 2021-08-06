@@ -1,14 +1,14 @@
 import React from "react";
-import { Container, Row, Col, Jumbotron, Image } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import styled from "styled-components";
 import { Disqus } from "gatsby-plugin-disqus";
 
 import PritchettHeadshot from "../../static/images/pritchett-headshot.jpg";
 
-import Layout from "../src/components/Layout";
-import Seo from "../src/components/Seo";
-import NewsSubCard from "../src/components/NewsSubCard";
-import useSiteMetadata from "../src/hooks/useSiteMetadata";
+import Layout from "@components/Layout";
+import Seo from "@components/Seo";
+import NewsSubCard from "@components/NewsSubCard";
+import useSiteMetadata from "@hooks/useSiteMetadata";
 
 export default function PritchettCampaignPage() {
   const { siteUrl } = useSiteMetadata();
@@ -24,14 +24,14 @@ export default function PritchettCampaignPage() {
         description="Grassroots coverage on Linda Pritchett’s campaign for Georgia State Senate Seat in District 39. Listen to her intimate response to the eviction and arrest during her press conference (it’s a Vngle exclusive)."
       />
 
-      <Jumbotron className="bg-primary" as="section">
+      <section className="bg-primary p-5 mb-5">
         <Container>
           <h1 className="display-3 fw-bold">Linda Pritchett</h1>
           <h2 className="mb-0 font-sans-serif">
             Candidate for GA State Senator in District 39
           </h2>
         </Container>
-      </Jumbotron>
+      </section>
 
       <Container as="article">
         <StyledRow>
@@ -81,13 +81,12 @@ export default function PritchettCampaignPage() {
             Pritchett for the December 1st runoff for Georgia's State Senate
             seat in District 39.
           </h2>
-          <div className="embed-responsive embed-responsive-4by3 rounded">
+          <div className="ratio ratio-4x3 rounded">
             <iframe
               src="https://www.youtube.com/embed/9CyDI9wfFZs?autoplay=1&modestbranding=1&mute=1"
               title="Pritchett press conference"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="embed-responsive-item"
             ></iframe>
           </div>
         </VideoContainer>
@@ -100,13 +99,12 @@ export default function PritchettCampaignPage() {
             Georgia voters have to use 2 machines to vote for the remainder of
             John Lewis's term & State Senate in District 39.
           </h2>
-          <div className="embed-responsive embed-responsive-4by3 rounded">
+          <div className="ratio ratio-4x3 rounded">
             <iframe
               src="https://www.youtube.com/embed/V1f6nbrk6wg?autoplay=1&modestbranding=1&mute=1"
               title="Pritchett press conference"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="embed-responsive-item"
             ></iframe>
           </div>
         </VideoContainer>
@@ -119,13 +117,12 @@ export default function PritchettCampaignPage() {
             Who built the new Marta benches that go down Old National Highway?
             It was Linda Becquer Pritchett, candidate for GA Senate District 39.
           </h2>
-          <div className="embed-responsive embed-responsive-4by3 rounded">
+          <div className="ratio ratio-4x3 rounded">
             <iframe
               src="https://www.youtube.com/embed/Na-4vCeJBpE?autoplay=1&modestbranding=1&mute=1"
               title="Pritchett press conference"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="embed-responsive-item"
             ></iframe>
           </div>
         </VideoContainer>
@@ -139,13 +136,12 @@ export default function PritchettCampaignPage() {
             on revitalizing areas like these. Check out our full coverage on her
             campaign here: Vngle.com/Pritchett
           </h2>
-          <div className="embed-responsive embed-responsive-4by3 rounded">
+          <div className="ratio ratio-4x3 rounded">
             <iframe
               src="https://www.youtube.com/embed/si_qBCdJgt8?autoplay=1&modestbranding=1&mute=1"
               title="Pritchett press conference"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="embed-responsive-item"
             ></iframe>
           </div>
         </VideoContainer>
@@ -158,13 +154,12 @@ export default function PritchettCampaignPage() {
             Vngle covered Linda Pritchett's full press conference following her
             home eviction.
           </h2>
-          <div className="embed-responsive embed-responsive-4by3 rounded">
+          <div className="ratio ratio-4x3 rounded">
             <iframe
               src="https://www.youtube.com/embed/QO5TmVo1lZo?autoplay=1&modestbranding=1&mute=1"
               title="Pritchett press conference"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="embed-responsive-item"
             ></iframe>
           </div>
         </VideoContainer>
@@ -177,13 +172,12 @@ export default function PritchettCampaignPage() {
             Our team covered Linda's qualifying process as she officially
             entered the election.
           </h2>
-          <div className="embed-responsive embed-responsive-4by3 rounded">
+          <div className="ratio ratio-4x3 rounded">
             <iframe
               src="https://www.youtube.com/embed/zqHwPFoz7-Y?modestbranding=1"
               title="Pritchett qualifying video"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="embed-responsive-item"
             ></iframe>
           </div>
         </VideoContainer>

@@ -16676,9 +16676,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:^2.0.0-beta.4":
-  version: 2.0.0-beta.4
-  resolution: "react-bootstrap@npm:2.0.0-beta.4"
+"react-bootstrap@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "react-bootstrap@npm:1.6.1"
   dependencies:
     "@babel/runtime": ^7.14.0
     "@restart/context": ^2.1.4
@@ -16693,14 +16693,14 @@ fsevents@~2.3.2:
     invariant: ^2.2.4
     prop-types: ^15.7.2
     prop-types-extra: ^1.1.0
-    react-overlays: ^5.1.1
+    react-overlays: ^5.0.1
     react-transition-group: ^4.4.1
     uncontrollable: ^7.2.1
     warning: ^4.0.3
   peerDependencies:
-    react: ">=16.14.0"
-    react-dom: ">=16.14.0"
-  checksum: bf5e17d476f4d46761df48ac936e259dc3f327eba2dcd77f2ae8d80436550a021240ed77b5595fd4c5434478f1d3a5be3b0a36db8704b3c4e3ab918f12e14502
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 1e02c3abdd290b11aab282196013b7eb9e7ea228db0fa95a0cf7b49a826364b2dbd1a9debbe628b7ac29ab891c1604c51c983ea7fa5c00b8a59e0e64ebcb3fbc
   languageName: node
   linkType: hard
 
@@ -16848,7 +16848,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"react-overlays@npm:^5.1.1":
+"react-overlays@npm:^5.0.1":
   version: 5.1.1
   resolution: "react-overlays@npm:5.1.1"
   dependencies:
@@ -20419,7 +20419,7 @@ resolve@^2.0.0-next.3:
     prop-types: ^15.7.2
     react: ^17.0.2
     react-awesome-slider: ^4.1.0
-    react-bootstrap: ^2.0.0-beta.4
+    react-bootstrap: ^1.6.1
     react-dom: ^17.0.2
     react-dropzone: ^11.3.4
     react-helmet: ^6.1.0
