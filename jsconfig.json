@@ -2,11 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components": ["src/components"],
-      "@hooks": ["src/hooks"],
-      "@views": ["src/views"],
-      "@src": ["src"],
-      "@images": ["static/images"]
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@views/*": ["src/views/*"],
+      "@src/*": ["src/*"],
+      "@images/*": ["static/images/*"]
     }
-  }
+  },
+  "exclude": ["node_modules", "public", ".cache"]
 }

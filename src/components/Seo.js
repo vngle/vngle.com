@@ -19,7 +19,7 @@ import { useLocation } from "@reach/router";
  * @param {string} image Location of site preview image in static folder
  * @param {boolean} article Is this page an article?
  */
-function SEO({ description, lang, meta, title, image, article }) {
+function Seo({ description, lang, meta, title, image, article }) {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(
     graphql`
@@ -40,8 +40,9 @@ function SEO({ description, lang, meta, title, image, article }) {
 
   const url = `${site.siteMetadata.siteUrl}${pathname}`;
   const metaDescription = description || site.siteMetadata.description;
-  const img = `${site.siteMetadata.siteUrl}${image ||
-    site.siteMetadata.defaultImage}`;
+  const img = `${site.siteMetadata.siteUrl}${
+    image || site.siteMetadata.defaultImage
+  }`;
 
   return (
     <Helmet
@@ -100,7 +101,7 @@ function SEO({ description, lang, meta, title, image, article }) {
   );
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   title: null,
   image: null,
   article: false,
@@ -109,7 +110,7 @@ SEO.defaultProps = {
   description: ``,
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
@@ -118,4 +119,4 @@ SEO.propTypes = {
   article: PropTypes.bool,
 };
 
-export default SEO;
+export default Seo;

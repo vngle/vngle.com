@@ -197,7 +197,7 @@ export default function MainPage() {
                   width={200}
                 />
               </div>
-              <Link to="#" className="stretched-link" />
+              <Link to="college-park" className="stretched-link" />
             </div>
           </Col>
           <Col md={6}>
