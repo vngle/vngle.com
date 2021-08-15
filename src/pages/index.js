@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { Container, Image, Button, Alert } from "react-bootstrap";
+import { Container, Image, Button } from "react-bootstrap";
 import styled from "styled-components";
 import Typed from "react-typed";
 import awsvideo from "../aws-video-exports";
@@ -74,27 +74,6 @@ const IndexPage = ({
           })}
         </Slider>
       </Container>
-
-      <Alert variant="primary">
-        <Container>
-          <Alert.Heading className="font-sans-serif">
-            GMA Convention Attendees: Claim your city promotional
-          </Alert.Heading>
-          <p>
-            <b>
-              Vngle stands for “various angles” and we’re all about bringing
-              diverse insights and equal attention to all of Georgia’s cities.
-            </b>{" "}
-            Our technology mobilizes trained citizens to gather verified
-            information to help municipalities run better. Want to increase the
-            good news coverage in your city?{" "}
-            <b>Sign up today at the GMA Convention and get priority access!</b>
-          </p>
-          <Button variant="primary" as={Link} to="/vngleforcities">
-            Check out our services
-          </Button>
-        </Container>
-      </Alert>
 
       <SubForm />
 
