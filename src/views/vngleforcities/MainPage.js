@@ -186,7 +186,7 @@ export default function MainPage() {
 
         <SplitSection className="gy-3">
           <Col md={6}>
-            <div className="bg-primary content position-relative">
+            <div className="bg-primary content position-relative d-flex flex-column justify-content-center">
               <Heading center>
                 Improving city communication in College Park during COVID-19
               </Heading>
@@ -213,10 +213,32 @@ export default function MainPage() {
                   candidates
                 </Heading>
               </div>
-              <Link to="#" className="stretched-link" />
+              <Link to="georgia-election" className="stretched-link" />
             </BgImageContainer>
           </Col>
         </SplitSection>
+
+        <Section className="text-center">
+          <Heading center>How our coverage works</Heading>
+          <p>
+            We’re an equitable local reporting approach that brings nonpartisan
+            coverage to underreported municipalities through verifying and
+            training citizens with HD smartphones to serve as reporters and
+            editors for the areas they live.
+          </p>
+          <StaticImage
+            src="../../images/vngleforcities/reporter-kit-1.jpg"
+            alt="Blake Stoner with reporter kit"
+            width={500}
+            className="mb-3"
+          />
+
+          <p className="lead">Interested in working with us?</p>
+
+          <Button size="lg" href="https://forms.gle/e6y4Gkna5S9kymdE8">
+            Sign up and we'll reach out
+          </Button>
+        </Section>
 
         <Section>
           <Heading center>Who We've Worked With</Heading>
@@ -239,6 +261,14 @@ const Heading = styled.h1`
 const MainPageContainer = styled.div`
   margin-top: 2rem;
   margin-bottom: 2rem;
+
+  .gatsby-image-wrapper {
+    height: 100%;
+
+    img {
+      border-radius: 10px;
+    }
+  }
 `;
 
 const SplitSection = styled(Row)`
@@ -254,18 +284,6 @@ const SplitSection = styled(Row)`
     p.sup {
       font-weight: bold;
       font-size: clamp(1rem, 2.5vw, 1.5rem);
-    }
-  }
-
-  .image {
-    height: auto;
-
-    .gatsby-image-wrapper {
-      height: 100%;
-    }
-
-    img {
-      border-radius: 10px;
     }
   }
 `;

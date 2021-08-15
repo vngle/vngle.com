@@ -7,12 +7,18 @@ import GoodieNationLogo from "../../static/images/landing/goodie-nation.png";
 import EnvisionLogo from "../../static/images/landing/envision.png";
 import DivIncLogo from "../../static/images/landing/divinc.png";
 import CollegeParkLogo from "../../static/images/landing/cp-logo.png";
+import GmaLogo from "@images/landing/gma.png";
 
 const workedWithData = [
   {
     src: CollegeParkLogo,
     alt: "College Park (GA) logo",
     href: "https://www.collegeparkga.com/",
+  },
+  {
+    src: GmaLogo,
+    alt: "Georgia Municipal Association logo",
+    href: "https://www.gacities.com/",
   },
   {
     src: MozillaLogo,

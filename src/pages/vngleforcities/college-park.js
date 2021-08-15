@@ -3,6 +3,7 @@ import Layout from "@components/Layout";
 import Seo from "@components/Seo";
 import CaseStudy from "@views/vngleforcities/CaseStudy";
 import { StaticImage } from "gatsby-plugin-image";
+import { Row, Col } from "react-bootstrap";
 
 export default function CpCaseStudyPage() {
   const title = "Improving city communication in College Park during COVID-19";
@@ -59,28 +60,33 @@ export default function CpCaseStudyPage() {
               underrepresented citizens.
             </p>
 
-            <figure className="figure">
-              <StaticImage
-                src="../../images/vngleforcities/college-park/stakeholder-discussion.png"
-                alt="Vngle College Park front page"
-              />
-              <figcaption className="figure-caption">
-                Example of a flyer Vngle posted on social media to advertise the
-                stakeholder discussion
-              </figcaption>
-            </figure>
-
-            <figure className="figure">
-              <StaticImage
-                src="../../images/vngleforcities/college-park/cruise-for-cause.png"
-                alt="Vngle College Park front page"
-                layout="fullWidth"
-              />
-              <figcaption className="figure-caption">
-                Our founder Blake Stoner speaking at the Cruise for a Cause
-                event
-              </figcaption>
-            </figure>
+            <Row>
+              <Col md={6}>
+                <figure className="figure">
+                  <StaticImage
+                    src="../../images/vngleforcities/college-park/stakeholder-discussion.png"
+                    alt="Vngle College Park front page"
+                  />
+                  <figcaption className="figure-caption">
+                    Example of a flyer Vngle posted on social media to advertise
+                    the stakeholder discussion
+                  </figcaption>
+                </figure>
+              </Col>
+              <Col md={6} className="align-self-end">
+                <figure className="figure">
+                  <StaticImage
+                    src="../../images/vngleforcities/college-park/cruise-for-cause.png"
+                    alt="Vngle College Park front page"
+                    layout="fullWidth"
+                  />
+                  <figcaption className="figure-caption">
+                    Vngle founder & CEO Blake Stoner speaking at the Cruise for
+                    a Cause event
+                  </figcaption>
+                </figure>
+              </Col>
+            </Row>
           </li>
         </ol>
 

@@ -11,11 +11,19 @@ export default function CaseStudy({ children, id, title }) {
       <StaticImage
         src="images/college-park/cp-header.png"
         alt="Orange banner with College Park logo at the center"
+        layout="fullWidth"
       />
     );
-  } else if (id === "georgia") {
+  } else if (id === "georgia-election") {
     headerImage = (
-      <StaticImage src="images/college-park/cp-header.png" alt="" />
+      <StaticImage
+        src="https://source.unsplash.com/RfiBK6Y_upQ"
+        alt="Man speaking in front of audience"
+        layout="constrained"
+        width={500}
+        height={300}
+        style={{ display: "block" }}
+      />
     );
   }
 
