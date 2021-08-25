@@ -55,7 +55,7 @@ const OldHomePage = () => {
       imgSrc: Search,
       title: "Aggregated Vetted Sources",
       description:
-        "Our reality reporters are vetted and their stories are verified by communities.",
+        "Our verified reporters are vetted and their stories are verified by communities.",
     },
   ];
   const processData = [
@@ -66,9 +66,9 @@ const OldHomePage = () => {
       imgSrc: Request,
     },
     {
-      title: "Reality reporters assigned",
+      title: "Reporters assigned",
       description:
-        "After a request is accepted, we match it with a local reality reporter based on their location and area of expertise.",
+        "After a request is accepted, we match it with a local verified reporter based on their location and area of expertise.",
       imgSrc: Capture,
     },
     {
@@ -96,7 +96,7 @@ const OldHomePage = () => {
       title: "I want to report",
       text: (
         <>
-          Want to be a reality reporter for your community?
+          Want to be a grassroots reporter for your community?
           <br />
           Click the button below.
         </>
@@ -110,7 +110,7 @@ const OldHomePage = () => {
 
   return (
     <Layout>
-      <Seo title="Nonpartisan Grassroots Reality News" />
+      <Seo title="Nonpartisan Grassroots Verified News" />
 
       <HeroContainer>
         <Row className="row-intro">
@@ -128,7 +128,7 @@ const OldHomePage = () => {
               ))}
             </Row>
             <Subtitle className="mb-4">
-              We’re a grassroots reality news network curating more
+              We’re a grassroots verified news network curating more
               comprehensive & verifiable insights for local communities. We give
               locals the training & tools needed to create a more diverse news
               ecosystem for their area.{" "}

@@ -30,7 +30,7 @@ const FrontPageTemplate = ({
   <Layout>
     <Seo
       title={`${cityName}, ${state} Local News`}
-      description={`${cityName}, ${state}’s frontpage for local news and grassroots reality coverage.`}
+      description={`${cityName}, ${state}’s frontpage for local news and grassroots verified coverage.`}
     />
 
     <StyledJumbotron className="mb-4">

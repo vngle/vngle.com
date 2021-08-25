@@ -19,13 +19,13 @@ const IndexPage = ({
 }) => {
   return (
     <Layout>
-      <Seo title="Nonpartisan Grassroots Reality News" />
+      <Seo title="Nonpartisan Grassroots Verified News" />
 
       <HeroContainer>
         <h1 className="display-4 fw-bolder text-center">
           Various Angles of
           <br />
-          Reality News Near You
+          Verified News Near You
         </h1>
         <h1 className="display-4 fw-bolder text-center">
           <span className="highlight">Nonpartisan</span>

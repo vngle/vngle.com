@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => {
   const dropdownLinks = [
     { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
     {
-      name: "Become a Reality Reporter",
+      name: "Become a Reporter",
       to: "https://forms.gle/JuxuSvst9aJTiDAk6",
     },
     {

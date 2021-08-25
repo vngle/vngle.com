@@ -12,7 +12,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Vngle`,
-    description: `Vngle brings you grassroots reality coverage on pressing underrepresented stories happening across America from “various angles”. Join us and let’s bring “various angles” of raw local news coverage to your city next.`,
+    description: `Vngle brings you grassroots verified coverage on pressing underrepresented stories happening across America from “various angles”. Join us and let’s bring “various angles” of raw local news coverage to your city next.`,
     siteUrl: `https://www.vngle.com`,
     image: `/images/logo.png`,
     author: `Kenneth Chen`,
@@ -68,8 +68,7 @@ module.exports = {
       options: {
         typeName: "Story",
         fieldName: "allStory",
-        url:
-          "https://luz7nngkczcchiekqx5xinl3te.appsync-api.us-east-1.amazonaws.com/graphql",
+        url: "https://luz7nngkczcchiekqx5xinl3te.appsync-api.us-east-1.amazonaws.com/graphql",
         headers: {
           "x-api-key": "da2-kridzenngrcsrn55mau3sqv2ru",
         },

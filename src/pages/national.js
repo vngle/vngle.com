@@ -45,7 +45,7 @@ const NationalPage = () => {
 
       <Container as="section" className="mt-5">
         <h1 className="display-4">
-          Here's a peak into some of the latest reality stories from across the
+          Here's a peak into some of the latest verified stories from across the
           U.S.
         </h1>
         <InstaFeed filter={["national"]} isPreview={true} />

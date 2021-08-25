@@ -13,7 +13,7 @@ const TeamPage = () => {
     { name: "Blake Stoner", position: "Founder & Chief Reporter" },
     { name: "Carley Deardorff", position: "Communication Strategist" },
     { name: "Jaime Fernandez", position: "Strategic Partnerships" },
-    { name: "Majestic Gay", position: "Reporter in College Park, GA" },
+    { name: "Majestic Gay", position: "Collegiate Reporting Lead" },
     { name: "Marcus Figueiredo", position: "Sales" },
     { name: "Kenneth Chen", position: "Front End Developer" },
     { name: 'Devante "Don" Griffin', position: "Special Operations" },
@@ -25,7 +25,7 @@ const TeamPage = () => {
     <Layout>
       <Seo
         title="A Grassroots News Network"
-        description="Vngle is a decentralized grassroots news network covering pressing underrepresented reality coverage on cities across America. Our coverage is for the people, by the people."
+        description="Vngle is a decentralized grassroots news network covering pressing underrepresented verified coverage on cities across America. Our coverage is for the people, by the people."
       />
 
       <section className="bg-primary p-5 mb-5" as="section">
@@ -43,7 +43,7 @@ const TeamPage = () => {
           <p>
             <b>
               Vngle stands for “various angles”, and it’s a nonpartisan
-              grassroots reality news network bringing coverage to
+              grassroots verified news network bringing coverage to
               underrepresented parts of society. We address news deserts, areas
               that get little to no daily or fair news coverage, by capturing
               human-interest stories from all angles.

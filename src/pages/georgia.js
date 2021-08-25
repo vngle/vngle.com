@@ -53,7 +53,7 @@ const GeorgiaPage = () => {
 
       <Container as="section" className="mt-5">
         <h1 className="display-4">
-          Here's a peak into some of the latest reality stories from across
+          Here's a peak into some of the latest verified stories from across
           Georgia
         </h1>
         <InstaFeed filter={["georgia"]} isPreview={true} />
