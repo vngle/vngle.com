@@ -11,7 +11,6 @@ import Team from "../../static/images/about/profiles";
 const TeamPage = () => {
   const team = [
     { name: "Blake Stoner", position: "Founder & Chief Reporter" },
-    { name: "Carley Deardorff", position: "Communication Strategist" },
     { name: "Jaime Fernandez", position: "Strategic Partnerships" },
     { name: "Majestic Gay", position: "Collegiate Reporting Lead" },
     { name: "Marcus Figueiredo", position: "Sales" },
