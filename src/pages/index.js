@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { Container, Image, Button, Alert } from "react-bootstrap";
+import { Container, Image, Button } from "react-bootstrap";
 import styled from "styled-components";
 import Typed from "react-typed";
 import awsvideo from "../aws-video-exports";
@@ -74,25 +74,6 @@ const IndexPage = ({
           })}
         </Slider>
       </Container>
-
-      <Alert variant="primary py-5">
-        <Container>
-          <Alert.Heading className="font-sans-serif display-4 fw-bold mb-4">
-            Vngle is a finalist for MIT Solve’s Global Challenge to create
-            Antiracist Tech in the U.S.! 🇺🇸
-          </Alert.Heading>
-
-          <Button
-            size="large"
-            variant="dark"
-            href="https://solve.mit.edu/challenges/antiracist-technology/solutions/49533"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Vote for us to win the Community Award 🥇
-          </Button>
-        </Container>
-      </Alert>
 
       <SubForm />
 
