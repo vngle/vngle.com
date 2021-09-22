@@ -2,11 +2,11 @@ import React from "react";
 import { Container, Row, Col, Figure } from "react-bootstrap";
 import styled from "styled-components";
 
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 
-import VngleDef from "../../static/images/about/vngle-def.png";
-import Team from "../../static/images/about/profiles";
+import VngleDef from "@images/team/vngle-def.png";
+import Team from "@images/team/profiles";
 
 const TeamPage = () => {
   const team = [

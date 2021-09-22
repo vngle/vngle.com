@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 import Link from "./Link";
 
-import Logo from "../../static/images/logo.png";
+import Logo from "../images/logo.png";
 
 const Footer = () => (
   <Container as="footer" className="text-center pt-5">

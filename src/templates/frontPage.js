@@ -9,7 +9,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FcBookmark } from "react-icons/fc";
 import moment from "moment";
 
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 import ActionButtonGroup from "../components/frontPage/ActionBtnGroup";
 import InstaFeed from "../components/frontPage/InstaFeed";

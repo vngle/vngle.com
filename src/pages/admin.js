@@ -7,7 +7,7 @@ import awsvideoconfig from "../aws-video-exports";
 import { createVodAsset, createVideoObject } from "../graphql/mutations";
 import "@aws-amplify/ui/dist/style.css";
 
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 import FilePicker from "../components/FilePickers/VideoPicker";
 import ProgressModal from "../components/Modals/ProgressModal";
@@ -25,7 +25,7 @@ const Admin = () => {
   useEffect(() => {
     const region = Amplify._config.aws_project_region;
 
-    Auth.currentSession().then(data => {
+    Auth.currentSession().then((data) => {
       const groups = data.idToken.payload["cognito:groups"];
 
       if (groups) {
@@ -44,7 +44,7 @@ const Admin = () => {
     });
   }, []);
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const { value } = event.target;
     const { name } = event.target;
 
@@ -54,7 +54,7 @@ const Admin = () => {
     });
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
     const uuid = uuidv4();
@@ -79,7 +79,7 @@ const Admin = () => {
       `${uuid}.${fileExtension[fileExtension.length - 1]}`,
       file.data,
       {
-        progressCallback: progress => {
+        progressCallback: (progress) => {
           const { loaded, total } = progress;
           console.log(`Uploaded: ${progress.loaded}/${progress.total}`);
           setProgress((loaded / total) * 100);
@@ -88,7 +88,7 @@ const Admin = () => {
       }
     )
       .then(() => console.log(`Successfully Uploaded: ${uuid}`))
-      .catch(err => console.log(`Error: ${err}`));
+      .catch((err) => console.log(`Error: ${err}`));
 
     API.graphql(graphqlOperation(createVideoObject, videoObject)).then(
       (response, error) => {
@@ -114,7 +114,7 @@ const Admin = () => {
             `${uuid}.${fileExtension[fileExtension.length - 1]}`,
             file.data,
             {
-              progressCallback: progress => {
+              progressCallback: (progress) => {
                 const { loaded, total } = progress;
                 console.log(`Uploaded: ${progress.loaded}/${progress.total}`);
                 setProgress((loaded / total) * 100);
@@ -123,7 +123,7 @@ const Admin = () => {
             }
           )
             .then(() => console.log(`Successfully Uploaded: ${uuid}`))
-            .catch(err => console.log(`Error: ${err}`));
+            .catch((err) => console.log(`Error: ${err}`));
         }
       }
     );
@@ -171,7 +171,7 @@ const Admin = () => {
               </Form.Group>
               <Form.Group>
                 <FilePicker
-                  onPick={pickedFile => {
+                  onPick={(pickedFile) => {
                     setFile({
                       data: pickedFile,
                       name: pickedFile.name,

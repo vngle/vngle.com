@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 
 const TermsPage = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Jumbotron } from "react-bootstrap";
 
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 
 export default function FaqPage() {

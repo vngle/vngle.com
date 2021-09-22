@@ -35,7 +35,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@views": path.resolve(__dirname, "src/views"),
         "@templates": path.resolve(__dirname, "src/templates"),
         "@src": path.resolve(__dirname, "src"),
-        "@images": path.resolve(__dirname, "static/images"),
+        "@images": path.resolve(__dirname, "src/images"),
       },
     },
   });

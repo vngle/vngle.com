@@ -3,9 +3,9 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import styled from "styled-components";
 import { Disqus } from "gatsby-plugin-disqus";
 
-import PritchettHeadshot from "../../static/images/pritchett-headshot.jpg";
+import PritchettHeadshot from "../images/pritchett-campaign/headshot.jpg";
 
-import Layout from "@components/Layout";
+import Layout from "@components/Layouts/MainLayout";
 import Seo from "@components/Seo";
 import NewsSubCard from "@components/NewsSubCard";
 import useSiteMetadata from "@hooks/useSiteMetadata";

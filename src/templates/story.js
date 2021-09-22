@@ -8,7 +8,7 @@ import { Disqus } from "gatsby-plugin-disqus";
 import ReactPlayer from "react-player";
 import "styled-components/macro";
 
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 
 import useSiteMetadata from "../hooks/useSiteMetadata";

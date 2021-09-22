@@ -11,21 +11,21 @@ import {
 } from "react-bootstrap";
 import styled from "styled-components";
 
-import Layout from "@components/Layout";
+import Layout from "@components/Layouts/MainLayout";
 import Seo from "@components/Seo";
 import NewsSubCard from "@components/NewsSubCard";
 import StorySlider from "@components/StoryCarousel";
 import SimpleSubForm from "@components/SubForm";
 import ActionCard from "@components/landing/ActionCard";
-import ClientLogoGrid from "@components/ClientLogoGrid";
+import ClientLogoGrid from "@components/PartnerLogoGrid";
 
-import GaFlag from "../../static/images/landing/ga-flag.svg";
-import Culture from "../../static/images/landing/culture.svg";
-import Transparent from "../../static/images/landing/transparent.svg";
-import Search from "../../static/images/landing/search.svg";
-import Request from "../../static/images/landing/request.svg";
-import Capture from "../../static/images/landing/capture.svg";
-import Distribute from "../../static/images/landing/distribute.svg";
+import GaFlag from "@images/ga-flag.svg";
+import Culture from "@images/about/culture.svg";
+import Transparent from "@images/about/transparent.svg";
+import Search from "@images/about/search.svg";
+import Request from "@images/about/request.svg";
+import Capture from "@images/about/capture.svg";
+import Distribute from "@images/about/distribute.svg";
 
 const OldHomePage = () => {
   const heroBtn = [

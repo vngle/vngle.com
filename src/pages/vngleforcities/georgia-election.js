@@ -1,6 +1,6 @@
-import Layout from "@components/Layout";
+import Layout from "@components/Layouts/MainLayout";
 import Seo from "@components/Seo";
-import CaseStudy from "@views/vngleforcities/CaseStudy";
+import CaseStudy from "@components/Layouts/CaseStudy";
 import { Link } from "gatsby";
 import React from "react";
 

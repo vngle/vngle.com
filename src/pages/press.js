@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Jumbotron, Row, Col, Button } from "react-bootstrap";
 import styled from "styled-components";
 
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 
 export default function PressPage() {
@@ -10,24 +10,20 @@ export default function PressPage() {
     {
       title:
         "WSBTV (Atlanta Channel 2) - Founder feature on our census work in College Park, GA",
-      href:
-        "https://www.wsbtv.com/video/local-video/deadline-complete-census-looms-heres-why-its-so-important/cde4bdcf-137c-466f-852f-6e59f16d2b04/",
+      href: "https://www.wsbtv.com/video/local-video/deadline-complete-census-looms-heres-why-its-so-important/cde4bdcf-137c-466f-852f-6e59f16d2b04/",
     },
     {
       title: "TechCrunch Feature (Our Envision Accelerator Demo Week)",
-      href:
-        "https://techcrunch.com/2020/09/01/student-led-accelerator-envision-reaches-demo-week-for-class-one-looks-to-class-two/",
+      href: "https://techcrunch.com/2020/09/01/student-led-accelerator-envision-reaches-demo-week-for-class-one-looks-to-class-two/",
     },
     {
       title:
         "American Inno Feature (Our acceptance into DivInc’s Social Justice Innovation Accelerator)",
-      href:
-        "https://www.americaninno.com/austin/newsletters/1-9m-to-fuel-dancefight-app-divinc-reveals-social-justice-cohort/",
+      href: "https://www.americaninno.com/austin/newsletters/1-9m-to-fuel-dancefight-app-divinc-reveals-social-justice-cohort/",
     },
     {
       title: "Georgia Tech founding feature",
-      href:
-        "https://grow.gatech.edu/wp-content/uploads/2018/04/Sucess-Stories.pdf",
+      href: "https://grow.gatech.edu/wp-content/uploads/2018/04/Sucess-Stories.pdf",
     },
   ];
 

@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Jumbotron, Row, Col, Button } from "react-bootstrap";
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 import StorySlider from "../components/StoryCarousel";
 import NewsSubCard from "../components/NewsSubCard";
 import InstaFeed from "../components/frontPage/InstaFeed";
 
-import GaFlag from "../../static/images/landing/ga-flag.svg";
+import GaFlag from "@images/ga-flag.svg";
 
 const GeorgiaPage = () => {
   return (

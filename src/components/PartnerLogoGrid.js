@@ -1,13 +1,13 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 
-import MozillaLogo from "../../static/images/landing/mozilla.png";
-import ColumbiaLogo from "../../static/images/landing/columbia-tamer.png";
-import GoodieNationLogo from "../../static/images/landing/goodie-nation.png";
-import EnvisionLogo from "../../static/images/landing/envision.png";
-import DivIncLogo from "../../static/images/landing/divinc.png";
-import CollegeParkLogo from "../../static/images/landing/cp-logo.png";
-import GmaLogo from "@images/landing/gma.png";
+import MozillaLogo from "@images/partners/mozilla.png";
+import ColumbiaLogo from "@images/partners/columbia-tamer.png";
+import GoodieNationLogo from "@images/partners/goodie-nation.png";
+import EnvisionLogo from "@images/partners/envision.png";
+import DivIncLogo from "@images/partners/divinc.png";
+import CollegeParkLogo from "@images/partners/cp-logo.png";
+import GmaLogo from "@images/partners/gma.png";
 
 const workedWithData = [
   {

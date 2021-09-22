@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap";
 
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 import InstaFeed from "../components/frontPage/InstaFeed";
 
-import Wwan from "../../static/images/wwan.png";
+import Wwan from "../images/wwan/wwan.png";
 
 const citiesTraveled = [
   "Atlanta, GA",
@@ -70,7 +70,7 @@ const WwanPage = () => (
           <Col>
             <h2 className="mb-4">Cities we've traveled to thus far:</h2>
             <Row>
-              {citiesTraveled.map(city => (
+              {citiesTraveled.map((city) => (
                 <Col key={city} lg={3} md={4} sm={6} className="mb-4">
                   <p>
                     <em>{city}</em>

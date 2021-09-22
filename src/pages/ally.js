@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Jumbotron, Button, Row, Col } from "react-bootstrap";
+import { Container, Button, Row, Col } from "react-bootstrap";
 import { FiActivity, FiCompass, FiGlobe } from "react-icons/fi";
 
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 
-import TeamSvg from "../../static/images/ally/team.svg";
-import ClubELogo from "../../static/images/ally/logo-club-e.png";
-import CouncilmanGay from "../../static/images/ally/councilman-gay.jpg";
-import OneTalentLogo from "../../static/images/ally/logo-one-talent.png";
+import TeamSvg from "@images/ally/team.svg";
+import ClubELogo from "@images/ally/logo-club-e.png";
+import CouncilmanGay from "@images/ally/councilman-gay.jpg";
+import OneTalentLogo from "@images/ally/logo-one-talent.png";
 
 export default function AllyPage() {
   const allies = [
@@ -85,7 +85,7 @@ export default function AllyPage() {
       <Styled>
         <Seo title="Become an Ally" />
 
-        <Jumbotron as="section" className="bg-primary title-banner">
+        <div as="section" className="bg-primary title-banner py-4">
           <Container>
             <h1 className="display-2">Become an Ally</h1>
             <h2>Grow with Vngle in cities across America!</h2>
@@ -98,7 +98,7 @@ export default function AllyPage() {
               Become an ally today!
             </Button>
           </Container>
-        </Jumbotron>
+        </div>
 
         <Container>
           <section className="intro">
@@ -123,7 +123,7 @@ export default function AllyPage() {
           </section>
         </Container>
 
-        <Jumbotron className="bg-secondary text-light">
+        <div className="bg-secondary text-light py-4 mb-5">
           <Container>
             <h1 className="font-sans-serif mb-5">
               Benefits of becoming an ally
@@ -159,7 +159,7 @@ export default function AllyPage() {
               </Col>
             </Row>
           </Container>
-        </Jumbotron>
+        </div>
 
         <Container className="examples">
           <h1 className="text-center display-4">
@@ -225,6 +225,6 @@ const Styled = styled.div`
 `;
 
 const LogoCol = styled(Col)`
-  background-color: ${props => props.bg};
+  background-color: ${(props) => props.bg};
   border-radius: 10px;
 `;

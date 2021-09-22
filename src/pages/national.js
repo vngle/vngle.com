@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Jumbotron, Row, Col, Button } from "react-bootstrap";
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 import StorySlider from "../components/StoryCarousel";
 import NewsSubCard from "../components/NewsSubCard";

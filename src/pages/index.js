@@ -5,14 +5,14 @@ import styled from "styled-components";
 import Typed from "react-typed";
 import awsvideo from "../aws-video-exports";
 
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 import Slider from "../components/Slider";
 import Grid from "../components/Grid";
 import List from "../components/List";
 import SubForm from "../components/SubForm";
 
-import World from "../../static/images/landing/world.svg";
+import World from "@images/home/world.svg";
 
 const IndexPage = ({
   data: { storiesFeatured, storiesGeorgia, storiesNational },

@@ -9,8 +9,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../Header";
+import Footer from "../Footer";
 
 /**
  * Uses ThemeProvider from styled-components to make context available for children
@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <>
           <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>

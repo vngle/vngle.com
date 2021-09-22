@@ -5,7 +5,7 @@ import { FaSlack } from "react-icons/fa";
 import styled from "styled-components";
 
 import Seo from "../components/Seo";
-import Layout from "../components/Layout";
+import Layout from "../components/Layouts/MainLayout";
 import ReportForm from "../components/Forms/ReportForm";
 
 const Report = () => {
