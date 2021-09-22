@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import SwiperCore, { Navigation, A11y, Autoplay } from "swiper";
+import { Navigation, A11y, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-import "swiper/components/navigation/navigation.scss";
+import "swiper/css/bundle";
+import "swiper/css";
+import "swiper/css/navigation";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-
-SwiperCore.use([Navigation, A11y, Autoplay]);
 
 const Slider = ({ children }) => {
   const config = {
+    modules: [Navigation, A11y, Autoplay],
     spaceBetween: 30,
     slidesPerView: 1,
     navigation: {
@@ -34,7 +34,7 @@ const Slider = ({ children }) => {
   return (
     <SliderContainer>
       <Swiper {...config}>
-        {children.map(child => {
+        {children.map((child) => {
           return <SwiperSlide key={child.key}>{child}</SwiperSlide>;
         })}
       </Swiper>
@@ -68,8 +68,8 @@ const NavButton = styled.div`
   background: var(--bs-primary);
   position: absolute;
   top: 50%;
-  left: ${props => (props.prev ? "10px" : "auto")};
-  right: ${props => (props.next ? "10px" : "auto")};
+  left: ${(props) => (props.prev ? "10px" : "auto")};
+  right: ${(props) => (props.next ? "10px" : "auto")};
   width: var(--swiper-navigation-size);
   height: auto;
   margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
