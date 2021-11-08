@@ -16,6 +16,8 @@ const TeamPage = () => {
     { name: "Marcus Figueiredo", position: "Sales" },
     { name: "Kenneth Chen", position: "Front End Developer" },
     { name: 'Devante "Don" Griffin', position: "Special Operations" },
+    { name: "Shweta Jain", position: "Research & Development" },
+    { name: "Alex Rhodd", position: "Data & Digital Forensics" },
   ].map((profile, i) => {
     return { ...profile, img: Team[i] };
   });
