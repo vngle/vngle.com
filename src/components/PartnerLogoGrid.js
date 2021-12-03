@@ -12,7 +12,7 @@ import Goldin from "@images/partners/goldin.png";
 import Mit from "@images/partners/mit.png";
 import Nyc from "@images/partners/nyc.png";
 import Pyxera from "@images/partners/pyxera.png";
-import Sap from "@images/partners/Sap.png";
+import Sap from "@images/partners/sap.png";
 
 const workedWithData = [
   {
