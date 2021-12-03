@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import awsvideo from "../aws-video-exports";
-import { FcApproval } from "react-icons/fc";
+import VerifiedIcon from "@components/Tooltips/VerifiedIcon";
 
 const Grid = ({ items }) => {
   return (
@@ -27,7 +27,7 @@ const Grid = ({ items }) => {
 
                   <div className="post-content__meta">
                     <p>
-                      VngleVerified <FcApproval />
+                      VngleVerified <VerifiedIcon />
                     </p>
                     {/* <p>{moment(createdAt).calendar()}</p> */}
                   </div>

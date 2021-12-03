@@ -7,6 +7,6 @@ import Don from "./don.jpeg";
 import Shweta from "./shweta.jpg";
 import Alex from "./alex.jpg";
 
-const profiles = [Blake, Jaime, Majestic, Marcus, Kenneth, Don, Shweta, Alex];
+const profiles = [Blake, Shweta, Jaime, Alex, Kenneth, Marcus, Don, Majestic];
 
 export default profiles;

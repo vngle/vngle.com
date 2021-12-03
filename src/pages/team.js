@@ -11,13 +11,13 @@ import Team from "@images/team/profiles";
 const TeamPage = () => {
   const team = [
     { name: "Blake Stoner", position: "Founder & Chief Reporter" },
-    { name: "Jaime Fernandez", position: "Strategic Partnerships" },
-    { name: "Majestic Gay", position: "Collegiate Reporting Lead" },
-    { name: "Marcus Figueiredo", position: "Sales" },
-    { name: "Kenneth Chen", position: "Front End Developer" },
-    { name: 'Devante "Don" Griffin', position: "Special Operations" },
     { name: "Shweta Jain", position: "Research & Development" },
+    { name: "Jaime Fernandez", position: "Strategic Partnerships" },
     { name: "Alex Rhodd", position: "Data & Digital Forensics" },
+    { name: "Kenneth Chen", position: "Technology Lead" },
+    { name: "Marcus Figueiredo", position: "Sales" },
+    { name: 'Devante "Don" Griffin', position: "Special Operations" },
+    { name: "Majestic Gay", position: "Collegiate Reporting Lead" },
   ].map((profile, i) => {
     return { ...profile, img: Team[i] };
   });
@@ -32,9 +32,9 @@ const TeamPage = () => {
       <section className="bg-primary p-5 mb-5" as="section">
         <Container>
           <h1 className="mb-0">
-            Through capturing various angles on cities, we’re creating balanced
-            nonpartisan narratives, and more verifiable insights into what’s
-            happening across them.
+            We're a tribe of grassroots strategists, technologists, and change
+            makers working to combat misinformation and underrepresentation in
+            America.
           </h1>
         </Container>
       </section>
@@ -70,6 +70,24 @@ const TeamPage = () => {
               Definition of Vngle
             </Figure.Caption>
           </Figure>
+
+          <section>
+            <h1 className="text-center mb-5">Our Team</h1>
+            <Row>
+              {team.map((profile, i) => (
+                <Col lg={4} md={6} xs={12} key={i} className="text-center mb-4">
+                  <h2>{profile.name}</h2>
+                  <p>{profile.position}</p>
+                  <ProfileImg
+                    src={profile.img}
+                    alt="Profile of team members"
+                    width="100%"
+                  />
+                </Col>
+              ))}
+            </Row>
+          </section>
+
           <Row className="my-4">
             <Col className="m-auto" sm>
               <h2>The concept of Vngle was born in Ferguson, Missouri</h2>
@@ -86,36 +104,26 @@ const TeamPage = () => {
             </Col>
           </Row>
           <p>
-            Over 64% of the United States is considered a news desert, and Blake
-            Stoner noticed this problem as he was registering people to vote in
-            Ferguson, MO.
+            Vngle is a response to growing misinformation and
+            underrepresentation that's plaguing so much of America.
           </p>
           <p>
-            As he went door to door, he learned what was happening across the
-            city from local perspectives, and realized so many of their
-            experiences were shockingly going unreported. That collective gap
-            revealed to Blake that many pressing stories across America are not
-            being properly covered from all sides.
+            Our origin is rooted in grassroots work and seeing the systemic
+            problems local communities face. This work started in Ferguson, MO,
+            where social injustice is real but goes incredibly underreported.
+            Ferguson like so many other underrepresented cities is a news
+            desert, a place that gets little to no original reporting. Today,
+            over 64% of America, millions of people, do not get daily original
+            news on their area. These areas are where misinformation grows the
+            most.
           </p>
           <p>
-            <b>That inspired Blake to start Vngle.</b>
+            <b>
+              We started Vngle to address these critical issues through
+              empowering communities to bring various angles verified local news
+              to their area.
+            </b>
           </p>
-        </section>
-        <section>
-          <h1 className="text-center mb-5">Our Team</h1>
-          <Row>
-            {team.map((profile, i) => (
-              <Col lg={4} md={6} xs={12} key={i} className="text-center mb-4">
-                <h2>{profile.name}</h2>
-                <p>{profile.position}</p>
-                <ProfileImg
-                  src={profile.img}
-                  alt="Profile of team members"
-                  width="100%"
-                />
-              </Col>
-            ))}
-          </Row>
         </section>
       </Container>
     </Layout>

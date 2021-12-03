@@ -41,40 +41,40 @@ const OldHomePage = () => {
   const mainFeatureData = [
     {
       imgSrc: Culture,
-      title: "Cross-Cultural Authenticity",
+      title: "Local Grassroots Reporting",
       description:
-        "Reporting on stories from all sides of cities to ensure holistic representation.",
+        "Empowering diverse communities with the digital infrastructure and hardware needed to report.",
     },
     {
       imgSrc: Transparent,
-      title: "Credible & Verifiable Transparency",
+      title: "Community Skills Training",
       description:
-        "There’s no agenda, just real stories from real people on the communities they love.",
+        "Training locals to spot misinformation and report on their areas of expertise.",
     },
     {
       imgSrc: Search,
-      title: "Aggregated Vetted Sources",
+      title: "Verifying & Fact-checking",
       description:
-        "Our verified reporters are vetted and their stories are verified by communities.",
+        "Leveraging grassroots insights and digital forensic data to confirm the origin of information.",
     },
   ];
   const processData = [
     {
       title: "Local coverage requested",
       description:
-        "Know something that’s going under reported? Whether it’s a local election, a protest, or just a high school game, Vngle’s got you covered.",
+        "Know something that’s going underreported or misreported? Whether it’s a local election, a protest, or just a high school game, Vngle’s got you covered.",
       imgSrc: Request,
     },
     {
-      title: "Reporters assigned",
+      title: "Grassroots Reporting is Deployed",
       description:
-        "After a request is accepted, we match it with a local verified reporter based on their location and area of expertise.",
+        "We train & mobilizing diverse local experts to capture varying views on cities, thus crafting more balanced nonpartisan narratives backed by verifiable insights into what’s happening.",
       imgSrc: Capture,
     },
     {
-      title: "Stories captured + circulated",
+      title: "Stories Captured, Checked, & Circulated.",
       description:
-        "After a story is captured, it’s made public and distributed across its home community and any others that would benefit from the information.",
+        "After a story is covered, it’s fact-checked, and distributed across the communities that are directly related to the subject matter.",
       imgSrc: Distribute,
     },
   ];
@@ -116,9 +116,11 @@ const OldHomePage = () => {
         <Row className="row-intro">
           <Col className="col-intro text-md-left text-center" md={6} sm={12}>
             <h1 className="display-4 fw-bolder mb-4">
-              Cities need various angles of more inclusive coverage
+              We help harmonize cities by
               <br />
-              <span className="highlight">That's why we created Vngle</span>
+              <span className="highlight">
+                combatting misinformation & under-representation
+              </span>
             </h1>
             <Row>
               {heroBtn.map(({ value, href }, i) => (
@@ -128,10 +130,10 @@ const OldHomePage = () => {
               ))}
             </Row>
             <Subtitle className="mb-4">
-              We’re a grassroots verified news network curating more
-              comprehensive & verifiable insights for local communities. We give
-              locals the training & tools needed to create a more diverse news
-              ecosystem for their area.{" "}
+              Vngle is a nonpartisan grassroots news network bringing various
+              angles of verified coverage to communities. Our creator community
+              is powered by a network of local experts and change-makers working
+              to curate deeper more intimate insights on the areas around us.{" "}
               <Badge variant="primary">
                 <a
                   href="http://eepurl.com/g1cJk5"
@@ -192,21 +194,21 @@ const OldHomePage = () => {
 
       <TopFeatureContainer>
         <Title className="display-3">
-          Get the real scoop from real locals, sharing their truth on what’s
+          Get the real scoop from trained locals, capturing the truth on what’s
           happening.
         </Title>
         <Subtitle>
           We bring you authentic on-the-ground perspectives that mainstream
-          media won’t. Our cross-cultural video coverage highlights the diverse
-          experiences and realities people face. It puts you in the shoes of
-          people from all walks of life.
+          media won’t. Our cross-cultural video coverage puts you in the midst
+          of the diverse realities people face, all while creating more
+          transparency into how you receive local information.
         </Subtitle>
         <StorySlider />
       </TopFeatureContainer>
 
       <MainFeatureContainer className="my-5">
         <Title className="display-3 mb-5">
-          Bring you “various angles” of coverage through
+          We bring various angles of transparent coverage to cities through:
         </Title>
         <Row>
           {mainFeatureData.map(({ imgSrc, title, description, offset }, i) => (
