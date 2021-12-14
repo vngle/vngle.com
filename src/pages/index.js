@@ -10,7 +10,7 @@ import Seo from "../components/Seo";
 import Slider from "../components/Slider";
 import Grid from "../components/Grid";
 import List from "../components/List";
-import SubForm from "../components/SubForm";
+import SubForm from "../components/Forms/SubForm";
 
 import World from "@images/home/world.svg";
 

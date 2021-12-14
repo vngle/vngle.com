@@ -1,21 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
-import {
-  Jumbotron,
-  Container,
-  Row,
-  Col,
-  Button,
-  Image,
-  Badge,
-} from "react-bootstrap";
+import { Container, Row, Col, Button, Image, Badge } from "react-bootstrap";
 import styled from "styled-components";
 
 import Layout from "@components/Layouts/MainLayout";
 import Seo from "@components/Seo";
 import NewsSubCard from "@components/NewsSubCard";
 import StorySlider from "@components/StoryCarousel";
-import SimpleSubForm from "@components/SubForm";
+import SimpleSubForm from "@components/Forms/SubForm";
 import ActionCard from "@components/landing/ActionCard";
 import ClientLogoGrid from "@components/PartnerLogoGrid";
 
@@ -168,7 +160,7 @@ const OldHomePage = () => {
         </Row>
       </HeroContainer>
 
-      <Jumbotron className="bg-primary py-5 mb-5">
+      <div className="bg-primary py-5 mb-5">
         <Container>
           <Row className="align-items-center justify-content-center">
             <Col md={1} sm={2} xs={3}>
@@ -190,7 +182,7 @@ const OldHomePage = () => {
             </Col>
           </Row>
         </Container>
-      </Jumbotron>
+      </div>
 
       <TopFeatureContainer>
         <Title className="display-3">
@@ -222,7 +214,7 @@ const OldHomePage = () => {
       </MainFeatureContainer>
 
       <ProcessContainer>
-        <Jumbotron className="bg-primary shadow">
+        <div className="bg-primary shadow jumbotron">
           <h1 className="display-4">How Your Community is Covered</h1>
           {processData.map(({ title, description, imgSrc }, i) => (
             <Row className="text-center text-md-left" key={i}>
@@ -242,7 +234,7 @@ const OldHomePage = () => {
               </Col>
             </Row>
           ))}
-        </Jumbotron>
+        </div>
       </ProcessContainer>
 
       <Container className="my-5">

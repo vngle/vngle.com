@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Jumbotron, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 import StorySlider from "../components/StoryCarousel";
@@ -14,7 +14,7 @@ const GeorgiaPage = () => {
     <Layout>
       <Seo title={`Georgia`} />
 
-      <StyledJumbotron>
+      <StyledJumbotron className="mb-5">
         <CoverImage src="https://source.unsplash.com/tjdu7p_PaEM" alt="" />
         <Row className="align-items-end">
           <Col>
@@ -62,7 +62,7 @@ const GeorgiaPage = () => {
   );
 };
 
-const StyledJumbotron = styled(Jumbotron)`
+const StyledJumbotron = styled.div`
   position: relative;
   background-color: transparent;
   color: var(--bs-light);

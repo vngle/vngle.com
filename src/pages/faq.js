@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Jumbotron } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
@@ -48,11 +48,11 @@ export default function FaqPage() {
     <Layout>
       <Seo title="Grassroots FAQs" />
 
-      <Jumbotron className="bg-primary" as="section">
+      <div className="bg-primary p-5 mb-5" as="section">
         <Container>
           <h1 className="mb-0">Grassroots FAQs</h1>
         </Container>
-      </Jumbotron>
+      </div>
 
       <Container as="article">
         <section>

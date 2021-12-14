@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Jumbotron, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import styled from "styled-components";
 
 import Layout from "../components/Layouts/MainLayout";
@@ -31,14 +31,14 @@ export default function PressPage() {
     <Layout>
       <Seo title="Press" />
 
-      <Jumbotron className="bg-primary" as="section">
+      <div className="bg-primary p-5 mb-5" as="section">
         <Container>
           <h1 className="display-3">Press</h1>
           <h2 className="mb-0 font-sans-serif">
             Company and team features in the media.
           </h2>
         </Container>
-      </Jumbotron>
+      </div>
 
       <Container as="article">
         <Row>

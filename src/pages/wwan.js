@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Jumbotron, Figure } from "react-bootstrap";
+import { Container, Row, Col, Figure } from "react-bootstrap";
 
 import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
@@ -39,7 +39,7 @@ const WwanPage = () => (
       description="Where We Are Now is Vngle’s traveling series uncovering how America’s culture is changing from coast to coast. Let us know your thoughts on where we should go next."
     />
 
-    <Jumbotron className="bg-primary" as="section">
+    <div className="bg-primary p-5 mb-5" as="section">
       <Container>
         <h1 className="mb-0">
           <em>Where We Are Now</em> is our nonpartisan grassroots documentary
@@ -48,7 +48,7 @@ const WwanPage = () => (
           bring needed coverage to underrepresented parts of America.
         </h1>
       </Container>
-    </Jumbotron>
+    </div>
 
     <section>
       <Container>
