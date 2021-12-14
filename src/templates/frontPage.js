@@ -34,7 +34,7 @@ const FrontPageTemplate = ({
     />
 
     <StyledJumbotron className="mb-4">
-      <CoverImage src={coverImage.fluid.src} alt="" />
+      <CoverImage src={coverImage.file.url} alt="" />
       <Container>
         <Row className="align-items-end">
           <Col>

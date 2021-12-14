@@ -1,31 +1,7 @@
 import React, { useState } from "react";
-import {
-  Form,
-  Button,
-  Spinner,
-  Container,
-  Jumbotron,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Form, Button, Spinner, Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import DOMPurify from "dompurify";
-import MailchimpSubscribe from "react-mailchimp-subscribe";
-
-const MailChimpForm = () => {
-  return (
-    <MailchimpSubscribe
-      url={process.env.GATSBY_MAILCHIMP_URL}
-      render={({ subscribe, status, message }) => (
-        <SubForm
-          status={status}
-          message={message}
-          onSubmitted={(formData) => subscribe(formData)}
-        />
-      )}
-    />
-  );
-};
 
 /**
  * All props are passed in by MailchimpSubscribe component
@@ -109,7 +85,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
           <Col xs={12} md={7} lg={6}>
             <h1>Get free and balanced news near you</h1>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
-              <Form.Row as={Row} xs={1} sm={2}>
+              <Row xs={1} sm={2}>
                 {formData["group[293774][4]"] === true ? (
                   <Form.Group controlId="number" as={Col}>
                     <Form.Label>
@@ -162,7 +138,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
                     Please provide a zip code
                   </Form.Control.Feedback>
                 </Form.Group>
-              </Form.Row>
+              </Row>
 
               <Row className="mt-3">
                 <Form.Group as={Col} xs="auto">
@@ -203,7 +179,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
   );
 };
 
-const StyledJumbotron = styled(Jumbotron)`
+const StyledJumbotron = styled.div`
   background: rgba(255, 204, 52, 0.4);
   border: 5px solid var(--bs-primary);
   margin: 3rem 0;
@@ -221,4 +197,4 @@ const MutedMsg = styled(Form.Text)`
   font-size: 10px;
 `;
 
-export default MailChimpForm;
+export default SubForm;

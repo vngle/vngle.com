@@ -83,13 +83,15 @@ const createStories = async (graphql, { createPage }) => {
     });
   }
 
-  items.forEach((item) => {
-    createPage({
-      path: `/stories/${item.id}`,
-      component: require.resolve(`./src/templates/story`),
-      context: item,
-    });
-  });
+  await Promise.all(
+    items.map((item) => {
+      createPage({
+        path: `/stories/${item.id}`,
+        component: require.resolve(`./src/templates/story`),
+        context: item,
+      });
+    })
+  );
 };
 
 /**
@@ -117,8 +119,8 @@ const createContentful = async (graphql, { createPage }) => {
           slug
           cityName
           coverImage {
-            fluid {
-              src
+            file {
+              url
             }
           }
           state
@@ -139,8 +141,8 @@ const createContentful = async (graphql, { createPage }) => {
               url
               contentType
             }
-            fixed {
-              src
+            file {
+              url
             }
           }
         }
@@ -167,31 +169,35 @@ const createContentful = async (graphql, { createPage }) => {
 
    */
 
-  frontPages.forEach(({ cityId, cityName, coverImage, id, state, slug }) => {
-    createPage({
-      path: `${slug}`,
-      component: require.resolve(`./src/templates/frontPage`),
-      context: {
-        cityId,
-        cityName,
-        coverImage,
-        id,
-        state,
-      },
-    });
-  });
+  await Promise.all(
+    frontPages.map(({ cityId, cityName, coverImage, id, state, slug }) => {
+      createPage({
+        path: `${slug}`,
+        component: require.resolve(`./src/templates/frontPage`),
+        context: {
+          cityId,
+          cityName,
+          coverImage,
+          id,
+          state,
+        },
+      });
+    })
+  );
 
-  stories.forEach(({ title, author, id, slug, caption, mediaContent }) => {
-    createPage({
-      path: `/stories/${slug}`,
-      component: require.resolve(`./src/templates/story`),
-      context: {
-        title,
-        author,
-        id,
-        caption: caption.caption,
-        mediaContent,
-      },
-    });
-  });
+  await Promise.all(
+    stories.map(({ title, author, id, slug, caption, mediaContent }) => {
+      createPage({
+        path: `/stories/${slug}`,
+        component: require.resolve(`./src/templates/story`),
+        context: {
+          title,
+          author,
+          id,
+          caption: caption.caption,
+          mediaContent,
+        },
+      });
+    })
+  );
 };

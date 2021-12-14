@@ -103,7 +103,7 @@
 //   }
 // `;
 
-// const StyledJumbotron = styled(Jumbotron)`
+// const StyledJumbotron = styled.div`
 //   position: relative;
 //   background-color: transparent;
 //   color: var(--bs-light);

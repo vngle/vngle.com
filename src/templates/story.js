@@ -56,7 +56,7 @@ const StoryTemplate = ({
             if (content.file.contentType.includes("image")) {
               mediaElement = (
                 <Image
-                  src={content.fixed.src}
+                  src={content.file.url}
                   width="100%"
                   alt="Media content of a story"
                   rounded
