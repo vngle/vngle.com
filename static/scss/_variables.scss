@@ -42,6 +42,6 @@ $body-bg: map-get($theme-colors, "light");
   --organic-arrow-color: #6a6a6a;
   --control-button-background: transparent;
   --control-button-width: 15%;
-  --loader-bar-color: #ffcc34;
+  --loader-bar-color: $primary;
   --loader-bar-height: 3px;
 }
