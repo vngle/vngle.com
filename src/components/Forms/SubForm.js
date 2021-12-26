@@ -193,7 +193,7 @@ const StyledJumbotron = styled.div`
   }
 `;
 
-const MutedMsg = styled(Form.Text)`
+const MutedMsg = styled.small`
   font-size: 10px;
 `;
 

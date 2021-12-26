@@ -13,9 +13,6 @@ import Header from "../Header";
 import Footer from "../Footer";
 
 /**
- * Uses ThemeProvider from styled-components to make context available for children
- * to use.
- *
  * @param {element} children Any JSX that are children of Layout component
  */
 const Layout = ({ children }) => {

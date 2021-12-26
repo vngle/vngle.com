@@ -63,6 +63,7 @@ const createStories = async (graphql, { createPage }) => {
               id
               tags
               title
+              createdAt
               video {
                 id
               }
@@ -149,25 +150,6 @@ const createContentful = async (graphql, { createPage }) => {
       }
     }
   `);
-
-  /**
-   *       allContentfulCampaign {
-        nodes {
-          title
-          id
-          slug
-          cover {
-            fluid {
-              src
-            }
-          }
-          description {
-            description
-          }
-        }
-      }
-
-   */
 
   await Promise.all(
     frontPages.map(({ cityId, cityName, coverImage, id, state, slug }) => {

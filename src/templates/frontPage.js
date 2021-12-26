@@ -7,7 +7,6 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import { FcBookmark } from "react-icons/fc";
-import moment from "moment";
 
 import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
@@ -39,7 +38,11 @@ const FrontPageTemplate = ({
         <Row className="align-items-end">
           <Col>
             <h1 className="display-1">{cityName}</h1>
-            {moment().format("dddd, MMMM D, YYYY")}
+            {new Date().toLocaleDateString("en-us", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
             <WeatherWidget cityId={cityId} />
           </Col>
           <Col md="auto">

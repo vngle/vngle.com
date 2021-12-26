@@ -3,9 +3,10 @@
  */
 
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Breadcrumb, Badge } from "react-bootstrap";
 import { Disqus } from "gatsby-plugin-disqus";
 import ReactPlayer from "react-player";
+import { Link } from "gatsby";
 import "styled-components/macro";
 
 import Layout from "../components/Layouts/MainLayout";
@@ -19,7 +20,7 @@ import useSiteMetadata from "../hooks/useSiteMetadata";
  * @param {object} location URL location info of this page
  */
 const StoryTemplate = ({
-  pageContext: { title, author, id, caption, video, src },
+  pageContext: { title, id, caption, src: videoUrl, tags, createdAt },
   location,
 }) => {
   const { siteUrl } = useSiteMetadata();
@@ -34,80 +35,44 @@ const StoryTemplate = ({
     <Layout>
       <Seo title={title} />
       <Container>
+        <Breadcrumb>
+          <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/" }}>
+            Home
+          </Breadcrumb.Item>
+          <Breadcrumb.Item active>Stories</Breadcrumb.Item>
+        </Breadcrumb>
+
         <Row>
-          <Col>
-            <p
-              css={`
-                font-weight: 500;
-              `}
-            >
-              {caption}
+          <Col md={8}>
+            <h1 className="font-sans-serif">
+              {title} <small className="text-secondary">by VngleStories</small>
+            </h1>
+            <p className="border-top pt-2">
+              {new Date(createdAt).toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
             </p>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} sm={6} className="mb-3 mx-auto">
-            <ReactPlayer url={src} controls width="100" height="100%" />
-          </Col>
 
-          {/* {mediaContent.map(content => {
-            let mediaElement;
+            <ReactPlayer
+              url={videoUrl}
+              controls
+              className="ratio ratio-16x9 mb-4"
+              width=""
+              height=""
+            />
 
-            if (content.file.contentType.includes("image")) {
-              mediaElement = (
-                <Image
-                  src={content.file.url}
-                  width="100%"
-                  alt="Media content of a story"
-                  rounded
-                  className="shadow"
-                />
-              );
-            } else if (content.file.contentType.includes("video")) {
-              mediaElement = (
-                <div className="embed-responsive embed-responsive-16by9 rounded shadow">
-                  <video
-                    controls
-                    className="embed-responsive-item"
-                    autoPlay
-                    playsInline
-                  >
-                    <source
-                      src={content.file.url}
-                      type={content.file.contentType}
-                    />
-                    Sorry, your browser doesn't support embedded videos.
-                    <track
-                      src=""
-                      kind="captions"
-                      srcLang="en"
-                      label="english_captions"
-                    />
-                  </video>
-                </div>
-              );
-            } else {
-              mediaElement = (
-                <audio>
-                  <track
-                    src=""
-                    kind="captions"
-                    srcLang="en"
-                    label="english_captions"
-                  />
-                </audio>
-              );
-            }
+            <p>{caption}</p>
 
-            return (
-              <Col xs={12} sm={6} className="mb-3 mx-auto" key={content.id}>
-                {mediaElement}
-              </Col>
-            );
-          })} */}
-        </Row>
-        <Row>
-          <Col>
+            <div className="mb-4">
+              {tags.map((tag, i) => (
+                <Badge className="me-1" key={i}>
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+
             <Disqus config={disqusConfig} />
           </Col>
         </Row>

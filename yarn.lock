@@ -5041,27 +5041,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@restart/context@npm:^2.1.4":
-  version: 2.1.4
-  resolution: "@restart/context@npm:2.1.4"
-  peerDependencies:
-    react: ">=16.3.2"
-  checksum: f9dd1416c16988b5bd66d3306dedfc9b95665d3af2c5b88cd2040b0825dfcf778eb9bd992c6e810c62187f981a78ea34923fb582a023f896079634edb3b1bc2c
-  languageName: node
-  linkType: hard
-
-"@restart/hooks@npm:^0.3.26":
-  version: 0.3.27
-  resolution: "@restart/hooks@npm:0.3.27"
-  dependencies:
-    dequal: ^2.0.2
-  peerDependencies:
-    react: ">=16.8.0"
-  checksum: a9f32355c53741ea27a51531f2d6bcf4a4c1b238e8d6832a45a73d51528b30c33c76b7cf2807b304b38753db97567cdefeae493c358283118670b475daae0e87
-  languageName: node
-  linkType: hard
-
-"@restart/hooks@npm:^0.4.0":
+"@restart/hooks@npm:^0.4.0, @restart/hooks@npm:^0.4.5":
   version: 0.4.5
   resolution: "@restart/hooks@npm:0.4.5"
   dependencies:
@@ -5072,7 +5052,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@restart/ui@npm:^0.2.3":
+"@restart/ui@npm:^0.2.5":
   version: 0.2.5
   resolution: "@restart/ui@npm:0.2.5"
   dependencies:
@@ -16084,6 +16064,17 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"prop-types@npm:^15.8.0":
+  version: 15.8.0
+  resolution: "prop-types@npm:15.8.0"
+  dependencies:
+    loose-envify: ^1.4.0
+    object-assign: ^4.1.1
+    react-is: ^16.13.1
+  checksum: 71271eecc1359d18f4e828508fd1f37947c922a81d780055b5e788580a3ffd9c624eab9274b4db59fe43223c938a4e02e9b9df4af70351a83b9ba5489ca95ff9
+  languageName: node
+  linkType: hard
+
 "proper-lockfile@npm:^4.1.2":
   version: 4.1.2
   resolution: "proper-lockfile@npm:4.1.2"
@@ -16339,14 +16330,13 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "react-bootstrap@npm:2.0.3"
+"react-bootstrap@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "react-bootstrap@npm:2.0.4"
   dependencies:
     "@babel/runtime": ^7.14.0
-    "@restart/context": ^2.1.4
-    "@restart/hooks": ^0.3.26
-    "@restart/ui": ^0.2.3
+    "@restart/hooks": ^0.4.5
+    "@restart/ui": ^0.2.5
     "@types/invariant": ^2.2.33
     "@types/prop-types": ^15.7.3
     "@types/react": ">=16.14.8"
@@ -16363,7 +16353,7 @@ fsevents@~2.3.2:
   peerDependencies:
     react: ">=16.14.0"
     react-dom: ">=16.14.0"
-  checksum: 516b22bb42818c0d04addfb8a599b557f913dffd24c294f11b06f4cb9fe397280ebbc11bd3c434cadd0dc59e095556063e5c688d160e2e713989a1673cfa6648
+  checksum: f332d573fe1fd8032cc3c83f7ebf02f247a78854be26febf362997fd29bc6cc1a2ff8ef2194bb33ca94866fdc6471936d1f866fd5ba2e8ffa4037073359e5d51
   languageName: node
   linkType: hard
 
@@ -16473,7 +16463,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.12.0, react-is@npm:^16.3.2, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
+"react-is@npm:^16.12.0, react-is@npm:^16.13.1, react-is@npm:^16.3.2, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: 11bcf1267a314a522615f626f3ce3727a3a24cdbf61c4d452add3550a7875326669631326cfb1ba3e92b6f72244c32ffecf93ad21c0cad8455d3e169d0e3f060
@@ -17296,16 +17286,16 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.45.0":
-  version: 1.45.0
-  resolution: "sass@npm:1.45.0"
+"sass@npm:^1.45.1":
+  version: 1.45.1
+  resolution: "sass@npm:1.45.1"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 2155f5c5e9515a701ff6fc8be6601a44778cbed43cc88fd271a2092771e0cf16b06d7073c50baf2e7f3a0f98023ad170e751ec4133a3573957aebfedc63125d8
+  checksum: 2c44fd3e71bcbd7678d3a1b5d08d5f58b933f35a5352db22c2c31ef0be846956cfe4e13546df4b3b949828a93cea6c11b2205787c7344906b1946168f554b7e5
   languageName: node
   linkType: hard
 
@@ -18492,13 +18482,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"swiper@npm:^7.3.2":
-  version: 7.3.2
-  resolution: "swiper@npm:7.3.2"
+"swiper@npm:^7.4.1":
+  version: 7.4.1
+  resolution: "swiper@npm:7.4.1"
   dependencies:
     dom7: ^4.0.2
     ssr-window: ^4.0.2
-  checksum: ad7213f6c38b24b0f42b3ffd807c848ec7473828dbedeaa15658621bf1736553e3352d588434252c7d9b12d4cfbcc913b78af91f7fd695857986fbb3ddb8a096
+  checksum: 326fd6cc4fedf2bf23d57f3ca0ca6e84f6a637ec597d12cb3c3f09b8a958e6ecae235f999fea01de390394d10b20b3cb9c3a68f7fc769a7aa2fe8bac29cdf1a8
   languageName: node
   linkType: hard
 
@@ -19679,13 +19669,12 @@ resolve@^2.0.0-next.3:
     gatsby-source-filesystem: ^4.3.0
     gatsby-source-graphql: ^4.3.0
     gatsby-transformer-sharp: ^4.3.0
-    moment: ^2.29.1
     node-sass: ^7.0.0
     prettier: ^2.5.1
-    prop-types: ^15.7.2
+    prop-types: ^15.8.0
     react: ^17.0.2
     react-awesome-slider: ^4.1.0
-    react-bootstrap: ^2.0.3
+    react-bootstrap: ^2.0.4
     react-dom: ^17.0.2
     react-dropzone: ^11.4.2
     react-helmet: ^6.1.0
@@ -19695,9 +19684,9 @@ resolve@^2.0.0-next.3:
     react-player: ^2.9.0
     react-typed: ^1.2.0
     react-video-thumbnail: ^0.1.3
-    sass: ^1.45.0
+    sass: ^1.45.1
     styled-components: ^5.3.3
-    swiper: ^7.3.2
+    swiper: ^7.4.1
     typeface-inter: ^3.18.1
     typeface-playfair-display: ^1.1.13
     uuid: ^8.3.2
