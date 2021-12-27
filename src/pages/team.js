@@ -41,25 +41,6 @@ const TeamPage = () => {
 
       <Container as="article">
         <section>
-          <p>
-            <b>
-              Vngle stands for “various angles”, and it’s a nonpartisan
-              grassroots verified news network bringing coverage to
-              underrepresented parts of society. We address news deserts, areas
-              that get little to no daily or fair news coverage, by capturing
-              human-interest stories from all angles.
-            </b>{" "}
-            Our grassroots reporting serves as the last mile for curating
-            diverse local news for cities.
-          </p>
-          <blockquote className="blockquote fw-bold font-italic font-serif text-center">
-            <h2>
-              “Vngle's mission is to help build a more interconnected society,
-              by connecting every person with diverse comprehensive coverage on
-              what’s happening around them.”
-            </h2>
-          </blockquote>
-
           <Figure className="d-block">
             <Figure.Image
               alt="Vngle definition"

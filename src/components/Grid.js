@@ -29,7 +29,6 @@ const Grid = ({ items }) => {
                     <p>
                       VngleVerified <VerifiedIcon />
                     </p>
-                    {/* <p>{moment(createdAt).calendar()}</p> */}
                   </div>
                 </div>
               </Post>

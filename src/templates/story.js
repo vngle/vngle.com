@@ -45,7 +45,7 @@ const StoryTemplate = ({
         <Row>
           <Col md={8}>
             <h1 className="font-sans-serif">
-              {title} <small className="text-secondary">by VngleStories</small>
+              {title} <small className="text-secondary">by Vngle</small>
             </h1>
             <p className="border-top pt-2">
               {new Date(createdAt).toLocaleDateString("en-us", {

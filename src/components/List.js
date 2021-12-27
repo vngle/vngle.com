@@ -21,7 +21,6 @@ const List = ({ items }) => {
                     <p>
                       VngleVerified <FcApproval />
                     </p>
-                    {/* <p>{moment(createdAt).calendar()}</p> */}
                   </div>
                 </div>
                 <div className="thumbnail-wrapper">

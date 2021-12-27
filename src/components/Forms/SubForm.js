@@ -159,7 +159,6 @@ const SubForm = ({ status, message, onSubmitted }) => {
                     checked={formData["group[293774][4]"]}
                     onChange={handleChange}
                     inline
-                    custom
                   />
                 </Form.Group>
               </Row>
