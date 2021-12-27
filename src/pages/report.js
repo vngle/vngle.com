@@ -6,10 +6,9 @@ import styled from "styled-components";
 
 import Seo from "../components/Seo";
 import Layout from "../components/Layouts/MainLayout";
-import ReportForm from "../components/Forms/ReportForm";
 
 const Report = () => {
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formSubmitted] = useState(false);
   const perks = [
     "Show off your city's culture",
     "Earn passive income",
@@ -42,7 +41,11 @@ const Report = () => {
         ) : (
           <>
             <h1 className="text-center">Report a Story</h1>
-            <ReportForm setFormSubmitted={setFormSubmitted} />
+            {/* <ReportForm setFormSubmitted={setFormSubmitted} /> */}
+            <h2>
+              Vngle is retooling! We are currently not taking anonymous
+              submissions for the time being. Sorry for the inconvenience.
+            </h2>
           </>
         )}
       </Container>

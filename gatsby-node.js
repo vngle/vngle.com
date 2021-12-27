@@ -109,7 +109,6 @@ const createContentful = async (graphql, { createPage }) => {
   const {
     data: {
       allContentfulFrontPage: { nodes: frontPages },
-      allContentfulStory: { nodes: stories },
     },
   } = await graphql(`
     {
@@ -127,27 +126,6 @@ const createContentful = async (graphql, { createPage }) => {
           state
         }
       }
-      allContentfulStory {
-        nodes {
-          title
-          author
-          id
-          slug
-          caption {
-            caption
-          }
-          mediaContent {
-            id
-            file {
-              url
-              contentType
-            }
-            file {
-              url
-            }
-          }
-        }
-      }
     }
   `);
 
@@ -162,22 +140,6 @@ const createContentful = async (graphql, { createPage }) => {
           coverImage,
           id,
           state,
-        },
-      });
-    })
-  );
-
-  await Promise.all(
-    stories.map(({ title, author, id, slug, caption, mediaContent }) => {
-      createPage({
-        path: `/stories/${slug}`,
-        component: require.resolve(`./src/templates/story`),
-        context: {
-          title,
-          author,
-          id,
-          caption: caption.caption,
-          mediaContent,
         },
       });
     })
