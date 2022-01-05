@@ -7,7 +7,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import Layout from "@components/Layouts/MainLayout";
 import Seo from "@components/Seo";
-import ClientLogoGrid from "@components/PartnerLogoGrid";
+import ClientLogoGrid from "@components/Grids/PartnerLogoGrid";
 
 const VngleForCitiesPage = () => {
   return (

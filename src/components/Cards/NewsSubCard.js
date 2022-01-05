@@ -8,7 +8,7 @@ import Card from "react-bootstrap/Card";
 import styled from "styled-components";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
-import NewsSubForm from "./NewsSubForm";
+import NewsSubForm from "../Forms/NewsSubForm";
 
 const NewsSubCard = ({ title, subtitle }) => (
   <StyledCard className="shadow-sm border-0" id="sub-card">

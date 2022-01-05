@@ -7,7 +7,7 @@ import PritchettHeadshot from "../images/pritchett-campaign/headshot.jpg";
 
 import Layout from "@components/Layouts/MainLayout";
 import Seo from "@components/Seo";
-import NewsSubCard from "@components/NewsSubCard";
+import NewsSubCard from "@components/Cards/NewsSubCard";
 import useSiteMetadata from "@hooks/useSiteMetadata";
 
 export default function PritchettCampaignPage() {

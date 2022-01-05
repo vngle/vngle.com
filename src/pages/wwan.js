@@ -3,7 +3,7 @@ import { Container, Row, Col, Figure } from "react-bootstrap";
 
 import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
-import InstaFeed from "../components/frontPage/InstaFeed";
+import InstaFeed from "../components/Grids/InstaFeed";
 
 import Wwan from "../images/wwan/wwan.png";
 

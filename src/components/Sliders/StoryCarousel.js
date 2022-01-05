@@ -9,8 +9,8 @@ import styled from "styled-components";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import { API } from "aws-amplify";
-import * as queries from "../graphql/queries";
-import awsvideo from "../aws-video-exports";
+import * as queries from "../../graphql/queries";
+import awsvideo from "../../aws-video-exports";
 import ReactPlayer from "react-player";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
@@ -34,7 +34,7 @@ const StoryCarousel = () => {
         authMode: "API_KEY",
       });
 
-      const items = assets.data.listVodAssets.items.map(item => {
+      const items = assets.data.listVodAssets.items.map((item) => {
         return {
           ...item,
           src: `https://${awsvideo.awsOutputVideo}/${item.video.id}/${item.video.id}.m3u8`,

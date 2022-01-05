@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
-import awsvideo from "../aws-video-exports";
+import awsvideo from "../../aws-video-exports";
 import { FcApproval } from "react-icons/fc";
 
 const List = ({ items }) => {

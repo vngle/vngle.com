@@ -8,12 +8,12 @@ import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import { FcBookmark } from "react-icons/fc";
 
-import Layout from "../components/Layouts/MainLayout";
-import Seo from "../components/Seo";
-import ActionButtonGroup from "../components/frontPage/ActionBtnGroup";
-import InstaFeed from "../components/frontPage/InstaFeed";
-import NewsFeed from "../components/frontPage/NewsFeed";
-import WeatherWidget from "../components/frontPage/WeatherWidget";
+import Layout from "@components/Layouts/MainLayout";
+import Seo from "@components/Seo";
+import ActionButtonGroup from "@components/ActionBtnGroup";
+import InstaFeed from "@components/Grids/InstaFeed";
+import NewsFeed from "@components/Grids/NewsFeed";
+import WeatherWidget from "@components/WeatherWidget";
 
 /**
  *

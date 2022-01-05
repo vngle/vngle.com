@@ -7,9 +7,9 @@ import awsvideo from "../aws-video-exports";
 
 import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
-import Slider from "../components/Slider";
-import Grid from "../components/Grid";
-import List from "../components/List";
+import Slider from "../components/Sliders/Slider";
+import Grid from "../components/Grids/Grid";
+import List from "../components/Grids/List";
 import SubForm from "../components/Forms/SubForm";
 
 import World from "@images/home/world.svg";

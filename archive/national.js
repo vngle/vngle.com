@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Layout from "../src/components/Layouts/MainLayout";
 import Seo from "../src/components/Seo";
-import StorySlider from "../src/components/StoryCarousel";
-import NewsSubCard from "../src/components/NewsSubCard";
-import InstaFeed from "../src/components/frontPage/InstaFeed";
+import StorySlider from "../src/components/Sliders/StoryCarousel";
+import NewsSubCard from "../src/components/Cards/NewsSubCard";
+import InstaFeed from "../src/components/Grids/InstaFeed";
 
 const NationalPage = () => {
   return (

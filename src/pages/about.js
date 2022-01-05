@@ -5,11 +5,11 @@ import styled from "styled-components";
 
 import Layout from "@components/Layouts/MainLayout";
 import Seo from "@components/Seo";
-import NewsSubCard from "@components/NewsSubCard";
-import StorySlider from "@components/StoryCarousel";
+import NewsSubCard from "@components/Cards/NewsSubCard";
+import StorySlider from "@components/Sliders/StoryCarousel";
 import SimpleSubForm from "@components/Forms/SubForm";
-import ActionCard from "@components/landing/ActionCard";
-import ClientLogoGrid from "@components/PartnerLogoGrid";
+import ActionCard from "@components/Cards/ActionCard";
+import ClientLogoGrid from "@components/Grids/PartnerLogoGrid";
 
 import GaFlag from "@images/ga-flag.svg";
 import Culture from "@images/about/culture.svg";

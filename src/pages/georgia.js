@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
-import StorySlider from "../components/StoryCarousel";
-import NewsSubCard from "../components/NewsSubCard";
-import InstaFeed from "../components/frontPage/InstaFeed";
+import StorySlider from "../components/Sliders/StoryCarousel";
+import NewsSubCard from "../components/Cards/NewsSubCard";
+import InstaFeed from "../components/Grids/InstaFeed";
 
 import GaFlag from "@images/ga-flag.svg";
 
