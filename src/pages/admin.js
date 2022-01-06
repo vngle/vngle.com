@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Form, Col, Button } from "react-bootstrap";
+import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import Amplify, { Auth, API, graphqlOperation, Storage } from "aws-amplify";
@@ -137,7 +137,7 @@ const Admin = () => {
           <>
             <h1>Admin Panel</h1>
             <Form onSubmit={handleSubmit}>
-              <Form.Row>
+              <Row>
                 <Form.Group as={Col}>
                   <Form.Label>Title</Form.Label>
                   <Form.Control
@@ -158,7 +158,7 @@ const Admin = () => {
                     onChange={handleChange}
                   />
                 </Form.Group>
-              </Form.Row>
+              </Row>
               <Form.Group>
                 <Form.Label>Caption</Form.Label>
                 <Form.Control
