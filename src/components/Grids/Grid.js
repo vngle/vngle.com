@@ -11,6 +11,11 @@ const Grid = ({ items }) => {
     <>
       <Row xs={1} md={2} lg={3}>
         {items.map(({ title, video, id, createdAt }) => {
+          // TEMPORARY REMOVAL; RECOVER ASAP
+          if (title.includes("Southwest ATL's 1st 4/20 Adult Ditch Day.")) {
+            return;
+          }
+
           return (
             <Col key={id} className="mb-4">
               <Post className="rounded">
