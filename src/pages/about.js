@@ -122,7 +122,7 @@ const OldHomePage = () => {
               ))}
             </Row>
             <Subtitle className="mb-4">
-              Vngle is a nonpartisan grassroots news network bringing various
+              Vngle is a nonpartisan grassroots news agency bringing various
               angles of verified coverage to communities. Our creator community
               is powered by a network of local experts and change-makers working
               to curate deeper more intimate insights on the areas around us.{" "}
@@ -185,9 +185,9 @@ const OldHomePage = () => {
       </div>
 
       <TopFeatureContainer>
-        <Title className="display-3">
-          Get the real scoop from trained locals, capturing the truth on what’s
-          happening.
+        <Title className="display-3 fw-bold">
+          Get the real scoop from trained local experts, capturing the truth on
+          what’s happening.
         </Title>
         <Subtitle>
           We bring you authentic on-the-ground perspectives that mainstream

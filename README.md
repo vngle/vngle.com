@@ -7,7 +7,7 @@
   Vngle ("various angles")
 </h1>
 
-A decentralized grassroots news network for news deserts.
+A decentralized grassroots news agency for news deserts.
 
 # Problem
 
@@ -15,6 +15,6 @@ There are 3,143 counties in the U.S. & before the pandemic over 2,000 of them ha
 
 # What We Do
 
-Vngle seeks to proactively inform isolated communities through a decentralized grassroots news network, taking a gig-economy approach to sourcing stories and experiences by organizing trained and vetted community members to capture underreported information.
+Vngle seeks to proactively inform isolated communities through a decentralized grassroots news agency, taking a gig-economy approach to sourcing stories and experiences by organizing trained and vetted community members to capture underreported information.
 
 The website allows new visitors to subscribe to newsletters based on their location (city or zip code). The main section showcases captured community experiences shared by locals across the United States (via our Instagram feed). The website also empowers visitors wishing to take part in the newsgathering process by facilitating the ability to request local coverage on matters unknown or not being represented to the general public, as well as the option to upload their own grassroots stories and content (e.g. photos, videos, etc).

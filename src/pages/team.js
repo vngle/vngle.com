@@ -25,7 +25,7 @@ const TeamPage = () => {
   return (
     <Layout>
       <Seo
-        title="A Grassroots News Network"
+        title="A Grassroots News Agency"
         description="Vngle is a decentralized grassroots news network covering pressing underrepresented verified coverage on cities across America. Our coverage is for the people, by the people."
       />
 

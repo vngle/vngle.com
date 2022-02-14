@@ -1,7 +1,7 @@
 {
   "name": "vngle-site",
   "private": true,
-  "description": "Vngle is a decentralized grassroots news network for news deserts.",
+  "description": "Vngle is a decentralized grassroots news agency for news deserts.",
   "version": "0.1.0",
   "author": "Kenneth Chen",
   "dependencies": {
