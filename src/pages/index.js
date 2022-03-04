@@ -25,7 +25,7 @@ const IndexPage = ({
         <h1 className="display-4 fw-bolder text-center">
           Various Angles of
           <br />
-          Verified News Near You
+          Verified Grassroots News
         </h1>
         <h1 className="display-4 fw-bolder text-center">
           <span className="highlight">Nonpartisan</span>
