@@ -76,7 +76,7 @@ export default function CpCaseStudyPage() {
               <Col md={6} className="align-self-end">
                 <figure className="figure">
                   <StaticImage
-                    src="../../images/servicess/college-park/cruise-for-cause.png"
+                    src="../../images/services/college-park/cruise-for-cause.png"
                     alt="Vngle College Park front page"
                     layout="fullWidth"
                   />

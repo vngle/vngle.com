@@ -20,8 +20,9 @@ const ServicesPage = () => {
               <div className="content p-md-5">
                 <p className="sup">Grassroots Newswire</p>
                 <Heading>
-                  <u>Your city + our grassroots operations</u>: let’s create
-                  deeper coverage and representation for your area
+                  <u>Your city + our grassroots operations</u>: Expand your
+                  coverage with our visual catalog of local nonpartisan
+                  insights.
                 </Heading>
               </div>
             </Col>
@@ -35,21 +36,19 @@ const ServicesPage = () => {
 
           <Section className="p-md-5">
             <Heading weight="500" lineHeight="1.3em">
-              Our various angles of verified grassroots reporting broadens your
-              ability to engage audiences with trusted and truly representative
-              original local content. We deploy trained local experts and
-              patented verification technology to enable you to confidently grow
-              your content startegy with authentic ground-level perspectives.
+              Our newswire accelerates your ability to engage & learn from
+              audiences through trusted and truly representative original local
+              content. We deploy trained local experts and patented verification
+              technology to confidently grow your media strategy with authentic
+              ground-level perspectives.
             </Heading>
             <Heading weight="500" lineHeight="1.3em">
               <b>
-                The Vngle newswire fulfills your demands for original local
-                content.
-              </b>{" "}
-              If you’re are a media organisation needing to better engage
-              diverse audiences, a local government needing reliable hyper-local
-              insights, or an organization needing to monitor your community, we
-              can support you.
+                If you’re are a media organization needing to engage diverse
+                audiences, a local government needing reliable hyper-local
+                insights, or an organization needing to monitor your community,
+                we can support you.
+              </b>
             </Heading>
           </Section>
 
