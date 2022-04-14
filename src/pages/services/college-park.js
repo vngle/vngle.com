@@ -29,7 +29,7 @@ export default function CpCaseStudyPage() {
 
             <figure className="figure">
               <StaticImage
-                src="../../images/vngleforcities/college-park/cp-front-page.png"
+                src="../../images/services/college-park/cp-front-page.png"
                 alt="Vngle College Park front page"
               />
               <figcaption className="figure-caption">
@@ -46,7 +46,7 @@ export default function CpCaseStudyPage() {
 
             <figure className="figure">
               <StaticImage
-                src="../../images/vngleforcities/college-park/census.png"
+                src="../../images/services/college-park/census.png"
                 alt="Vngle College Park front page"
               />
             </figure>
@@ -64,7 +64,7 @@ export default function CpCaseStudyPage() {
               <Col md={6}>
                 <figure className="figure">
                   <StaticImage
-                    src="../../images/vngleforcities/college-park/stakeholder-discussion.png"
+                    src="../../images/services/college-park/stakeholder-discussion.png"
                     alt="Vngle College Park front page"
                   />
                   <figcaption className="figure-caption">
@@ -76,7 +76,7 @@ export default function CpCaseStudyPage() {
               <Col md={6} className="align-self-end">
                 <figure className="figure">
                   <StaticImage
-                    src="../../images/vngleforcities/college-park/cruise-for-cause.png"
+                    src="../../images/servicess/college-park/cruise-for-cause.png"
                     alt="Vngle College Park front page"
                     layout="fullWidth"
                   />

@@ -9,7 +9,7 @@ export default function CaseStudy({ children, id, title }) {
   if (id === "college-park") {
     headerImage = (
       <StaticImage
-        src="../../images/vngleforcities/college-park/cp-header.png"
+        src="../../images/services/college-park/cp-header.png"
         alt="Orange banner with College Park logo at the center"
         layout="fullWidth"
       />
