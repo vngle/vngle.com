@@ -40,8 +40,8 @@ const Footer = () => (
           >
             Jobs
           </Link>
-          <Link to="/vngleforcities" className="nav-link text-muted">
-            For Cities
+          <Link to="/services" className="nav-link text-muted">
+            Services
           </Link>
           <Link to="/faq" className="nav-link text-muted">
             FAQ

@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => {
     },
     { name: "About", to: "/about" },
     { name: "Our Team", to: "/team" },
-    { name: "For Cities", to: "/vngleforcities" },
+    { name: "Services", to: "/services" },
   ];
   const dropdownLinks = [
     { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
