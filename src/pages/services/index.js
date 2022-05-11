@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "styled-components/macro";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { FcConferenceCall, FcDepartment } from "react-icons/fc";
+import { FcConferenceCall } from "react-icons/fc";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import Layout from "@components/Layouts/MainLayout";
@@ -65,7 +65,7 @@ const ServicesPage = () => {
           </Section>
 
           <Section>
-            <Heading center>Supporting Services</Heading>
+            <Heading center>Creative Media Services</Heading>
           </Section>
 
           <SplitSection background="#3cf" className="gy-3">
@@ -136,6 +136,17 @@ const ServicesPage = () => {
               />
             </Col>
           </SplitSection>
+
+          <Section>
+            <p>
+              Our Creative Media Services are separate from the Vngle newsroom.
+              Clients and brands working with Vngle’s Creative Media Services do
+              not influence the editorial discretion of our news reporting in
+              any form. Conversely, custom storytelling projects through our
+              Creative Media Services do permit the collaborative input of the
+              clients and brands we work with.
+            </p>
+          </Section>
 
           {/* <SplitSection background="var(--bs-primary)" className="gy-3">
             <Col md={6}>
