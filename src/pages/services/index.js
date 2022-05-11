@@ -65,7 +65,7 @@ const ServicesPage = () => {
           </Section>
 
           <Section>
-            <Heading center>Creative Media Services</Heading>
+            <Heading center>Creative Content Services</Heading>
           </Section>
 
           <SplitSection background="#3cf" className="gy-3">
