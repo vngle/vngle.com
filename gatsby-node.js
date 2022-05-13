@@ -46,6 +46,8 @@ const createStories = async (graphql, { createPage }) => {
   let nextToken = "init";
 
   while (nextToken !== null) {
+    const nextTokenStr =
+      nextToken !== "init" ? `(nextToken: "${nextToken}")` : "";
     const {
       data: {
         allStory: {
@@ -54,8 +56,8 @@ const createStories = async (graphql, { createPage }) => {
       },
     } = await graphql(`
       {
-        allStory${nextToken !== "init" ? `(nextToken: ${nextToken})` : ""} {
-          listVodAssets {
+        allStory {
+          listVodAssets${nextTokenStr} {
             nextToken
             items {
               author
