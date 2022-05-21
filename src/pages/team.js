@@ -15,7 +15,6 @@ const TeamPage = () => {
     { name: "Jaime Fernandez", position: "Strategic Partnerships" },
     { name: "Alex Rhodd", position: "Data & Digital Forensics" },
     { name: "Kenneth Chen", position: "Technology Lead" },
-    { name: "Marcus Figueiredo", position: "Sales" },
     { name: 'Devante "Don" Griffin', position: "Special Operations" },
     { name: "Majestic Gay", position: "Collegiate Reporting Lead" },
   ].map((profile, i) => {
