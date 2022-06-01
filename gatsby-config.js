@@ -15,7 +15,7 @@ module.exports = {
     description: `Vngle brings you grassroots verified coverage on pressing underrepresented stories happening across America from “various angles”. Join us and let’s bring “various angles” of raw local news coverage to your city next.`,
     siteUrl: `https://www.vngle.com`,
     image: `/images/logo.png`,
-    author: `Kenneth Chen`,
+    author: `Israel Klein`,
     twitterUsername: `@vnglestories`,
   },
   plugins: [
