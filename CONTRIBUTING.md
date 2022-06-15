@@ -17,9 +17,11 @@ vngle.com currently uses [Gatsby.js](https://www.gatsbyjs.com/) as its underlyin
 
 Check out the aforementioned tutorial for details on how to install these tools on your specific operating system.
 
-**Optional**: vngle.com also uses features provided by [Netlify](https://www.netlify.com/), which requires the installation of Netlify CLI to work with them on your local machine. If you are planning to contribute to aspects of the website that requires Netlify CLI, run `npm install netlify-cli -g` on your terminal to install.
+**Set up AWS Amplify**
 
-- Once installed, you need to authenticate with Netlify using `netlify login`. Contact us via GitHub issues or dev@vngle.com for us to provide you with the credentials.
+We use [AWS Amplify](https://aws.amazon.com/amplify/) to connect our Gatsby frontend with AWS backend services (S3, DynamoDB, Cognito, etc.) without too much hassle configurating them.
+
+Work in progress.
 
 ### Running the Website
 
