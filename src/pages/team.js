@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 
-import VngleDef from "@images/team/vngle-def.png";
+import VngleDef from "@images/team/Vngle-definition.png";
 import Team from "@images/team/profiles";
 
 const TeamPage = () => {
@@ -17,9 +17,18 @@ const TeamPage = () => {
     { name: "Kenneth Chen", position: "Technology Lead" },
     { name: 'Devante "Don" Griffin', position: "Special Operations" },
     { name: "Majestic Gay", position: "Collegiate Reporting Lead" },
+    {name:"Jennifer Guadarrama", position:"Engineering Intern: Front page"},
+    {name:"Nanami Inaba", position:"Engineering Intern: Front page"},
+    {name:"Chelsea Alcinord", position:"Engineering Intern: Front page"},
+    {name:"Israel Klein", position:"Engineering Intern: CMS"},
+    {name:"Robert Quartay", position:"Engineering Intern: CMS"},
+    {name:"Muzaffar Mukhitdinov", position:"Engineering Intern: CMS"},
+    {name:"Christopher Ortega", position:"Engineering Intern: Mobile"},
+    {name:"Shiming Huang", position:"Engineering Intern: Mobile"},
   ].map((profile, i) => {
     return { ...profile, img: Team[i] };
   });
+
 
   return (
     <Layout>
@@ -50,22 +59,21 @@ const TeamPage = () => {
               Definition of Vngle
             </Figure.Caption>
           </Figure>
-
           <section>
-            <h1 className="text-center mb-5">Our Team</h1>
-            <Row>
-              {team.map((profile, i) => (
-                <Col lg={4} md={6} xs={12} key={i} className="text-center mb-4">
-                  <h2>{profile.name}</h2>
-                  <p>{profile.position}</p>
-                  <ProfileImg
-                    src={profile.img}
-                    alt="Profile of team members"
-                    width="100%"
-                  />
-                </Col>
-              ))}
-            </Row>
+          <h1 className="text-center mb-5">Our Team</h1>
+          <Row>
+                {team.map((profile, i)=> (
+                    <Col lg={4} md={6} xs={12} key={i} className="text-center mb-4">
+                        <ProfileImg src={profile.img}
+                        alt="Profile of team members"
+                        width="100%" />
+                        <Model>
+                        <h2>{profile.name}</h2>
+                        <p>{profile.position}</p>
+                        </Model>
+                    </Col>
+                ))}
+          </Row>
           </section>
 
           <Row className="my-4">
@@ -115,4 +123,19 @@ export default TeamPage;
 const ProfileImg = styled.img`
   border-radius: 50%;
   border: 10px solid var(--bs-primary);
+  position: relative;
+  top: 115px;
+  background-color: #fcc93d;
 `;
+
+const Model = styled.div`
+  background-color: #fcc93d;
+  height: 260px;
+  width: 325px;
+  padding: 10px;
+  border-radius: 35px;
+  margin-left: 8px;
+  h2{
+      margin-top: 115px;
+  }
+`
