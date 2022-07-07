@@ -29,7 +29,6 @@ const TeamPage = () => {
     return { ...profile, img: Team[i] };
   });
 
-
   return (
     <Layout>
       <Seo
@@ -132,26 +131,10 @@ const ProfileImg = styled.img`
 
 const Model = styled.div`
   background-color: #fcc93d;
-  height: 260px;
-  width: 325px;
-  padding: 10px;
-  border-radius: 35px;
-  margin-left: 8px;
-  
+  padding: 1rem;
+  border-radius: 20px;
+
   h2 {
-    margin-top: 115px;
+    margin-top: 8rem;
   }
 `;
-
-const Model = styled.div`
-  background-color: #fcc93d;
-  height: 260px;
-  width: 325px;
-  padding: 10px;
-  border-radius: 35px;
-  margin-left: 8px;
-  
-  h2{
-      margin-top: 115px;
-  }
-`
