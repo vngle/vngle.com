@@ -21,7 +21,7 @@ const TeamPage = () => {
     { name: "Nanami Inaba", position: "Engineering Intern: Front page" },
     { name: "Chelsea Alcinord", position: "Engineering Intern: Front page" },
     { name: "Israel Klein", position: "Engineering Intern: CMS" },
-    { name: "Robert Quartay", position: "Engineering Intern: CMS" },
+    { name: "Robert Quartey", position: "Engineering Intern: CMS" },
     { name: "Muzaffar Mukhitdinov", position: "Engineering Intern: CMS" },
     { name: "Christopher Ortega", position: "Engineering Intern: Mobile" },
     { name: "Shiming Huang", position: "Engineering Intern: Mobile" },
