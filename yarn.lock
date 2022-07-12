@@ -3738,6 +3738,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.11.2":
+  version: 7.18.6
+  resolution: "@babel/runtime@npm:7.18.6"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: e26ebe35005da79d4add737c7fcd4600cd754c8f20606a8f28d38c2e9fc65b5669f5f6e739e4272649c74cb909378bd1519a521452430da9d64a1f8378567e9c
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/template@npm:7.16.7"
@@ -10980,6 +10989,19 @@ fsevents@~2.3.2:
   peerDependencies:
     react: ^16.0.0 || ^17.0.0 || ^18.0.0
   checksum: 45b8f42db296ed025fc52dd283e9161c7683a77a0f4a2dff6e3249dffd9a55dfa67bae8429d36f7ce425a01bfe4150a11e2b230eddd7e1adcc4043cc03626408
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-gdpr-cookies@npm:^2.0.9":
+  version: 2.0.9
+  resolution: "gatsby-plugin-gdpr-cookies@npm:2.0.9"
+  dependencies:
+    "@babel/runtime": ^7.11.2
+  peerDependencies:
+    gatsby: ^2.24.77 || ^3.0.0 || ^4.0.0
+    react: ^16.13.1 || ^17.0.1
+    react-dom: ^16.13.1 || ^17.0.1
+  checksum: 716de484276b70a19a0c786d8c510193af0ac650c5d9ceaadbde60a4651d3ffa3b2d18e6062664abb2f664bb5eafef344dfb5944be0c5fb5db91b7b25b2d8526
   languageName: node
   linkType: hard
 
@@ -19309,6 +19331,7 @@ resolve@^2.0.0-next.3:
     gatsby: ^4.3.0
     gatsby-cli: ^4.3.0
     gatsby-plugin-disqus: ^1.2.3
+    gatsby-plugin-gdpr-cookies: ^2.0.9
     gatsby-plugin-google-analytics: ^4.3.0
     gatsby-plugin-image: ^2.3.0
     gatsby-plugin-manifest: ^4.3.0
