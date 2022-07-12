@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col, Nav, Badge } from "react-bootstrap";
 import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
 import styled from "styled-components";
-
 import Link from "./Link";
 
 import Logo from "../images/logo.png";

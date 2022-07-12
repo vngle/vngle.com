@@ -14,6 +14,7 @@ import SubForm from "../components/Forms/SubForm";
 
 import World from "@images/home/world.svg";
 
+
 const IndexPage = ({
   data: { storiesFeatured, storiesGeorgia, storiesNational },
 }) => {
