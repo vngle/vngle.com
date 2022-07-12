@@ -31,18 +31,26 @@ const Layout = ({ children }) => {
       render={(data) => (
         <>
           <Header siteTitle={data.site.siteMetadata.title} />
-          <CookieConsent
-          enableDeclineButton
-          location="bottom"
-          visible="byCookieValue"
-          buttonText="I understand" 
-          cookieName="gatsby-gdpr-google-analytics">
+         <CookieConsent
+          style={{ background: "black", textShadow: "2px 2px black"}}
+          enableDeclineButton flipButtons
           buttonStyle={{
-      background: "linear-gradient(to left, orange , yellow, green, cyan, blue, violet)",
-      color: "white",
-     fontWeight: "bolder",
-      textShadow: "2px 2px black",
-    }} We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they've collected from your use of their services. You consent to our cookies if you continue to use our website.</CookieConsent>
+            background: "#ffffff",
+    color: "black",
+  }}
+
+  declineButtonStyle ={{
+    background: "#B0ADAC",
+color: "black",
+}}
+      location="bottom"
+          buttonText="I accept" 
+          declineButtonText="Decline"
+          cookieName="gatsby-gdpr-google-analytics">
+          We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. 
+          We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they've collected from your use of their services.
+          You consent to our cookies if you continue to use our website.
+          </CookieConsent>
           <main>{children}</main>
           <Footer />
         </>
