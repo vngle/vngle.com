@@ -45,9 +45,7 @@ color: "black",
           buttonText="I accept" 
           declineButtonText="Decline"
           cookieName="gatsby-gdpr-google-analytics">
-          We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. 
-          We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they've collected from your use of their services.
-          You consent to our cookies if you continue to use our website.   <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="https://www.vngle.com/privacy" rel="noopener noreferrer nofollow" target="_blank">Learn more</a> 
+          This site uses cookies and related technologies, as described in our <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="https://www.vngle.com/privacy" rel="noopener noreferrer nofollow" target="_blank">privacy</a> , for purposes that may include site operation, analytics, enhanced user experience, or advertising. You consent to our cookies if you continue to use our website.  However, if you do not accept cookies, you may not be able to use some portions of our Services.
           </CookieConsent>
           <main>{children}</main>
           <Footer />
