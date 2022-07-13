@@ -37,7 +37,6 @@ const Layout = ({ children }) => {
             background: "#ffffff",
     color: "black",
   }}
-
   declineButtonStyle ={{
     background: "#B0ADAC",
 color: "black",
@@ -48,7 +47,7 @@ color: "black",
           cookieName="gatsby-gdpr-google-analytics">
           We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. 
           We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they've collected from your use of their services.
-          You consent to our cookies if you continue to use our website.
+          You consent to our cookies if you continue to use our website. To learn more about, visit  <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="https://www.vngle.com/privacy" rel="noopener noreferrer nofollow" target="_blank">our privacy page.</a> 
           </CookieConsent>
           <main>{children}</main>
           <Footer />
