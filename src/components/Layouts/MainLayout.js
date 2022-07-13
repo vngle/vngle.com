@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
         <>
           <Header siteTitle={data.site.siteMetadata.title} />
           <CookieConsent
-          style={{ background: "black", textShadow: "2px 2px black"}}
+          style={{ background: "black", textShadow: "2rem 2rem black"}}
           enableDeclineButton flipButtons
           buttonStyle={{
             background: "#ffffff",
