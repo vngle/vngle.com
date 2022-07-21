@@ -48,6 +48,7 @@ const Layout = ({ children }) => {
             cookieSecurity="true"
             sameSite="none"
             cookieName="gatsby-gdpr-google-analytics"
+            sameSite="none"
           >
             This site uses cookies and related technologies, as described in our{" "}
             <a
