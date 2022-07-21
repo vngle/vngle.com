@@ -46,6 +46,7 @@ const Layout = ({ children }) => {
             buttonText="I accept"
             declineButtonText="Decline"
             cookieName="gatsby-gdpr-google-analytics"
+            sameSite="none"
           >
             This site uses cookies and related technologies, as described in our{" "}
             <a
