@@ -8,7 +8,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import Cookiebanner from "../Cookiebanner";
+import Cookiebanner from "../CookieBanner";
 import Header from "../Header";
 import Footer from "../Footer";
 
