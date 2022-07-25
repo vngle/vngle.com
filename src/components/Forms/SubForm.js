@@ -13,7 +13,6 @@ const SubForm = ({ status, message, onSubmitted }) => {
   // object key names are extracted from Mailchimp. Changing them will break the form.
   const [formData, setFormData] = useState({
     EMAIL: "",
-    ZIPCODE: "",
     NUMBER: "",
     "group[293774][4]": false, // SMS opt-in
   });
@@ -23,7 +22,6 @@ const SubForm = ({ status, message, onSubmitted }) => {
     const form = event.currentTarget;
     const submitData = {
       EMAIL: formData.EMAIL,
-      ZIPCODE: formData.ZIPCODE,
       NUMBER: formData.NUMBER,
     };
 
@@ -122,22 +120,6 @@ const SubForm = ({ status, message, onSubmitted }) => {
                   </Form.Group>
                 )}
 
-                <Form.Group controlId="zipCode" as={Col}>
-                  <Form.Label>
-                    Zip Code<span className="text-danger">*</span>
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter zip code"
-                    name="ZIPCODE"
-                    value={formData.ZIPCODE}
-                    onChange={handleChange}
-                    required
-                  />
-                  <Form.Control.Feedback type="invalid">
-                    Please provide a zip code
-                  </Form.Control.Feedback>
-                </Form.Group>
               </Row>
 
               <Row className="mt-3">
