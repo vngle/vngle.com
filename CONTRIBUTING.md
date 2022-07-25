@@ -11,9 +11,10 @@ Before you could start contributing, let's first get the project up and running 
 vngle.com currently uses [Gatsby.js](https://www.gatsbyjs.com/) as its underlying static site generator framework. Their site contains docs that shows how to [Set Up Your Development Environment](https://www.gatsbyjs.com/docs/tutorial/part-zero) for Gatsby. In summary:
 
 1. Install Node.js
-2. Install Git
-3. Install Gatsby CLI
-4. Install a code editor (we recommend VS Code) & the [Prettier](https://prettier.io/) plugin on the code editor
+2. Install Yarn
+3. Install Git
+4. Install Gatsby CLI
+5. Install a code editor (we recommend VS Code) & the [Prettier](https://prettier.io/) plugin on the code editor
 
 Check out the aforementioned tutorial for details on how to install these tools on your specific operating system.
 
