@@ -15,7 +15,7 @@ import awsvideo from "../../aws-video-exports";
 // TODO: rename to StoryFeed and refactor names
 const InstaFeed = ({ filter }) => {
   const [instaFeed, setInstaFeed] = useState([]);
-  const [instaInfo, setInstaInfo] = useState("init");
+  const [nextToken, setNextToken] = useState();
   const [loading, setLoading] = useState(true);
 
   // fetch more insta data when scroll to end
@@ -23,19 +23,18 @@ const InstaFeed = ({ filter }) => {
   const fetchNext = useCallback(async () => {
     const assets = await API.graphql({
       query: queries.listVodAssets,
-      variables: { instaInfo },
+      variables: { nextToken },
       authMode: "API_KEY",
     });
     const newItems = instaFeed.concat(assets.data.listVodAssets.items);
-    let newNextToken = assets.data.listVodAssets.nextToken;
-    if (newNextToken === null) {
-      newNextToken = "";
-    }
+    const newNextToken = assets.data.listVodAssets.nextToken;
+
+    console.log(assets);
 
     setInstaFeed(newItems);
-    setInstaInfo(newNextToken);
+    setNextToken(newNextToken);
     setLoading(false);
-  }, [instaFeed, instaInfo]);
+  }, [instaFeed, nextToken]);
 
   // TOFIX: Memory leak when unmounted (moved to another page) and fetching in progress
   // fetch Instagram feed data at initial render
@@ -45,33 +44,23 @@ const InstaFeed = ({ filter }) => {
         query: queries.listVodAssets,
         authMode: "API_KEY",
       });
-      let { nextToken } = assets.data.listVodAssets;
-      if (nextToken === null) {
-        nextToken = "";
-      }
+      const { newNextToken } = assets.data.listVodAssets;
 
       const items = assets.data.listVodAssets.items;
 
       setInstaFeed(items);
-      setInstaInfo(nextToken);
+      setNextToken(newNextToken);
       setLoading(false);
     };
 
     fetchVod();
   }, []);
 
-  // when insta feed & info is updated, check if feed is empty. If yes, try fetching next batch
-  useEffect(() => {
-    if (instaFeed.length === 0 && instaInfo !== "") {
-      fetchNext();
-    }
-  }, [instaFeed, instaInfo, fetchNext]);
-
   return (
     <InfiniteScroll
       dataLength={instaFeed.length}
       next={fetchNext}
-      hasMore={instaInfo !== ""}
+      hasMore={nextToken !== null}
       className="text-center"
       style={{ overflow: "visible" }}
       scrollThreshold={0.5}
@@ -81,7 +70,7 @@ const InstaFeed = ({ filter }) => {
           instaFeed
             // TODO: this filter should be done at the GraphQL level?
             .filter(({ tags }) =>
-              filter.every(tag =>
+              filter.every((tag) =>
                 Array.isArray(tags) ? tags.includes(tag) : false
               )
             )
