@@ -8,6 +8,8 @@ import { Link } from "gatsby";
 import Layout from "@components/Layouts/MainLayout";
 import Seo from "@components/Seo";
 import ClientLogoGrid from "@components/Grids/PartnerLogoGrid";
+import { Fade } from "react-reveal";
+import { motion } from "framer-motion";
 
 const ServicesPage = () => {
   return (
@@ -15,138 +17,166 @@ const ServicesPage = () => {
       <Seo title="Services" />
       <Container>
         <MainPageContainer>
+
           <SplitSection background="var(--bs-primary)" className="gy-3">
-            <Col md={6}>
-              <div className="content p-md-5">
+          <Col md={6}>
+          <Fade left>
+
+
+            <div className="content p-md-5">
                 <p className="sup">Grassroots Newswire</p>
                 <Heading>
                   <u>Your city + our grassroots operations</u>: Expand your
                   coverage with our visual catalog of local nonpartisan
                   insights.
                 </Heading>
-              </div>
+                </div>
+              </Fade>
             </Col>
+
             <Col className="image" md={6}>
-              <StaticImage
-                src="../../images/services/newswire.png"
-                alt="City with networks on top"
-              />
+                <Fade right>
+                  <StaticImage
+                    src="../../images/services/newswire.png"
+                    alt="City with networks on top"
+                  />
+                </Fade>
             </Col>
-          </SplitSection>
+        </SplitSection>
 
           <Section className="p-md-5">
-            <Heading weight="500" lineHeight="1.3em">
-              Our newswire accelerates your ability to engage & learn from
-              audiences through trusted and truly representative original local
-              content. We deploy trained local experts and patented verification
-              technology to confidently grow your media strategy with authentic
-              ground-level perspectives.
-            </Heading>
-            <Heading weight="500" lineHeight="1.3em">
-              <b>
-                If you’re are a media organization needing to engage diverse
-                audiences, a local government needing reliable hyper-local
-                insights, or an organization needing to monitor your community,
-                we can support you.
-              </b>
-            </Heading>
+            <Fade bottom>
+              <Heading weight="500" lineHeight="1.3em">
+                Our newswire accelerates your ability to engage & learn from
+                audiences through trusted and truly representative original
+                local content. We deploy trained local experts and patented
+                verification technology to confidently grow your media strategy
+                with authentic ground-level perspectives.
+              </Heading>
+            </Fade>
+            <Fade bottom>
+              <Heading weight="500" lineHeight="1.3em">
+                <b>
+                  If you’re are a media organization needing to engage diverse
+                  audiences, a local government needing reliable hyper-local
+                  insights, or an organization needing to monitor your
+                  community, we can support you.
+                </b>
+              </Heading>
+            </Fade>
           </Section>
 
-          <Section background="#1ee592" className="p-md-5">
-            <FcConferenceCall />
-            <Heading>Interested in working with us?</Heading>
-            <Button
-              size="lg"
-              variant="light"
-              href="https://forms.gle/e6y4Gkna5S9kymdE8"
-            >
-              Find out more today!
-            </Button>
-          </Section>
+            <Fade bottom>
+              <Section background="#1ee592" className="p-md-5">
+                <FcConferenceCall />
+                <Heading>Interested in working with us?</Heading>
+                <a href="https://forms.gle/e6y4Gkna5S9kymdE8">
+                  <motion.button className="btn animated-button" whileHover={{ scale: 1.1 }}
+                      size="lg"
+                      variant="light"
+                      >Find out more today!                    
+                  </motion.button>
+                </a>
+              </Section>
+            </Fade>
 
-          <Section>
-            <Heading center>Creative Content Services</Heading>
-          </Section>
+          <Fade bottom>
+            <Section>
+              <Heading center>Creative Content Services</Heading>
+            </Section>
+          </Fade>
 
           <SplitSection background="#3cf" className="gy-3">
             <Col md={6}>
-              <div className="content p-md-5">
-                <p className="sup">SPECIAL INTEREST COVERAGE</p>
-                <Heading>
-                  Create a curated custom content campaign that helps you
-                  connect with local audiences in meaningful ways.
-                </Heading>
-                <p>
-                  Maximize your audience reach with our on-demand tailored
-                  content. Leverage our grassroots storytelling expertise to
-                  capture a specific story you want covered. Our award-winning
-                  approach combines community engagement, media creation and
-                  grassroots strategy to make your desired stories resonate
-                  across channels to engage the right audiences.
-                </p>
-                <Button
-                  size="lg"
-                  variant="light"
-                  href="https://forms.gle/e6y4Gkna5S9kymdE8"
-                >
-                  Launch your campaign
-                </Button>
-              </div>
-            </Col>
+                    <Fade right>
+                      <div className="content p-md-5">
+                        <p className="sup">SPECIAL INTEREST COVERAGE</p>
+                        <Heading>
+                          Create a curated custom content campaign that helps you
+                          connect with local audiences in meaningful ways.
+                        </Heading>
+                        <p>
+                          Maximize your audience reach with our on-demand tailored
+                          content. Leverage our grassroots storytelling expertise to
+                          capture a specific story you want covered. Our award-winning
+                          approach combines community engagement, media creation and
+                          grassroots strategy to make your desired stories resonate
+                          across channels to engage the right audiences.
+                        </p>
+                        <a href="https://forms.gle/e6y4Gkna5S9kymdE8">
+                        <motion.button className="btn animated-button" whileHover={{ scale: 1.1 }}
+                            size="lg"
+                            variant="light"
+                            >Launch your campaign
+                        </motion.button>
+                      </a>
+                      </div>
+                    </Fade>
+                  </Col>
+
             <Col className="image" md={6}>
-              <StaticImage
-                src="../../images/services/sic.png"
-                alt="Hand holding mics"
-              />
+              <Fade left>
+                <StaticImage
+                  src="../../images/services/sic.png"
+                  alt="Hand holding mics"
+                />
+              </Fade>
             </Col>
           </SplitSection>
 
           <SplitSection background="#ff52db" className="gy-3">
             <Col md={{ span: 6, order: "last" }}>
-              <div className="content p-md-5">
-                <p className="sup">COMMUNITY WORKSHOPS & EVENTS</p>
-                <Heading>
-                  Equip your community with the media skills to properly
-                  represent themselves.
-                </Heading>
-                <p>
-                  Vngle empowers communities with our grassroots reporting
-                  practices to ensure pressing stories are captured and
-                  misinformation is detered from it’s origin. Our event hosts &
-                  sponsors benefit from seeing their own community become a
-                  ecosystem to support grassroots reporting. With endless
-                  combinations available to infuse our reporting experinces into
-                  your live events, Vngle serves as a unique avenue to connect
-                  your brand with our impactful culture centered on combatting
-                  misinformation & underrepresentation across local communities.
-                </p>
-                <Button
-                  size="lg"
-                  variant="light"
-                  href="https://forms.gle/e6y4Gkna5S9kymdE8"
-                >
-                  Host an event with us
-                </Button>
-              </div>
+              <Fade left>
+                <div className="content p-md-5">
+                  <p className="sup">COMMUNITY WORKSHOPS & EVENTS</p>
+                  <Heading>
+                    Equip your community with the media skills to properly
+                    represent themselves.
+                  </Heading>
+                  <p>
+                    Vngle empowers communities with our grassroots reporting
+                    practices to ensure pressing stories are captured and
+                    misinformation is detered from it’s origin. Our event hosts
+                    & sponsors benefit from seeing their own community become a
+                    ecosystem to support grassroots reporting. With endless
+                    combinations available to infuse our reporting experinces
+                    into your live events, Vngle serves as a unique avenue to
+                    connect your brand with our impactful culture centered on
+                    combatting misinformation & underrepresentation across local
+                    communities.
+                  </p>
+                  <a href="https://forms.gle/e6y4Gkna5S9kymdE8">
+                        <motion.button className="btn animated-button" whileHover={{ scale: 1.1 }}
+                            size="lg"
+                            variant="light"
+                            >Host an event with us
+                        </motion.button>
+                      </a>
+                </div>
+              </Fade>
             </Col>
             <Col className="image" md={6}>
-              <StaticImage
-                src="../../images/services/workshop.jpg"
-                alt="Workshop participants group photo"
-              />
+              <Fade right>
+                <StaticImage
+                  src="../../images/services/workshop.jpg"
+                  alt="Workshop participants group photo"
+                />
+              </Fade>
             </Col>
           </SplitSection>
 
-          <Section>
-            <p>
-              Our Creative Media Services are separate from the Vngle newsroom.
-              Clients and brands working with Vngle’s Creative Media Services do
-              not influence the editorial discretion of our news reporting in
-              any form. Conversely, custom storytelling projects through our
-              Creative Media Services do permit the collaborative input of the
-              clients and brands we work with.
-            </p>
-          </Section>
+          <Fade bottom>
+            <Section>
+              <p>
+                Our Creative Media Services are separate from the Vngle
+                newsroom. Clients and brands working with Vngle’s Creative Media
+                Services do not influence the editorial discretion of our news
+                reporting in any form. Conversely, custom storytelling projects
+                through our Creative Media Services do permit the collaborative
+                input of the clients and brands we work with.
+              </p>
+            </Section>
+          </Fade>
 
           {/* <SplitSection background="var(--bs-primary)" className="gy-3">
             <Col md={6}>
@@ -201,70 +231,91 @@ const ServicesPage = () => {
             </Button>
           </Section> */}
 
-          <Section>
-            <Heading center>Our Georgia Case Studies</Heading>
-          </Section>
+          <Fade bottom>
+            <Section>
+              <Heading center>Our Georgia Case Studies</Heading>
+            </Section>
+          </Fade>
 
           <SplitSection className="gy-3">
             <Col md={6}>
-              <div className="bg-primary content position-relative d-flex flex-column justify-content-center">
-                <Heading center>
-                  Improving city communication in College Park during COVID-19
-                </Heading>
-                <div className="d-flex justify-content-center">
-                  <StaticImage
-                    src="../../images/services/cp-logo.png"
-                    alt="College Park logo"
-                    width={200}
-                  />
+              <Fade right>
+                <div className="bg-primary content position-relative d-flex flex-column justify-content-center">
+                  <Heading center>
+                    Improving city communication in College Park during COVID-19
+                  </Heading>
+                  <div className="d-flex justify-content-center">
+                    <StaticImage
+                      src="../../images/services/cp-logo.png"
+                      alt="College Park logo"
+                      width={200}
+                    />
+                  </div>
+                  <Link to="college-park" className="stretched-link" />
                 </div>
-                <Link to="college-park" className="stretched-link" />
-              </div>
+              </Fade>
             </Col>
             <Col md={6}>
-              <BgImageContainer className="position-relative">
-                <StaticImage
-                  layout="fullWidth"
-                  alt=""
-                  src="https://source.unsplash.com/RfiBK6Y_upQ"
-                />
-                <div className="content">
-                  <Heading center color="white">
-                    Bringing trusted nonpartisan coverage to Georgia local
-                    candidates
-                  </Heading>
-                </div>
-                <Link to="georgia-election" className="stretched-link" />
-              </BgImageContainer>
+              <Fade left>
+                <BgImageContainer className="position-relative">
+                  <StaticImage
+                    layout="fullWidth"
+                    alt=""
+                    src="https://source.unsplash.com/RfiBK6Y_upQ"
+                  />
+                  <div className="content">
+                    <Heading center color="white">
+                      Bringing trusted nonpartisan coverage to Georgia local
+                      candidates
+                    </Heading>
+                  </div>
+                  <Link to="georgia-election" className="stretched-link" />
+                </BgImageContainer>
+              </Fade>
             </Col>
           </SplitSection>
 
           <Section className="text-center">
-            <Heading center>How our coverage works</Heading>
-            <p>
-              We’re an equitable local reporting approach that brings
-              nonpartisan coverage to underreported municipalities through
-              verifying and training citizens with HD smartphones to serve as
-              reporters and editors for the areas they live.
-            </p>
-            <StaticImage
-              src="../../images/services/reporter-kit-1.jpg"
-              alt="Blake Stoner with reporter kit"
-              width={500}
-              className="mb-3"
-            />
+            <Fade bottom>
+              <Heading center>How our coverage works</Heading>
+            </Fade>
+            <Fade bottom>
+              <p>
+                We’re an equitable local reporting approach that brings
+                nonpartisan coverage to underreported municipalities through
+                verifying and training citizens with HD smartphones to serve as
+                reporters and editors for the areas they live.
+              </p>
+            </Fade>
+            <Fade>
+              <StaticImage
+                src="../../images/services/reporter-kit-1.jpg"
+                alt="Blake Stoner with reporter kit"
+                width={500}
+                className="mb-3"
+              />
+            </Fade>
 
-            <p className="lead">Interested in working with us?</p>
+            <Fade bottom>
+              <p className="lead">Interested in working with us?</p>
+            </Fade>
 
-            <Button size="lg" href="https://forms.gle/e6y4Gkna5S9kymdE8">
-              Sign up and we'll reach out
-            </Button>
+            
+            <Fade bottom>
+              <motion.div whileHover={{ scale: 1.1 }}>
+                <Button size="lg" href="https://forms.gle/e6y4Gkna5S9kymdE8">
+                  Sign up and we'll reach out
+                </Button>
+              </motion.div>
+            </Fade>
           </Section>
 
-          <Section>
-            <Heading center>Who We've Worked With</Heading>
-            <ClientLogoGrid />
-          </Section>
+          <Fade bottom>
+            <Section>
+              <Heading center>Who We've Worked With</Heading>
+              <ClientLogoGrid />
+            </Section>
+          </Fade>
         </MainPageContainer>
       </Container>{" "}
     </Layout>
@@ -304,11 +355,38 @@ const SplitSection = styled(Row)`
     padding: 2rem;
     border-radius: 10px;
     height: 100%;
+    transition: transform 1s;
 
     p.sup {
       font-weight: bold;
       font-size: clamp(1rem, 2.5vw, 1.5rem);
     }
+  }
+
+  .react-reveal {
+    height: 100%;
+  }
+
+  .animated-button {
+    color: #000;
+    background-color: #f7f7f7;
+    border-color: #f7f7f7;
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
+    border-radius: 0.25rem;
+  }
+
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 `;
 
@@ -323,6 +401,29 @@ const Section = styled.section`
   svg {
     font-size: 5rem;
   }
+
+  .animated-button {
+    color: #000;
+    background-color: #ffcc35;
+    border-color: #ffcc35;
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
+    border-radius: 0.25rem;
+  }
+
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
 `;
 
 const BgImageContainer = styled.div`
