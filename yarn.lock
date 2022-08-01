@@ -5695,6 +5695,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-material/core@npm:^1.3.7":
+  version: 1.3.7
+  resolution: "@react-native-material/core@npm:1.3.7"
+  dependencies:
+    chroma-js: ^2.4.2
+    react-native-flex-layout: ^0.1.5
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 4f08fb224b366da23da5aee5a32256e4e0a995b6bc0a3610ec98085417c5398920b55dae957f275875b337c4a467bae56fd7c73f0fb40c7cfdd5aac3220e6627
+  languageName: node
+  linkType: hard
+
 "@restart/hooks@npm:^0.4.0, @restart/hooks@npm:^0.4.6":
   version: 0.4.7
   resolution: "@restart/hooks@npm:0.4.7"
@@ -8015,6 +8028,13 @@ __metadata:
   version: 2.0.0
   resolution: "chownr@npm:2.0.0"
   checksum: b06ba0bf4218bc2214cdb94a7d0200db5c6425f9425795c064dcf5a3801aac8ae87f764727890cd1f48c026559159e7e0e15ed3d1940ce453dec54898d013379
+  languageName: node
+  linkType: hard
+
+"chroma-js@npm:^2.4.2":
+  version: 2.4.2
+  resolution: "chroma-js@npm:2.4.2"
+  checksum: 7ac5b1552e28960231b77837d038405ed0054057b340a5436485b21d1b963e449ac52cb1d32fb113b5a80e2aa63125882ca01d2b3cb5c2c2683662d118904201
   languageName: node
   linkType: hard
 
@@ -16554,6 +16574,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"react-js-banner@npm:^0.6.0-beta3":
+  version: 0.6.0-beta3
+  resolution: "react-js-banner@npm:0.6.0-beta3"
+  peerDependencies:
+    react: ^16.8.0
+  checksum: 1e41249b5b75abf050ff94e97331e3d6008b12281f212889e55811bb8a1463005e7775bff8ea92b5e31ea53b62e88c1221f1c319418d6093a75bbadebd37f36a
+  languageName: node
+  linkType: hard
+
 "react-lifecycles-compat@npm:^3.0.4":
   version: 3.0.4
   resolution: "react-lifecycles-compat@npm:3.0.4"
@@ -16571,6 +16600,16 @@ fsevents@~2.3.2:
   peerDependencies:
     react: ">=15"
   checksum: e369f39d3de31060faf8afad955895aa5bbe42395f80809f7c37370a88f32409290a503f2171a431fda13afbfeadbc6ddfceb1414aa367ebb553f7f91269cbef
+  languageName: node
+  linkType: hard
+
+"react-native-flex-layout@npm:^0.1.5":
+  version: 0.1.5
+  resolution: "react-native-flex-layout@npm:0.1.5"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 2f550140f920c3f49072a0d0932d23446fb386031b690a492e470580496a9e3a944a01e46360a5fab96a012585f8e27ba70e461997165c61b808f33039bdbbd9
   languageName: node
   linkType: hard
 
@@ -19334,6 +19373,7 @@ resolve@^2.0.0-next.3:
   resolution: "vngle-site@workspace:."
   dependencies:
     "@aws-amplify/ui-react": ^1.2.26
+    "@react-native-material/core": ^1.3.7
     aws-amplify: ^4.3.10
     axios: ^0.24.0
     babel-plugin-styled-components: ^2.0.2
@@ -19367,6 +19407,7 @@ resolve@^2.0.0-next.3:
     react-helmet: ^6.1.0
     react-icons: ^4.3.1
     react-infinite-scroll-component: ^6.1.0
+    react-js-banner: ^0.6.0-beta3
     react-mailchimp-subscribe: ^2.1.3
     react-player: ^2.9.0
     react-typed: ^1.2.0

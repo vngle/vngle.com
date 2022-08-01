@@ -4,6 +4,7 @@ import { Container, Image, Button } from "react-bootstrap";
 import styled from "styled-components";
 import Typed from "react-typed";
 import awsvideo from "../aws-video-exports";
+import Banner from "react-js-banner";
 
 import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
@@ -21,8 +22,9 @@ const IndexPage = ({
     <Layout>
       <Seo title="Nonpartisan Grassroots Verified News" />
 
-      <HeroContainer>
+      <HeroContainer className="main-banner" style={{ height: "32rem" }}>
         <h1 className="display-4 fw-bolder text-center">
+          <br />
           Various Angles of
           <br />
           Verified Grassroots News
@@ -33,7 +35,7 @@ const IndexPage = ({
           <span className="highlight">
             <Typed
               strings={["By the People", "For the People"]}
-              typeSpeed={40}
+              typeSpeed={30}
               backDelay={5000}
               showCursor={false}
               loop
@@ -41,20 +43,32 @@ const IndexPage = ({
           </span>
           <br />
         </h1>
-
-        <div className="btn-container">
-          <Button size="lg" href="https://vngle.typeform.com/to/zwc2R2og">
-            Request a story
-          </Button>
-          <Button
-            size="lg"
-            href="https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true"
-          >
-            Report a story
-          </Button>
-        </div>
+        <h1 className="text-center">
+          <span className="highlight news">
+            <Typed
+              strings={[
+                "News and Media Services to Empower Communities Everywhere",
+              ]}
+              typeSpeed={40}
+              backDelay={5000}
+              showCursor={false}
+              loop
+            />
+          </span>
+        </h1>
 
         <img src={World} alt="" className="hero-img" />
+      </HeroContainer>
+
+      <HeroContainer>
+        <div className="btn-container">
+          <Banner>
+            Capture your story with our award-winning content services
+            <Button size="sm" href="https://docs.google.com/forms/d/e/1FAIpQLSf80FHwD9CVDZK954uUQ_-_0nkMvBGYT1vZ6nHvXsD12H7fDg/viewform">
+              CONTACT US
+            </Button>
+          </Banner>
+        </div>
       </HeroContainer>
 
       <Container fluid>
@@ -99,8 +113,6 @@ const IndexPage = ({
 
 const HeroContainer = styled(Container)`
   position: relative;
-  margin-top: 2rem;
-
   .btn-container {
     text-align: center;
 
@@ -113,7 +125,9 @@ const HeroContainer = styled(Container)`
   }
 
   .hero-img {
-    width: 80%;
+    object-fit: cover;
+    width: 70%;
+    height: 100%;
     position: absolute;
     z-index: -1;
     margin-left: auto;
@@ -123,6 +137,69 @@ const HeroContainer = styled(Container)`
     right: 0;
     text-align: center;
     opacity: 0.2;
+  }
+
+  .news {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .btn-container {
+    text-align: center;
+    bottom: 0px;
+
+    .btn {
+      background: #1a1110;
+      font-weight: bold;
+      color: #ffcc35;
+      border-radius: 10px;
+      width: 130px;
+      border: 4px double black;
+      margin: auto;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      transition: all 0.5s;
+    }
+
+    .btn span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .btn span:after {
+      position: relative;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .btn:hover {
+      background-color: #ffcc35;
+      color: black;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .btn:hover span {
+      padding-right: 25px;
+    }
+
+    .btn:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    .banner {
+      background: #ffdf00;
+      margin: auto;
+      height: 70px;
+      font-size: 18px;
+      border-radius: 15px;
+      width: 50%;
+    }
   }
 `;
 
