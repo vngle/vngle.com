@@ -17,32 +17,29 @@ const ServicesPage = () => {
       <Seo title="Services" />
       <Container>
         <MainPageContainer>
-
           <SplitSection background="var(--bs-primary)" className="gy-3">
-          <Col md={6}>
-          <Fade left>
-
-
-            <div className="content p-md-5">
-                <p className="sup">Grassroots Newswire</p>
-                <Heading>
-                  <u>Your city + our grassroots operations</u>: Expand your
-                  coverage with our visual catalog of local nonpartisan
-                  insights.
-                </Heading>
+            <Col md={6}>
+              <Fade left>
+                <div className="content p-md-5">
+                  <p className="sup">Grassroots Newswire</p>
+                  <Heading>
+                    <u>Your city + our grassroots operations</u>: Expand your
+                    coverage with our visual catalog of local nonpartisan
+                    insights.
+                  </Heading>
                 </div>
               </Fade>
             </Col>
 
             <Col className="image" md={6}>
-                <Fade right>
-                  <StaticImage
-                    src="../../images/services/newswire.png"
-                    alt="City with networks on top"
-                  />
-                </Fade>
+              <Fade right>
+                <StaticImage
+                  src="../../images/services/newswire.png"
+                  alt="City with networks on top"
+                />
+              </Fade>
             </Col>
-        </SplitSection>
+          </SplitSection>
 
           <Section className="p-md-5">
             <Fade bottom>
@@ -66,19 +63,22 @@ const ServicesPage = () => {
             </Fade>
           </Section>
 
-            <Fade bottom>
-              <Section background="#1ee592" className="p-md-5">
-                <FcConferenceCall />
-                <Heading>Interested in working with us?</Heading>
-                <a href="https://forms.gle/e6y4Gkna5S9kymdE8">
-                  <motion.button className="btn animated-button" whileHover={{ scale: 1.1 }}
-                      size="lg"
-                      variant="light"
-                      >Find out more today!                    
-                  </motion.button>
-                </a>
-              </Section>
-            </Fade>
+          <Fade bottom>
+            <Section background="#1ee592" className="p-md-5">
+              <FcConferenceCall />
+              <Heading>Interested in working with us?</Heading>
+              <a href="https://forms.gle/e6y4Gkna5S9kymdE8">
+                <motion.button
+                  className="btn animated-button"
+                  whileHover={{ scale: 1.1 }}
+                  size="lg"
+                  variant="light"
+                >
+                  Find out more today!
+                </motion.button>
+              </a>
+            </Section>
+          </Fade>
 
           <Fade bottom>
             <Section>
@@ -88,31 +88,34 @@ const ServicesPage = () => {
 
           <SplitSection background="#3cf" className="gy-3">
             <Col md={6}>
-                    <Fade right>
-                      <div className="content p-md-5">
-                        <p className="sup">SPECIAL INTEREST COVERAGE</p>
-                        <Heading>
-                          Create a curated custom content campaign that helps you
-                          connect with local audiences in meaningful ways.
-                        </Heading>
-                        <p>
-                          Maximize your audience reach with our on-demand tailored
-                          content. Leverage our grassroots storytelling expertise to
-                          capture a specific story you want covered. Our award-winning
-                          approach combines community engagement, media creation and
-                          grassroots strategy to make your desired stories resonate
-                          across channels to engage the right audiences.
-                        </p>
-                        <a href="https://forms.gle/e6y4Gkna5S9kymdE8">
-                        <motion.button className="btn animated-button" whileHover={{ scale: 1.1 }}
-                            size="lg"
-                            variant="light"
-                            >Launch your campaign
-                        </motion.button>
-                      </a>
-                      </div>
-                    </Fade>
-                  </Col>
+              <Fade right>
+                <div className="content p-md-5">
+                  <p className="sup">SPECIAL INTEREST COVERAGE</p>
+                  <Heading>
+                    Create a curated custom content campaign that helps you
+                    connect with local audiences in meaningful ways.
+                  </Heading>
+                  <p>
+                    Maximize your audience reach with our on-demand tailored
+                    content. Leverage our grassroots storytelling expertise to
+                    capture a specific story you want covered. Our award-winning
+                    approach combines community engagement, media creation and
+                    grassroots strategy to make your desired stories resonate
+                    across channels to engage the right audiences.
+                  </p>
+                  <a href="https://forms.gle/e6y4Gkna5S9kymdE8">
+                    <motion.button
+                      className="btn animated-button"
+                      whileHover={{ scale: 1.1 }}
+                      size="lg"
+                      variant="light"
+                    >
+                      Launch your campaign
+                    </motion.button>
+                  </a>
+                </div>
+              </Fade>
+            </Col>
 
             <Col className="image" md={6}>
               <Fade left>
@@ -146,12 +149,15 @@ const ServicesPage = () => {
                     communities.
                   </p>
                   <a href="https://forms.gle/e6y4Gkna5S9kymdE8">
-                        <motion.button className="btn animated-button" whileHover={{ scale: 1.1 }}
-                            size="lg"
-                            variant="light"
-                            >Host an event with us
-                        </motion.button>
-                      </a>
+                    <motion.button
+                      className="btn animated-button"
+                      whileHover={{ scale: 1.1 }}
+                      size="lg"
+                      variant="light"
+                    >
+                      Host an event with us
+                    </motion.button>
+                  </a>
                 </div>
               </Fade>
             </Col>
@@ -300,7 +306,6 @@ const ServicesPage = () => {
               <p className="lead">Interested in working with us?</p>
             </Fade>
 
-            
             <Fade bottom>
               <motion.div whileHover={{ scale: 1.1 }}>
                 <Button size="lg" href="https://forms.gle/e6y4Gkna5S9kymdE8">
@@ -386,7 +391,8 @@ const SplitSection = styled(Row)`
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 `;
 
@@ -421,9 +427,9 @@ const Section = styled.section`
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
-
 `;
 
 const BgImageContainer = styled.div`
