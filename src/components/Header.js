@@ -9,10 +9,6 @@ import Link from "./Link";
 const Header = ({ siteTitle }) => {
   const navLinks = [
     { name: "Georgia", to: "/georgia" },
-    {
-      name: "Jobs",
-      to: "https://www.notion.so/vngle/Jobs-Vngle-cbe85d3d0e074aeda5c860629a42ad86",
-    },
     { name: "About", to: "/about" },
     { name: "Our Team", to: "/team" },
     { name: "Services", to: "/services" },
