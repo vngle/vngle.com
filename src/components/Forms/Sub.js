@@ -17,7 +17,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
     EMAIL: "",
     MESSAGE: "",
 
-    "group[293774][4]": true, //message not opt-in
+    "group[293774][4]": true, //messagenot opt-in
   });
   const [validated, setValidated] = useState(true);
 
@@ -27,7 +27,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
       FIRST: formData.FIRST,
       LAST: formData.LAST,
       EMAIL: formData.EMAIL,
-      MESSAGE: formData.MESSAGE,
+      NUMBER: formData.MESSAGE,
     };
 
     // only send checkbox status if checked
@@ -168,6 +168,9 @@ const SubForm = ({ status, message, onSubmitted }) => {
                     )}
                   </Button>
                 </Form.Group>
+
+                {respMessage}
+                
               </Row>
             </Form>
           </Col>
