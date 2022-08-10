@@ -65,7 +65,7 @@ const Footer = () => (
             href="https://docs.google.com/forms/d/e/1FAIpQLScpXPlS3MOqr9-P5E4A_F2JFt4dfspI-OY2W-xlAPWUOT9yoA/viewform"
             className="text-muted"
           >
-            <Badge variant="primary">Feedback</Badge>
+            <Badge variant="primary">Feedback / Contact</Badge>
           </Nav.Link>
         </FooterNav>
       </Col>
