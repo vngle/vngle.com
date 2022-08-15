@@ -9,13 +9,13 @@ import DOMPurify from "dompurify";
  * @param {string} message Response message from Mailchimp
  * @param {function} onSubmitted Function to be called on form submission. Usually used to call subscribe(formData)
  */
+
+
 const SubForm = ({ status, message, onSubmitted }) => {
   // object key names are extracted from Mailchimp. Changing them will break the form.
   const [formData, setFormData] = useState({
-    FIRST: "",
-    LAST: "",
     EMAIL: "",
-    MESSAGE: "",
+
 
     "group[293774][4]": true, //messagenot opt-in
   });
@@ -24,16 +24,13 @@ const SubForm = ({ status, message, onSubmitted }) => {
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     const submitData = {
-      FIRST: formData.FIRST,
-      LAST: formData.LAST,
       EMAIL: formData.EMAIL,
-      NUMBER: formData.MESSAGE,
     };
 
     // only send checkbox status if checked
     // Mailchimp will populate field if any value is sent
-    if (formData["group[293774][4]"]) {
-      submitData["group[293774][4]"] = formData["group[293774][4]"];
+    if (formData["group[293774][1]"]) {
+      submitData["group[293774][1]"] = formData["group[293774][1]"];
     }
 
     if (!form.checkValidity()) {
@@ -80,7 +77,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
       </Form.Group>
     );
   }
-
+    
   return (
     <StyledJumbotron>
       <Container>
@@ -88,41 +85,10 @@ const SubForm = ({ status, message, onSubmitted }) => {
           <Col xs={12} md={7} lg={6}>
             <h1>Let’s work together</h1>
             <h2>Get in touch today</h2>
+    
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
-              <Row xs={1} sm={2}>
-                <Form.Group controlId="name" as={Col}>
-                  <Form.Label>
-                    First Name <span className="text-danger">*</span>
-                  </Form.Label>
-                  <Form.Control
-                    type="first"
-                    placeholder="Enter first name"
-                    name="FIRST"
-                    value={formData.NAME}
-                    onChange={handleChange}
-                    required
-                  />
-                </Form.Group>
-              </Row>
-
-              <Row xs={1} sm={2}>
-                <Form.Group controlId="name" as={Col}>
-                  <Form.Label>
-                    Last Name<span className="text-danger">*</span>
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter last name"
-                    name="LAST"
-                    value={formData.NAME}
-                    onChange={handleChange}
-                    required={formData["group[293774][4]"]}
-                  />
-                </Form.Group>
-              </Row>
-
-              <Row xs={1} sm={2}>
-                <Form.Group controlId="email" as={Col}>
+            <Row className="email-form"xs={1} sm={3}>
+            <Form.Group controlId="email" as={Col}>
                   <Form.Label>
                     Email address <span className="text-danger">*</span>
                   </Form.Label>
@@ -137,24 +103,6 @@ const SubForm = ({ status, message, onSubmitted }) => {
                   <Form.Control.Feedback type="invalid">
                     Please provide a valid email address
                   </Form.Control.Feedback>
-                </Form.Group>
-              </Row>
-
-              <Row xs={4} sm={2}>
-                <Form.Group controlId="Textarea" as={Col}>
-                  <Form.Label>
-                    Message <span className="text-danger">*</span>
-                  </Form.Label>
-                  <Form.Control
-                    type="textarea"
-                    placeholder=""
-                    name="MESSAGE"
-                    value={formData.MESSAGE}
-                    onChange={handleChange}
-                    required={formData["group[293774][4]"]}
-                    style={{ height: "100px" }}
-                  />
-                  <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
                 </Form.Group>
               </Row>
 
