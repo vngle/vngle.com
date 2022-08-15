@@ -8,14 +8,11 @@ import Link from "./Link";
 
 const Header = ({ siteTitle }) => {
   const navLinks = [
-    { name: "Georgia", to: "/georgia" },
-    {
-      name: "Jobs",
-      to: "https://www.notion.so/vngle/Jobs-Vngle-cbe85d3d0e074aeda5c860629a42ad86",
-    },
+    { name: "Coverage", to: "/coverage" },
     { name: "About", to: "/about" },
-    { name: "Our Team", to: "/team" },
-    { name: "Services", to: "/services" },
+    { name: "Our Tech", to: "/technology" },
+    { name: "Team", to: "/team" },
+    {name: "Merchandise", to:"https://vngle-merch-demo.square.site/"}
   ];
   const dropdownLinks = [
     { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
@@ -31,6 +28,12 @@ const Header = ({ siteTitle }) => {
     { name: "Submit a tip", to: "/report" },
   ];
 
+  const dropdownLinksServices = [
+    { name: "Newsire", to: "/services/news-wire" },
+    { name: "Creative Content", to: "/services/creative-content" },
+    { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
+  ];
+
   return (
     <StyledHeader>
       <Navbar collapseOnSelect expand="lg" className="p-4">
@@ -43,6 +46,19 @@ const Header = ({ siteTitle }) => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-end text-center">
             <Nav>
+              <Dropdown className="nav-item">
+                <Dropdown.Toggle className="menu-dropdown-toggle nav-link" as="a">Services</Dropdown.Toggle>
+                <Dropdown.Menu>
+                  {dropdownLinksServices.map((link, i) => {
+                    return (
+                      <Dropdown.Item as="div" key={i} role="menu-item">
+                        <Link to={link.to}>{link.name}</Link>
+                      </Dropdown.Item>
+                    );
+                  })}
+                </Dropdown.Menu>
+              </Dropdown>
+
               {navLinks.map((link, i) => {
                 return (
                   <Nav.Item as="div" key={i} className="mx-lg-2">
@@ -104,7 +120,11 @@ const StyledHeader = styled.header`
           text-decoration: none;
         }
       }
-
+      .menu-dropdown-toggle {
+        background: transparent;
+        border-color: transparent;
+        cursor: pointer;
+      }
       .navbar-toggler {
         border: none;
         font-size: 1.5rem;
