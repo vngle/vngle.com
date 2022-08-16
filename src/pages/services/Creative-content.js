@@ -211,6 +211,7 @@ const MaContainer = styled.div`
 
     ,
     p {
+      padding-left: 1rem;
       font-size: 3rem;
       font-weight: bold;
       float: left;
