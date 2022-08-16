@@ -13,11 +13,14 @@ import Seo from "../components/Seo";
 import Slider from "../components/Sliders/Slider";
 import Grid from "../components/Grids/Grid";
 import SubForm from "../components/Forms/SubForm";
-import Sub from "../components/Forms/Sub";
+import Sub from "@components/Forms/sub";
 import NewBanner from "../components/Banner";
 import NewContainer from "../components/Containers/SingleContainer";
+import TextContainer from "../components/Containers/TextContainer";
+import ButtonContainer from "../components/Containers/ButtonContainer";
 
 import World from "@images/home/world.svg";
+import MitGif from "@images/home/mit.gif";
 
 const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
   return (
@@ -34,8 +37,8 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
         </Fade>
 
         <p className="font-sans-serif h5">
-          <span>&mdash;</span> News and Media Services to Empower Communities
-          Everywhere <span>&mdash;</span>
+          <span>&mdash;</span> Nonpartisan News and Media Services to Empower
+          Communities Everywhere <span>&mdash;</span>
         </p>
 
         <h2 className="display-4 fw-bolder">
@@ -43,7 +46,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             Nonpartisan{" "}
             <Typed
               strings={["By the People", "For the People"]}
-              typeSpeed={20}
+              typeSpeed={30}
               backDelay={5000}
               showCursor={false}
               loop
@@ -55,6 +58,13 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
       </HeroContainer>
 
       <Container fluid>
+        <NewBanner
+          paragraph="Capture your story with our award-winning content services"
+          buttonText="CONTACT US"
+          buttonLink="https://docs.google.com/forms/d/e/1FAIpQLSf80FHwD9CVDZK954uUQ_-_0nkMvBGYT1vZ6nHvXsD12H7fDg/viewform"
+          bgColor="var(--bs-primary)"
+        />
+
         <NewBanner
           paragraph="Capture your story with our award-winning content services"
           buttonText="CONTACT US"
@@ -99,7 +109,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             <Col className="image" md={6}>
               <Fade left>
                 <StaticImage
-                  src="../images/services/newswire.png"
+                  src="../../images/services/newswire.png"
                   alt="City with networks on top"
                 />
               </Fade>
@@ -117,7 +127,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             </Col>
           </SplitSection>
 
-          <SplitSection background="#3cf" className="section2 gy-3">
+          <SplitSection background="#3cf" className="gy-3">
             <Col md={6}>
               <Fade left>
                 <div className="content p-md-5">
@@ -142,14 +152,14 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             <Col className="image" md={6}>
               <Fade right>
                 <StaticImage
-                  src="../images/services/sic.png"
+                  src="../../images/services/sic.png"
                   alt="Hand holding mics"
                 />
               </Fade>
             </Col>
           </SplitSection>
 
-          <SplitSection background="#ff52db" className="section2 gy-3">
+          <SplitSection background="#ff52db" className="gy-3">
             <Col md={{ span: 6, order: "last" }}>
               <Fade right>
                 <div className="content p-md-5">
@@ -174,7 +184,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             <Col className="image" md={6}>
               <Fade left>
                 <StaticImage
-                  src="../images/services/workshop.jpg"
+                  src="../../images/services/workshop.jpg"
                   alt="Workshop participants group photo"
                 />
               </Fade>
@@ -182,6 +192,16 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
           </SplitSection>
         </MainPageContainer>
       </Container>
+
+      {/* <ButtonContainer
+        title="We bring you hyper-local content & insights that’s verified by digital forensics & local experts."
+        titleColor="var(--bs-primary)"
+        buttonLink=""
+        buttonText="Learn More"
+        buttonColor="var(--bs-primary)"
+        butTexCol="black"
+        bgColor="black"
+      /> */}
 
       <NewContainer
         title="We bring you hyper-local content & insights that’s verified by digital forensics & local experts."
@@ -195,7 +215,24 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
           <div className="text-center"></div>
         </div>
       </Container>
-      <Sub />
+
+      <Container fluid>
+        <NewContainer
+          title="Our impact won the 🌎 Community Award at MIT."
+          titleColor="black"
+          bgColor="#cdfd01"
+        />
+
+        <Row>
+          <Col xs={12} md={4} lg={3} xl={2}>
+            <img src={MitGif} alt="" width="100%" />
+          </Col>
+          <Col xs={12} md={8} lg={9} xl={10}>
+            <SubForm />
+          </Col>
+        </Row>
+        {/* <Sub /> */}
+      </Container>
     </Layout>
   );
 };
@@ -215,6 +252,35 @@ const HeroContainer = styled(Container)`
     right: 0;
     text-align: center;
     opacity: 0.2;
+  }
+
+  .w4-container {
+    background: #f7f7f7;
+    text-align: left;
+    padding: 10px 10px;
+
+    .btn {
+      font-weight: bold;
+      background: #000000;
+      color: #fffff9;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  .w-container {
+    background: #1a0117;
+    color: var(--bs-primary);
+    text-align: center;
+    padding: 1 em;
+
+    .btn {
+      font-weight: bold;
+      background: var(--bs-primary);
+      color: #1a0117;
+      text-align: center;
+      cursor: pointer;
+    }
   }
 
   .w4-container {
@@ -365,12 +431,6 @@ const SplitSection = styled(Row)`
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-
-  @media (max-width: 47rem) {
-    &.section2 {
-      flex-direction: column-reverse;
-    }
   }
 `;
 

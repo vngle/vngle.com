@@ -1,45 +1,20 @@
-import { Button } from "react-bootstrap";
+import { Button, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import React from "react";
 
-// const CtaBanner = () => {
-//   return (
-//     <Banner className="shadow">
-//       <p>Capture your story with our award-winning content services</p>
-//       <Button
-//         // css={{
-//         //   background: "#1a111",
-//         //   fw: "bold",
-//         //   color: "#ffcc35",
-//         //   width: "130px",
-//         //   border: "4px double black",
-//         //   margin: "auto",
-//         //   transition: "all 0.5s",
-//         // }}
-//         size="sm"
-//         href="https://docs.google.com/forms/d/e/1FAIpQLSf80FHwD9CVDZK954uUQ_-_0nkMvBGYT1vZ6nHvXsD12H7fDg/viewform"
-//         variant="dark"
-//       >
-//         CONTACT US
-//       </Button>
-//     </Banner>
-//   );
-// };
-
-const CtaBanner = ({
-  paragraph,
-  buttonLink,
-  buttonText,
-  bgColor,
-  children,
-}) => {
+const CtaBanner = ({ paragraph, buttonLink, buttonText, bgColor }) => {
   return (
     <Banner className="shadow" bgColor={bgColor}>
-      <p>{paragraph}</p>
-      <Button size="sm" href={buttonLink} variant="dark">
-        {buttonText}
-      </Button>
-      {children}
+      <Row className="text-center">
+        <Col xs={12} md="auto">
+          <p className="mb-3 mb-md-0 mx-auto">{paragraph}</p>
+        </Col>
+        <Col>
+          <Button size="sm" href={buttonLink} variant="dark">
+            {buttonText}
+          </Button>
+        </Col>
+      </Row>
     </Banner>
   );
 };

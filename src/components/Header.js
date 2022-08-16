@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => {
     // },
     { name: "Be a Vngler", to: "/vngler" },
     { name: "Become an Ally: Grow with Us", to: "/ally" },
-    { name: "Submit a Tip", to: "https://forms.gle/ezGNfYqZTqMUD8YZ9"},
+    { name: "Submit a Tip", to: "https://forms.gle/ezGNfYqZTqMUD8YZ9" },
   ];
 
   const dropdownLinksServices = [

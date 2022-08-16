@@ -79,90 +79,95 @@ const SubForm = ({ status, message, onSubmitted }) => {
   }
 
   return (
-  
-  <Fade bottom>
-    <StyledJumbotron>
-      <HeroContainer>
-        <Row>
-          <Col xs={12}>
-            <h1 className="center-element">Stay Updated & Follow Our Movement</h1>
-            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+    <Fade bottom>
+      <StyledJumbotron>
+        <HeroContainer>
+          <Row>
+            <Col xs={12}>
+              <h1 className="center-element">
+                Stay Updated & Follow Our Movement
+              </h1>
+              <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                <Row className="email-form" xs={1} sm={3}>
+                  {formData["group[293774][4]"] === true ? (
+                    <Form.Group
+                      className="email-form"
+                      controlId="number"
+                      as={Col}
+                    >
+                      <Form.Label>
+                        Phone Number<span className="text-danger">*</span>
+                      </Form.Label>
+                      <Form.Control
+                        type="text"
+                        placeholder="Enter cell phone number"
+                        name="NUMBER"
+                        value={formData.NUMBER}
+                        onChange={handleChange}
+                        required={formData["group[293774][4]"]}
+                      />
+                      <Form.Control.Feedback type="invalid">
+                        Please provide a phone number
+                      </Form.Control.Feedback>
+                    </Form.Group>
+                  ) : (
+                    <Form.Group controlId="email" as={Col}>
+                      <Form.Label>
+                        Email address<span className="text-danger">*</span>
+                      </Form.Label>
+                      <Form.Control
+                        type="email"
+                        placeholder="Enter email"
+                        name="EMAIL"
+                        value={formData.EMAIL}
+                        onChange={handleChange}
+                        required
+                      />
+                      <Form.Control.Feedback type="invalid">
+                        Please provide a valid email address
+                      </Form.Control.Feedback>
+                    </Form.Group>
+                  )}
+                </Row>
 
-              <Row className="email-form"xs={1} sm={3}>
-                {formData["group[293774][4]"] === true ? (
-                  <Form.Group className="email-form" controlId="number" as={Col}>
-                    <Form.Label>
-                      Phone Number<span className="text-danger">*</span>
-                    </Form.Label>
-                    <Form.Control
-                      type="text"
-                      placeholder="Enter cell phone number"
-                      name="NUMBER"
-                      value={formData.NUMBER}
-                      onChange={handleChange}
-                      required={formData["group[293774][4]"]}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Please provide a phone number
-                    </Form.Control.Feedback>
+                <Row className="mt-3">
+                  <Form.Group class="center-element">
+                    <Button type="submit" variant="dark">
+                      {status === "sending" ? (
+                        <Spinner animation="border" size="sm" />
+                      ) : (
+                        // "Subscribe"
+                        "SUBSCRIBE"
+                      )}
+                    </Button>
                   </Form.Group>
-                ) : (
-                  <Form.Group controlId="email" as={Col}>
-                    <Form.Label>
-                      Email address<span className="text-danger">*</span>
-                    </Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="Enter email"
-                      name="EMAIL"
-                      value={formData.EMAIL}
+                  <Form.Group
+                    as={Col}
+                    className="checkbox-container center-element"
+                  >
+                    <Form.Check
+                      type="checkbox"
+                      id="sms-confirm"
+                      label="Text me instead!"
+                      name="group[293774][4]"
+                      checked={formData["group[293774][4]"]}
                       onChange={handleChange}
-                      required
+                      inline
                     />
-                    <Form.Control.Feedback type="invalid">
-                      Please provide a valid email address
-                    </Form.Control.Feedback>
                   </Form.Group>
-                )}
-              </Row>
+                </Row>
 
-              <Row className="mt-3">
-                <Form.Group class="center-element">
-                  <Button type="submit" variant="dark">
-                    {status === "sending" ? (
-                      <Spinner animation="border" size="sm" />
-                    ) : (
-                      // "Subscribe"
-                      "SUBSCRIBE"
-                    )}
-                  </Button>
-                </Form.Group>
-                <Form.Group as={Col} className="checkbox-container center-element">
-                  <Form.Check
-                    type="checkbox"
-                    id="sms-confirm"
-                    label="Text me instead!"
-                    name="group[293774][4]"
-                    checked={formData["group[293774][4]"]}
-                    onChange={handleChange}
-                    inline
-                  />
-                </Form.Group>
-              </Row>
-
-              {respMessage}
-              
-            </Form>
-          </Col>
-        </Row>
-      </HeroContainer>
-    </StyledJumbotron>
+                {respMessage}
+              </Form>
+            </Col>
+          </Row>
+        </HeroContainer>
+      </StyledJumbotron>
     </Fade>
   );
 };
 
 const StyledJumbotron = styled.div`
-
   background: var(--bs-primary);
   margin: 0.2rem 0;
   padding-top: 0.2rem;
@@ -179,7 +184,7 @@ const StyledJumbotron = styled.div`
   h1 {
     font-family: "Inter", sans-serif;
   }
-  
+
   .form-label {
     margin-left: 0.3rem;
   }
@@ -204,8 +209,7 @@ const StyledJumbotron = styled.div`
 `;
 
 const HeroContainer = styled(Container)`
-
   padding: 30px;
-`
+`;
 
 export default SubForm;
