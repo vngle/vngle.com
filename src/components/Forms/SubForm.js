@@ -13,7 +13,6 @@ const SubForm = ({ status, message, onSubmitted }) => {
   // object key names are extracted from Mailchimp. Changing them will break the form.
   const [formData, setFormData] = useState({
     EMAIL: "",
-    ZIPCODE: "",
     NUMBER: "",
     "group[293774][4]": false, // SMS opt-in
   });
@@ -23,7 +22,6 @@ const SubForm = ({ status, message, onSubmitted }) => {
     const form = event.currentTarget;
     const submitData = {
       EMAIL: formData.EMAIL,
-      ZIPCODE: formData.ZIPCODE,
       NUMBER: formData.NUMBER,
     };
 
@@ -80,14 +78,19 @@ const SubForm = ({ status, message, onSubmitted }) => {
 
   return (
     <StyledJumbotron>
-      <Container>
+      <HeroContainer>
         <Row>
-          <Col xs={12} md={7} lg={6}>
-            <h1>Get free and balanced news near you</h1>
+          <Col xs={12}>
+            <h1>Stay Updated & Follow Our Movement</h1>
+
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
-              <Row xs={1} sm={2}>
+              <Row className="email-form" xs={1} sm={3}>
                 {formData["group[293774][4]"] === true ? (
-                  <Form.Group controlId="number" as={Col}>
+                  <Form.Group
+                    className="email-form"
+                    controlId="number"
+                    as={Col}
+                  >
                     <Form.Label>
                       Phone Number<span className="text-danger">*</span>
                     </Form.Label>
@@ -121,32 +124,16 @@ const SubForm = ({ status, message, onSubmitted }) => {
                     </Form.Control.Feedback>
                   </Form.Group>
                 )}
-
-                <Form.Group controlId="zipCode" as={Col}>
-                  <Form.Label>
-                    Zip Code<span className="text-danger">*</span>
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter zip code"
-                    name="ZIPCODE"
-                    value={formData.ZIPCODE}
-                    onChange={handleChange}
-                    required
-                  />
-                  <Form.Control.Feedback type="invalid">
-                    Please provide a zip code
-                  </Form.Control.Feedback>
-                </Form.Group>
               </Row>
 
               <Row className="mt-3">
-                <Form.Group as={Col} xs="auto">
+                <Form.Group>
                   <Button type="submit" variant="dark">
                     {status === "sending" ? (
                       <Spinner animation="border" size="sm" />
                     ) : (
-                      "Subscribe"
+                      // "Subscribe"
+                      "SUBSCRIBE"
                     )}
                   </Button>
                 </Form.Group>
@@ -164,36 +151,48 @@ const SubForm = ({ status, message, onSubmitted }) => {
               </Row>
 
               {respMessage}
-
-              <MutedMsg className="text-muted">
-                * We’re operating in Georgia with more states coming soon. Sign
-                ups outside of GA are invited to our national community
-                newsletter until we reach them.
-              </MutedMsg>
             </Form>
           </Col>
         </Row>
-      </Container>
+      </HeroContainer>
     </StyledJumbotron>
   );
 };
 
 const StyledJumbotron = styled.div`
-  background: rgba(255, 204, 52, 0.4);
-  border: 5px solid var(--bs-primary);
-  margin: 3rem 0;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  background: var(--bs-primary);
+  height: 100%;
+
+  .center-element {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  h1 {
+    font-family: "Inter", sans-serif;
+  }
+
+  .form-label {
+    margin-left: 0.3rem;
+  }
+
+  .form-control {
+    border-radius: 0.6rem;
+  }
+
+  .btn {
+    letter-spacing: 1.7px;
+  }
 
   .checkbox-container {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding-top: 15px;
   }
 `;
 
-const MutedMsg = styled.small`
-  font-size: 10px;
+const HeroContainer = styled(Container)`
+  padding: 30px;
 `;
 
 export default SubForm;

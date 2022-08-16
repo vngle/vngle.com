@@ -33,11 +33,11 @@ const Header = ({ siteTitle }) => {
 
   return (
     <StyledHeader>
-      <Navbar collapseOnSelect expand="lg" className="p-4">
+      <Navbar collapseOnSelect expand="lg" className="p-4" >
         <Container>
           <Navbar.Brand>
             <Link to="/" title={siteTitle}>
-              <img alt="Vngle logo" src={Logo} height="70" />
+              <img alt="Vngle logo" src={Logo} height="90" />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -84,8 +84,13 @@ Header.defaultProps = {
 
 const StyledHeader = styled.header`
   & {
-    .navbar {
-      .navbar-nav {
+    background: rgba(247, 247, 247, 0.73);
+    position: sticky;
+    top: 0;  
+    z-index:1001;
+
+    .navbar {      
+        .navbar-nav {
         .nav-link,
         .btn {
           color: var(--bs-dark);

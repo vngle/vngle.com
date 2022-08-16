@@ -11,15 +11,18 @@ Before you could start contributing, let's first get the project up and running 
 vngle.com currently uses [Gatsby.js](https://www.gatsbyjs.com/) as its underlying static site generator framework. Their site contains docs that shows how to [Set Up Your Development Environment](https://www.gatsbyjs.com/docs/tutorial/part-zero) for Gatsby. In summary:
 
 1. Install Node.js
-2. Install Git
-3. Install Gatsby CLI
-4. Install a code editor (we recommend VS Code) & the [Prettier](https://prettier.io/) plugin on the code editor
+2. Install Yarn
+3. Install Git
+4. Install Gatsby CLI
+5. Install a code editor (we recommend VS Code) & the [Prettier](https://prettier.io/) plugin on the code editor
 
 Check out the aforementioned tutorial for details on how to install these tools on your specific operating system.
 
-**Optional**: vngle.com also uses features provided by [Netlify](https://www.netlify.com/), which requires the installation of Netlify CLI to work with them on your local machine. If you are planning to contribute to aspects of the website that requires Netlify CLI, run `npm install netlify-cli -g` on your terminal to install.
+**Set up AWS Amplify**
 
-- Once installed, you need to authenticate with Netlify using `netlify login`. Contact us via GitHub issues or dev@vngle.com for us to provide you with the credentials.
+We use [AWS Amplify](https://aws.amazon.com/amplify/) to connect our Gatsby frontend with AWS backend services (S3, DynamoDB, Cognito, etc.) without too much hassle configurating them.
+
+Work in progress.
 
 ### Running the Website
 

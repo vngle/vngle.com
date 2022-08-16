@@ -130,7 +130,6 @@ const NewsSubForm = ({ status, message, onSubmitted }) => {
               checked={formData["group[293774][4]"]}
               onChange={handleChange}
               inline
-              custom
             />
           </Form.Group>
         </Form.Group>
@@ -156,7 +155,7 @@ const NewsSubForm = ({ status, message, onSubmitted }) => {
 
         {respMessage}
 
-        <Button type="submit" block className="mt-3">
+        <Button type="submit" className="mt-3">
           {status === "sending" ? (
             <Spinner animation="border" size="sm" />
           ) : (
