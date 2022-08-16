@@ -1,42 +1,45 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import styled from "styled-components";
 
 const SinContainer = ({ title, titleColor, paragraph, bgColor, aside }) => {
   return (
-    <Container titleColor= {titleColor} bgColor={bgColor} aside={aside}>
-      <div className="sub-container">
+    <Wrapper
+      titleColor={titleColor}
+      bgColor={bgColor}
+      aside={aside}
+      className="p-4"
+    >
+      <Container className="sub-container">
         <div>
           <h1>{title}</h1>
-          <p>{paragraph}</p>
+          {paragraph && <p>{paragraph}</p>}
         </div>
         <div className="btn-container">{aside}</div>
-      </div>
-    </Container>
+      </Container>
+    </Wrapper>
   );
 };
 
-const Container = styled.div`
-  position: relative;
-  padding: 0rem 0.75rem;
+const Wrapper = styled.div`
+  background-color: ${(props) => props.bgColor};
 
   h1 {
     color: ${(props) => props.titleColor};
-    padding-top: 2rem;
+    margin-bottom: 0;
   }
 
   p {
     color: var(--bs-primary);
+    margin-bottom: 0;
   }
 
   p,
   h1 {
     font-family: "Inter", sans-serif;
-    margin-left: 10px;
   }
 
-  .sub-container {
-    background-color: ${(props) => props.bgColor};
-    padding: 10px 10px;
+  .container {
     display: ${(props) => (props.aside ? "flex" : "block")};
   }
 `;
