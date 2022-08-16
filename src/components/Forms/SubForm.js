@@ -3,8 +3,6 @@ import { Form, Button, Spinner, Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import DOMPurify from "dompurify";
 
-import { Fade } from "react-reveal";
-
 /**
  * All props are passed in by MailchimpSubscribe component
  * @param {string} status Subscription status (success, error, or sending)
@@ -79,18 +77,20 @@ const SubForm = ({ status, message, onSubmitted }) => {
   }
 
   return (
-  
-  <Fade bottom>
     <StyledJumbotron>
       <HeroContainer>
         <Row>
           <Col xs={12}>
-            <h1 className="center-element">Stay Updated & Follow Our Movement</h1>
-            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+            <h1>Stay Updated & Follow Our Movement</h1>
 
-              <Row className="email-form"xs={1} sm={3}>
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+              <Row className="email-form" xs={1} sm={3}>
                 {formData["group[293774][4]"] === true ? (
-                  <Form.Group className="email-form" controlId="number" as={Col}>
+                  <Form.Group
+                    className="email-form"
+                    controlId="number"
+                    as={Col}
+                  >
                     <Form.Label>
                       Phone Number<span className="text-danger">*</span>
                     </Form.Label>
@@ -127,7 +127,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
               </Row>
 
               <Row className="mt-3">
-                <Form.Group class="center-element">
+                <Form.Group>
                   <Button type="submit" variant="dark">
                     {status === "sending" ? (
                       <Spinner animation="border" size="sm" />
@@ -137,7 +137,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
                     )}
                   </Button>
                 </Form.Group>
-                <Form.Group as={Col} className="checkbox-container center-element">
+                <Form.Group as={Col} className="checkbox-container">
                   <Form.Check
                     type="checkbox"
                     id="sms-confirm"
@@ -151,24 +151,17 @@ const SubForm = ({ status, message, onSubmitted }) => {
               </Row>
 
               {respMessage}
-              
             </Form>
           </Col>
         </Row>
       </HeroContainer>
     </StyledJumbotron>
-    </Fade>
   );
 };
 
 const StyledJumbotron = styled.div`
-
   background: var(--bs-primary);
-  margin: 0.2rem 0;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-  margin-left: 12px;
-  margin-right: 12px;
+  height: 100%;
 
   .center-element {
     align-items: center;
@@ -179,14 +172,9 @@ const StyledJumbotron = styled.div`
   h1 {
     font-family: "Inter", sans-serif;
   }
-  
+
   .form-label {
     margin-left: 0.3rem;
-  }
-
-  .email-form {
-    align-items: center;
-    justify-content: center;
   }
 
   .form-control {
@@ -204,8 +192,7 @@ const StyledJumbotron = styled.div`
 `;
 
 const HeroContainer = styled(Container)`
-
   padding: 30px;
-`
+`;
 
 export default SubForm;
