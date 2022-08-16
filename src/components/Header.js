@@ -31,9 +31,14 @@ const Header = ({ siteTitle }) => {
     { name: "Submit a tip", to: "/report" },
   ];
 
+  const dropdownLinksServices = [
+    { name: "Newswire", to: "/services/news-wire" },
+    { name: "Creative Content", to: "/services/Creative-content" },
+  ];
+
   return (
     <StyledHeader>
-      <Navbar collapseOnSelect expand="lg" className="p-4" >
+      <Navbar collapseOnSelect expand="lg" className="p-4">
         <Container>
           <Navbar.Brand>
             <Link to="/" title={siteTitle}>
@@ -43,6 +48,21 @@ const Header = ({ siteTitle }) => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-end text-center">
             <Nav>
+              <Dropdown>
+                <Dropdown.Toggle as={Button} className="services">
+                  Services
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  {dropdownLinksServices.map((link, i) => {
+                    return (
+                      <Dropdown.Item as="div" key={i} role="menu-item">
+                        <Link to={link.to}>{link.name}</Link>
+                      </Dropdown.Item>
+                    );
+                  })}
+                </Dropdown.Menu>
+              </Dropdown>
+
               {navLinks.map((link, i) => {
                 return (
                   <Nav.Item as="div" key={i} className="mx-lg-2">
@@ -52,6 +72,22 @@ const Header = ({ siteTitle }) => {
                   </Nav.Item>
                 );
               })}
+
+              {/* <Dropdown>
+                <Dropdown.Toggle as={Button} className="services">
+                  Services
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  {dropdownLinksServices.map((link, i)=>{
+                    return(
+                      <Dropdown.Item as="div" key={i} role="menu-item">
+                        <Link to={link.to}>{link.name}</Link>
+                      </Dropdown.Item>
+                    )
+                  })}
+                </Dropdown.Menu>
+              </Dropdown> */}
+
               <Dropdown as={Nav.Item}>
                 <Dropdown.Toggle as={Button} className="ml-lg-2">
                   Get Involved
@@ -86,11 +122,11 @@ const StyledHeader = styled.header`
   & {
     background: rgba(247, 247, 247, 0.73);
     position: sticky;
-    top: 0;  
-    z-index:1001;
+    top: 0;
+    z-index: 1001;
 
-    .navbar {      
-        .navbar-nav {
+    .navbar {
+      .navbar-nav {
         .nav-link,
         .btn {
           color: var(--bs-dark);

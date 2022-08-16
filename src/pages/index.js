@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { Container, Image, Button, Col, Row } from "react-bootstrap";
+import { Container, Image, Col, Row } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import { Fade } from "react-reveal";
 import { motion } from "framer-motion";
@@ -283,7 +283,7 @@ const HeroContainer = styled(Container)`
 
   .w-container {
     background: #1a0117;
-    color: var(--bs-primary);
+    color: var(--bs-primary);-
     text-align: center;
     padding: 1 em;
 
