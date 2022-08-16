@@ -13,7 +13,7 @@ import Seo from "../components/Seo";
 import Slider from "../components/Sliders/Slider";
 import Grid from "../components/Grids/Grid";
 import SubForm from "../components/Forms/SubForm";
-import Sub from "@components/Forms/sub";
+import Sub from "../components/Forms/sub";
 import NewBanner from "../components/Banner";
 import NewContainer from "../components/Containers/SingleContainer";
 import TextContainer from "../components/Containers/TextContainer";
