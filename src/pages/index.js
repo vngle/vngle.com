@@ -37,8 +37,8 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
         </Fade>
 
         <p className="font-sans-serif h5">
-          <span>&mdash;</span> Nonpartisan News and Media Services to Empower
-          Communities Everywhere <span>&mdash;</span>
+          <span>&mdash;</span> News and Media Services to Empower Communities
+          Everywhere <span>&mdash;</span>
         </p>
 
         <h2 className="display-4 fw-bolder">
@@ -46,7 +46,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             Nonpartisan{" "}
             <Typed
               strings={["By the People", "For the People"]}
-              typeSpeed={30}
+              typeSpeed={20}
               backDelay={5000}
               showCursor={false}
               loop
