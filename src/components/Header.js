@@ -47,12 +47,15 @@ const Header = ({ siteTitle }) => {
     { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
   ];
 
+<<<<<<< master
   const dropdownLinksServices = [
     { name: "Newsire", to: "/services/news-wire" },
     { name: "Creative Content", to: "/services/creative-content" },
     { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
   ];
 
+=======
+>>>>>>> Updates
   return (
     <StyledHeader>
       <Navbar collapseOnSelect expand="lg" className="p-4">

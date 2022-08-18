@@ -17,9 +17,16 @@ const SubForm = ({ status, message, onSubmitted }) => {
     LAST: "",
     EMAIL: "",
 <<<<<<< HEAD
+<<<<<<< HEAD
     MESSAGE: "",
 =======
 >>>>>>> 148ca85 (Merge conflict)
+=======
+<<<<<<< master
+=======
+    MESSAGE: "",
+>>>>>>> Updates
+>>>>>>> ccecdf0 (Updates)
 
     "group[293774][4]": true, //messagenot opt-in
   });
@@ -31,7 +38,11 @@ const SubForm = ({ status, message, onSubmitted }) => {
       FIRST: formData.FIRST,
       LAST: formData.LAST,
       EMAIL: formData.EMAIL,
+<<<<<<< HEAD
       MESSAGE: formData.MESSAGE,
+=======
+      NUMBER: formData.MESSAGE,
+>>>>>>> ccecdf0 (Updates)
     };
 
     // only send checkbox status if checked
@@ -120,9 +131,47 @@ const SubForm = ({ status, message, onSubmitted }) => {
           <Col xs={12} md={7} lg={6}>
             <h1>Let’s work together</h1>
             <h2>Get in touch today</h2>
+<<<<<<< master
 
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
               <Row className="email-form" xs={1} sm={3}>
+=======
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+            <form action="https://getform.io/f/6fa17a80-9b69-44dc-b894-27fe292b3795" method="POST">
+              <Row xs={1} sm={2}>
+                <Form.Group controlId="name" as={Col}>
+                  <Form.Label>
+                    First Name <span className="text-danger">*</span>
+                  </Form.Label>
+                  <Form.Control
+                    type="first"
+                    placeholder="Enter first name"
+                    name="FIRST"
+                    value={formData.NAME}
+                    onChange={handleChange}
+                    required
+                  />
+                </Form.Group>
+              </Row>
+
+              <Row xs={1} sm={2}>
+                <Form.Group controlId="name" as={Col}>
+                  <Form.Label>
+                    Last Name<span className="text-danger">*</span>
+                  </Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter last name"
+                    name="LAST"
+                    value={formData.NAME}
+                    onChange={handleChange}
+                    required={formData["group[293774][4]"]}
+                  />
+                </Form.Group>
+              </Row>
+
+              <Row xs={1} sm={2}>
+>>>>>>> Updates
                 <Form.Group controlId="email" as={Col}>
                   <Form.Label>
                     Email address <span className="text-danger">*</span>
@@ -142,6 +191,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
               </Row>
 >>>>>>> 148ca85 (Merge conflict)
 
+<<<<<<< HEAD
                 <Row xs={1} sm={2}>
                   <Form.Group controlId="name" as={Col}>
                     <Form.Label>
@@ -175,6 +225,36 @@ const SubForm = ({ status, message, onSubmitted }) => {
                     </Form.Control.Feedback>
                   </Form.Group>
                 </Row>
+=======
+              <Row xs={4} sm={2}>
+                <Form.Group controlId="Textarea" as={Col}>
+                  <Form.Label>
+                    Message <span className="text-danger">*</span>
+                  </Form.Label>
+                  <Form.Control
+                    type="textarea"
+                    placeholder=""
+                    name="MESSAGE"
+                    value={formData.MESSAGE}
+                    onChange={handleChange}
+                    required={formData["group[293774][4]"]}
+                    style={{ height: "100px" }}
+                  />
+                  <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
+                </Form.Group>
+              </Row>
+
+              <Row className="mt-3">
+                <Form.Group as={Col} xs="auto">
+                  <Button type="submit" variant="dark">
+                    {status === "sending" ? (
+                      <Spinner animation="border" size="sm" display="flex" />
+                    ) : (
+                      "Contact Us"
+                    )}
+                  </Button>
+                </Form.Group>
+>>>>>>> ccecdf0 (Updates)
 
 <<<<<<< HEAD
                 <Row xs={1} sm={2}>
@@ -212,7 +292,11 @@ const SubForm = ({ status, message, onSubmitted }) => {
 =======
                 {respMessage}
               </Row>
+<<<<<<< HEAD
 >>>>>>> 148ca85 (Merge conflict)
+=======
+              </form>
+>>>>>>> ccecdf0 (Updates)
             </Form>
           </Col>
         </Row>
@@ -223,6 +307,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
 
 const StyledJumbotron = styled.div`
   background: var(--bs-primary);
+<<<<<<< HEAD
   // margin-top: 2rem;
   // margin-bottom: 5rem;
   margin: 0.4rem;
@@ -232,6 +317,35 @@ const StyledJumbotron = styled.div`
     font-family: "Inter", sans-serif;
     margin-top:2rem;
     margin-left:10rem;
+=======
+  height: 100%;
+
+  .center-element {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  h1 {
+    font-family: "Inter", sans-serif;
+  }
+
+  .form-label {
+    margin-left: 0.3rem;
+  }
+
+  .form-control {
+    border-radius: 0.6rem;
+  }
+
+  .btn {
+    letter-spacing: 1.7px;
+  }
+
+  .checkbox-container {
+    flex-direction: column;
+    padding-top: 15px;
+>>>>>>> ccecdf0 (Updates)
   }
 
   .form-label {
