@@ -14,8 +14,10 @@ import DOMPurify from "dompurify";
 const SubForm = ({ status, message, onSubmitted }) => {
   // object key names are extracted from Mailchimp. Changing them will break the form.
   const [formData, setFormData] = useState({
+    FIRST: "",
+    LAST: "",
     EMAIL: "",
-
+    MESSAGE: "",
 
     "group[293774][4]": true, //messagenot opt-in
   });
@@ -24,13 +26,16 @@ const SubForm = ({ status, message, onSubmitted }) => {
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     const submitData = {
+      FIRST: formData.FIRST,
+      LAST: formData.LAST,
       EMAIL: formData.EMAIL,
+      NUMBER: formData.MESSAGE,
     };
 
     // only send checkbox status if checked
     // Mailchimp will populate field if any value is sent
-    if (formData["group[293774][1]"]) {
-      submitData["group[293774][1]"] = formData["group[293774][1]"];
+    if (formData["group[293774][4]"]) {
+      submitData["group[293774][4]"] = formData["group[293774][4]"];
     }
 
     if (!form.checkValidity()) {
@@ -85,10 +90,42 @@ const SubForm = ({ status, message, onSubmitted }) => {
           <Col xs={12} md={7} lg={6}>
             <h1>Let’s work together</h1>
             <h2>Get in touch today</h2>
-    
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <Row className="email-form"xs={1} sm={3}>
-            <Form.Group controlId="email" as={Col}>
+            <form action="https://getform.io/f/6fa17a80-9b69-44dc-b894-27fe292b3795" method="POST">
+              <Row xs={1} sm={2}>
+                <Form.Group controlId="name" as={Col}>
+                  <Form.Label>
+                    First Name <span className="text-danger">*</span>
+                  </Form.Label>
+                  <Form.Control
+                    type="first"
+                    placeholder="Enter first name"
+                    name="FIRST"
+                    value={formData.NAME}
+                    onChange={handleChange}
+                    required
+                  />
+                </Form.Group>
+              </Row>
+
+              <Row xs={1} sm={2}>
+                <Form.Group controlId="name" as={Col}>
+                  <Form.Label>
+                    Last Name<span className="text-danger">*</span>
+                  </Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter last name"
+                    name="LAST"
+                    value={formData.NAME}
+                    onChange={handleChange}
+                    required={formData["group[293774][4]"]}
+                  />
+                </Form.Group>
+              </Row>
+
+              <Row xs={1} sm={2}>
+                <Form.Group controlId="email" as={Col}>
                   <Form.Label>
                     Email address <span className="text-danger">*</span>
                   </Form.Label>
@@ -106,6 +143,24 @@ const SubForm = ({ status, message, onSubmitted }) => {
                 </Form.Group>
               </Row>
 
+              <Row xs={4} sm={2}>
+                <Form.Group controlId="Textarea" as={Col}>
+                  <Form.Label>
+                    Message <span className="text-danger">*</span>
+                  </Form.Label>
+                  <Form.Control
+                    type="textarea"
+                    placeholder=""
+                    name="MESSAGE"
+                    value={formData.MESSAGE}
+                    onChange={handleChange}
+                    required={formData["group[293774][4]"]}
+                    style={{ height: "100px" }}
+                  />
+                  <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
+                </Form.Group>
+              </Row>
+
               <Row className="mt-3">
                 <Form.Group as={Col} xs="auto">
                   <Button type="submit" variant="dark">
@@ -120,6 +175,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
                 {respMessage}
                 
               </Row>
+              </form>
             </Form>
           </Col>
         </Row>
@@ -129,16 +185,34 @@ const SubForm = ({ status, message, onSubmitted }) => {
 };
 
 const StyledJumbotron = styled.div`
-  background: #e512d0;
-  margin: 0rem;
-  padding-top: 0.2rem;
-  padding-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+  background: var(--bs-primary);
+  height: 100%;
 
-  .row {
+  .center-element {
+    align-items: center;
     justify-content: center;
-    text-align: center;
+    display: flex;
+  }
+
+  h1 {
+    font-family: "Inter", sans-serif;
+  }
+
+  .form-label {
+    margin-left: 0.3rem;
+  }
+
+  .form-control {
+    border-radius: 0.6rem;
+  }
+
+  .btn {
+    letter-spacing: 1.7px;
+  }
+
+  .checkbox-container {
+    flex-direction: column;
+    padding-top: 15px;
   }
 `;
 

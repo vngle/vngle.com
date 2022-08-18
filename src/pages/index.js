@@ -16,8 +16,8 @@ import SubForm from "../components/Forms/SubForm";
 import Sub from "@components/Forms/sub";
 import NewBanner from "../components/Banner";
 import NewContainer from "../components/Containers/SingleContainer";
-import TextContainer from "../components/Containers/TextContainer";
-import ButtonContainer from "../components/Containers/ButtonContainer";
+// import TextContainer from "../components/Containers/TextContainer";
+// import ButtonContainer from "../components/Containers/ButtonContainer";
 
 import World from "@images/home/world.svg";
 import M from "@images/home/m.gif";
@@ -211,6 +211,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
         </div>
       </Container>
 
+<<<<<<< Updated upstream
       <TextContainer
         title="Our impact won the 🌎 Community Award at MIT."
         titleColor="black"
@@ -223,6 +224,25 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
         </div>
         < Sub />
       </HeroContainer>
+=======
+      <Container fluid>
+        <NewContainer
+          title="Our impact won the 🌎 Community Award at MIT."
+          titleColor="black"
+          bgColor="#cdfd01"
+        />
+
+        <Row>
+          <Col xs={12} md={4} lg={3} xl={2}>
+            <img src={MitGif} alt="" width="100%" />
+          </Col>
+          <Col xs={12} md={8} lg={9} xl={10}>
+            <Sub />
+          </Col>
+        </Row>
+        {/* <Sub /> */}
+      </Container>
+>>>>>>> Stashed changes
     </Layout>
   );
 };

@@ -31,11 +31,6 @@ const Header = ({ siteTitle }) => {
     { name: "Submit a tip", to: "/report" },
   ];
 
-  const dropdownLinksServices = [
-    { name: "Newswire", to: "/services/news-wire" },
-    { name: "Creative Content", to: "/services/Creative-content" },
-  ];
-
   return (
     <StyledHeader>
       <Navbar collapseOnSelect expand="lg" className="p-4">
