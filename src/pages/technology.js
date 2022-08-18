@@ -41,16 +41,13 @@ function technology() {
             <h1 className="main-text fw-bolder">Our Tech</h1>
           </div>
           <StaticImage
-            src="../images/technology/headerTechPage.jpeg"
+            src="../images/technology/tech.jpeg"
             className="backgroundImg"
           />
         </div>
       </Title>
       {/* -------------------Navigation Bar ---------------------- */}
-      <Navbar
-        id="nav-sections"
-        className="navbar"
-      >
+      <Navbar id="nav-sections" className="navbar">
         <ul className="nav nav-pills">
           <li className="nav-item">
             <a className="nav-link" href="#Top">
@@ -70,10 +67,10 @@ function technology() {
         </ul>
       </Navbar>
       {/* ----------------------------------------------------------------------------------- */}
-      <Section className="white-background">
-        <h1 className="container text-center reveal active text-color">
+      <Section className="black-background">
+        <h1 className="container text-center reveal active text-white">
           We Bring Together Grassroots Insights & Web3 Digital Forensics To
-          Verfiy Info At the Ground Level
+          Verfiy Info at the Ground Level
         </h1>
       </Section>
 
@@ -94,18 +91,18 @@ function technology() {
               </h1>
             </div>
             <StaticImage
-              src="../images/technology/Mobile.jpg"
+              src="../images/technology/Mobile.jpeg"
               className="backgroundImg"
             />
           </div>
         </Title>
         <Title>
           <div className="content-wrapper">
-            <div className="container text-wrapper container">
+            <div className="container text-wrapper">
               <p className="mobile-text reveal active">
-                The Reporter App equips trained grassroots reporters with our
-                blockchain-based digital forensics technology to publically
-                authenticate the origin of stories from the field
+                The Reporter App Equips Trained Grassroots Reporters with our
+                Blockchain-Based Digital Forensics Technology to Publically
+                Authenticate the Origin of Stories from the Field
               </p>
             </div>
             <StaticImage
@@ -114,105 +111,59 @@ function technology() {
             />
           </div>
         </Title>
-        {/* -----------------------------VNGLE LOGO AND MOBILE APP------------------------------- */}
-        {/*
         <VngleLogo>
-        <div className="d-flex flex-wrap container-fluid">
-        <div className="d-flex align-items-start ">
-        <div className="container d-flex flex-column left-section">
-          <div className="container title-wrapper">
-            <h2 className="display-5 fw-bolder text-left">
-              How We Capture<br/>
-              &<br/>
-              Fact Check Content<br/>
-            </h2>
-          </div>
-            <div className="cards">
-              <div className="d-flex flex-column">
-                <div className="text-card yellow-border">
-                  <h3 className="fw-bolder">Local Assignments</h3>
-                  <p>
-                  <br />
-                      We work with trained members of the Vngle community to capture
-                      stories near them
-                  </p>
-                </div>
-                <div className="text-card pink-border">
-                  <h3 className="fw-bolder">Blockchain Record</h3>
-                  <p>
-                    <br/>
-                    The content is recorded using public ledger technology, making
-                    its origin accessible to newswire subscribers & partners
-                  </p>
-                </div>
-              </div>
-              <div className="cards align-self-center">
-                <div className="text-card cyan-border">
-                  <h3 className="fw-bolder">Editorial Review</h3>
-                  <p>
-                    <br/>
-                    We ensure all content undergoes review from our editorial team
-                    & cross-referenced to ensure credibility
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-            <StaticImage src="../images/technology/iPhone-cover.jpeg" className="img-fluid align-self-center iphone-img"/>
-            </div>
-          </div>
-        </VngleLogo>
-        */}
-        <VngleLogo>
-        <div className="d-flex flex-wrap container-fluid background">
-          <div className="height">
-        <div className="d-flex align-items-start media">
-          <Title>
-            <div className="content-wrapper">
-              <div className="text-wrapper container">
-                <h2 className="display-6 text-center">
-                    How We Capture<br/>
-                    &<br/>
-                    Fact Check Content<br/>
-                </h2>
-              </div>
-              <StaticImage
-                src="../images/technology/Iphone-Cover-2.jpeg"
-                className="backgroundImg Iphone-img"
-              />
-            </div>
-          </Title>
-          <div className="cards container d-flex flex-column align-self-center">
-              <div className="d-flex flex-column">
-                <div className="text-card yellow-border">
-                  <h3 className="fw-bolder">Local Assignments</h3>
-                  <p>
-                  <br />
-                      We work with trained members of the Vngle community to capture
-                      stories near them
-                  </p>  
-                </div>
-                <div className="text-card pink-border">
-                  <h3 className="fw-bolder">Blockchain Record</h3>
-                  <p>
-                    <br/>
-                    The content is recorded using public ledger technology, making
-                    its origin accessible to newswire subscribers & partners
-                  </p>
-                </div>
-                <div className="text-card cyan-border">
-                  <h3 className="fw-bolder">Editorial Review</h3>
-                    <p>
-                      <br/>
-                      We ensure all content undergoes review from our editorial team
-                      & cross-referenced to ensure credibility
-                    </p>
+          <div className="d-flex flex-wrap container-fluid background">
+            <div className="height">
+              <div className="d-flex media">
+                <Title className="d-flex justify-content-center">
+                  <div className="content-wrapper mobile-wrapper d-flex justify-content-center">
+                    <div className="text-wrapper container">
+                      <h2 className="display-6 text-center mobile-txt">
+                        How We Capture
+                        <br />
+                        &<br />
+                        Fact Check Content
+                        <br />
+                      </h2>
+                    </div>
+                    <StaticImage
+                      src="../images/technology/Iphone-Cover-2.jpeg"
+                      className="backgroundImg Iphone-img"
+                    />
+                  </div>
+                </Title>
+                <div className="cards container d-flex flex-column align-self-center">
+                  <div className="d-flex flex-column">
+                    <div className="text-card yellow-border">
+                      <h3 className="fw-bolder">Local Assignments</h3>
+                      <p>
+                        <br />
+                        We work with trained members of the Vngle community to
+                        capture stories near them
+                      </p>
+                    </div>
+                    <div className="text-card pink-border">
+                      <h3 className="fw-bolder">Blockchain Record</h3>
+                      <p>
+                        <br />
+                        The content is recorded using public ledger technology,
+                        making its origin accessible to newswire subscribers &
+                        partners
+                      </p>
+                    </div>
+                    <div className="text-card cyan-border">
+                      <h3 className="fw-bolder">Editorial Review</h3>
+                      <p>
+                        <br />
+                        We ensure all content undergoes review from our
+                        editorial team & cross-referenced to ensure credibility
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          </div>
-        </div>
         </VngleLogo>
         {/* --------------------------------------------------------------------------------- */}
         <Section>
@@ -293,14 +244,15 @@ function technology() {
           </div>
         </Cards>
       </Scroll>
-      <Section  className="cyan-background">
+      <Section className="cyan-background">
         <div className="container">
           <h1 className="cyan fw-bolder">
-            Get Access To More Verified Insights On Your Area:{" "}
+            Get Access To More Verified Insights On Your Area:
           </h1>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLScpXPlS3MOqr9-P5E4A_F2JFt4dfspI-OY2W-xlAPWUOT9yoA/viewform"
             target="blank"
+            className="text-decoration-none"
           >
             <button className="btn cyanbtn">Contact Us Today</button>
           </a>
@@ -342,6 +294,28 @@ const Title = styled.div`
     font-size: 4rem;
   }
 
+  .main-text {
+    font-size: 6rem;
+    margin-bottom: 12rem;
+    margin-top: 15rem;
+  }
+
+  .mobile-text {
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 2.25rem;
+  }
+
+  .text-wrapper > h2 {
+    margin-top: 5rem;
+    margin-right: 1px;
+    padding: 3rem;
+  }
+
+  .Iphone-img {
+    border-radius: 3rem;
+  }
+
   //---------------------REVEAL FROM BOTTOM --------------------------
 
   .reveal {
@@ -356,39 +330,6 @@ const Title = styled.div`
     opacity: 1;
   }
 
-  //-----------------------------------------------------------------
-
-  #title {
-    z-index: 11;
-    letter-spacing: 4rem;
-    font-size: 5rem;
-    font-weight: lighter;
-    display: flex;
-    justify-content: center;
-    vertical-align: top;
-  }
-
-  .main-text {
-    font-size: 6rem;
-    margin-bottom: 12rem;
-    margin-top: 15rem;
-  }
-
-  .mobile-text {
-    margin: 0 auto;
-    font-style: italic;
-    font-size: 2.25rem;
-  }
-
-  .text-wrapper > h2{
-    margin-top:5rem;
-    margin-right:1px;
-    padding: 3rem;
-  }
-
-  .Iphone-img{
-    border-radius:3rem;
-  }
   //-------------------------------@MEDIA QUERIES------------------------------
 
   @media (max-width: 27rem) {
@@ -410,6 +351,31 @@ const Title = styled.div`
       font-size: 1.25rem;
       padding: 0;
     }
+
+    .Iphone-img.backgroundImg {
+      width: 50%;
+      border-radius: 1rem;
+    }
+
+    .backgroundImg {
+      display: flex;
+      justify-content: center;
+    }
+
+    .mobile-wrapper > .text-wrapper {
+      padding: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    .text-wrapper > h2 {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 47rem) {
+    .mobile-wrapper > .text-wrapper {
+      padding: 6rem;
+    }
   }
 `;
 
@@ -417,7 +383,6 @@ const Section = styled.div`
   align-items: center;
   color: white;
   background-color: black;
-  overflow: hidden;
   position: relative;
   .container {
     padding: 70px 0;
@@ -440,14 +405,18 @@ const Section = styled.div`
   }
 
   .backgroundImg {
-    position:absolute;
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: 0;
   }
 
-  &.white-background{ background: white }
-  &.cyan-background { background: #1EE4F0;}
+  &.black-background {
+    background: black;
+  }
+  &.cyan-background {
+    background: #1ee4f0;
+  }
 
   .content-wrapper {
     display: flex;
@@ -460,8 +429,6 @@ const Section = styled.div`
     align-items: center;
     text-align: center;
   }
-
-  .text-color{ color: black; }
 
   .reveal {
     position: relative;
@@ -490,11 +457,6 @@ const Section = styled.div`
     color: white;
     font-size: 2rem;
     margin-top: 8rem;
-  }
-
-  .contactUs {
-    font-size: 3rem;
-    margin: 9rem auto;
   }
 
   .blockchain-text {
@@ -531,7 +493,7 @@ const Section = styled.div`
       margin: 5rem auto;
     }
 
-    .blockchainTxt {
+    .blockchain-text {
       margin: 0 auto;
       font-size: 1rem;
     }
@@ -552,13 +514,13 @@ const Section = styled.div`
 `;
 
 const Cards = styled.div`
-  background:white;
-  color: black;
+  background: #e2ded8;
+  color: white;
   font-family: Inter, sans-serif;
 
-  .container{
-    padding-top:2rem;
-    padding-bottom:2rem;
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .cards {
@@ -569,6 +531,9 @@ const Cards = styled.div`
     margin: 1.25rem;
     padding: 1.25rem;
     border-radius: 1rem;
+    border-style: solid;
+    border-color: #e512d0;
+    border-width: thick;
   }
 
   .magenta {
@@ -600,9 +565,15 @@ const Cards = styled.div`
     font-family: Inter, sans-serif;
   }
 
-  .gray{ background: #D9D9D9; }
-  &.background{ background:#E512D0; }
-  .text-background { background: white;}
+  .gray {
+    background: #615e64;
+  }
+  &.background {
+    background: #e512d0;
+  }
+  .text-background {
+    background: white;
+  }
   //---------------------------------MEDIA QUERIES---------------------------------
 
   @media (max-width: 46.25rem) {
@@ -644,9 +615,9 @@ const Navbar = styled.div`
   position: sticky;
   top: 0;
   z-index: 15;
-  background: #67646c;
+  background: #ffcc35;
   .nav-link {
-    color: #e2ded8;
+    color: black;
     font-size: 1rem;
     font-weight: 600;
   }
@@ -660,78 +631,72 @@ const Navbar = styled.div`
 `;
 
 const VngleLogo = styled.div`
-h2, h3, p{
-  font-family: Inter, sans-serif;
-}
-  .title-wrapper{
+  h2,
+  h3,
+  p {
+    font-family: Inter, sans-serif;
+  }
+  .title-wrapper {
     display: flex;
     align-items: center;
   }
 
-  .left-section{
+  .left-section {
     margin: 5rem 0;
   }
 
-  //For Vngle Logo
-  .background-img{
-    max-width: 40%;
-    z-index: 0;
-    margin: 3rem 3rem;
-  }
-
-  .iphone-img{
+  .iphone-img {
     max-width: 30%;
     z-index: 0;
-    border-radius:3rem;
+    border-radius: 3rem;
   }
 
   .container > .div {
     flex-basis: 100%;
   }
- 
+
   .cards {
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
   }
 
   .cards .text-card {
     margin: 1.25rem;
     padding: 1.25rem;
     border-radius: 1rem;
+    border-width: thick;
   }
 
   .text-card {
-    background: #D9D9D9;
+    background: #d9d9d9;
   }
 
-  .yellow-border{ 
-    border-style:solid;
-    border-color: #FFCC35;
+  .yellow-border {
+    border-style: solid;
+    border-color: #ffcc35;
   }
-  .pink-border { 
-    border-style:solid;
-    border-color: #E512D0; 
+  .pink-border {
+    border-style: solid;
+    border-color: #e512d0;
   }
-  .cyan-border { 
-    border-style:solid; 
-    border-color: #1EE4F0; 
-  }
-
-  .background{
-    background:#615e64;
+  .cyan-border {
+    border-style: solid;
+    border-color: #1ee4f0;
   }
 
-  .height{
+  .background {
+    background: black;
+  }
+
+  .height {
     margin: 5rem 0;
   }
 
   //-------------------------------@MEDIA QUERIES------------------------------
-  @media(max-width: 46.25rem){
-    .media{
-      flex-direction:column;
+  @media (max-width: 46.25rem) {
+    .media {
+      flex-direction: column;
     }
-
   }
-
-`
+`;
 export default technology;
