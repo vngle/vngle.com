@@ -6,12 +6,16 @@ import { StaticImage } from "gatsby-plugin-image";
 const newsWire = () => {
   return (
     <Layout>
+      
       <MainContainer>
         <Title>
           <div className="container">
+            <div className="text-wrapper d-flex flex-column">
             <h1 className="display-1">
-              Got a Scoop but Don't Know Where to Start?{" "}
+              News Wire
             </h1>
+            <p>SERVICES</p>
+            </div>
             <StaticImage
               src="../../images/services/newsWire/mainHeader.jpeg"
               className="backgroundImg"
@@ -47,26 +51,30 @@ const newsWire = () => {
                 & With Our Patented Mobile Forensics Blockchain Technology
               </h1>
               <StaticImage
-                src="../../images/services/newsWire/techHeader.jpeg"
+                src="../../images/services/newsWire/mobile-tech.jpg"
                 className="backgroundImg"
               />
             </div>
           </div>
         </Animation>
         <Animation>
-          <div className="container">
-            <div className="section">
+            <div className="section content-wrapper">
+              <div className="text-wrapper">
               <h1 className="display-5">
                 We Curate More Verified Local Insights for Newsrooms
               </h1>
+              </div>
+              <StaticImage 
+              src="../../images/services/newsWire/journey.jpg"
+              className="background-img-cover"
+              />
             </div>
-          </div>
         </Animation>
         <NewsWire>
           <h2 className="display-5">
             Equipping Them With Access to a Transparent Record of Exactly <br />
             Where, When, & How <br />
-            Digital Content Originates in Order to Better Combat New Deserts and
+            Digital Content Originates in Order to Better Combat New Deserts &
             Traces of Misinformation
           </h2>
           <div className="container">
@@ -79,11 +87,16 @@ const newsWire = () => {
             Audiences through
           </h2>
         </div>
-        <div className="container">
-          <h2 className="display-5">
-            Trusted and Truly Representative Original Local Content
-          </h2>
-        </div>
+        <Animation>
+          <div className="content-wrapper">
+            <div className="text-wrapper">
+              <h2 className="display-5 text-align-right text-white">
+                Trusted and Truly Representative Original Local Content
+              </h2>
+            </div>
+            <StaticImage src="../../images/services/newsWire/background.jpeg" className="background-img-cover"/>
+          </div>
+        </Animation>
         <div className="container text-right">
           <h2 className="display-6">
             We Deploy Trained Local Experts & Patented Verification Technology
@@ -91,36 +104,26 @@ const newsWire = () => {
             Perspectives
           </h2>
         </div>
-        <Title>
-          <h1 className="display-1 text-capitalize">
-            Are you a media organization?
-          </h1>
-          <h1 className="display-3 text-capitalize">
-            Need to engage diverse audiences? <br />
-            need a reliable hyper-local insights? <br />
-            need to monitor your community? <br />
-          </h1>
+        <Title className="blue-background">
+            <h1 className="display-1 text-capitalize">
+              Are you a media organization?
+            </h1>
+            <h1 className="display-3 text-capitalize">
+              Need to engage diverse audiences? <br />
+              need a reliable hyper-local insights? <br />
+              need to monitor your community? <br />
+            </h1>
         </Title>
-        <div className="container text-capitalize">
-          <h2 className="display-4">
-            we can support you with our <br />
-            Media Services
-          </h2>
-        </div>
-        <Cards>
-          <div className="container">
-            <div className="cards">
-              <div className="text-cards"></div>
-              <div className="text-cards"></div>
-            </div>
-          </div>
-        </Cards>
       </MainContainer>
     </Layout>
   );
 };
 
+
 const Title = styled.h1`
+  &.blue-background{
+    background: #1EE4F0;
+  }
   background: linear-gradient(
     to right,
     rgba(248, 200, 65, 1),
@@ -142,12 +145,15 @@ const Title = styled.h1`
     max-width: 40%;
     z-index: 0;
     margin: 3rem auto;
+    border-radius: 1rem;
   }
 
-  h1 {
-    font-family: Inter, sans-serif;
+  h1 , p{
     z-index: 10;
     padding-left: 2rem;
+  }
+  h1, h2{
+    font-family:Inter, sans-serif;
   }
 `;
 const Animation = styled.div`
@@ -163,11 +169,46 @@ const Animation = styled.div`
     z-index: 0;
     margin: 1rem 0;
     flex-basis: 50%;
+    border-radius:1rem;
+  }
+
+  .background-img-cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .text-wrapper {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    margin: 5rem 0;
+    padding: 0 1rem;
+  }
+
+  .text-wrapper > h1{
+    display:flex;
+    justify-content:center;
+    text-align:center;
+  }
+
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: black;
   }
 
   .section > h1 {
     font-family: Inter, sans-serif;
+    margin: 5rem 1rem;
   }
+
+  .conatiner{
+    margin:0 3rem;
+  }
+
 `;
 
 const NewsWire = styled.h1`
@@ -191,26 +232,9 @@ const MainContainer = styled.div`
     margin-top: 7rem;
     margin-bottom: 7rem;
   }
+
+  .blue-text{ color: #1EE4F0;}
 `;
 
-const Cards = styled.div`
-  .cards {
-    display: flex;
-  }
-  .cards .text-card {
-    background: #4f5c6c;
-    margin: 1.25rem;
-    padding: 1.25rem;
-  }
-  @media (max-width: 46.25rem) {
-    h2 {
-      font-size: 5rem;
-    }
-
-    .cards {
-      flex-direction: column;
-    }
-  }
-`;
 
 export default newsWire;
