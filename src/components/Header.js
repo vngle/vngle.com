@@ -48,6 +48,7 @@ const Header = ({ siteTitle }) => {
   ];
 
 <<<<<<< master
+<<<<<<< master
   const dropdownLinksServices = [
     { name: "Newsire", to: "/services/news-wire" },
     { name: "Creative Content", to: "/services/creative-content" },
@@ -56,9 +57,17 @@ const Header = ({ siteTitle }) => {
 
 =======
 >>>>>>> Updates
+=======
+  const dropdownLinksServices = [
+    { name: "NewsWire", to: "/services/news-wire" },
+    { name: "Creative Content", to: "/services/Creative-content" },
+    { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
+  ];
+
+>>>>>>> Creative Content Updates
   return (
     <StyledHeader>
-      <Navbar collapseOnSelect expand="lg" className="p-4">
+      <Navbar collapseOnSelect expand="lg" className="p-4" >
         <Container>
           <Navbar.Brand>
             <Link to="/" title={siteTitle}>
@@ -69,8 +78,12 @@ const Header = ({ siteTitle }) => {
           <Navbar.Collapse className="justify-content-end text-center">
             <Nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Dropdown className="nav-item">
 =======
+=======
+<<<<<<< master
+>>>>>>> 0102fb9 (Creative Content Updates)
               {/* <Dropdown className="nav-item">
 >>>>>>> f2747a7 (Create initial coverage page (#60))
                 <Dropdown.Toggle
@@ -79,6 +92,11 @@ const Header = ({ siteTitle }) => {
                 >
                   Services
                 </Dropdown.Toggle>
+=======
+
+            <Dropdown className="nav-item">
+                <Dropdown.Toggle className="menu-dropdown-toggle nav-link" as="a">Services</Dropdown.Toggle>
+>>>>>>> Creative Content Updates
                 <Dropdown.Menu>
                   {dropdownLinksServices.map((link, i) => {
                     return (
@@ -103,22 +121,6 @@ const Header = ({ siteTitle }) => {
                   </Nav.Item>
                 );
               })}
-
-              {/* <Dropdown>
-                <Dropdown.Toggle as={Button} className="services">
-                  Services
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  {dropdownLinksServices.map((link, i)=>{
-                    return(
-                      <Dropdown.Item as="div" key={i} role="menu-item">
-                        <Link to={link.to}>{link.name}</Link>
-                      </Dropdown.Item>
-                    )
-                  })}
-                </Dropdown.Menu>
-              </Dropdown> */}
-
               <Dropdown as={Nav.Item}>
                 <Dropdown.Toggle as={Button} className="ml-lg-2">
                   Get Involved
@@ -155,6 +157,7 @@ const StyledHeader = styled.header`
     position: sticky;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     top: 0;
 =======
     top: 0;  
@@ -163,7 +166,12 @@ const StyledHeader = styled.header`
     top: 0;
 >>>>>>> 57a2b90 (Hide some tabs)
     z-index: 1001;
+=======
+    top: 0;  
+    z-index:1001;
+>>>>>>> 0102fb9 (Creative Content Updates)
 
+<<<<<<< master
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -177,6 +185,10 @@ const StyledHeader = styled.header`
       position: fixed;
       top: 0;
       .navbar-nav {
+=======
+    .navbar {      
+        .navbar-nav {
+>>>>>>> Creative Content Updates
         .nav-link,
         .btn {
           color: var(--bs-dark);
@@ -212,4 +224,4 @@ const StyledHeader = styled.header`
   }
 `;
 
-export default Header;
+export default Header; 

@@ -217,6 +217,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
       </Container>
 
 <<<<<<< master
+<<<<<<< master
       <Container fluid>
         <NewContainer
           title="Our impact won the 🌎 Community Award at MIT."
@@ -248,6 +249,8 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
         < Sub />
       </HeroContainer>
 =======
+=======
+>>>>>>> Creative Content Updates
       <Container fluid>
         <NewContainer
           title="Our impact won the 🌎 Community Award at MIT."
@@ -265,8 +268,11 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
         </Row>
         {/* <Sub /> */}
       </Container>
+<<<<<<< master
 >>>>>>> Stashed changes
 >>>>>>> Updates
+=======
+>>>>>>> Creative Content Updates
     </Layout>
   );
 };
@@ -276,9 +282,7 @@ const HeroContainer = styled(Container)`
   margin-top: 2rem;
 
   .hero-img {
-    object-fit: cover;
-    width: 100%;
-    height: 20rem;
+    width: 80%;
     position: absolute;
     z-index: -1;
     margin-left: auto;
@@ -306,7 +310,7 @@ const HeroContainer = styled(Container)`
 
   .w-container {
     background: #1a0117;
-    color: var(--bs-primary);-
+    color: var(--bs-primary);
     text-align: center;
     padding: 1 em;
 
@@ -492,4 +496,8 @@ const MainPageContainer = styled.div`
   }
 `;
 
+<<<<<<< master
 export default IndexPage;
+=======
+export default IndexPage;
+>>>>>>> Creative Content Updates
