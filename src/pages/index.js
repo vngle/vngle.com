@@ -215,22 +215,15 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
           titleColor="black"
           bgColor="#cdfd01"
         />
-
-        <Row>
-          <Col
-            xs={12}
-            md={4}
-            lg={3}
-            xl={2}
-            style={{ background: "black", backgroundClip: "content-box" }}
-          >
-            <img src={MitGif} alt="" width="100%" />
-          </Col>
-          <Col xs={12} md={8} lg={9} xl={10}>
-            <SubForm />
-          </Col>
-        </Row>
         {/* <Sub /> */}
+      </Container>
+
+      <Container>
+        <img src={MitGif} alt="" width="100%" />
+      </Container>
+
+      <Container fluid>
+        <SubForm />
       </Container>
     </Layout>
   );
