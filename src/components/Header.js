@@ -11,6 +11,7 @@ const Header = ({ siteTitle }) => {
     { name: "Coverage", to: "/coverage" },
     { name: "About", to: "/about" },
 <<<<<<< HEAD
+<<<<<<< HEAD
     // { name: "Our Tech", to: "/technology" },
     { name: "Team", to: "/team" },
     // { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
@@ -19,6 +20,11 @@ const Header = ({ siteTitle }) => {
     { name: "Team", to: "/team" },
     { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
 >>>>>>> f2747a7 (Create initial coverage page (#60))
+=======
+    // { name: "Our Tech", to: "/technology" },
+    { name: "Team", to: "/team" },
+    // { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
+>>>>>>> 57a2b90 (Hide some tabs)
   ];
   const dropdownLinks = [
     { name: "Follow our Movement", to: "http://eepurl.com/g1cJk5" },
@@ -129,10 +135,14 @@ const StyledHeader = styled.header`
     background: rgba(247, 247, 247, 0.73);
     position: sticky;
 <<<<<<< HEAD
+<<<<<<< HEAD
     top: 0;
 =======
     top: 0;  
 >>>>>>> f2747a7 (Create initial coverage page (#60))
+=======
+    top: 0;
+>>>>>>> 57a2b90 (Hide some tabs)
     z-index: 1001;
 
     .navbar {
