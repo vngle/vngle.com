@@ -10,9 +10,9 @@ const Header = ({ siteTitle }) => {
   const navLinks = [
     { name: "Coverage", to: "/coverage" },
     { name: "About", to: "/about" },
-    { name: "Our Tech", to: "/technology" },
+    // { name: "Our Tech", to: "/technology" },
     { name: "Team", to: "/team" },
-    { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
+    // { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
   ];
   const dropdownLinks = [
     { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => {
 
   return (
     <StyledHeader>
-      <Navbar collapseOnSelect expand="lg" className="p-4" >
+      <Navbar collapseOnSelect expand="lg" className="p-4">
         <Container>
           <Navbar.Brand>
             <Link to="/" title={siteTitle}>
@@ -107,11 +107,11 @@ const StyledHeader = styled.header`
   & {
     background: rgba(247, 247, 247, 0.73);
     position: sticky;
-    top: 0;  
+    top: 0;
     z-index: 1001;
 
-    .navbar {      
-        .navbar-nav {
+    .navbar {
+      .navbar-nav {
         .nav-link,
         .btn {
           color: var(--bs-dark);
