@@ -109,7 +109,7 @@ const TeamPage = () => {
           <p>
             <b>
               We started Vngle to address these critical issues through
-              empowering communities to bring various angles verified local news
+              empowering communities to bring various angles of verified local news
               to their area.
             </b>
           </p>
