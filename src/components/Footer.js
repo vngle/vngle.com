@@ -40,9 +40,9 @@ const Footer = () => (
           >
             Jobs
           </Link>
-          <Link to="/services" className="nav-link text-muted">
+          {/* <Link to="/services" className="nav-link text-muted">
             Services
-          </Link>
+          </Link> */}
           <Link to="/faq" className="nav-link text-muted">
             FAQ
           </Link>

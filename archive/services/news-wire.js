@@ -213,4 +213,8 @@ const Cards = styled.div`
   }
 `;
 
+<<<<<<< HEAD:src/pages/services/news-wire.js
 export default newsWire;
+=======
+export default newsWire;
+>>>>>>> f2747a7 (Create initial coverage page (#60)):archive/services/news-wire.js

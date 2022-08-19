@@ -78,8 +78,7 @@ const OldHomePage = () => {
         <Row className="row-intro">
           <Col className="col-intro text-md-left text-center" md={6} sm={12}>
             <h1 className="display-4 fw-bolder mb-4">
-              We help harmonize cities by
-              <br />
+              We help harmonize cities by{" "}
               <span className="highlight">
                 combatting misinformation & under-representation
               </span>

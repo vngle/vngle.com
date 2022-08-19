@@ -315,4 +315,8 @@ export const query = graphql`
   }
 `;
 
+<<<<<<< HEAD
 export default GeorgiaPage;
+=======
+export default GeorgiaPage;
+>>>>>>> f2747a7 (Create initial coverage page (#60))

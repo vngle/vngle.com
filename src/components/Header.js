@@ -10,9 +10,15 @@ const Header = ({ siteTitle }) => {
   const navLinks = [
     { name: "Coverage", to: "/coverage" },
     { name: "About", to: "/about" },
+<<<<<<< HEAD
     // { name: "Our Tech", to: "/technology" },
     { name: "Team", to: "/team" },
     // { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
+=======
+    { name: "Our Tech", to: "/technology" },
+    { name: "Team", to: "/team" },
+    { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
+>>>>>>> f2747a7 (Create initial coverage page (#60))
   ];
   const dropdownLinks = [
     { name: "Follow our Movement", to: "http://eepurl.com/g1cJk5" },
@@ -35,6 +41,12 @@ const Header = ({ siteTitle }) => {
     { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
   ];
 
+  const dropdownLinksServices = [
+    { name: "Newsire", to: "/services/news-wire" },
+    { name: "Creative Content", to: "/services/creative-content" },
+    { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
+  ];
+
   return (
     <StyledHeader>
       <Navbar collapseOnSelect expand="lg" className="p-4">
@@ -47,7 +59,11 @@ const Header = ({ siteTitle }) => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-end text-center">
             <Nav>
+<<<<<<< HEAD
               <Dropdown className="nav-item">
+=======
+              {/* <Dropdown className="nav-item">
+>>>>>>> f2747a7 (Create initial coverage page (#60))
                 <Dropdown.Toggle
                   className="menu-dropdown-toggle nav-link"
                   as="a"
@@ -63,7 +79,11 @@ const Header = ({ siteTitle }) => {
                     );
                   })}
                 </Dropdown.Menu>
+<<<<<<< HEAD
               </Dropdown>
+=======
+              </Dropdown> */}
+>>>>>>> f2747a7 (Create initial coverage page (#60))
 
               {navLinks.map((link, i) => {
                 return (
@@ -108,7 +128,11 @@ const StyledHeader = styled.header`
   & {
     background: rgba(247, 247, 247, 0.73);
     position: sticky;
+<<<<<<< HEAD
     top: 0;
+=======
+    top: 0;  
+>>>>>>> f2747a7 (Create initial coverage page (#60))
     z-index: 1001;
 
     .navbar {
