@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "@components/Layouts/MainLayout";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import Seo from "../components/Seo";
+import Seo from "../src/components/Seo";
 
 window.addEventListener("scroll", reveal);
 
@@ -47,10 +47,7 @@ function technology() {
         </div>
       </Title>
       {/* -------------------Navigation Bar ---------------------- */}
-      <Navbar
-        id="nav-sections"
-        className="navbar"
-      >
+      <Navbar id="nav-sections" className="navbar">
         <ul className="nav nav-pills">
           <li className="nav-item">
             <a className="nav-link" href="#Top">
@@ -164,55 +161,58 @@ function technology() {
         </VngleLogo>
         */}
         <VngleLogo>
-        <div className="d-flex flex-wrap container-fluid background">
-          <div className="height">
-        <div className="d-flex align-items-start media">
-          <Title>
-            <div className="content-wrapper">
-              <div className="text-wrapper container">
-                <h2 className="display-6 text-center">
-                    How We Capture<br/>
-                    &<br/>
-                    Fact Check Content<br/>
-                </h2>
-              </div>
-              <StaticImage
-                src="../images/technology/Iphone-Cover-2.jpeg"
-                className="backgroundImg Iphone-img"
-              />
-            </div>
-          </Title>
-          <div className="cards container d-flex flex-column align-self-center">
-              <div className="d-flex flex-column">
-                <div className="text-card yellow-border">
-                  <h3 className="fw-bolder">Local Assignments</h3>
-                  <p>
-                  <br />
-                      We work with trained members of the Vngle community to capture
-                      stories near them
-                  </p>  
-                </div>
-                <div className="text-card pink-border">
-                  <h3 className="fw-bolder">Blockchain Record</h3>
-                  <p>
-                    <br/>
-                    The content is recorded using public ledger technology, making
-                    its origin accessible to newswire subscribers & partners
-                  </p>
-                </div>
-                <div className="text-card cyan-border">
-                  <h3 className="fw-bolder">Editorial Review</h3>
-                    <p>
-                      <br/>
-                      We ensure all content undergoes review from our editorial team
-                      & cross-referenced to ensure credibility
-                    </p>
+          <div className="d-flex flex-wrap container-fluid background">
+            <div className="height">
+              <div className="d-flex align-items-start media">
+                <Title>
+                  <div className="content-wrapper">
+                    <div className="text-wrapper container">
+                      <h2 className="display-6 text-center">
+                        How We Capture
+                        <br />
+                        &<br />
+                        Fact Check Content
+                        <br />
+                      </h2>
+                    </div>
+                    <StaticImage
+                      src="../images/technology/Iphone-Cover-2.jpeg"
+                      className="backgroundImg Iphone-img"
+                    />
+                  </div>
+                </Title>
+                <div className="cards container d-flex flex-column align-self-center">
+                  <div className="d-flex flex-column">
+                    <div className="text-card yellow-border">
+                      <h3 className="fw-bolder">Local Assignments</h3>
+                      <p>
+                        <br />
+                        We work with trained members of the Vngle community to
+                        capture stories near them
+                      </p>
+                    </div>
+                    <div className="text-card pink-border">
+                      <h3 className="fw-bolder">Blockchain Record</h3>
+                      <p>
+                        <br />
+                        The content is recorded using public ledger technology,
+                        making its origin accessible to newswire subscribers &
+                        partners
+                      </p>
+                    </div>
+                    <div className="text-card cyan-border">
+                      <h3 className="fw-bolder">Editorial Review</h3>
+                      <p>
+                        <br />
+                        We ensure all content undergoes review from our
+                        editorial team & cross-referenced to ensure credibility
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          </div>
-        </div>
         </VngleLogo>
         {/* --------------------------------------------------------------------------------- */}
         <Section>
@@ -293,7 +293,7 @@ function technology() {
           </div>
         </Cards>
       </Scroll>
-      <Section  className="cyan-background">
+      <Section className="cyan-background">
         <div className="container">
           <h1 className="cyan fw-bolder">
             Get Access To More Verified Insights On Your Area:{" "}
@@ -380,14 +380,14 @@ const Title = styled.div`
     font-size: 2.25rem;
   }
 
-  .text-wrapper > h2{
-    margin-top:5rem;
-    margin-right:1px;
+  .text-wrapper > h2 {
+    margin-top: 5rem;
+    margin-right: 1px;
     padding: 3rem;
   }
 
-  .Iphone-img{
-    border-radius:3rem;
+  .Iphone-img {
+    border-radius: 3rem;
   }
   //-------------------------------@MEDIA QUERIES------------------------------
 
@@ -440,14 +440,18 @@ const Section = styled.div`
   }
 
   .backgroundImg {
-    position:absolute;
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: 0;
   }
 
-  &.white-background{ background: white }
-  &.cyan-background { background: #1EE4F0;}
+  &.white-background {
+    background: white;
+  }
+  &.cyan-background {
+    background: #1ee4f0;
+  }
 
   .content-wrapper {
     display: flex;
@@ -461,7 +465,9 @@ const Section = styled.div`
     text-align: center;
   }
 
-  .text-color{ color: black; }
+  .text-color {
+    color: black;
+  }
 
   .reveal {
     position: relative;
@@ -552,13 +558,13 @@ const Section = styled.div`
 `;
 
 const Cards = styled.div`
-  background:white;
+  background: white;
   color: black;
   font-family: Inter, sans-serif;
 
-  .container{
-    padding-top:2rem;
-    padding-bottom:2rem;
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .cards {
@@ -600,9 +606,15 @@ const Cards = styled.div`
     font-family: Inter, sans-serif;
   }
 
-  .gray{ background: #D9D9D9; }
-  &.background{ background:#E512D0; }
-  .text-background { background: white;}
+  .gray {
+    background: #d9d9d9;
+  }
+  &.background {
+    background: #e512d0;
+  }
+  .text-background {
+    background: white;
+  }
   //---------------------------------MEDIA QUERIES---------------------------------
 
   @media (max-width: 46.25rem) {
@@ -660,38 +672,40 @@ const Navbar = styled.div`
 `;
 
 const VngleLogo = styled.div`
-h2, h3, p{
-  font-family: Inter, sans-serif;
-}
-  .title-wrapper{
+  h2,
+  h3,
+  p {
+    font-family: Inter, sans-serif;
+  }
+  .title-wrapper {
     display: flex;
     align-items: center;
   }
 
-  .left-section{
+  .left-section {
     margin: 5rem 0;
   }
 
   //For Vngle Logo
-  .background-img{
+  .background-img {
     max-width: 40%;
     z-index: 0;
     margin: 3rem 3rem;
   }
 
-  .iphone-img{
+  .iphone-img {
     max-width: 30%;
     z-index: 0;
-    border-radius:3rem;
+    border-radius: 3rem;
   }
 
   .container > .div {
     flex-basis: 100%;
   }
- 
+
   .cards {
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
   }
 
   .cards .text-card {
@@ -701,37 +715,35 @@ h2, h3, p{
   }
 
   .text-card {
-    background: #D9D9D9;
+    background: #d9d9d9;
   }
 
-  .yellow-border{ 
-    border-style:solid;
-    border-color: #FFCC35;
+  .yellow-border {
+    border-style: solid;
+    border-color: #ffcc35;
   }
-  .pink-border { 
-    border-style:solid;
-    border-color: #E512D0; 
+  .pink-border {
+    border-style: solid;
+    border-color: #e512d0;
   }
-  .cyan-border { 
-    border-style:solid; 
-    border-color: #1EE4F0; 
-  }
-
-  .background{
-    background:#615e64;
+  .cyan-border {
+    border-style: solid;
+    border-color: #1ee4f0;
   }
 
-  .height{
+  .background {
+    background: #615e64;
+  }
+
+  .height {
     margin: 5rem 0;
   }
 
   //-------------------------------@MEDIA QUERIES------------------------------
-  @media(max-width: 46.25rem){
-    .media{
-      flex-direction:column;
+  @media (max-width: 46.25rem) {
+    .media {
+      flex-direction: column;
     }
-
   }
-
-`
+`;
 export default technology;
