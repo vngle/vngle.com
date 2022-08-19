@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-end text-center">
             <Nav>
-              <Dropdown className="nav-item">
+              {/* <Dropdown className="nav-item">
                 <Dropdown.Toggle
                   className="menu-dropdown-toggle nav-link"
                   as="a"
@@ -62,7 +62,7 @@ const Header = ({ siteTitle }) => {
                     );
                   })}
                 </Dropdown.Menu>
-              </Dropdown>
+              </Dropdown> */}
 
               {navLinks.map((link, i) => {
                 return (
