@@ -221,7 +221,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             <img src={MitGif} alt="" width="100%" />
           </Col>
           <Col xs={12} md={8} lg={9} xl={10}>
-            <Sub />
+            <Sub/>
           </Col>
         </Row>
         {/* <Sub /> */}

@@ -4,6 +4,7 @@ import Layout from "@components/Layouts/MainLayout";
 import Background from "@images/services/creative_content_background.jpeg";
 import { StaticImage } from "gatsby-plugin-image";
 import { Container, Button } from "react-bootstrap";
+import Form from "@components/Forms/form";
 import { motion } from "framer-motion";
 
 const creativeContent = () => {
@@ -35,6 +36,15 @@ const creativeContent = () => {
       </HeroContainer>
 
       <MaContainer>
+        <div className="mt display-3">
+          <h1>
+            <span class="r">
+              Craft strategies to better target communities:
+            </span>{" "}
+            <br />
+            Build greater awareness, campaigns, market research & more.
+          </h1>
+        </div>
         <div className="mb display-6">
           <p>
             Maximize your audience reach with our on-demand tailored content!
@@ -45,16 +55,11 @@ const creativeContent = () => {
             alt="Hand holding mics"
           />
         </div>
-      </MaContainer>
-
-      <Mcontainer>
-        {/* <Container> */}
         <h1 class="display-2">
           Leverage our grassroots storytelling expertise to capture a specific
           story you want covered.
         </h1>
-        {/* </Container> */}
-      </Mcontainer>
+      </MaContainer>
 
       <HContainer className="rb-4">
         <h1>
@@ -69,8 +74,13 @@ const creativeContent = () => {
           <span class="b">the right audiences</span>.
         </p>
       </HContainer>
-      <br />
+
       <HeContainer>
+        <h1 className="content display-4 fw-bold">
+          {" "}
+          Our content team will work with you to plan your story and document
+          the story you want to capture.{" "}
+        </h1>
         <div>
           <StaticImage
             className="img"
@@ -78,11 +88,12 @@ const creativeContent = () => {
             alt="Hand holding camera"
           />
         </div>
-      </HeContainer>
 
-      <br />
-
-      <RContainer>
+        <h1 className="container display-4 fw-bold">
+          {" "}
+          No matter the if it’s on-the-ground or in-the-air, we have the tools
+          to tell your story.{" "}
+        </h1>
         <div>
           <StaticImage
             className="img"
@@ -90,24 +101,34 @@ const creativeContent = () => {
             alt="Drone Flying"
           />
         </div>
-      </RContainer>
 
-      <Mcontainer>
-        <div className="container">
-          <div className="text-wrap">
-            <h2 class="display-2">
-              Let’s grow your content strategy today.
-              <Button
-                className="btn"
-                href="https://forms.gle/e6y4Gkna5S9kymdE8"
-              >
-                Contact Us Today
-              </Button>
-            </h2>
-          </div>
+        <h2 className="content display-4 fw-bold">
+          {" "}
+          We offer end-to-end fulfillment: Whether you need support on reaching
+          your goals, increase distribution, or grow your audience, we got you
+          covered.{" "}
+        </h2>
+        <div>
+          <StaticImage
+            className="img"
+            src="../../images/services/stephen.jpeg"
+            alt="Quality Score"
+          />
         </div>
-      </Mcontainer>
-      <small class="lead text-center">𝐎𝐮𝐫 𝐂𝐫𝐞𝐚𝐭𝐢𝐯𝐞 𝐂𝐨𝐧𝐭𝐞𝐧𝐭 𝐒𝐭𝐫𝐚𝐭𝐞𝐠𝐲 𝐒𝐞𝐫𝐯𝐢𝐜𝐞𝐬 𝐚𝐫𝐞 𝐬𝐞𝐩𝐚𝐫𝐚𝐭𝐞 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐕𝐧𝐠𝐥𝐞 𝐧𝐞𝐰𝐬𝐫𝐨𝐨𝐦. 𝐂𝐥𝐢𝐞𝐧𝐭𝐬 𝐚𝐧𝐝 𝐛𝐫𝐚𝐧𝐝𝐬 𝐰𝐨𝐫𝐤𝐢𝐧𝐠 𝐰𝐢𝐭𝐡 𝐕𝐧𝐠𝐥𝐞’𝐬 𝐂𝐫𝐞𝐚𝐭𝐢𝐯𝐞 𝐂𝐨𝐧𝐭𝐞𝐧𝐭 𝐒𝐭𝐫𝐚𝐭𝐞𝐠𝐲 𝐒𝐞𝐫𝐯𝐢𝐜𝐞𝐬 𝐝𝐨 𝐧𝐨𝐭 𝐢𝐧𝐟𝐥𝐮𝐞𝐧𝐜𝐞 𝐭𝐡𝐞 𝐞𝐝𝐢𝐭𝐨𝐫𝐢𝐚𝐥 𝐝𝐢𝐬𝐜𝐫𝐞𝐭𝐢𝐨𝐧 𝐨𝐟 𝐨𝐮𝐫 𝐧𝐞𝐰𝐬 𝐫𝐞𝐩𝐨𝐫𝐭𝐢𝐧𝐠 𝐢𝐧 𝐚𝐧𝐲 𝐟𝐨𝐫𝐦. 𝐂𝐨𝐧𝐯𝐞𝐫𝐬𝐞𝐥𝐲, 𝐜𝐮𝐬𝐭𝐨𝐦 𝐬𝐭𝐨𝐫𝐲𝐭𝐞𝐥𝐥𝐢𝐧𝐠 𝐩𝐫𝐨𝐣𝐞𝐜𝐭𝐬 𝐭𝐡𝐫𝐨𝐮𝐠𝐡 𝐨𝐮𝐫 𝐂𝐫𝐞𝐚𝐭𝐢𝐯𝐞 𝐌𝐞𝐝𝐢𝐚 𝐒𝐞𝐫𝐯𝐢𝐜𝐞𝐬 𝐝𝐨 𝐩𝐞𝐫𝐦𝐢𝐭 𝐭𝐡𝐞 𝐜𝐨𝐥𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐢𝐯𝐞 𝐢𝐧𝐩𝐮𝐭 𝐨𝐟 𝐭𝐡𝐞 𝐜𝐥𝐢𝐞𝐧𝐭𝐬 𝐚𝐧𝐝 𝐛𝐫𝐚𝐧𝐝𝐬 𝐰𝐞 𝐰𝐨𝐫𝐤 𝐰𝐢𝐭𝐡.</small>
+      </HeContainer>
+
+      <Form />
+
+      <small class="lead text-center fw-bold">
+        {" "}
+        <br />
+        Creative Content Strategy Services are separate from the Vngle newsroom.
+        Clients and brands working with Vngle’s Creative Content Strategy
+        Services do not influence the editorial discretion of our news reporting
+        in any form. Conversely, custom storytelling projects through our
+        Creative Content Strategy Services do permit the collaborative input of
+        the clients and brands we work with.
+      </small>
     </Layout>
   );
 };
@@ -156,17 +177,62 @@ const HeroContainer = styled(Container)`
     text-align: center;
     opacity: 0.9;
   }
+
+  @media(max-width:47rem){
+    margin-top:5rem;
+
+     .hero-img {
+    
+      width: 100%;
+    
+      height: 80%;
+    }
+
+    &.main-banner {
+      min-height: 5rem;
+      padding: 14rem 0rem;
+      display: flex;
+    }
+    h1 {
+      font-family: "Playfair Display", serif;
+      margin-bottom: 0rem;
+      text-align: center;
+  }
 `;
 
 const HeContainer = styled.div`
+  .content {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      font-family: "Playfair Display", serif;
+    }
+  }
+
   img {
     posiiton: absolute;
     width: 100%;
     padding-left: 0.1rem;
   }
-`;
 
-const RContainer = styled.div`
+  .container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      font-family: "Playfair Display", serif;
+    }
+
+    h2 {
+      font-size: 3rem;
+      font-family: "Playfair Display", serif;
+    }
+  }
   img {
     posiiton: absolute;
     width: 100%;
@@ -179,6 +245,15 @@ const MaContainer = styled.div`
   margin-bottom: 2rem;
   justify-content: center;
 
+  .mt {
+    margin-bottom: 4rem;
+
+    .r {
+      color: #E612D0;
+      
+    }
+  }
+
   .mb {
     display: flex;
     align-items: center;
@@ -189,7 +264,7 @@ const MaContainer = styled.div`
       font-size: 3rem;
       font-weight: bold;
       float: left;
-      font-family: Century Gothic;
+      font-family: "Playfair Display", serif;
     }
   }
 
@@ -205,48 +280,36 @@ const MaContainer = styled.div`
     }
   }
 
-  // @media(max-width: 46.25rem) {
-
-  //   img {
-  //       border-radius: 4rem;
-  //       width: 70%;
-  //       margin-left: auto;
-  //       padding-bottom: 2rem;
-  //     }
-  //   }
-`;
-
-const Mcontainer = styled.div`
-
-.container {
-  padding-left: 0rem;
-  padding-right: 0rem;
-  width: 100%;
-}
-  .text-wrap > h2 {
-    padding-top: 10rem;
-  }
   h1 {
     font-weight: bold;
-    font-family: Century Gothic;
-    // font-size: 5rem;
+    font-family: "Playfair Display", serif;
     text-align: center;
   }
 
-  h2 {
-    width: 100%;
-    background: #1ee4f0;
-    margin-top: 1rem;
-    font-weight: bold;
-    font-family: Century Gothic;
-    padding-bottom: 9rem;
-    text-align: center;
-  }
+  @media (max-width: 47rem) {
+    margin-top: 0.5rem;
 
-  .btn {
-    color: white;
-    letter-spacing: 1.7px;
-    background: #000000;
+    .gatsby-image-wrapper {
+      height: 80%;
+      bottom: 0;
+
+      img {
+        width: 80%;
+        margin: auto;
+      }
+    }
+    .mb {
+      display: flex;
+      align-items: center;
+
+      ,
+      p {
+        font-size: 2rem;
+        font-weight: bold;
+        float: left;
+        font-family: "Playfair Display", serif;
+      }
+    }
   }
 `;
 
@@ -259,7 +322,7 @@ const HContainer = styled(Container)`
     color: white;
     font-weight: bold;
     font-size: 3rem;
-    font-family: Century Gothic;
+    font-family: "Playfair Display", serif;
     text-align: left;
     .f {
         color: var(--bs-primary);
@@ -270,7 +333,7 @@ const HContainer = styled(Container)`
     color: white;
     font-weight: bold;
     font-size: 3rem;
-    font-family: Century Gothic;
+    font-family: "Playfair Display", serif;
     text-align: left;
     .b {
         color: #1EE4F0;

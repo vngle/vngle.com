@@ -15,7 +15,6 @@ const Header = ({ siteTitle }) => {
     },
     { name: "About", to: "/about" },
     { name: "Our Team", to: "/team" },
-    { name: "Services", to: "/services" },
   ];
   const dropdownLinks = [
     { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
@@ -29,11 +28,14 @@ const Header = ({ siteTitle }) => {
     },
     { name: "Become an Ally", to: "/ally" },
     { name: "Submit a tip", to: "/report" },
+
+    { name: "Become a Vngler", to: "/becomevngler" },
   ];
+
 
   const dropdownLinksServices = [
     { name: "NewsWire", to: "/services/news-wire" },
-    { name: "Creative Content", to: "/services/Creative-content" },
+    { name: "Creative Content", to: "/services/creative-content" },
     { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
   ];
 
@@ -43,7 +45,7 @@ const Header = ({ siteTitle }) => {
         <Container>
           <Navbar.Brand>
             <Link to="/" title={siteTitle}>
-              <img alt="Vngle logo" src={Logo} height="90" />
+              <img alt="Vngle logo" src={Logo} height="70" />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
