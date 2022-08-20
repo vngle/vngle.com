@@ -287,4 +287,8 @@ const StyledHeader = styled.header`
   }
 `;
 
+<<<<<<< master
 export default Header; 
+=======
+export default Header;
+>>>>>>> formatting

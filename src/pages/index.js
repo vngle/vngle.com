@@ -511,6 +511,7 @@ const MainPageContainer = styled.div`
 
 <<<<<<< master
 <<<<<<< master
+<<<<<<< master
 export default IndexPage;
 =======
 export default IndexPage;
@@ -518,3 +519,6 @@ export default IndexPage;
 =======
 export default IndexPage;
 >>>>>>> Creative Content and Become a Vngler
+=======
+export default IndexPage;
+>>>>>>> formatting

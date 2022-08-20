@@ -81,10 +81,9 @@ const becomevngler = () => {
         </div>
 
         <div className="container">
-          <h1>Thank you for your interest in joining our media movement!
-          </h1>
+          <h1>Thank you for your interest in joining our media movement!</h1>
           <div class="tittle">
-          <h1>Our mission is fueled by 3 essential roles.</h1>
+            <h1>Our mission is fueled by 3 essential roles.</h1>
           </div>
         </div>
 
@@ -215,8 +214,12 @@ const becomevngler = () => {
           </h1>
         </div>
       </HContainer>
+<<<<<<< HEAD
       <Form/>
 >>>>>>> 9d7b92e (Creative Content and Become a Vngler)
+=======
+      <Form />
+>>>>>>> 96c7b6c (formatting)
     </Layout>
   );
 };
@@ -279,7 +282,7 @@ const HeroContainer = styled.div`
 <<<<<<< HEAD
 =======
 
-    .title {
+  .title {
     h1 {
       margin-top: 2rem;
       font-family: "Inter";
@@ -289,8 +292,11 @@ const HeroContainer = styled.div`
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
+<<<<<<< HEAD
   
 >>>>>>> 9d7b92e (Creative Content and Become a Vngler)
+=======
+>>>>>>> 96c7b6c (formatting)
 `;
 
 const SplitSection = styled(Row)`
