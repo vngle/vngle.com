@@ -175,7 +175,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
                       size="lg"
                       variant="light"
                     >
-                      Host an event with us
+                      Launch your campaign
                     </motion.button>
                   </a>
                 </div>
@@ -218,6 +218,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
 
 <<<<<<< master
 <<<<<<< master
+<<<<<<< master
       <Container fluid>
         <NewContainer
           title="Our impact won the 🌎 Community Award at MIT."
@@ -251,12 +252,15 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
 =======
 =======
 >>>>>>> Creative Content Updates
+=======
+>>>>>>> Creative Content and Become a Vngler
       <Container fluid>
         <NewContainer
           title="Our impact won the 🌎 Community Award at MIT."
           titleColor="black"
           bgColor="#cdfd01"
         />
+<<<<<<< master
 
         <Row>
           <Col xs={12} md={4} lg={3} xl={2}>
@@ -273,6 +277,15 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
 >>>>>>> Updates
 =======
 >>>>>>> Creative Content Updates
+=======
+      </Container>
+      <Container>
+        <img src={MitGif} alt="" width="100%" />
+      </Container>
+      <Container fluid>
+        <Sub />
+      </Container>
+>>>>>>> Creative Content and Become a Vngler
     </Layout>
   );
 };
@@ -497,7 +510,11 @@ const MainPageContainer = styled.div`
 `;
 
 <<<<<<< master
+<<<<<<< master
 export default IndexPage;
 =======
 export default IndexPage;
 >>>>>>> Creative Content Updates
+=======
+export default IndexPage;
+>>>>>>> Creative Content and Become a Vngler

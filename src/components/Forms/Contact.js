@@ -129,7 +129,11 @@ const SubForm = ({ status, message, onSubmitted }) => {
               <Row xs={1} sm={2}>
                 <Form.Group controlId="Textarea" as={Col}>
                   <Form.Label>
+<<<<<<< HEAD
                   Share what role you want to play in our network<span className="text-danger">*</span>
+=======
+                  How will you get involved?<span className="text-danger">*</span>
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
                   </Form.Label>
                   <Form.Control
                     type="textarea"
@@ -169,7 +173,13 @@ const SubForm = ({ status, message, onSubmitted }) => {
 
 const StyledJumbotron = styled.div`
   background: var(--bs-primary);
+<<<<<<< HEAD
   margin: auto 0.5rem;
+=======
+  // margin-top: 2rem;
+  // margin-bottom: 5rem;
+  margin: 0.4rem;
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
   height: 100%;
 
   h1 {

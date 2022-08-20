@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { useEffect } from "react";
 import styled from "styled-components";
 import Layout from "@components/Layouts/MainLayout";
@@ -61,13 +62,45 @@ const Becomevngler = () => {
         </div>
 
         <SplitSection background="" className="section2 gy-3">
+=======
+import styled from "styled-components";
+import Layout from "@components/Layouts/MainLayout";
+import { StaticImage } from "gatsby-plugin-image";
+import I from "@images/involved/img.png";
+import { Col, Row } from "react-bootstrap";
+import { Fade } from "react-reveal";
+import Form from "@components/Forms/Contact";
+
+const becomevngler = () => {
+  return (
+    <Layout>
+      <HeroContainer className="main-banner">
+        <div className="main-title">
+          <h1> Become a Vngler </h1>
+          <img src={I} alt="" className="hero-img" />
+        </div>
+
+        <div className="container">
+          <h1>Thank you for your interest in joining our media movement!
+          </h1>
+          <div class="tittle">
+          <h1>Our mission is fueled by 3 essential roles.</h1>
+          </div>
+        </div>
+
+        <SplitSection background="" className="gy-3">
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
           <Col md={{ span: 6, order: "last" }}>
             <Fade left>
               <div className="content p-md-5">
                 <p className="sup">
                   <Heading>Grassroots Reporters:</Heading>
+<<<<<<< HEAD
                   Local experts we train & equip to report on assignments in
                   their area.
+=======
+                  Local experts we train to report on their city.
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
                 </p>
               </div>
             </Fade>
@@ -82,14 +115,23 @@ const Becomevngler = () => {
           </Col>
         </SplitSection>
 
+<<<<<<< HEAD
         <SplitSection background="" className="section2 gy-3">
+=======
+        <SplitSection background="" className="gy-3">
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
           <Col md={6}>
             <Fade left>
               <div className="content p-md-5">
                 <p className="sup">
                   <Heading>Content Editors:</Heading>
+<<<<<<< HEAD
                   Constituents helping us get verfiable information to
                   newsrooms.
+=======
+                  Creative people who help us get our content to communities &
+                  newsrooms
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
                 </p>
               </div>
             </Fade>
@@ -104,14 +146,23 @@ const Becomevngler = () => {
           </Col>
         </SplitSection>
 
+<<<<<<< HEAD
         <SplitSection background="" className="section2 gy-3">
+=======
+        <SplitSection background="" className="gy-3">
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
           <Col md={{ span: 6, order: "last" }}>
             <Fade left>
               <div className="content p-md-5">
                 <p className="sup">
                   <Heading>Community Organizer:</Heading>
+<<<<<<< HEAD
                   Passionate folks helping communities & content creators better
                   connect with Vngle.
+=======
+                  Passionate people who help us better connect with local
+                  communities.
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
                 </p>
               </div>
             </Fade>
@@ -125,6 +176,7 @@ const Becomevngler = () => {
             </Fade>
           </Col>
         </SplitSection>
+<<<<<<< HEAD
 
         <div className="contact text-center">
           <h1>
@@ -152,6 +204,19 @@ const Becomevngler = () => {
         {" "}
         <Form />
       </section>
+=======
+      </HeroContainer>
+
+      <HContainer>
+        <div className="Contact text-center">
+          <h1>
+            Want to take part? Contact us and let us know how you would like to
+            join our growing grassroots community.
+          </h1>
+        </div>
+      </HContainer>
+      <Form/>
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
     </Layout>
   );
 };
@@ -159,24 +224,39 @@ const Becomevngler = () => {
 const HeroContainer = styled.div`
   position: relative;
   text-align: center;
+<<<<<<< HEAD
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 
   h1 {
     font-size: clamp(4rem, 7vw, ${(props) => props.size || "2.6rem"});
+=======
+
+  h1 {
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
     text-aling: center;
     font-family: "Inter";
     font-style: normal;
     font-weight: bold;
+<<<<<<< HEAD
     color: black;
+=======
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
   }
 
   .hero-img {
     object-fit: cover;
+<<<<<<< HEAD
     width: 100%;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
+=======
+    width: 50%;
+    height: 100%;
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
   }
 
   .container {
@@ -185,7 +265,10 @@ const HeroContainer = styled.div`
     text-align: center;
 
     h1 {
+<<<<<<< HEAD
       font-size: clamp(4rem, 7vw, ${(props) => props.size || "2.6rem"});
+=======
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
       font-family: "Inter";
       font-style: normal;
       font-weight: bold;
@@ -193,11 +276,27 @@ const HeroContainer = styled.div`
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
+<<<<<<< HEAD
+=======
+
+    .title {
+    h1 {
+      margin-top: 2rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: bold;
+      color: #000000;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+  
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
 `;
 
 const SplitSection = styled(Row)`
   margin-top: 2rem;
   margin-bottom: 2rem;
+<<<<<<< HEAD
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 
@@ -205,6 +304,13 @@ const SplitSection = styled(Row)`
     background: ${(props) => props.background};
     border-radius: 10px;
     padding: 2rem;
+=======
+
+  .content {
+    background: ${(props) => props.background};
+    padding: 2rem;
+    border-radius: 10px;
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
     height: 100%;
     transition: transform 1s;
 
@@ -212,7 +318,12 @@ const SplitSection = styled(Row)`
       text-align: center;
       font-family: "Inter";
       font-style: normal;
+<<<<<<< HEAD
       font-size: 4rem;
+=======
+      font-size: 2rem;
+      font-weight: bold;
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
       color: #000000;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
@@ -221,6 +332,7 @@ const SplitSection = styled(Row)`
   .react-reveal {
     height: 100%;
   }
+<<<<<<< HEAD
 
   @media (max-width: 47rem) {
     &.section2 {
@@ -236,17 +348,24 @@ const SplitSection = styled(Row)`
       }
     }
   }
+=======
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
 `;
 
 const Heading = styled.h1`
   font-family: "Inter", sans-serif;
   font-weight: ${(props) => props.weight || "bold"};
+<<<<<<< HEAD
   font-size: clamp(3rem, 7vw, ${(props) => props.size || "2.6rem"});
+=======
+  font-size: clamp(1rem, 7vw, ${(props) => props.size || "2.6rem"});
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
   text-align: ${(props) => (props.center ? "center" : "left")};
   line-height: ${(props) => props.lineHeight};
   color: ${(props) => props.color};
 `;
 
+<<<<<<< HEAD
 const Container = styled.h1`
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -255,10 +374,19 @@ const Container = styled.h1`
   h1 {
     text-align: center;
     font-family: "Inter";
+=======
+const HContainer = styled.div`
+  h1 {
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+    font-family: "Inter";
+    font-style: normal;
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
     font-weight: bold;
     color: #000000;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+<<<<<<< HEAD
 
   .title {
     margin-top: 5rem;
@@ -343,3 +471,8 @@ const HContainer = styled.div`
 `;
 
 export default Becomevngler;
+=======
+`;
+
+export default becomevngler;
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)

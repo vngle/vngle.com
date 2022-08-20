@@ -15,7 +15,11 @@ const Header = ({ siteTitle }) => {
 <<<<<<< HEAD
 =======
 <<<<<<< master
+<<<<<<< HEAD
 >>>>>>> 994d5d7 (Creative content changes with form)
+=======
+<<<<<<< master
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
     // { name: "Our Tech", to: "/technology" },
     { name: "Team", to: "/team" },
     // { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
@@ -88,6 +92,29 @@ const Header = ({ siteTitle }) => {
 >>>>>>> Creative content changes with form
   const dropdownLinksServices = [
     { name: "NewsWire", to: "/services/news-wire" },
+=======
+    // { name: "Our Tech", to: "/technology" },
+    { name: "Team", to: "/team" },
+    // { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
+  ];
+  const dropdownLinks = [
+    { name: "Follow our Movement", to: "http://eepurl.com/g1cJk5" },
+    // {
+    //   name: "Become a Reporter",
+    //   to: "https://forms.gle/JuxuSvst9aJTiDAk6",
+    // },
+    // {
+    //   name: "Request Coverage",
+    //   to: "https://vngle.typeform.com/to/zwc2R2og",
+    // },
+    { name: "Become a Vngler", to: "/vngler" },
+    { name: "Serve as an Ally", to: "/ally" },
+    { name: "Submit a Tip or Request", to: "/report" },
+  ];
+
+  const dropdownLinksServices = [
+    { name: "Newswire", to: "/services/news-wire" },
+>>>>>>> Creative Content and Become a Vngler
     { name: "Creative Content", to: "/services/creative-content" },
     { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
   ];
@@ -111,9 +138,17 @@ const Header = ({ siteTitle }) => {
 =======
 =======
 <<<<<<< master
+<<<<<<< HEAD
 >>>>>>> 0102fb9 (Creative Content Updates)
               {/* <Dropdown className="nav-item">
 >>>>>>> f2747a7 (Create initial coverage page (#60))
+=======
+<<<<<<< master
+              {/* <Dropdown className="nav-item">
+=======
+              <Dropdown className="nav-item">
+>>>>>>> Creative Content and Become a Vngler
+>>>>>>> 9d7b92e (Creative Content and Become a Vngler)
                 <Dropdown.Toggle
                   className="menu-dropdown-toggle nav-link"
                   as="a"

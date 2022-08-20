@@ -4,7 +4,11 @@ import Layout from "@components/Layouts/MainLayout";
 import Background from "@images/services/creative_content_background.jpeg";
 import { StaticImage } from "gatsby-plugin-image";
 import { Container, Button } from "react-bootstrap";
+<<<<<<< master
 import Form from "@components/Forms/form";
+=======
+import Form from "@components/Forms/Form";
+>>>>>>> Creative Content and Become a Vngler
 import { motion } from "framer-motion";
 
 const creativeContent = () => {
