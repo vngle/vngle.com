@@ -109,7 +109,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             <Col className="image" md={6}>
               <Fade left>
                 <StaticImage
-                  src="../../images/services/newswire.png"
+                  src="../images/services/newswire.png"
                   alt="City with networks on top"
                 />
               </Fade>
@@ -152,7 +152,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             <Col className="image" md={6}>
               <Fade right>
                 <StaticImage
-                  src="../../images/services/sic.png"
+                  src="../images/services/sic.png"
                   alt="Hand holding mics"
                 />
               </Fade>
@@ -184,7 +184,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             <Col className="image" md={6}>
               <Fade left>
                 <StaticImage
-                  src="../../images/services/workshop.jpg"
+                  src="../images/services/workshop.jpg"
                   alt="Workshop participants group photo"
                 />
               </Fade>
