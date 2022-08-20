@@ -70,180 +70,170 @@ function technology() {
       <Section className="black-background">
         <h1 className="container text-center reveal active text-white">
           We Bring Together Grassroots Insights & Web3 Digital Forensics To
-          Verfiy Info at the Ground Level
+          Verify Info at the Ground Level
         </h1>
       </Section>
 
-      <Scroll
-        data-bs-spy="scroll"
-        data-bs-target="#nav-sections"
-        data-bs-root-margin="0px 0px -40%"
-        data-bs-smooth-scroll="true"
-      >
-        {/* ------------------------- Moble App ----------------------- */}
+      {/* ------------------------- Moble App ----------------------- */}
 
-        <Title id="section-1">
-          <div className="content-wrapper">
-            <div className="text-wrapper container">
-              <h1 className="fw-bolder">
-                The Vngle <br />
-                Reporter App
-              </h1>
-            </div>
-            <StaticImage
-              src="../images/technology/Mobile.jpeg"
-              className="backgroundImg"
-            />
+      <Title id="section-1">
+        <div className="content-wrapper">
+          <div className="text-wrapper container">
+            <h1 className="fw-bolder">
+              The Vngle <br />
+              Reporter App
+            </h1>
           </div>
-        </Title>
-        <Title>
-          <div className="content-wrapper">
-            <div className="container text-wrapper">
-              <p className="mobile-text reveal active">
-                The Reporter App Equips Trained Grassroots Reporters with our
-                Blockchain-Based Digital Forensics Technology to Publically
-                Authenticate the Origin of Stories from the Field
-              </p>
-            </div>
-            <StaticImage
-              src="../images/technology/Record-2.jpeg"
-              className="backgroundImg"
-            />
+          <StaticImage
+            src="../images/technology/Mobile.jpeg"
+            className="backgroundImg"
+          />
+        </div>
+      </Title>
+      <Title>
+        <div className="content-wrapper">
+          <div className="container text-wrapper">
+            <p className="mobile-text reveal active">
+              The Reporter App Equips Trained Grassroots Reporters with our
+              Blockchain-Based Digital Forensics Technology to Publically
+              Authenticate the Origin of Stories from the Field
+            </p>
           </div>
-        </Title>
-        <VngleLogo>
-          <div className="d-flex flex-wrap container-fluid background">
-            <div className="height">
-              <div className="d-flex media">
-                <Title className="d-flex justify-content-center">
-                  <div className="content-wrapper mobile-wrapper d-flex justify-content-center">
-                    <div className="text-wrapper container">
-                      <h2 className="display-6 text-center mobile-txt">
-                        How We Capture
-                        <br />
-                        &<br />
-                        Fact Check Content
-                        <br />
-                      </h2>
-                    </div>
-                    <StaticImage
-                      src="../images/technology/Iphone-Cover-2.jpeg"
-                      className="backgroundImg Iphone-img"
-                    />
+          <StaticImage
+            src="../images/technology/Record-2.jpeg"
+            className="backgroundImg"
+          />
+        </div>
+      </Title>
+      <Promo>
+        <div className="d-flex flex-wrap container-fluid background">
+          <div className="height">
+            <div className="d-flex media">
+              <Title className="d-flex justify-content-center">
+                <div className="content-wrapper mobile-wrapper d-flex justify-content-center">
+                  <div className="text-wrapper container">
+                    <h2 className="display-6 text-center mobile-txt">
+                      How We Capture
+                      <br />
+                      &<br />
+                      Fact Check Content
+                      <br />
+                    </h2>
                   </div>
-                </Title>
-                <div className="cards container d-flex flex-column align-self-center">
-                  <div className="d-flex flex-column">
-                    <div className="text-card yellow-border">
-                      <h3 className="fw-bolder">Local Assignments</h3>
-                      <p>
-                        <br />
-                        We work with trained members of the Vngle community to
-                        capture stories near them
-                      </p>
-                    </div>
-                    <div className="text-card pink-border">
-                      <h3 className="fw-bolder">Blockchain Record</h3>
-                      <p>
-                        <br />
-                        The content is recorded using public ledger technology,
-                        making its origin accessible to newswire subscribers &
-                        partners
-                      </p>
-                    </div>
-                    <div className="text-card cyan-border">
-                      <h3 className="fw-bolder">Editorial Review</h3>
-                      <p>
-                        <br />
-                        We ensure all content undergoes review from our
-                        editorial team & cross-referenced to ensure credibility
-                      </p>
-                    </div>
+                  <StaticImage
+                    src="../images/technology/Iphone-Cover-2.jpeg"
+                    className="backgroundImg Iphone-img"
+                  />
+                </div>
+              </Title>
+              <div className="cards container d-flex flex-column align-self-center">
+                <div className="d-flex flex-column">
+                  <div className="text-card yellow-border">
+                    <h3 className="fw-bolder">Local Assignments</h3>
+                    <p>
+                      <br />
+                      We work with trained members of the Vngle community to
+                      capture stories near them
+                    </p>
+                  </div>
+                  <div className="text-card pink-border">
+                    <h3 className="fw-bolder">Blockchain Record</h3>
+                    <p>
+                      <br />
+                      The content is recorded using public ledger technology,
+                      making its origin accessible to newswire subscribers &
+                      partners
+                    </p>
+                  </div>
+                  <div className="text-card cyan-border">
+                    <h3 className="fw-bolder">Editorial Review</h3>
+                    <p>
+                      <br />
+                      We ensure all content undergoes review from our editorial
+                      team & cross-referenced to ensure credibility
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </VngleLogo>
-        {/* --------------------------------------------------------------------------------- */}
-        <Section>
-          <div className="content-wrapper">
-            <div className="inner text-wrapper reveal active contactUs">
-              <h1>
-                Interested? <br />
-                Let's Expand Coverage In To <br />
-                Your City
-              </h1>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScpXPlS3MOqr9-P5E4A_F2JFt4dfspI-OY2W-xlAPWUOT9yoA/viewform"
-                target="blank"
-              >
-                <button className="btn btn-primary">Contact Us Today</button>
-              </a>
-            </div>
-            <StaticImage
-              src="../images/technology/Download-App.jpeg"
-              className="backgroundImg"
-            />
+        </div>
+      </Promo>
+      {/* --------------------------------------------------------------------------------- */}
+      <Section>
+        <div className="content-wrapper">
+          <div className="inner text-wrapper reveal active contactUs">
+            <h1>
+              Interested? <br />
+              Let's Expand Coverage In To <br />
+              Your City
+            </h1>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScpXPlS3MOqr9-P5E4A_F2JFt4dfspI-OY2W-xlAPWUOT9yoA/viewform"
+              target="blank"
+            >
+              <button className="btn btn-primary">Contact Us Today</button>
+            </a>
           </div>
-        </Section>
-        {/* ----------------------------Blockchain-----------------------------*/}
+          <StaticImage
+            src="../images/technology/Download-App.jpeg"
+            className="backgroundImg"
+          />
+        </div>
+      </Section>
+      {/* ----------------------------Blockchain-----------------------------*/}
 
-        <Title id="section-2">
-          <div className="content-wrapper">
-            <div className="text-wrapper text-reveal container">
-              <h1 className="reveal active fw-bolder">
-                How Blockchain Is Used
-              </h1>
-            </div>
-            <StaticImage
-              src="../images/technology/Blockchain-orange.jpeg"
-              className="backgroundImg"
-            />
+      <Title id="section-2">
+        <div className="content-wrapper">
+          <div className="text-wrapper text-reveal container">
+            <h1 className="reveal active fw-bolder">How Blockchain Is Used</h1>
           </div>
-        </Title>
-        <Section>
-          <div className="blockchain-text">
-            <div className="container">
-              <h2 className="font-sans-serif">
-                We use public ledger technology to craft transparent records of
-                exactly where, when, and how digital content originates in order
-                to better combat misinformation.
-              </h2>
-            </div>
-          </div>
-        </Section>
-        <Cards>
+          <StaticImage
+            src="../images/technology/Blockchain-orange.jpeg"
+            className="backgroundImg"
+          />
+        </div>
+      </Title>
+      <Section>
+        <div className="blockchain-text">
           <div className="container">
-            <h2 className="magenta fw-bolder">How That Works: </h2>
-            <div className="cards">
-              <div className="text-card gray">
-                <h3>Proof of Origin Captured</h3>
-                <p>
-                  Story is documented and recorded containing a unique id with
-                  location, timestamp, and forensic dats is sent to the
-                  blockchain
-                </p>
-              </div>
-              <div className="text-card gray">
-                <h3>Public Record is Created</h3>
-                <p>
-                  This record is posted to the blockchain and a receipt is
-                  generate showing the location of data and what is posted
-                </p>
-              </div>
-              <div className="text-card gray">
-                <h3>Forensic Trail Is Shared</h3>
-                <p>
-                  Content is verified using its blockchain receipt, enabling our
-                  partners to check the forensics trail of stories via the
-                  public ledger.
-                </p>
-              </div>
+            <h2 className="font-sans-serif">
+              We use public ledger technology to craft transparent records of
+              exactly where, when, and how digital content originates in order
+              to better combat misinformation.
+            </h2>
+          </div>
+        </div>
+      </Section>
+      <Cards>
+        <div className="container">
+          <h2 className="magenta fw-bolder">How That Works: </h2>
+          <div className="cards">
+            <div className="text-card gray">
+              <h3>Proof of Origin Captured</h3>
+              <p>
+                Story is documented and recorded containing a unique id with
+                location, timestamp, and forensic dats is sent to the blockchain
+              </p>
+            </div>
+            <div className="text-card gray">
+              <h3>Public Record is Created</h3>
+              <p>
+                This record is posted to the blockchain and a receipt is
+                generate showing the location of data and what is posted
+              </p>
+            </div>
+            <div className="text-card gray">
+              <h3>Forensic Trail Is Shared</h3>
+              <p>
+                Content is verified using its blockchain receipt, enabling our
+                partners to check the forensics trail of stories via the public
+                ledger.
+              </p>
             </div>
           </div>
-        </Cards>
-      </Scroll>
+        </div>
+      </Cards>
       <Section className="cyan-background">
         <div className="container">
           <h1 className="cyan fw-bolder">
@@ -383,6 +373,7 @@ const Section = styled.div`
   align-items: center;
   color: white;
   background-color: black;
+  overflow: hidden;
   position: relative;
   .container {
     padding: 70px 0;
@@ -457,6 +448,11 @@ const Section = styled.div`
     color: white;
     font-size: 2rem;
     margin-top: 8rem;
+  }
+
+  .contactUs {
+    font-size: 3rem;
+    margin: 9rem auto;
   }
 
   .blockchain-text {
@@ -609,8 +605,6 @@ const Cards = styled.div`
   }
 `;
 
-const Scroll = styled.div``;
-
 const Navbar = styled.div`
   position: sticky;
   top: 0;
@@ -630,7 +624,7 @@ const Navbar = styled.div`
   }
 `;
 
-const VngleLogo = styled.div`
+const Promo = styled.div`
   h2,
   h3,
   p {

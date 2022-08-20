@@ -2,239 +2,314 @@ import React from "react";
 import styled from "styled-components";
 import Layout from "@components/Layouts/MainLayout";
 import { StaticImage } from "gatsby-plugin-image";
+import SubForm from "../../components/Forms/SubForm";
 
-const newsWire = () => {
+const newswire = () => {
   return (
     <Layout>
-      
-      <MainContainer>
-        <Title>
-          <div className="container">
-            <div className="text-wrapper d-flex flex-column">
-            <h1 className="display-1">
-              News Wire
-            </h1>
-            <p>SERVICES</p>
-            </div>
-            <StaticImage
-              src="../../images/services/newsWire/mainHeader.jpeg"
-              className="backgroundImg"
-            />
-          </div>
-        </Title>
-        <h2 className="display-5">
-          At Vngle, we help newsrooms expand their video coverage capabilities
-          across underrepresented areas through grassroots content partnerships.
-        </h2>
-        <Animation>
-          <div className="container">
-            <div className="section">
-              <h1 className="display-5">
-                {" "}
-                Through
-                <br />
-                Training
-                <br />
-                Constituencies
-              </h1>
-              <StaticImage
-                src="../../images/services/newsWire/newsWireHeader-2.jpg"
-                className="backgroundImg"
-              />
-            </div>
-          </div>
-        </Animation>
-        <Animation>
-          <div className="container">
-            <div className="section">
-              <h1 className="display-5">
-                & With Our Patented Mobile Forensics Blockchain Technology
-              </h1>
-              <StaticImage
-                src="../../images/services/newsWire/mobile-tech.jpg"
-                className="backgroundImg"
-              />
-            </div>
-          </div>
-        </Animation>
-        <Animation>
-            <div className="section content-wrapper">
-              <div className="text-wrapper">
-              <h1 className="display-5">
-                We Curate More Verified Local Insights for Newsrooms
-              </h1>
-              </div>
-              <StaticImage 
-              src="../../images/services/newsWire/journey.jpg"
-              className="background-img-cover"
-              />
-            </div>
-        </Animation>
-        <NewsWire>
-          <h2 className="display-5">
-            Equipping Them With Access to a Transparent Record of Exactly <br />
-            Where, When, & How <br />
-            Digital Content Originates in Order to Better Combat New Deserts &
-            Traces of Misinformation
-          </h2>
-          <div className="container">
-            <h1 className="display-2">Newswire</h1>
-          </div>
-        </NewsWire>
-        <div className="container text-left">
-          <h2 className="display-6">
-            Our Newswire Accelerates Your Ability to Engage & Learn from
-            Audiences through
-          </h2>
-        </div>
-        <Animation>
+        <Header>
           <div className="content-wrapper">
             <div className="text-wrapper">
-              <h2 className="display-5 text-align-right text-white">
-                Trusted and Truly Representative Original Local Content
-              </h2>
+              <h1 className="display-4 yellow-text fw-bolder lh-sm">
+                Expand Your Coverage Capabilities.
+                <h1 className="display-4 fw-bold text-black">
+                  Better Reach Underrepresented Areas Through the Vngle
+                  Newswire.
+                </h1>
+              </h1>
             </div>
-            <StaticImage src="../../images/services/newsWire/background.jpeg" className="background-img-cover"/>
+            <video
+              playsinline="playsinline"
+              autoplay="autoplay"
+              muted="muted"
+              loop="loop"
+              className="login-video"
+            >
+              <source
+                src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4"
+                type="video/mp4"
+                className="login-vid"
+              />
+            </video>
           </div>
-        </Animation>
-        <div className="container text-right">
-          <h2 className="display-6">
-            We Deploy Trained Local Experts & Patented Verification Technology
-            to Confidently Grow Noir Media Strategy with Authentic Ground-level
-            Perspectives
-          </h2>
-        </div>
-        <Title className="blue-background">
-            <h1 className="display-1 text-capitalize">
-              Are you a media organization?
-            </h1>
-            <h1 className="display-3 text-capitalize">
-              Need to engage diverse audiences? <br />
-              need a reliable hyper-local insights? <br />
-              need to monitor your community? <br />
-            </h1>
-        </Title>
-      </MainContainer>
+        </Header>
+        <Section>
+          <div className="content-wrapper">
+            <div className="text-wrapper">
+              <h1 className="display-4 text-white">
+                Our work strengthens the local news ecosystem to help you better
+                curate more verified local insights.
+              </h1>
+            </div>
+            <StaticImage
+              src="../../images/services/newsWire/newsroom.jpeg"
+              className="background-img"
+            />
+          </div>
+        </Section>
+        <Section className="mt-3">
+          <div className="container d-flex height">
+            <div className="content-wrapper">
+              <h1>
+                Through partnering with trained local experts, we capture
+                pressing grassroots-level stories.
+              </h1>
+            </div>
+            <StaticImage
+              src="../../images/services/newsWire/recording.jpg"
+              className="picture"
+            />
+          </div>
+        </Section>
+        <Section>
+          <div className="container d-flex height">
+            <StaticImage
+              src="../../images/services/newswire.png"
+              className="picture"
+            />
+            <div className="content-wrapper">
+              <h1>
+                Our content is secured by patented mobile forensics verification
+                technology.
+              </h1>
+            </div>
+          </div>
+        </Section>
+        <Section>
+          <div className="container d-flex height">
+            <div className="content-wrapper">
+              <h1 className="padding">
+                Our tech enables us to share a record of exactly where, when,
+                and how our conrent is captured, helping you get transparent
+                insights from the ground without being there.
+              </h1>
+            </div>
+            <StaticImage
+              src="../../images/services/newsWire/katie-rodriguez-unsplash.jpeg"
+              className="picture"
+            />
+          </div>
+        </Section>
+        <Content>
+          <div className="content-wrapper">
+            <div className="text-wrapper">
+              <h1 className="display-5">
+                We cover the last mile so you don't have to
+              </h1>
+            </div>
+            <StaticImage
+              src="../../images/services/newsWire/journey.jpg"
+              className="background-img-cover"
+            />
+          </div>
+        </Content>
+        <Text>
+          <h1 className="display-4">
+            Vngle's grassroots newsire accelerates your ability to learn from
+            diverse audiences to confidently grow your media strategy & combat
+            traces of misinformation
+          </h1>
+        </Text>
+        <Section>
+          <div className="content-wrapper img">
+            <div className="text-wrapper"></div>
+            <StaticImage
+              src="../../images/services/newsWire/mainHeader.jpeg"
+              className="background-img"
+            />
+          </div>
+        </Section>
+        <Text>
+          <h1 className="display-4">
+            We work with media organizations, institutions, and more delivering
+            trusted and truly representative hyper-local insights on the
+            ommunites they care about.
+          </h1>
+        </Text>
+        <Section>
+          <div className="content-wrapper">
+            <div className="top-text">
+              <h1 className="display-4 text-white">
+                Recieve the Various Angles <br />
+                you need From Vngle
+              </h1>
+            </div>
+            <StaticImage
+              src="../../images/services/newsWire/roger-erdvig.jpg"
+              className="background-img"
+            />
+          </div>
+        </Section>
+        <SubForm />
     </Layout>
   );
 };
 
+const Header = styled.div`
+  position: relative;
 
-const Title = styled.h1`
-  &.blue-background{
-    background: #1EE4F0;
-  }
-  background: linear-gradient(
-    to right,
-    rgba(248, 200, 65, 1),
-    rgba(248, 200, 65, 0.5)
-  );
-
-  .container {
+  .content-wrapper {
     display: flex;
-    justify-content: space-around;
+    position: relative;
     align-items: center;
-    color: black;
+    min-height: 50vh;
   }
 
-  .container > div {
-    flex-basis: 90%;
+  .text-wrapper {
+    z-index: 10;
+    margin-top: 35%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
   }
 
-  .backgroundImg {
-    max-width: 40%;
-    z-index: 0;
-    margin: 3rem auto;
+  .login-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-family: Inter, sans-serif;
+  }
+  .yellow-text {
+    color: #ffcc35;
+  }
+`;
+
+const Text = styled.h1`
+  margin: 5rem 2rem;
+  h1 {
+    font-family: Inter, sans-serif;
+  }
+  //--------------Media Queries-----------------
+  @media (max-width: 47rem) {
+    margin: 2rem 1rem;
+  }
+`;
+
+const Section = styled.div`
+  position: relative;
+
+  .text-wrapper {
+    z-index: 10;
+    margin-top: 50%;
+    padding-right: 3rem;
+    margin-left: 1rem;
+  }
+
+  .text-wrapper > h1 {
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 1rem;
   }
 
-  h1 , p{
+  .top-text {
     z-index: 10;
-    padding-left: 2rem;
-  }
-  h1, h2{
-    font-family:Inter, sans-serif;
-  }
-`;
-const Animation = styled.div`
-  background: #ffcc35;
-  .container > .section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin-bottom: 50%;
+    margin-left: 1rem;
+    margin-top: 2rem;
   }
 
-  .backgroundImg {
-    max-width: 50%;
-    z-index: 0;
-    margin: 1rem 0;
-    flex-basis: 50%;
-    border-radius:1rem;
-  }
-
-  .background-img-cover{
+  .background-img {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 0;
   }
 
-  .text-wrapper {
-    z-index: 10;
+  .content-wrapper {
     display: flex;
     align-items: center;
-    margin: 5rem 0;
-    padding: 0 1rem;
+    position: relative;
   }
 
-  .text-wrapper > h1{
-    display:flex;
-    justify-content:center;
-    text-align:center;
+  .picture {
+    max-width: 80%;
+    border-radius: 1rem;
   }
 
+  .container > div {
+    flex-basis: 100%;
+  }
+
+  .height {
+    height: 70vh;
+  }
+
+  h1 {
+    font-family: Inter, sans-serif;
+    padding-left: 1rem;
+  }
+
+  //--------------Media Queries-----------------
+  @media (max-width: 47rem) {
+    .height {
+      height: 20vh;
+      margin-top: 2rem;
+    }
+
+    .picture {
+      max-width: 50%;
+      height: auto;
+    }
+
+    .content-wrapper > h1 {
+      font-size: 1rem;
+      text-align: center;
+      padding-left: 0;
+    }
+
+    .content-wrapper > .padding {
+      padding-top: 2rem;
+    }
+
+    .container > div {
+      flex-basis: 50%;
+    }
+
+    .text-wrapper > h1 {
+      margin-top: 25%;
+      padding-right: 0;
+      font-size: 1.5rem;
+    }
+  }
+`;
+
+const Content = styled.div`
+  background: #ffcc35;
   .content-wrapper {
     display: flex;
     align-items: center;
     position: relative;
     color: black;
+    margin-top: 3rem;
   }
 
-  .section > h1 {
+  .text-wrapper {
+    z-index: 10;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .text-wrapper > h1 {
     font-family: Inter, sans-serif;
-    margin: 5rem 1rem;
-  }
-
-  .conatiner{
-    margin:0 3rem;
-  }
-
-`;
-
-const NewsWire = styled.h1`
-  .container {
     display: flex;
     justify-content: center;
-  }
-  h1 {
-    font-family: Inter, sans-serif;
-    background: #e3e3e3;
-    border-radius: 20px;
-    padding: 3rem 18rem;
-    color: #e512d0;
-  }
-`;
-const MainContainer = styled.div`
-  h2 {
-    font-family: Inter, sans-serif;
-    margin: 0 auto;
     text-align: center;
-    margin-top: 7rem;
-    margin-bottom: 7rem;
+    margin: 5rem 0;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
   }
-
-  .blue-text{ color: #1EE4F0;}
+  .background-img-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
 `;
 
-
-export default newsWire;
+export default newswire;

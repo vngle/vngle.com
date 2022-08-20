@@ -9,26 +9,31 @@ import DOMPurify from "dompurify";
  * @param {string} message Response message from Mailchimp
  * @param {function} onSubmitted Function to be called on form submission. Usually used to call subscribe(formData)
  */
+
+
 const SubForm = ({ status, message, onSubmitted }) => {
   // object key names are extracted from Mailchimp. Changing them will break the form.
   const [formData, setFormData] = useState({
+    NAME: "",
     EMAIL: "",
-    NUMBER: "",
-    "group[293774][4]": false, // SMS opt-in
+    MESSAGE: "",
+
+    "group[293774][3]": true, //messagenot opt-in
   });
-  const [validated, setValidated] = useState(false);
+  const [validated, setValidated] = useState(true);
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     const submitData = {
+      NAME: formData.FIRST,
       EMAIL: formData.EMAIL,
-      NUMBER: formData.NUMBER,
+      MESSAGE: formData.MESSAGE,
     };
 
     // only send checkbox status if checked
     // Mailchimp will populate field if any value is sent
-    if (formData["group[293774][4]"]) {
-      submitData["group[293774][4]"] = formData["group[293774][4]"];
+    if (formData["group[293774][3]"]) {
+      submitData["group[293774][3]"] = formData["group[293774][3]"];
     }
 
     if (!form.checkValidity()) {
@@ -75,83 +80,86 @@ const SubForm = ({ status, message, onSubmitted }) => {
       </Form.Group>
     );
   }
-
+    
   return (
     <StyledJumbotron>
       <Container>
         <Row>
-          <Col xs={12} md={7} lg={6}>
-            <h1>Get free and balanced news near you</h1>
+          <Col>
+          <h1 className="fw-bold">
+            Let's work together.<br/>
+            Get in touch today.
+          </h1>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
+            <form action="https://getform.io/f/6fa17a80-9b69-44dc-b894-27fe292b3795" method="POST">
               <Row xs={1} sm={2}>
-                {formData["group[293774][4]"] === true ? (
-                  <Form.Group controlId="number" as={Col}>
-                    <Form.Label>
-                      Phone Number<span className="text-danger">*</span>
-                    </Form.Label>
-                    <Form.Control
-                      type="text"
-                      placeholder="Enter cell phone number"
-                      name="NUMBER"
-                      value={formData.NUMBER}
-                      onChange={handleChange}
-                      required={formData["group[293774][4]"]}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Please provide a phone number
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                ) : (
-                  <Form.Group controlId="email" as={Col}>
-                    <Form.Label>
-                      Email address<span className="text-danger">*</span>
-                    </Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="Enter email"
-                      name="EMAIL"
-                      value={formData.EMAIL}
-                      onChange={handleChange}
-                      required
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Please provide a valid email address
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                )}
+                <Form.Group controlId="name" as={Col}>
+                  <Form.Label>
+                   Name <span className="text-danger">*</span>
+                  </Form.Label>
+                  <Form.Control
+                    type="NAME"
+                    placeholder="Enter full name"
+                    name="NAME"
+                    value={formData.NAME}
+                    onChange={handleChange}
+                    required
+                  />
+                </Form.Group>
+              </Row>
 
+              <Row xs={1} sm={2}>
+                <Form.Group controlId="email" as={Col}>
+                  <Form.Label>
+                    Email address <span className="text-danger">*</span>
+                  </Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="Enter a valid email address"
+                    name="EMAIL"
+                    value={formData.EMAIL}
+                    onChange={handleChange}
+                    required
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    Please provide a valid email address
+                  </Form.Control.Feedback>
+                </Form.Group>
+              </Row>
+
+              <Row xs={1} sm={2}>
+                <Form.Group controlId="Textarea" as={Col}>
+                  <Form.Label>
+                  What are your needs? <span className="text-danger">*</span>
+                  </Form.Label>
+                  <Form.Control
+                    type="textarea"
+                    placeholder=""
+                    name="MESSAGE"
+                    value={formData.MESSAGE}
+                    onChange={handleChange}
+                    required={formData["group[293774][4]"]}
+                    style={{height:'100px'}}
+                  />
+                  <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
+                </Form.Group>
               </Row>
 
               <Row className="mt-3">
                 <Form.Group as={Col} xs="auto">
                   <Button type="submit" variant="dark">
                     {status === "sending" ? (
-                      <Spinner animation="border" size="sm" />
+                      <Spinner animation="border" size="sm" display="flex" />
                     ) : (
-                      "Subscribe"
+                      "Contact Us"
                     )}
                   </Button>
                 </Form.Group>
-                <Form.Group as={Col} className="checkbox-container">
-                  <Form.Check
-                    type="checkbox"
-                    id="sms-confirm"
-                    label="Text me instead!"
-                    name="group[293774][4]"
-                    checked={formData["group[293774][4]"]}
-                    onChange={handleChange}
-                    inline
-                  />
-                </Form.Group>
+
+                {respMessage}
+                
               </Row>
-
-              {respMessage}
-
-              <MutedMsg className="text-muted">
-                * We’re operating in Georgia with more states coming soon. Sign
-                ups outside of GA are invited to our national community
-                newsletter until we reach them.
-              </MutedMsg>
+              </form>
             </Form>
           </Col>
         </Row>
@@ -161,21 +169,51 @@ const SubForm = ({ status, message, onSubmitted }) => {
 };
 
 const StyledJumbotron = styled.div`
-  background: rgba(255, 204, 52, 0.4);
-  border: 5px solid var(--bs-primary);
-  margin: 3rem 0;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  background: #1EE4F0;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  height: 100%;
 
-  .checkbox-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  h1 {
+    font-family: "Inter", sans-serif;
+    margin-top:2rem;
+    margin-left:10rem;
   }
-`;
 
-const MutedMsg = styled.small`
-  font-size: 10px;
-`;
+  .form-label {
+    margin-left: 0.3rem;
+    margin-top: 0.5rem;
+    padding left: 10rem;
+  }
+
+  .form-control {
+    border-radius: 0.6rem;
+  }
+
+  form{
+    margin-left:5rem;
+  }
+
+  .btn {
+    letter-spacing: 1.7px;
+    margin-bottom: 2rem;
+    margin-top:1rem;
+  }
+
+  @media(max-width:47rem){
+    margin-top:5rem;
+    .form-label{
+      paddin-left:2rem;
+    }
+
+    form{
+      margin-left:0;
+    }
+
+    h1{
+      margin-left:0;
+    }
+  }
+  `;
 
 export default SubForm;
