@@ -87,7 +87,8 @@ const SubForm = ({ status, message, onSubmitted }) => {
         <Row>
           <Col>
           <h1 className="fw-bold">
-          Let’s grow your content strategy today.<br/>
+          Let’s grow your content strategy.<br/>
+           Request a demo today.
           </h1>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <form action="https://getform.io/f/6fa17a80-9b69-44dc-b894-27fe292b3795" method="POST">
@@ -150,7 +151,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
                     {status === "sending" ? (
                       <Spinner animation="border" size="sm" display="flex" />
                     ) : (
-                      "Request a quote"
+                      "Request Us"
                     )}
                   </Button>
                 </Form.Group>

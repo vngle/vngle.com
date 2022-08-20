@@ -12,10 +12,15 @@ const Header = ({ siteTitle }) => {
     { name: "About", to: "/about" },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< master
+>>>>>>> 994d5d7 (Creative content changes with form)
     // { name: "Our Tech", to: "/technology" },
     { name: "Team", to: "/team" },
     // { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
 =======
+<<<<<<< HEAD
     { name: "Our Tech", to: "/technology" },
     { name: "Team", to: "/team" },
     { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
@@ -45,8 +50,28 @@ const Header = ({ siteTitle }) => {
     { name: "Newswire", to: "/services/news-wire" },
     { name: "Creative Content Strategy", to: "/services/creative-content" },
     { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
+=======
+    { name: "Our Team", to: "/team" },
+>>>>>>> Creative content changes with form
+  ];
+  const dropdownLinks = [
+    { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
+    {
+      name: "Become a Reporter",
+      to: "https://forms.gle/JuxuSvst9aJTiDAk6",
+    },
+    {
+      name: "Request Coverage",
+      to: "https://vngle.typeform.com/to/zwc2R2og",
+    },
+    { name: "Become an Ally", to: "/ally" },
+    { name: "Submit a tip", to: "/report" },
+
+    { name: "Become a Vngler", to: "/becomevngler" },
+>>>>>>> 994d5d7 (Creative content changes with form)
   ];
 
+<<<<<<< master
 <<<<<<< master
 <<<<<<< master
   const dropdownLinksServices = [
@@ -58,9 +83,12 @@ const Header = ({ siteTitle }) => {
 =======
 >>>>>>> Updates
 =======
+=======
+
+>>>>>>> Creative content changes with form
   const dropdownLinksServices = [
     { name: "NewsWire", to: "/services/news-wire" },
-    { name: "Creative Content", to: "/services/Creative-content" },
+    { name: "Creative Content", to: "/services/creative-content" },
     { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
   ];
 
@@ -71,7 +99,7 @@ const Header = ({ siteTitle }) => {
         <Container>
           <Navbar.Brand>
             <Link to="/" title={siteTitle}>
-              <img alt="Vngle logo" src={Logo} height="90" />
+              <img alt="Vngle logo" src={Logo} height="70" />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

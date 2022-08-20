@@ -39,10 +39,14 @@ const SubForm = ({ status, message, onSubmitted }) => {
       LAST: formData.LAST,
       EMAIL: formData.EMAIL,
 <<<<<<< HEAD
+<<<<<<< HEAD
       MESSAGE: formData.MESSAGE,
 =======
       NUMBER: formData.MESSAGE,
 >>>>>>> ccecdf0 (Updates)
+=======
+      MESSAGE: formData.MESSAGE,
+>>>>>>> 994d5d7 (Creative content changes with form)
     };
 
     // only send checkbox status if checked
@@ -178,7 +182,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
                   </Form.Label>
                   <Form.Control
                     type="email"
-                    placeholder="Enter email"
+                    placeholder="Enter a valid email address"
                     name="EMAIL"
                     value={formData.EMAIL}
                     onChange={handleChange}
@@ -320,18 +324,14 @@ const StyledJumbotron = styled.div`
 =======
   height: 100%;
 
-  .center-element {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
-
   h1 {
     font-family: "Inter", sans-serif;
   }
 
   .form-label {
     margin-left: 0.3rem;
+    margin-top: 0.3rem;
+    font-weight: bold;
   }
 
   .form-control {
@@ -340,12 +340,30 @@ const StyledJumbotron = styled.div`
 
   .btn {
     letter-spacing: 1.7px;
+    margin-bottom: 0.9rem;
   }
+  
+  @media(max-width:47rem){
+    margin-top:5rem;
+    
+    .form-label {
+      paddin-left:2rem;
+    }
 
+<<<<<<< HEAD
   .checkbox-container {
     flex-direction: column;
     padding-top: 15px;
 >>>>>>> ccecdf0 (Updates)
+=======
+    form{
+      margin-left:0;
+    }
+
+    h1{
+      margin-left:0;
+    }
+>>>>>>> 994d5d7 (Creative content changes with form)
   }
 
   .form-label {
