@@ -8,27 +8,31 @@ import Link from "./Link";
 
 const Header = ({ siteTitle }) => {
   const navLinks = [
-    { name: "Georgia", to: "/georgia" },
-    {
-      name: "Jobs",
-      to: "https://www.notion.so/vngle/Jobs-Vngle-cbe85d3d0e074aeda5c860629a42ad86",
-    },
+    { name: "Coverage", to: "/coverage" },
     { name: "About", to: "/about" },
-    { name: "Our Team", to: "/team" },
-    { name: "Services", to: "/services" },
+    // { name: "Our Tech", to: "/technology" },
+    { name: "Team", to: "/team" },
+    // { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
   ];
   const dropdownLinks = [
-    { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
-    {
-      name: "Become a Reporter",
-      to: "https://forms.gle/JuxuSvst9aJTiDAk6",
-    },
-    {
-      name: "Request Coverage",
-      to: "https://vngle.typeform.com/to/zwc2R2og",
-    },
-    { name: "Become an Ally", to: "/ally" },
-    { name: "Submit a tip", to: "/report" },
+    { name: "Follow our Movement", to: "http://eepurl.com/g1cJk5" },
+    // {
+    //   name: "Become a Reporter",
+    //   to: "https://forms.gle/JuxuSvst9aJTiDAk6",
+    // },
+    // {
+    //   name: "Request Coverage",
+    //   to: "https://vngle.typeform.com/to/zwc2R2og",
+    // },
+    { name: "Become a Vngler", to: "/vngler" },
+    { name: "Serve as an Ally", to: "/ally" },
+    { name: "Submit a Tip or Request", to: "/report" },
+  ];
+
+  const dropdownLinksServices = [
+    { name: "Newswire", to: "/services/news-wire" },
+    { name: "Creative Content", to: "/services/creative-content" },
+    { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
   ];
 
   return (
@@ -43,8 +47,11 @@ const Header = ({ siteTitle }) => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-end text-center">
             <Nav>
-              <Dropdown>
-                <Dropdown.Toggle as={Button} className="services">
+              <Dropdown className="nav-item">
+                <Dropdown.Toggle
+                  className="menu-dropdown-toggle nav-link"
+                  as="a"
+                >
                   Services
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
@@ -67,22 +74,6 @@ const Header = ({ siteTitle }) => {
                   </Nav.Item>
                 );
               })}
-
-              {/* <Dropdown>
-                <Dropdown.Toggle as={Button} className="services">
-                  Services
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  {dropdownLinksServices.map((link, i)=>{
-                    return(
-                      <Dropdown.Item as="div" key={i} role="menu-item">
-                        <Link to={link.to}>{link.name}</Link>
-                      </Dropdown.Item>
-                    )
-                  })}
-                </Dropdown.Menu>
-              </Dropdown> */}
-
               <Dropdown as={Nav.Item}>
                 <Dropdown.Toggle as={Button} className="ml-lg-2">
                   Get Involved
@@ -140,7 +131,11 @@ const StyledHeader = styled.header`
           text-decoration: none;
         }
       }
-
+      .menu-dropdown-toggle {
+        background: transparent;
+        border-color: transparent;
+        cursor: pointer;
+      }
       .navbar-toggler {
         border: none;
         font-size: 1.5rem;

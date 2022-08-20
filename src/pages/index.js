@@ -13,37 +13,40 @@ import Seo from "../components/Seo";
 import Slider from "../components/Sliders/Slider";
 import Grid from "../components/Grids/Grid";
 import SubForm from "../components/Forms/SubForm";
-import Sub from "@components/Forms/sub";
+import Sub from "../components/Forms/Sub";
 import NewBanner from "../components/Banner";
 import NewContainer from "../components/Containers/SingleContainer";
 // import TextContainer from "../components/Containers/TextContainer";
 // import ButtonContainer from "../components/Containers/ButtonContainer";
 
 import World from "@images/home/world.svg";
-import M from "@images/home/m.gif";
-
+import MitGif from "@images/home/mit.gif";
 
 const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
   return (
     <Layout>
       <Seo title="Nonpartisan Grassroots Verified News" />
 
-      <HeroContainer className="main-banner">
+      <HeroContainer className="main-banner text-center">
         <Fade bottom>
-          <h1 className="display-4 fw-bolder text-center">
+          <h1 className="display-4 fw-bolder">
             Amplifying Various Angles
             <br />
             of Grassroots Coverage
           </h1>
         </Fade>
 
-        <h2 className="display-4 fw-bolder text-center">
-          <span className="highlight">Nonpartisan&nbsp;</span>
+        <p className="font-sans-serif h5">
+          <span>&mdash;</span> News and Media Services to Empower Communities
+          Everywhere <span>&mdash;</span>
+        </p>
 
+        <h2 className="display-4 fw-bolder">
           <span className="highlight">
+            Nonpartisan{" "}
             <Typed
               strings={["By the People", "For the People"]}
-              typeSpeed={30}
+              typeSpeed={20}
               backDelay={5000}
               showCursor={false}
               loop
@@ -51,22 +54,17 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
           </span>
           <br />
         </h2>
-
-        <h3 className="text-center">
-          News and Media Services to Empower Communities Everywhere
-        </h3>
-
         <img src={World} alt="" className="hero-img" />
       </HeroContainer>
 
-      <NewBanner
-        paragraph="Capture your story with our award-winning content services"
-        buttonText="CONTACT US"
-        buttonLink="https://docs.google.com/forms/d/e/1FAIpQLSf80FHwD9CVDZK954uUQ_-_0nkMvBGYT1vZ6nHvXsD12H7fDg/viewform"
-        bgColor="var(--bs-primary)"
-      />
-
       <Container fluid>
+        <NewBanner
+          paragraph="Capture your story with our award-winning content services"
+          buttonText="CONTACT US"
+          buttonLink="https://docs.google.com/forms/d/e/1FAIpQLSf80FHwD9CVDZK954uUQ_-_0nkMvBGYT1vZ6nHvXsD12H7fDg/viewform"
+          bgColor="var(--bs-primary)"
+        />
+
         <Slider>
           {storiesFeatured.byType.items.map(({ title, caption, id, video }) => {
             return (
@@ -82,29 +80,23 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             );
           })}
         </Slider>
+
+        <SubForm />
+
+        <NewContainer
+          title="We boost equitable local representation across cities:"
+          titleColor="white"
+          paragraph="Aiding Newsrooms, Brands, Institutions & more in expanding their
+        coverage capabilities through Grassroots Content Partnerships."
+          bgColor="#222"
+        />
       </Container>
 
-      <SubForm />
-
-      <NewContainer
-        title="We boost equitable local representation across cities :"
-        titleColor="white"
-        paragraph="Aiding Newsrooms, Brands, Institutions & more in expanding their
-        coverage capabilities through Grassroots Content Partnerships."
-        bgColor="black"
-      />
-
-      <ButtonContainer
-        title="How we can advance your operation:"
-        titleColor="black"
-        buttonLink="https://docs.google.com/forms/d/e/1FAIpQLSf80FHwD9CVDZK954uUQ_-_0nkMvBGYT1vZ6nHvXsD12H7fDg/viewform"
-        buttonText="Contact Us Today"
-        buttonColor="black"
-        butTexCol="white"
-        bgColor="var(--bs-light)"
-      />
-
       <Container>
+        <h1 className="my-5 display-3 font-sans-serif text-center fw-bolder">
+          How we can advance your operation
+        </h1>
+
         <MainPageContainer>
           <SplitSection background="var(--bs-primary)" className="gy-3">
             <Col className="image" md={6}>
@@ -176,7 +168,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
                       size="lg"
                       variant="light"
                     >
-                      Host an event with us
+                      Launch your campaign
                     </motion.button>
                   </a>
                 </div>
@@ -194,7 +186,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
         </MainPageContainer>
       </Container>
 
-      <ButtonContainer
+      {/* <ButtonContainer
         title="We bring you hyper-local content & insights that’s verified by digital forensics & local experts."
         titleColor="var(--bs-primary)"
         buttonLink=""
@@ -202,80 +194,44 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
         buttonColor="var(--bs-primary)"
         butTexCol="black"
         bgColor="black"
+      /> */}
+
+      <NewContainer
+        title="We bring you hyper-local content & insights that’s verified by digital forensics & local experts."
+        titleColor="white"
+        bgColor="#222"
       />
 
-      <Container>
+      <Container className="mt-5">
         <div className="mb-5">
           <Grid items={storiesGeorgia.byType.items} />
           <div className="text-center"></div>
         </div>
       </Container>
 
-<<<<<<< Updated upstream
-      <TextContainer
-        title="Our impact won the 🌎 Community Award at MIT."
-        titleColor="black"
-        bgColor="#cdfd01"
-      />
-
-      <HeroContainer>
-        <div className="mit-container">
-          <img src={M} alt="" className="mi-img"/>
-        </div>
-        < Sub />
-      </HeroContainer>
-=======
       <Container fluid>
         <NewContainer
           title="Our impact won the 🌎 Community Award at MIT."
           titleColor="black"
           bgColor="#cdfd01"
         />
-
-        <Row>
-          <Col xs={12} md={4} lg={3} xl={2}>
-            <img src={MitGif} alt="" width="100%" />
-          </Col>
-          <Col xs={12} md={8} lg={9} xl={10}>
-            <Sub />
-          </Col>
-        </Row>
-        {/* <Sub /> */}
       </Container>
->>>>>>> Stashed changes
+      <Container>
+        <img src={MitGif} alt="" width="100%" />
+      </Container>
+      <Container fluid>
+        <Sub />
+      </Container>
     </Layout>
   );
 };
 
 const HeroContainer = styled(Container)`
   position: relative;
-
-  h1,
-  .h1 {
-    padding-top: 2rem;
-  }
-
-  h2,
-  .h2 {
-    font-size: 2rem;
-    margin-bottom: 0.7rem;
-  }
-
-  h3 {
-    font-size: 18px;
-    font-family: cursive;
-    font-weight: bold;
-  }
-
-  &.main-banner {
-    min-height: 20rem;
-    max-width: 920px;
-  }
+  margin-top: 2rem;
 
   .hero-img {
-    object-fit: cover;
-    width: 100%;
-    height: 20rem;
+    width: 80%;
     position: absolute;
     z-index: -1;
     margin-left: auto;
@@ -303,7 +259,7 @@ const HeroContainer = styled(Container)`
 
   .w-container {
     background: #1a0117;
-    color: var(--bs-primary);-
+    color: var(--bs-primary);
     text-align: center;
     padding: 1 em;
 
@@ -314,18 +270,6 @@ const HeroContainer = styled(Container)`
       text-align: center;
       cursor: pointer;
     }
-  }
-
-  .mi-img {
-   
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-  }
-
-  .mit-container {
-    background: black;
   }
 `;
 
@@ -471,6 +415,5 @@ const MainPageContainer = styled.div`
     }
   }
 `;
-
 
 export default IndexPage;

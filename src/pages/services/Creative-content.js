@@ -1,78 +1,65 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "@components/Layouts/MainLayout";
-import J from "@images/services/j.webp"
+import Background from "@images/services/creative_content_background.jpeg";
 import { StaticImage } from "gatsby-plugin-image";
 import { Container, Button } from "react-bootstrap";
+import Form from "@components/Forms/Form";
 import { motion } from "framer-motion";
-
 
 const creativeContent = () => {
   return (
     <Layout>
-    <HeroContainer className="main-banner">
-        <motion.div
-          animate={{ y: [100, 0], scale: [3.5, 1] }}
-          transition={{ duration: 2.3 }}
-        >
-          <div className="logo-container">
-            <img
-              src="../../images/logo.png"
-              alt="Vngle Logo"
-              className="vngle-logo"
-            />
-          </div>
-        </motion.div>
-
-        <motion.div
-          animate={{ opacity: [0, 1] }}
-          transition={{ duration: 1.3, delay: 2.5 }}
-        >
-          <div className="center-content">
-            <h1 className="logo-title">Services</h1>
-          </div>
-        </motion.div>
-
-        <motion.div
-          animate={{ y: [300, 0] }}
-          transition={{ duration: 1.8, delay: 0.5 }}
-        >
-          <div className="centercontent">
-            <h1 className="main-title">Creative Content Strategy</h1>
-          </div>
-
-          <div className="center-content">
-          <Button className="animated-btn" href="https://forms.gle/e6y4Gkna5S9kymdE8">Launch Your Campain
-            </Button>
-          </div>
-        </motion.div>
-
-        <img src={J} alt="" className="hero-img" />
+      <HeroContainer className="main-banner">
+        <Container className="d-flex justify-content-center flex-column">
+          <motion.div
+            animate={{ y: [100, 0], opacity: [0, 1] }}
+            transition={{ duration: 1.3, delay: 1 }}
+          >
+            <div className="main-title">
+              <h1 className="display-4 fw-bolder">
+                Creative Content <br />
+                Strategy
+              </h1>
+            </div>
+          </motion.div>
+          <motion.div
+            animate={{ opacity: [0, 1] }}
+            transition={{ duration: 1.3, delay: 2 }}
+          >
+            <div className="main-title btn-container">
+              <Button className="animated-btn">Contact Us Today</Button>
+            </div>
+          </motion.div>
+        </Container>
+        <img src={Background} alt="" className="hero-img" />
       </HeroContainer>
-     
-     
-        <MaContainer>
-          <div className="mb display-6">
-            <p>
-              Maximize your audience reach with our on-demand tailored content!
-            </p>
-            <StaticImage
-              className="img"
-              src="../../images/services/sic.png"
-              alt="Hand holding mics"
-            />
-          </div>
-        </MaContainer>
-       
 
-      <Mcontainer>
-        {/* <Container> */}
+      <MaContainer>
+        <div className="mt display-3">
+          <h1>
+            <span class="r">
+              Craft strategies to better target communities:
+            </span>{" "}
+            <br />
+            Build greater awareness, campaigns, market research & more.
+          </h1>
+        </div>
+        <div className="mb display-6">
+          <p>
+            Maximize your audience reach with our on-demand tailored content!
+          </p>
+          <StaticImage
+            className="img"
+            src="../../images/services/sic.png"
+            alt="Hand holding mics"
+          />
+        </div>
         <h1 class="display-2">
           Leverage our grassroots storytelling expertise to capture a specific
           story you want covered.
         </h1>
-        {/* </Container> */}
-      </Mcontainer>
+      </MaContainer>
 
       <HContainer className="rb-4">
         <h1>
@@ -87,6 +74,61 @@ const creativeContent = () => {
           <span class="b">the right audiences</span>.
         </p>
       </HContainer>
+
+      <HeContainer>
+        <h1 className="content display-4 fw-bold">
+          {" "}
+          Our content team will work with you to plan your story and document
+          the story you want to capture.{" "}
+        </h1>
+        <div>
+          <StaticImage
+            className="img"
+            src="../../images/services/k.jpg"
+            alt="Hand holding camera"
+          />
+        </div>
+
+        <h1 className="container display-4 fw-bold">
+          {" "}
+          No matter the if it’s on-the-ground or in-the-air, we have the tools
+          to tell your story.{" "}
+        </h1>
+        <div>
+          <StaticImage
+            className="img"
+            src="../../images/services/g.jpg"
+            alt="Drone Flying"
+          />
+        </div>
+
+        <h2 className="content display-4 fw-bold">
+          {" "}
+          We offer end-to-end fulfillment: Whether you need support on reaching
+          your goals, increase distribution, or grow your audience, we got you
+          covered.{" "}
+        </h2>
+        <div>
+          <StaticImage
+            className="img"
+            src="../../images/services/stephen.jpeg"
+            alt="Quality Score"
+          />
+        </div>
+      </HeContainer>
+
+      <Form />
+
+      <small class="lead text-center fw-bold">
+        {" "}
+        <br />
+        Creative Content Strategy Services are separate from the Vngle newsroom.
+        Clients and brands working with Vngle’s Creative Content Strategy
+        Services do not influence the editorial discretion of our news reporting
+        in any form. Conversely, custom storytelling projects through our
+        Creative Content Strategy Services do permit the collaborative input of
+        the clients and brands we work with.
+      </small>
     </Layout>
   );
 };
@@ -97,70 +139,21 @@ const HeroContainer = styled(Container)`
 
   &.main-banner {
     min-height: 44rem;
-    padding: 9rem;
+    padding: 14rem 0rem;
+    display: flex;
   }
-
   h1 {
-    font-family: Inter, sans-serif;
-  }
-
-
-   .centercontent {
-   
-     
-    h1 {
-      font-family: Inter, sans-serif;
-      margin: 10px 0 0 10px;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      opacity: 0;
-      animation: type 4s steps(60, end) forwards;
-      animation-delay: 2s;
-    
-    }
-    
-    @keyframes type {
-       0% {
-      opacity: 1;
-    }
-    100% {
-      width: 30em;
-      opacity: 1;
-    }
-    }
-  }
-
-
-  .logo-container {
-    max-width: 10rem;
-    margin: 0 auto;
-    padding-top: 10px;
-  }
-
-  .vngle-logo {
-    object-fit: cover;
-    max-width: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-    top: 0;
-    left: 0;
-    right: 0;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 0rem;
     text-align: center;
   }
-
-  .logo-title {
-    font-size: 30px;
-  }
-
-  .center-content {
-    padding-top: 10px;
+  .main-title {
+    max-width: 35rem;
     justify-content: center;
     display: flex;
   }
-
-  .main-title {
-    font-size: 55px;
+  .btn-container {
+    padding: 2rem;
   }
 
   .animated-btn {
@@ -182,28 +175,84 @@ const HeroContainer = styled(Container)`
     left: 0;
     right: 0;
     text-align: center;
-    opacity: 0.5;
+    opacity: 0.9;
   }
 
-  // @media(max-width: 46.25rem) {
+  @media(max-width:47rem){
+    margin-top:5rem;
 
-  //   .centercontent {
-         
-  //     h1 {
+     .hero-img {
+    
+      width: 100%;
+    
+      height: 80%;
+    }
 
-     
-  //   }
-  // }
-  // }
+    &.main-banner {
+      min-height: 5rem;
+      padding: 14rem 0rem;
+      display: flex;
+    }
+    h1 {
+      font-family: "Playfair Display", serif;
+      margin-bottom: 0rem;
+      text-align: center;
+  }
 `;
 
+const HeContainer = styled.div`
+  .content {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
 
+    h1 {
+      font-size: 3rem;
+      font-family: "Playfair Display", serif;
+    }
+  }
 
+  img {
+    posiiton: absolute;
+    width: 100%;
+    padding-left: 0.1rem;
+  }
+
+  .container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      font-family: "Playfair Display", serif;
+    }
+
+    h2 {
+      font-size: 3rem;
+      font-family: "Playfair Display", serif;
+    }
+  }
+  img {
+    posiiton: absolute;
+    width: 100%;
+    padding-left: 0.1rem;
+  }
+`;
 
 const MaContainer = styled.div`
   margin-top: 2rem;
   margin-bottom: 2rem;
   justify-content: center;
+
+  .mt {
+    margin-bottom: 4rem;
+
+    .r {
+      color: #E612D0;
+      
+    }
+  }
 
   .mb {
     display: flex;
@@ -215,16 +264,13 @@ const MaContainer = styled.div`
       font-size: 3rem;
       font-weight: bold;
       float: left;
-      padding-left: 1rem;
-      font-family: Century Gothic;
-      
+      font-family: "Playfair Display", serif;
     }
   }
 
   .gatsby-image-wrapper {
     height: 100%;
-    bottom:0;
- 
+    bottom: 0;
 
     img {
       border-radius: 4rem;
@@ -234,27 +280,37 @@ const MaContainer = styled.div`
     }
   }
 
-  // @media(max-width: 46.25rem) {
-   
-  //   img {
-  //       border-radius: 4rem;
-  //       width: 70%;
-  //       margin-left: auto;
-  //       padding-bottom: 2rem;
-  //     }
-  //   }
+  h1 {
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+  }
 
-`;
+  @media (max-width: 47rem) {
+    margin-top: 0.5rem;
 
+    .gatsby-image-wrapper {
+      height: 80%;
+      bottom: 0;
 
+      img {
+        width: 80%;
+        margin: auto;
+      }
+    }
+    .mb {
+      display: flex;
+      align-items: center;
 
-const Mcontainer = styled.h1`
-h1 {
-  font-weight: bold;
-  font-family: Century Gothic;
-  
-  text-align: center;
-}
+      ,
+      p {
+        font-size: 2rem;
+        font-weight: bold;
+        float: left;
+        font-family: "Playfair Display", serif;
+      }
+    }
+  }
 `;
 
 const HContainer = styled(Container)`
@@ -266,7 +322,7 @@ const HContainer = styled(Container)`
     color: white;
     font-weight: bold;
     font-size: 3rem;
-    font-family: Century Gothic;
+    font-family: "Playfair Display", serif;
     text-align: left;
     .f {
         color: var(--bs-primary);
@@ -277,7 +333,7 @@ const HContainer = styled(Container)`
     color: white;
     font-weight: bold;
     font-size: 3rem;
-    font-family: Century Gothic;
+    font-family: "Playfair Display", serif;
     text-align: left;
     .b {
         color: #1EE4F0;

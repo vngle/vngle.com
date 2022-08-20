@@ -14,28 +14,26 @@ import DOMPurify from "dompurify";
 const SubForm = ({ status, message, onSubmitted }) => {
   // object key names are extracted from Mailchimp. Changing them will break the form.
   const [formData, setFormData] = useState({
-    FIRST: "",
-    LAST: "",
+    NAME: "",
     EMAIL: "",
     MESSAGE: "",
 
-    "group[293774][4]": true, //messagenot opt-in
+    "group[293774][3]": true, //messagenot opt-in
   });
   const [validated, setValidated] = useState(true);
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     const submitData = {
-      FIRST: formData.FIRST,
-      LAST: formData.LAST,
+      NAME: formData.FIRST,
       EMAIL: formData.EMAIL,
       MESSAGE: formData.MESSAGE,
     };
 
     // only send checkbox status if checked
     // Mailchimp will populate field if any value is sent
-    if (formData["group[293774][4]"]) {
-      submitData["group[293774][4]"] = formData["group[293774][4]"];
+    if (formData["group[293774][3]"]) {
+      submitData["group[293774][3]"] = formData["group[293774][3]"];
     }
 
     if (!form.checkValidity()) {
@@ -87,39 +85,25 @@ const SubForm = ({ status, message, onSubmitted }) => {
     <StyledJumbotron>
       <Container>
         <Row>
-          <Col xs={12} md={7} lg={6}>
-            <h1>Let’s work together</h1>
-            <h2>Get in touch today</h2>
+          <Col>
+          <h1 className="fw-bold">
+          Let’s grow your content strategy.<br/>
+           Request a demo today.
+          </h1>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <form action="https://getform.io/f/6fa17a80-9b69-44dc-b894-27fe292b3795" method="POST">
               <Row xs={1} sm={2}>
                 <Form.Group controlId="name" as={Col}>
                   <Form.Label>
-                    First Name <span className="text-danger">*</span>
+                   Name <span className="text-danger">*</span>
                   </Form.Label>
                   <Form.Control
-                    type="first"
-                    placeholder="Enter first name"
-                    name="FIRST"
+                    type="NAME"
+                    placeholder="Enter full name"
+                    name="NAME"
                     value={formData.NAME}
                     onChange={handleChange}
                     required
-                  />
-                </Form.Group>
-              </Row>
-
-              <Row xs={1} sm={2}>
-                <Form.Group controlId="name" as={Col}>
-                  <Form.Label>
-                    Last Name<span className="text-danger">*</span>
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter last name"
-                    name="LAST"
-                    value={formData.NAME}
-                    onChange={handleChange}
-                    required={formData["group[293774][4]"]}
                   />
                 </Form.Group>
               </Row>
@@ -143,10 +127,10 @@ const SubForm = ({ status, message, onSubmitted }) => {
                 </Form.Group>
               </Row>
 
-              <Row xs={4} sm={2}>
+              <Row xs={1} sm={2}>
                 <Form.Group controlId="Textarea" as={Col}>
                   <Form.Label>
-                    Message <span className="text-danger">*</span>
+                  What are your needs? <span className="text-danger">*</span>
                   </Form.Label>
                   <Form.Control
                     type="textarea"
@@ -155,7 +139,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
                     value={formData.MESSAGE}
                     onChange={handleChange}
                     required={formData["group[293774][4]"]}
-                    style={{ height: "100px" }}
+                    style={{height:'100px'}}
                   />
                   <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
                 </Form.Group>
@@ -167,7 +151,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
                     {status === "sending" ? (
                       <Spinner animation="border" size="sm" display="flex" />
                     ) : (
-                      "Contact Us"
+                      "Request Us"
                     )}
                   </Button>
                 </Form.Group>
@@ -186,27 +170,38 @@ const SubForm = ({ status, message, onSubmitted }) => {
 
 const StyledJumbotron = styled.div`
   background: var(--bs-primary);
+  // margin-top: 2rem;
+  // margin-bottom: 5rem;
+  margin: 0.4rem;
   height: 100%;
 
   h1 {
     font-family: "Inter", sans-serif;
+    margin-top:2rem;
+    margin-left:10rem;
   }
 
   .form-label {
-    margin-left: 0.3rem;
-    margin-top: 0.3rem;
     font-weight: bold;
+    margin-left: 0.3rem;
+    margin-top: 0.5rem;
+    padding left: 10rem;
   }
 
   .form-control {
     border-radius: 0.6rem;
   }
 
+  form{
+    margin-left:5rem;
+  }
+
   .btn {
     letter-spacing: 1.7px;
-    margin-bottom: 0.9rem;
+    margin-bottom: 2rem;
+    margin-top:1rem;
   }
-  
+
   @media(max-width:47rem){
     margin-top:5rem;
     
@@ -222,6 +217,6 @@ const StyledJumbotron = styled.div`
       margin-left:0;
     }
   }
-`;
+  `;
 
 export default SubForm;
