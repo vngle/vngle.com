@@ -2,14 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Button, Row, Col } from "react-bootstrap";
 import { FiActivity, FiCompass, FiGlobe } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 
+import Sub from "@components/Forms/Sub";
 import TeamSvg from "@images/ally/team.svg";
 import ClubELogo from "@images/ally/logo-club-e.png";
 import CouncilmanGay from "@images/ally/councilman-gay.jpg";
-import OneTalentLogo from "@images/ally/logo-one-talent.png";
+import VietnamVeteransLogo from "@images/ally/logo-vietnam-veterans-of-america.png";
 
 export default function AllyPage() {
   const allies = [
@@ -38,42 +40,33 @@ export default function AllyPage() {
       ),
     },
     {
-      name: "One Talent Inc",
-      href: "https://www.onetalent.org/",
-      logoSrc: OneTalentLogo,
+      name: "Vietnam Veterans of America",
+      href: "https://www.sonsofatlanta.org/",
+      logoSrc: VietnamVeteransLogo,
       bg: "#03B7E6",
       description: (
         <>
           <p>
-            <a href="https://www.onetalent.org/">One Talent Inc</a> is on a
-            mission is to advance the gifts and talents of our leaders of
-            tomorrow through providing mentorship to young girls.
+           VVA promotes and supports the full range of issues important to Vietnam veterans, to create a new identity for this generation of veterans, and to change public perception of Vietnam veterans. 
           </p>
           <p>
             <b>
-              One Talent Inc partnered with Vngle to extend their programming
-              across Atlanta, South Fulton, and College Park, Georgia.
+            VVA Metro-Atlanta Chapter #1118 worked with Vngle to kickoff thier media strategy around the <a href="https://www.sonsofatlanta.org/">Sons of Atlanta Memorial</a>, a Vietnam Veteran Memorial at Piedmont Park, in Atlanta, GA. 
             </b>
           </p>
         </>
       ),
     },
     {
-      name: "Councilmember Roderick Gay",
+      name: " City of College Park, GA Ward 4 Neighborhood Association (via  Councilmember Roderick Gay)",
       href: "https://www.onetalent.org/",
       logoSrc: CouncilmanGay,
       bg: "var(--bs-primary)",
       description: (
         <>
           <p>
-            College Park Ward 4 Neighborhood Association (via City of College
-            Park Councilmember Roderick Gay)
-          </p>
-          <p>
-            “Vngle has been tremendous in helping me connect with my
-            constituents and gather the most up-to-date information on their
-            needs. They now are my go to channel.” -{" "}
-            <b>Councilmember Roderick Gay</b>
+            “Vngle has been tremendous in helping me connect with my constituents and gather the most up-to-date information on their needs. They now are my go to community channel.”{" "}
+            <b>- Councilmember Roderick Gay</b>
           </p>
         </>
       ),
@@ -89,6 +82,11 @@ export default function AllyPage() {
           <Container>
             <h1 className="display-2">Become an Ally</h1>
             <h2>Grow with Vngle in cities across America!</h2>
+            
+            <motion.div
+            animate={{ opacity: [0, 1] }}
+            transition={{ duration: 1.9, delay: 1 }}
+          >
             <Button
               size="lg"
               href="https://forms.gle/XQ7ZBAje4pksxdnDA"
@@ -97,6 +95,7 @@ export default function AllyPage() {
             >
               Become an ally today!
             </Button>
+            </motion.div>
           </Container>
         </div>
 
@@ -186,6 +185,8 @@ export default function AllyPage() {
           ))}
         </Container>
       </Styled>
+
+      <Sub/>
     </Layout>
   );
 }
@@ -198,12 +199,14 @@ const Styled = styled.div`
     background-size: cover;
     color: white;
 
+
     h1 {
       font-weight: 900;
     }
 
     h2 {
       font-family: "Inter", sans-serif;
+    animation: play 1.5s steps (10) infinite;
     }
   }
 
@@ -222,6 +225,10 @@ const Styled = styled.div`
       justify-content: center;
     }
   }
+
+  @keyframes play {
+    100% { background-position: -1200px; }
+    }
 `;
 
 const LogoCol = styled(Col)`

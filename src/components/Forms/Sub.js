@@ -185,7 +185,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
 };
 
 const StyledJumbotron = styled.div`
-  background: var(--bs-primary);
+  background: #DC33B7;
   height: 100%;
 
   h1 {
@@ -211,7 +211,7 @@ const StyledJumbotron = styled.div`
     margin-top:5rem;
     
     .form-label {
-      paddin-left:2rem;
+      padding-left:2rem;
     }
 
     form{

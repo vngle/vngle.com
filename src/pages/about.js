@@ -22,12 +22,12 @@ import Distribute from "@images/about/distribute.svg";
 const OldHomePage = () => {
   const heroBtn = [
     {
-      value: "Request a Story",
-      href: "https://vngle.typeform.com/to/zwc2R2og",
+      value: "Submit a Tip",
+      href: "https://forms.gle/ezGNfYqZTqMUD8YZ9",
     },
     {
-      value: "Report a Story",
-      href: "https://docs.google.com/forms/d/1s6VKLzBLnfLDjUn5IWHwezZmQJZK-SBHjGGvTY27XSQ/viewform?edit_requested=true",
+      value: "Be a Vngler",
+      href: "/vngler",
     },
   ];
   const mainFeatureData = [
@@ -237,11 +237,20 @@ const OldHomePage = () => {
         </div>
       </ProcessContainer>
 
-      <Container className="my-5">
+      <ProcessContainer className="my-5">
         <Title className="display-3 mb-5 text-center">
           <i style={{ fontWeight: "100" }}>Your Community Needs You:</i>
           <br />
-          Get Involved
+          <a
+            href="/vngler"
+             style={{
+              textDecorationLine: "none",
+              color: "black",
+              textEmphasisColor: "yellow",
+            }}
+          >
+            Get involved
+          </a>
         </Title>
         <SimpleSubForm />
         <Row className="card-row text-center">
@@ -251,7 +260,7 @@ const OldHomePage = () => {
             </Col>
           ))}
         </Row>
-      </Container>
+      </ProcessContainer>
 
       <Container as="section" className="my-4">
         <Row as={Col} className="justify-content-center">
@@ -349,6 +358,21 @@ const ProcessContainer = styled(Container)`
         color: white;
       }
     }
+  }
+
+  a:visited {
+    color: #DC33B7;
+  }
+  
+  
+  a:hover {
+    background
+    : var(--bs-primary);
+  }
+  
+  a:active {
+    background: #265301;
+    color: #CDFEAA;
   }
 `;
 
