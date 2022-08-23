@@ -24,9 +24,9 @@ const Header = ({ siteTitle }) => {
     //   name: "Request Coverage",
     //   to: "https://vngle.typeform.com/to/zwc2R2og",
     // },
-    { name: "Become a Vngler", to: "/vngler" },
-    { name: "Serve as an Ally", to: "/ally" },
-    { name: "Submit a Tip or Request", to: "/report" },
+    { name: "Be a Vngler", to: "/vngler" },
+    { name: "Become an Ally: Grow with Us", to: "/ally" },
+    { name: "Submit a Tip", to: "https://forms.gle/ezGNfYqZTqMUD8YZ9"},
   ];
 
   const dropdownLinksServices = [
