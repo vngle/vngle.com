@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Layout from "@components/Layouts/MainLayout";
 import { StaticImage } from "gatsby-plugin-image";
 import SubForm from "../../components/Forms/SubForm";
+import newswirevideo from "../../images/services/newsWire/Newswire-Header-1.mp4";
 
 const newswire = () => {
   return (
@@ -10,9 +11,9 @@ const newswire = () => {
         <Header>
           <div className="content-wrapper">
             <div className="text-wrapper">
-              <h1 className="display-4 yellow-text fw-bolder lh-sm">
+              <h1 className="display-4 yellow-text fw-bolder lh-sm background-white">
                 Expand Your Coverage Capabilities.
-                <h1 className="display-4 fw-bold text-black">
+                <h1 className="display-4 fw-bold text-white">
                   Better Reach Underrepresented Areas Through the Vngle
                   Newswire.
                 </h1>
@@ -26,7 +27,7 @@ const newswire = () => {
               className="login-video"
             >
               <source
-                src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4"
+                src={newswirevideo}
                 type="video/mp4"
                 className="login-vid"
               />
@@ -112,7 +113,7 @@ const newswire = () => {
         </Text>
         <Section>
           <div className="content-wrapper img">
-            <div className="text-wrapper"></div>
+            <div className="pic-wrapper"></div>
             <StaticImage
               src="../../images/services/newsWire/mainHeader.jpeg"
               className="background-img"
@@ -146,38 +147,51 @@ const newswire = () => {
 };
 
 const Header = styled.div`
+position: relative;
+
+.content-wrapper {
+  display: flex;
   position: relative;
+  align-items: center;
+  min-height: 50vh;
+}
 
-  .content-wrapper {
-    display: flex;
-    position: relative;
-    align-items: center;
-    min-height: 50vh;
-  }
+.text-wrapper {
+  z-index: 10;
+  margin-top: 35%;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  background:rgba(0, 0, 0,0.6);
+  padding-left:2rem;
+  border-radius:1rem;
+}
 
-  .text-wrapper {
-    z-index: 10;
-    margin-top: 35%;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-  }
+.login-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  object-fit: cover;
+}
 
-  .login-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -10;
-    object-fit: cover;
-  }
+.yellow-text {
+  color: #ffcc35;
+}
 
-  h1 {
-    font-family: Inter, sans-serif;
+h1{
+  border-radius:1rem;
+}
+
+@media(max-width:37rem){
+  h1{
+    font-size:1rem;
   }
-  .yellow-text {
-    color: #ffcc35;
+  .content-wrapper{
+    min-height:30vh;
   }
+}
 `;
 
 const Text = styled.h1`
@@ -199,6 +213,10 @@ const Section = styled.div`
     margin-top: 50%;
     padding-right: 3rem;
     margin-left: 1rem;
+  }
+
+  .pic-wrapper{
+    margin-top: 50%;
   }
 
   .text-wrapper > h1 {
@@ -274,6 +292,14 @@ const Section = styled.div`
       margin-top: 25%;
       padding-right: 0;
       font-size: 1.5rem;
+    }
+
+    .text-wrapper{
+      margin-top:10%;
+    }
+
+    .pic-wrapper{
+     
     }
   }
 `;

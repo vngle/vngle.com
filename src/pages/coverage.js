@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
 import StorySlider from "../components/Sliders/StoryCarousel";
-
-
+import ActionCard from "@components/Cards/ActionCard";
 import NewsSubCard from "../components/Cards/NewsSubCard";
 import Grid from "../components/Grids/Grid";
 import List from "../components/Grids/List";
 import { Link, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-
-window.addEventListener("scroll", reveal);
+import VngleVid from "@images/vngle3.mp4";
+import SinContainer from "@components/Containers/SingleContainer";
+import TopButton from "@components/BackToTop";
 
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
@@ -30,59 +29,108 @@ function reveal() {
   }
 }
 
-const GeorgiaPage = ({
-  data: {storiesGeorgia, storiesNational },
-}) => {
+const actionCardData = [
+  {
+    title: "I need coverage",
+    text: (
+      <>
+        Know a topic that's underreported near you? <br /> Text "STORY" to{" "}
+        <b>(678) 995-5121</b> OR
+      </>
+    ),
+    btn: {
+      to: "https://blake680703.typeform.com/to/zwc2R2og",
+      text: "Submit a Tip",
+    },
+  },
+  {
+    title: "I want to report",
+    text: (
+      <>
+        Want to be a grassroots reporter for your community?
+        <br />
+        Click the button below.
+      </>
+    ),
+    btn: {
+      to: "/vnglr",
+      text: "Be a Vnglr",
+    },
+  },
+];
+
+const GeorgiaPage = ({ data: { storiesGeorgia, storiesNational } }) => {
+  useEffect(() => {
+    window.addEventListener("scroll", reveal);
+    return () => window.removeEventListener("scroll", reveal);
+  }, []);
   return (
     <Layout>
-      <Header>
-            <div className="content-wrapper">
-            <div className="text-wrap container">
-              <h1>Our Coverage</h1>
-            </div>
-            <StaticImage src="../images/camera.jpg" class="background-img"/>
-            </div>
-      </Header>
+      <Seo title="Our Coverage" />
+      <Video>
+        <div className="content-wrapper">
+          <div className="text-wrapper">
+            <h1 className="display-4 yellow-text fw-bolder background-white">
+              Our Coverage
+            </h1>
+          </div>
+          <video
+            playsinline="playsinline"
+            autoplay="autoplay"
+            muted="muted"
+            loop="loop"
+            className="login-video"
+          >
+            <source src={VngleVid} type="video/mp4" className="login-vid" />
+          </video>
+        </div>
+      </Video>
       {/* --------------------Based In Georgia--------------------*/}
-      <Header className="background-black">
-        <Container>
-            <h2>We're Based in Georgia, but Our Work Reaches Nationally</h2>
-        </Container>
-      </Header>
+      <SinContainer
+        title="We are Based in Georgia, but Our Work Reaches Nationally"
+        titleColor={"white"}
+        bgColor={"black"}
+      />
       {/* --------------------Navbar--------------------*/}
       <Navbar>
-      <nav className="navbar navbar-expand-lg navbar-light" id="Top">
-        <li className="nav-item">
-          <a className="display-3 fw-bolder"href="#Georgia">Georgia</a>
+        <nav className="navbar navbar-expand-lg navbar-light" id="Top">
+          <li className="nav-item rounded">
+            <a className="display-3" href="#Georgia">
+              Georgia
+            </a>
           </li>
-          <li className="nav-item">
-          <a className="display-3 fw-bolder" href="#National">National</a>
+          <li className="nav-item rounded">
+            <a className="display-3" href="#National">
+              National
+            </a>
           </li>
-      </nav>
+        </nav>
       </Navbar>
-      
 
       {/* --------------------Slider--------------------*/}
-      <Container style={{marginTop:'2rem'}}>
+      <Container className="mt-4">
         <div className="mb-5">
           <StorySlider fetchNum={50} interval={10000} hashTags={["Georgia"]} />
         </div>
       </Container>
 
-       {/* --------------------Stay Updated--------------------*/}
-      <Container style={{background:'#FFCC35'}}>
+      {/* --------------------Stay Updated--------------------*/}
+      <Container>
         <NewsSubCard
           title="Stay Updated And Follow Our Movement."
           subtitle="Sign up for balanced coverage on everything from local campaigns, state politics, to COVID-19 updates."
         />
       </Container>
 
-        {/* --------------------Georgia Title--------------------*/}
+      {/* --------------------Georgia Title--------------------*/}
 
-       <Seo title={`Georgia`} />
+      <Seo title={`Georgia`} />
 
       <StyledJumbotron className="mb-5" id="Georgia">
-        <CoverImage src="https://source.unsplash.com/tjdu7p_PaEM" alt="Georgia" />
+        <CoverImage
+          src="https://source.unsplash.com/tjdu7p_PaEM"
+          alt="Georgia"
+        />
         <Row className="align-items-end">
           <Col>
             <h1 className="display-1">Georgia Stories</h1>
@@ -90,13 +138,17 @@ const GeorgiaPage = ({
         </Row>
       </StyledJumbotron>
 
-
+      <TopButton />
+      {/*
       <Navbar className="sticky-top">
         <div className="sticky">
-        <a className="btn btn-primary fw-bolder reveal active" href="#Top">Back to Top</a>
+          <a className="btn btn-primary fw-bolder reveal active" href="#Top">
+            Back to Top
+          </a>
         </div>
       </Navbar>
-       {/* --------------------Georgia Stories--------------------*/}
+ */}
+      {/* --------------------Georgia Stories--------------------*/}
       <Container>
         <div className="mb-5">
           <Grid items={storiesGeorgia.byType.items} />
@@ -106,10 +158,13 @@ const GeorgiaPage = ({
             </Button>
           </div>
         </div>
-   </Container>
+      </Container>
       {/* --------------------National Title--------------------*/}
       <StyledJumbotron className="mb-5" id="National">
-        <CoverImage src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="" />
+        <CoverImage
+          src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+          alt=""
+        />
         <Row className="align-items-end">
           <Col>
             <h1 className="display-1">National Stories</h1>
@@ -117,28 +172,38 @@ const GeorgiaPage = ({
         </Row>
       </StyledJumbotron>
 
-<Container>
+      <Container>
         {/* --------------------National Stories--------------------*/}
         <div>
           <List items={storiesNational.byType.items} />
         </div>
-
+      </Container>
+      <Container>
+        <Row className="card-row text-center">
+          {actionCardData.map((props, i) => (
+            <Col lg={6} sm={12} key={i}>
+              <ActionCard {...props}>{props.text}</ActionCard>
+            </Col>
+          ))}
+        </Row>
+      </Container>
       <Header>
         <Container>
           <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSf80FHwD9CVDZK954uUQ_-_0nkMvBGYT1vZ6nHvXsD12H7fDg/viewform"
-                target="blank"
-                className="display-3 text-black"
-              >Work With Us Today!</a>
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf80FHwD9CVDZK954uUQ_-_0nkMvBGYT1vZ6nHvXsD12H7fDg/viewform"
+            target="blank"
+            className="display-3 text-black"
+          >
+            Work With Us Today!
+          </a>
         </Container>
       </Header>
-  </Container>
     </Layout>
   );
 };
 
 const StyledJumbotron = styled.div`
-  margin-top:2rem;
+  margin-top: 2rem;
   position: relative;
   background-color: transparent;
   color: var(--bs-light);
@@ -154,7 +219,7 @@ const StyledJumbotron = styled.div`
   h1 {
     font-weight: 800;
     text-align: center;
-    margin-bottom:4rem;
+    margin-bottom: 4rem;
   }
 
   h4 {
@@ -177,110 +242,133 @@ const CoverImage = styled.img`
 `;
 
 const Header = styled.div`
-    position: relative;
-    background: #FFCC35;
-  h1{
-    color:white;
-    font-family: Inter, sans-serif;
-    font-size: 6rem;
-    margin-bottom:15rem;
-    margin-top:6rem;
-    z-index: 10;
-    margin-left:2rem;
-  }
+  position: relative;
+  padding: 10rem 0;
 
-  h2{
-    font-family: Inter, sans-serif;
-    display:flex;
-    justify-content: center;
-    color:white;
-    font-weight: 500;
-    font-size: 3rem;
-    padding-top: 2rem;
-  }
-
-  .background-img{
+  .bg-img {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    top: 0;
+    z-index: -1;
   }
 
   .content-wrapper {
     display: flex;
     align-items: center;
     position: relative;
-
   }
 
-  .text-wrap{
+  .text-wrap {
     z-index: 10;
     display: flex;
     align-items: center;
   }
 
-  a{
-    text-align:center;
-    text-decoration:none;
+  a {
+    text-align: center;
+    text-decoration: none;
     font-weight: 500;
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
   }
 
-  &.background-black{
-    background:black;
+  &.background-black {
+    background: black;
   }
-  @media (max-width: 36.25rem){
-    h2{ 
+  @media (max-width: 36.25rem) {
+    h2 {
       font-size: 1rem;
-      padding-top:1rem;
+      padding-top: 1rem;
     }
-    h1{ 
-      font-size:2rem;
-      margin-bottom:7rem;
-      margin-left:0.75rem;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 7rem;
+      margin-left: 0.75rem;
     }
   }
-`
+`;
 
 const Navbar = styled.nav`
-margin-top:2rem;
+  margin-top: 2rem;
 
-  nav{
-    display:flex;
+  nav {
+    display: flex;
     justify-content: space-around;
   }
 
-  li{
-    list-style-type:none;
+  li {
+    list-style-type: none;
+    background: var(--bs-primary);
+    padding: 1rem;
   }
- a{
-  color:black;
-  background: #E8D52CF7;
-  padding: 0 4rem;
-  text-decoration:none;
-  z-index:15;
- }
-
- .reveal{
-  opacity: 0;
- }
- .reveal.active{
-  opacity: 1;
- }
-
- @media(max-width: 28rem){
   a {
-    font-size: 1.5rem;
-    padding: 0 1rem;
-  }
-  .sticky > a{
-    font-size:1rem;
+    color: black;
+    text-decoration: none;
   }
 
-}
-`
+  .reveal {
+    opacity: 0;
+  }
+  .reveal.active {
+    opacity: 1;
+  }
 
+  @media (max-width: 28rem) {
+    a {
+      font-size: 1.5rem;
+      padding: 0 1rem;
+    }
+    .sticky > a {
+      font-size: 1rem;
+    }
+  }
+`;
+
+const Video = styled.div`
+  position: relative;
+
+  .content-wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    min-height: 50vh;
+  }
+
+  .text-wrapper {
+    z-index: 10;
+    margin-top: 35%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .login-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    object-fit: cover;
+  }
+
+  .yellow-text {
+    color: #ffcc35;
+  }
+
+  h1 {
+    border-radius: 1rem;
+  }
+
+  @media (max-width: 37rem) {
+    .content-wrapper {
+      min-height: 30vh;
+    }
+  }
+`;
 export const query = graphql`
   {
     storiesGeorgia: allStory {

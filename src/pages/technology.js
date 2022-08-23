@@ -3,6 +3,8 @@ import Layout from "@components/Layouts/MainLayout";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import Seo from "../components/Seo";
+import VngleGif from "@images/technology/Vngle-MIT-GWC.gif";
+import NewContainer from "../components/Containers/SingleContainer";
 
 window.addEventListener("scroll", reveal);
 
@@ -13,7 +15,7 @@ function reveal() {
   for (var i = 0; i < reveals.length; i++) {
     var windowheight = window.innerHeight;
     var revealtop = reveals[i].getBoundingClientRect().top;
-    var revealpoint = 150;
+    var revealpoint = 90;
 
     if (revealtop < windowheight - revealpoint) {
       reveals[i].classList.add("active");
@@ -85,22 +87,22 @@ function technology() {
             </h1>
           </div>
           <StaticImage
-            src="../images/technology/Mobile.jpeg"
+            src="../images/technology/recording-3.jpeg"
             className="backgroundImg"
           />
         </div>
       </Title>
       <Title>
         <div className="content-wrapper">
-          <div className="container text-wrapper">
-            <p className="mobile-text reveal active">
+          <div className="container text-wrapper reveal active">
+            <p className="mobile-text background-black">
               The Reporter App Equips Trained Grassroots Reporters with our
               Blockchain-Based Digital Forensics Technology to Publically
               Authenticate the Origin of Stories from the Field
             </p>
           </div>
           <StaticImage
-            src="../images/technology/Record-2.jpeg"
+            src="../images/technology/city-officer-2.png"
             className="backgroundImg"
           />
         </div>
@@ -213,27 +215,44 @@ function technology() {
               <h3>Proof of Origin Captured</h3>
               <p>
                 Story is documented and recorded containing a unique id with
-                location, timestamp, and forensic dats is sent to the blockchain
+                location, timestamp, and forensic data, which is sent to the blockchain.
               </p>
             </div>
             <div className="text-card gray">
               <h3>Public Record is Created</h3>
               <p>
                 This record is posted to the blockchain and a receipt is
-                generate showing the location of data and what is posted
+                generated, showing the location of data and what was posted.
               </p>
             </div>
             <div className="text-card gray">
               <h3>Forensic Trail Is Shared</h3>
               <p>
                 Content is verified using its blockchain receipt, enabling our
-                partners to check the forensics trail of stories via the public
+                partners to check the forensic data trail of stories via the public
                 ledger.
               </p>
             </div>
           </div>
         </div>
       </Cards>
+      <Video>
+        <div className="d-flex flex-column">
+        <NewContainer
+                title="Our impact won the 🌎 Community Award at MIT."
+                titleColor="black"
+                bgColor="#cdfd01"
+              />
+          <div className="content-wrapper">
+          <img 
+                src={VngleGif}
+                type="video/mp4"
+                alt=""
+                className="login-video"
+              />
+          </div>
+          </div>
+      </Video>
       <Section className="cyan-background">
         <div className="container">
           <h1 className="cyan fw-bolder">
@@ -277,6 +296,11 @@ const Title = styled.div`
     align-items: center;
   }
 
+  .background-black{
+    background: rgba(0,0,0, 0.6);
+    border-radius:1rem;
+  }
+
   h1 {
     font-family: Inter, sans-serif;
     padding: 1rem;
@@ -291,9 +315,10 @@ const Title = styled.div`
   }
 
   .mobile-text {
-    margin: 0 auto;
     font-style: italic;
     font-size: 2.25rem;
+    margin-top:15rem;
+    padding-left:1rem;
   }
 
   .text-wrapper > h2 {
@@ -690,6 +715,50 @@ const Promo = styled.div`
   @media (max-width: 46.25rem) {
     .media {
       flex-direction: column;
+    }
+  }
+`;
+
+const Video = styled.div`
+  position: relative;
+  background:black;
+  .content-wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    min-height: 80vh;
+  }
+
+  .text-wrapper {
+    z-index: 10;
+    margin-top: 35%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .login-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    object-fit: contain;
+  }
+
+  .yellow-text {
+    color: #ffcc35;
+  }
+
+  h1{
+    background:rgba(0, 0, 0,0.6);
+    padding:1rem;
+    border-radius:1rem;
+  }
+
+  @media(max-width:47rem){
+    .content-wrapper{
+      min-height:40vh;
     }
   }
 `;
