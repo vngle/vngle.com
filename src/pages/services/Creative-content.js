@@ -3,10 +3,15 @@ import styled from "styled-components";
 import Layout from "@components/Layouts/MainLayout";
 import Background from "@images/services/creative_content_background.jpeg";
 import { StaticImage } from "gatsby-plugin-image";
+<<<<<<< master
 import { Container, Button } from "react-bootstrap";
 <<<<<<< master
 import Form from "@components/Forms/form";
 =======
+=======
+import { Container, Button, Col, Row } from "react-bootstrap";
+import { Fade } from "react-reveal";
+>>>>>>>  Content creative, Vngler,Ally and  About
 import Form from "@components/Forms/Form";
 >>>>>>> Creative Content and Become a Vngler
 import { motion } from "framer-motion";
@@ -32,7 +37,11 @@ const creativeContent = () => {
             transition={{ duration: 1.3, delay: 2 }}
           >
             <div className="main-title btn-container">
+<<<<<<< HEAD
               <Button className="animated-btn">Contact Us Today</Button>
+=======
+              <Button className="animated-btn">Launch Your Campaign</Button>
+>>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
             </div>
           </motion.div>
         </Container>
@@ -49,20 +58,28 @@ const creativeContent = () => {
             Build greater awareness, campaigns, market research & more.
           </h1>
         </div>
-        <div className="mb display-6">
-          <p>
-            Maximize your audience reach with our on-demand tailored content!
-          </p>
-          <StaticImage
-            className="img"
-            src="../../images/services/sic.png"
-            alt="Hand holding mics"
-          />
-        </div>
-        <h1 class="display-2">
-          Leverage our grassroots storytelling expertise to capture a specific
-          story you want covered.
-        </h1>
+
+        <SplitSection background="" className="section2 gy-3">
+          <Col md={6}>
+            <Fade left>
+              <div className="content p-md-5">
+                <p className="sup display-2">
+                  Leverage our grassroots expertise to create content that
+                  maximizes your local connection across the areas you care
+                  about.
+                </p>
+              </div>
+            </Fade>
+          </Col>
+          <Col className="image" md={6}>
+            <Fade right>
+              <StaticImage
+                src="../images/services/sic.png"
+                alt="Hand holding mics"
+              />
+            </Fade>
+          </Col>
+        </SplitSection>
       </MaContainer>
 
       <HContainer className="rb-4">
@@ -182,25 +199,12 @@ const HeroContainer = styled(Container)`
     opacity: 0.9;
   }
 
-  @media(max-width:47rem){
-    margin-top:5rem;
-
-     .hero-img {
-    
-      width: 100%;
-    
-      height: 80%;
-    }
-
+  @media (max-width: 47rem) {
     &.main-banner {
       min-height: 5rem;
       padding: 14rem 0rem;
       display: flex;
     }
-    h1 {
-      font-family: "Playfair Display", serif;
-      margin-bottom: 0rem;
-      text-align: center;
   }
 `;
 
@@ -250,14 +254,13 @@ const MaContainer = styled.div`
   justify-content: center;
 
   .mt {
+    
     margin-bottom: 4rem;
 
-    .r {
-      color: #E612D0;
-      
-    }
-  }
+    .r  {
+      color: #E612D0;  
 
+<<<<<<< HEAD
   .mb {
     display: flex;
     align-items: center;
@@ -268,18 +271,16 @@ const MaContainer = styled.div`
       font-weight: bold;
       float: left;
       font-family: "Playfair Display", serif;
+=======
+>>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
     }
   }
 
   .gatsby-image-wrapper {
     height: 100%;
-    bottom: 0;
 
     img {
-      border-radius: 4rem;
-      width: 70%;
-      margin-left: auto;
-      padding-bottom: 2rem;
+      border-radius: 10px;
     }
   }
 
@@ -288,31 +289,6 @@ const MaContainer = styled.div`
     font-family: "Playfair Display", serif;
     text-align: center;
   }
-
-  @media (max-width: 47rem) {
-    margin-top: 0.5rem;
-
-    .gatsby-image-wrapper {
-      height: 80%;
-      bottom: 0;
-
-      img {
-        width: 80%;
-        margin: auto;
-      }
-    }
-    .mb {
-      display: flex;
-      align-items: center;
-
-      ,
-      p {
-        font-size: 2rem;
-        font-weight: bold;
-        float: left;
-        font-family: "Playfair Display", serif;
-      }
-    }
   }
 `;
 
@@ -344,7 +320,6 @@ const HContainer = styled(Container)`
       }   
   }
 
-
   .one {
     color: #1EE4F0;
     text-align: center;
@@ -373,6 +348,44 @@ const HContainer = styled(Container)`
     0%,80% {
       transform: rotateY(360deg) 
     }
+`;
+const SplitSection = styled(Row)`
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  .content {
+    background: ${(props) => props.background};
+    padding: 2rem;
+    border-radius: 10px;
+    height: 100%;
+    transition: transform 1s;
+
+    p.sup {
+      text-align: left;
+      font-weight: bold;
+      font-size: 4rem;
+      font-family: "Playfair Display", serif;
+      font-style: normal;
+      color: #000000;
+    }
+  }
+
+  @media (max-width: 47rem) {
+    &.section2 {
+      flex-direction: column-reverse;
+
+      p.sup {
+        text-align: left;
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: "Playfair Display", serif;
+        font-style: normal;
+        color: #000000;
+      }
+    }
+  }
 `;
 
 export default creativeContent;

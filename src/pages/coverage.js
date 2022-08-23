@@ -316,7 +316,15 @@ export const query = graphql`
 `;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default GeorgiaPage;
 =======
 export default GeorgiaPage;
 >>>>>>> f2747a7 (Create initial coverage page (#60))
+=======
+<<<<<<< master
+export default GeorgiaPage;
+=======
+export default GeorgiaPage;
+>>>>>>>  Content creative, Vngler,Ally and  About
+>>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)

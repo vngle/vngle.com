@@ -174,12 +174,16 @@ const SubForm = ({ status, message, onSubmitted }) => {
 const StyledJumbotron = styled.div`
   background: var(--bs-primary);
 <<<<<<< HEAD
+<<<<<<< HEAD
   margin: auto 0.5rem;
 =======
   // margin-top: 2rem;
   // margin-bottom: 5rem;
   margin: 0.4rem;
 >>>>>>> 9d7b92e (Creative Content and Become a Vngler)
+=======
+  margin: auto 0.5rem;
+>>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
   height: 100%;
 
   h1 {

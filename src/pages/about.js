@@ -207,16 +207,34 @@ const OldHomePage = () => {
           <br />
           <a
             href="/vngler"
+<<<<<<< HEAD
             style={{
+=======
+             style={{
+>>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
               textDecorationLine: "none",
               color: "black",
               textEmphasisColor: "yellow",
             }}
           >
+<<<<<<< HEAD
             Get Involved
           </a>
         </Title>
         <SimpleSubForm />
+=======
+            Get involved
+          </a>
+        </Title>
+        <SimpleSubForm />
+        <Row className="card-row text-center">
+          {actionCardData.map((props, i) => (
+            <Col lg={6} sm={12} key={i}>
+              <ActionCard {...props}>{props.text}</ActionCard>
+            </Col>
+          ))}
+        </Row>
+>>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
       </ProcessContainer>
 
       <Container as="section" className="my-4">
@@ -318,6 +336,7 @@ const ProcessContainer = styled(Container)`
   }
 
   a:visited {
+<<<<<<< HEAD
     color: #dc33b7;
   }
 
@@ -328,6 +347,20 @@ const ProcessContainer = styled(Container)`
   a:active {
     background: #265301;
     color: #cdfeaa;
+=======
+    color: #DC33B7;
+  }
+  
+  
+  a:hover {
+    background
+    : var(--bs-primary);
+  }
+  
+  a:active {
+    background: #265301;
+    color: #CDFEAA;
+>>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
   }
 `;
 
