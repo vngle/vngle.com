@@ -124,7 +124,6 @@ const becomevngler = () => {
           />
         </div>
       </HContainer>
-      
       <section id="Form">
         {" "}
         <Form />
