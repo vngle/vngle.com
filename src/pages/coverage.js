@@ -9,7 +9,7 @@ import NewsSubCard from "../components/Cards/NewsSubCard";
 import Grid from "../components/Grids/Grid";
 import List from "../components/Grids/List";
 import { Link, graphql } from "gatsby";
-import VngleVid from "@images/vngle3.mp4";
+import VngleVid from "@images/Vngle.mp4";
 import SinContainer from "@components/Containers/SingleContainer";
 import TopButton from "@components/BackToTop";
 
