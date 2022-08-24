@@ -54,7 +54,7 @@ const actionCardData = [
     ),
     btn: {
       to: "/vnglr",
-      text: "Be a Vnglr",
+      text: "Be a Vngler",
     },
   },
 ];
@@ -147,7 +147,7 @@ const GeorgiaPage = ({ data: { storiesGeorgia, storiesNational } }) => {
           </a>
         </div>
       </Navbar>
- */}
+      */}
       {/* --------------------Georgia Stories--------------------*/}
       <Container>
         <div className="mb-5">
@@ -189,13 +189,13 @@ const GeorgiaPage = ({ data: { storiesGeorgia, storiesNational } }) => {
       </Container>
       <Header>
         <Container>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSf80FHwD9CVDZK954uUQ_-_0nkMvBGYT1vZ6nHvXsD12H7fDg/viewform"
-            target="blank"
-            className="display-3 text-black"
-          >
-            Work With Us Today!
-          </a>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf80FHwD9CVDZK954uUQ_-_0nkMvBGYT1vZ6nHvXsD12H7fDg/viewform"
+              target="blank"
+              className="display-3 text-black"
+            >
+              Work With Us Today!
+            </a>
         </Container>
       </Header>
     </Layout>
@@ -265,7 +265,8 @@ const Header = styled.div`
     align-items: center;
   }
 
-  a {
+  a{
+    background: #FECB3E;
     text-align: center;
     text-decoration: none;
     font-weight: 500;

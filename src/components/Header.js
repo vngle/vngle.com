@@ -10,9 +10,9 @@ const Header = ({ siteTitle }) => {
   const navLinks = [
     { name: "Coverage", to: "/coverage" },
     { name: "About", to: "/about" },
-    { name: "Our Tech", to: "/technology" },
+    { name: "Tech", to: "/technology" },
     { name: "Team", to: "/team" },
-    {name: "Merchandise", to:"https://vngle-merch-demo.square.site/"}
+    {name: "Merch", to:"https://vngle-merch-demo.square.site/"}
   ];
   const dropdownLinks = [
     { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },

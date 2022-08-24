@@ -10,7 +10,7 @@ const newswire = () => {
     <Layout>
         <Header>
           <div className="content-wrapper">
-            <div className="text-wrapper">
+            <div className="text-wrapper d-flex">
               <h1 className="display-4 yellow-text fw-bolder lh-sm background-white">
                 Expand Your Coverage Capabilities.
                 <h1 className="display-4 fw-bold text-white">
@@ -18,6 +18,12 @@ const newswire = () => {
                   Newswire.
                 </h1>
               </h1>
+              <nav className="navbar">
+              <a href="#Contact" className="btn btn-primary">Contact Us Today!</a>
+              </nav>
+              {/* 
+              
+              */}
             </div>
             <video
               playsinline="playsinline"
@@ -34,12 +40,29 @@ const newswire = () => {
             </video>
           </div>
         </Header>
+        {/*
+        
+        <nav className="navbar navbar-expand-lg navbar-light" id="Top">
+          <li className="nav-item rounded">
+            <a className="display-3" href="#Georgia">
+              Georgia
+            </a>
+          </li>
+          <li className="nav-item rounded">
+            <a className="display-3" href="#National">
+              National
+            </a>
+          </li>
+        </nav>
+
+
+        */}
         <Section>
           <div className="content-wrapper">
             <div className="text-wrapper">
               <h1 className="display-4 text-white">
                 Our work strengthens the local news ecosystem to help you better
-                curate more verified local insights.
+                acurate more verified local insights.
               </h1>
             </div>
             <StaticImage
@@ -95,7 +118,7 @@ const newswire = () => {
           <div className="content-wrapper">
             <div className="text-wrapper">
               <h1 className="display-5">
-                We cover the last mile so you don't have to
+                We cover the last mile so you don't have to.
               </h1>
             </div>
             <StaticImage
@@ -108,7 +131,7 @@ const newswire = () => {
           <h1 className="display-4">
             Vngle's grassroots newsire accelerates your ability to learn from
             diverse audiences to confidently grow your media strategy & combat
-            traces of misinformation
+            traces of misinformation.
           </h1>
         </Text>
         <Section>
@@ -124,15 +147,15 @@ const newswire = () => {
           <h1 className="display-4">
             We work with media organizations, institutions, and more delivering
             trusted and truly representative hyper-local insights on the
-            ommunites they care about.
+            communites they care about.
           </h1>
         </Text>
         <Section>
           <div className="content-wrapper">
             <div className="top-text">
               <h1 className="display-4 text-white">
-                Recieve the Various Angles <br />
-                you need From Vngle
+                Receive the Various Angles <br />
+                you need From Vngle.
               </h1>
             </div>
             <StaticImage
@@ -141,7 +164,9 @@ const newswire = () => {
             />
           </div>
         </Section>
-        <SubForm />
+        <div id="Contact">
+        <SubForm/>
+        </div>
     </Layout>
   );
 };
@@ -296,10 +321,6 @@ const Section = styled.div`
 
     .text-wrapper{
       margin-top:10%;
-    }
-
-    .pic-wrapper{
-     
     }
   }
 `;

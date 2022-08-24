@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Seo from "../components/Seo";
 import VngleGif from "@images/technology/Vngle-MIT-GWC.gif";
 import NewContainer from "../components/Containers/SingleContainer";
+//import NewCards from "@components/Cards/NewCards";
 
 window.addEventListener("scroll", reveal);
 
@@ -72,7 +73,7 @@ function technology() {
       <Section className="black-background">
         <h1 className="container text-center reveal active text-white">
           We Bring Together Grassroots Insights & Web3 Digital Forensics To
-          Verify Info at the Ground Level
+          Verify Info at the Ground Level.
         </h1>
       </Section>
 
@@ -98,7 +99,7 @@ function technology() {
             <p className="mobile-text background-black">
               The Reporter App Equips Trained Grassroots Reporters with our
               Blockchain-Based Digital Forensics Technology to Publically
-              Authenticate the Origin of Stories from the Field
+              Authenticate the Origin of Stories from the Field.
             </p>
           </div>
           <StaticImage
@@ -135,7 +136,7 @@ function technology() {
                     <p>
                       <br />
                       We work with trained members of the Vngle community to
-                      capture stories near them
+                      capture stories near them.
                     </p>
                   </div>
                   <div className="text-card pink-border">
@@ -144,7 +145,7 @@ function technology() {
                       <br />
                       The content is recorded using public ledger technology,
                       making its origin accessible to newswire subscribers &
-                      partners
+                      partners.
                     </p>
                   </div>
                   <div className="text-card cyan-border">
@@ -152,7 +153,7 @@ function technology() {
                     <p>
                       <br />
                       We ensure all content undergoes review from our editorial
-                      team & cross-referenced to ensure credibility
+                      team & cross-referenced to ensure credibility.
                     </p>
                   </div>
                 </div>
@@ -207,6 +208,12 @@ function technology() {
           </div>
         </div>
       </Section>
+      {/*
+      <NewCards 
+        mainTitle="How That Works: "
+        title="Proof of Origin Captured"
+      />
+ */}
       <Cards>
         <div className="container">
           <h2 className="magenta fw-bolder">How That Works: </h2>
@@ -215,7 +222,8 @@ function technology() {
               <h3>Proof of Origin Captured</h3>
               <p>
                 Story is documented and recorded containing a unique id with
-                location, timestamp, and forensic data, which is sent to the blockchain.
+                location, timestamp, and forensic data, which is sent to the
+                blockchain.
               </p>
             </div>
             <div className="text-card gray">
@@ -229,8 +237,8 @@ function technology() {
               <h3>Forensic Trail Is Shared</h3>
               <p>
                 Content is verified using its blockchain receipt, enabling our
-                partners to check the forensic data trail of stories via the public
-                ledger.
+                partners to check the forensic data trail of stories via the
+                public ledger.
               </p>
             </div>
           </div>
@@ -238,20 +246,20 @@ function technology() {
       </Cards>
       <Video>
         <div className="d-flex flex-column">
-        <NewContainer
-                title="Our impact won the 🌎 Community Award at MIT."
-                titleColor="black"
-                bgColor="#cdfd01"
-              />
+          <NewContainer
+            title="Our impact won the 🌎 Community Award at MIT."
+            titleColor="black"
+            bgColor="#cdfd01"
+          />
           <div className="content-wrapper">
-          <img 
-                src={VngleGif}
-                type="video/mp4"
-                alt=""
-                className="login-video"
-              />
+            <img
+              src={VngleGif}
+              type="video/mp4"
+              alt=""
+              className="login-video"
+            />
           </div>
-          </div>
+        </div>
       </Video>
       <Section className="cyan-background">
         <div className="container">
@@ -259,7 +267,7 @@ function technology() {
             Get Access To More Verified Insights On Your Area:
           </h1>
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScpXPlS3MOqr9-P5E4A_F2JFt4dfspI-OY2W-xlAPWUOT9yoA/viewform"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf80FHwD9CVDZK954uUQ_-_0nkMvBGYT1vZ6nHvXsD12H7fDg/viewform"
             target="blank"
             className="text-decoration-none"
           >
@@ -296,9 +304,9 @@ const Title = styled.div`
     align-items: center;
   }
 
-  .background-black{
-    background: rgba(0,0,0, 0.6);
-    border-radius:1rem;
+  .background-black {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
   }
 
   h1 {
@@ -317,8 +325,8 @@ const Title = styled.div`
   .mobile-text {
     font-style: italic;
     font-size: 2.25rem;
-    margin-top:15rem;
-    padding-left:1rem;
+    margin-top: 15rem;
+    padding-left: 1rem;
   }
 
   .text-wrapper > h2 {
@@ -362,9 +370,11 @@ const Title = styled.div`
     h1 {
       font-size: 2.5rem;
     }
+
     .mobile-text {
-      font-size: 1.25rem;
-      padding: 0;
+      font-size: 1rem;
+      padding: 0 1rem;
+      margin-top: 10rem;
     }
 
     .Iphone-img.backgroundImg {
@@ -400,6 +410,7 @@ const Section = styled.div`
   background-color: black;
   overflow: hidden;
   position: relative;
+
   .container {
     padding: 70px 0;
   }
@@ -531,6 +542,10 @@ const Section = styled.div`
       margin: 0 auto;
       margin-top: 3rem;
     }
+
+    .container {
+      padding: 30px 0;
+    }
   }
 `;
 
@@ -573,6 +588,7 @@ const Cards = styled.div`
 
   p {
     font-weight: 500;
+    text-align: center;
   }
   h3 {
     font-weight: 700;
@@ -633,7 +649,7 @@ const Cards = styled.div`
 const Navbar = styled.div`
   position: sticky;
   top: 0;
-  z-index: 15;
+  z-index: 25;
   background: #ffcc35;
   .nav-link {
     color: black;
@@ -721,7 +737,7 @@ const Promo = styled.div`
 
 const Video = styled.div`
   position: relative;
-  background:black;
+  background: black;
   .content-wrapper {
     display: flex;
     position: relative;
@@ -750,15 +766,15 @@ const Video = styled.div`
     color: #ffcc35;
   }
 
-  h1{
-    background:rgba(0, 0, 0,0.6);
-    padding:1rem;
-    border-radius:1rem;
+  h1 {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 1rem;
   }
 
-  @media(max-width:47rem){
-    .content-wrapper{
-      min-height:40vh;
+  @media (max-width: 47rem) {
+    .content-wrapper {
+      min-height: 40vh;
     }
   }
 `;
