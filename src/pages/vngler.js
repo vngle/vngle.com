@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import Layout from "@components/Layouts/MainLayout";
 import { StaticImage } from "gatsby-plugin-image";
@@ -9,7 +10,28 @@ import Form from "@components/Forms/Contact";
 import SubForm from "@components/Forms/SubForm";
 import ButtonContainer from "../components/Containers/ButtonContainer";
 
-const becomevngler = () => {
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 500;
+
+    if (revealtop < windowheight - revealpoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+const Becomevngler = () => {
+  useEffect(() => {
+    window.addEventListener("scroll", reveal);
+    return () => window.removeEventListener("scroll", reveal);
+  }, []);
+
   return (
     <Layout>
       <HeroContainer className="main-banner">
@@ -266,7 +288,7 @@ const Container = styled.h1`
       font-weight: bold;
       color: #000000;
       -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: #DC33B7;
+      -webkit-text-stroke-color: #dc33b7;
       // text-shadow: 0px 4px 4px rgba(220, 51, 183, 0.25);
     }
   }
@@ -318,4 +340,4 @@ const HContainer = styled.div`
   }
 `;
 
-export default becomevngler;
+export default Becomevngler;
