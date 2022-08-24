@@ -114,8 +114,12 @@ const Header = ({ siteTitle }) => {
 
   const dropdownLinksServices = [
     { name: "Newswire", to: "/services/news-wire" },
+<<<<<<< master
 >>>>>>> Creative Content and Become a Vngler
     { name: "Creative Content", to: "/services/creative-content" },
+=======
+    { name: "Creative Content Strategy", to: "/services/creative-content" },
+>>>>>>> Animations, changes in forms.
     { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
   ];
 

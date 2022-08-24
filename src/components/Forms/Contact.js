@@ -130,10 +130,14 @@ const SubForm = ({ status, message, onSubmitted }) => {
                 <Form.Group controlId="Textarea" as={Col}>
                   <Form.Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   Share what role you want to play in our network<span className="text-danger">*</span>
 =======
                   How will you get involved?<span className="text-danger">*</span>
 >>>>>>> 9d7b92e (Creative Content and Become a Vngler)
+=======
+                  Share what role you want to play in our network<span className="text-danger">*</span>
+>>>>>>> d9af24a (Animations, changes in forms.)
                   </Form.Label>
                   <Form.Control
                     type="textarea"

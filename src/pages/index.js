@@ -18,7 +18,6 @@ import NewBanner from "../components/Banner";
 import NewContainer from "../components/Containers/SingleContainer";
 
 import World from "@images/home/world.svg";
-import MitGif from "@images/home/mit.gif";
 
 const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
   return (
@@ -203,6 +202,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
           <div className="text-center"></div>
         </div>
       </Container>
+<<<<<<< master
 
 <<<<<<< master
 <<<<<<< master
@@ -274,6 +274,9 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
         <Sub />
       </Container>
 >>>>>>> Creative Content and Become a Vngler
+=======
+      <Sub />
+>>>>>>> Animations, changes in forms.
     </Layout>
   );
 };
@@ -474,12 +477,11 @@ const SplitSection = styled(Row)`
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 
-  @media(max-width:47rem) {
+  @media (max-width: 47rem) {
     &.section2 {
       flex-direction: column-reverse;
     }
   }
-
 `;
 
 const Heading = styled.h1`
@@ -508,6 +510,7 @@ const MainPageContainer = styled.div`
 <<<<<<< master
 <<<<<<< master
 <<<<<<< master
+<<<<<<< master
 export default IndexPage;
 =======
 export default IndexPage;
@@ -519,5 +522,7 @@ export default IndexPage;
 =======
 
 >>>>>>>  Content creative, Vngler,Ally and  About
+=======
+>>>>>>> Animations, changes in forms.
 export default IndexPage;
 >>>>>>> formatting

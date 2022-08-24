@@ -105,6 +105,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
       <Container>
         <Row>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Col>
             <h1 className="fw-bold">
               Let’s work together.
@@ -132,6 +133,9 @@ const SubForm = ({ status, message, onSubmitted }) => {
                   </Form.Group>
                 </Row>
 =======
+=======
+<<<<<<< master
+>>>>>>> d9af24a (Animations, changes in forms.)
           <Col xs={12} md={7} lg={6}>
             <h1>Let’s work together</h1>
             <h2>Get in touch today</h2>
@@ -297,8 +301,105 @@ const SubForm = ({ status, message, onSubmitted }) => {
                 {respMessage}
               </Row>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 148ca85 (Merge conflict)
 =======
+=======
+=======
+          <Col>
+            <h1 className="fw-bold">
+              Let’s work together.
+              <br />
+              Get in touch today.
+            </h1>
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+              <form
+                action="https://getform.io/f/6fa17a80-9b69-44dc-b894-27fe292b3795"
+                method="POST"
+              >
+                <Row xs={1} sm={2}>
+                  <Form.Group controlId="name" as={Col}>
+                    <Form.Label>
+                      First Name <span className="text-danger">*</span>
+                    </Form.Label>
+                    <Form.Control
+                      type="first"
+                      placeholder="Enter first name"
+                      name="FIRST"
+                      value={formData.NAME}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Form.Group>
+                </Row>
+
+                <Row xs={1} sm={2}>
+                  <Form.Group controlId="name" as={Col}>
+                    <Form.Label>
+                      Last Name<span className="text-danger">*</span>
+                    </Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter last name"
+                      name="LAST"
+                      value={formData.NAME}
+                      onChange={handleChange}
+                      required={formData["group[293774][4]"]}
+                    />
+                  </Form.Group>
+                </Row>
+                <Row xs={1} sm={2}>
+                  <Form.Group controlId="email" as={Col}>
+                    <Form.Label>
+                      Email address <span className="text-danger">*</span>
+                    </Form.Label>
+                    <Form.Control
+                      type="email"
+                      placeholder="Enter a valid email address"
+                      name="EMAIL"
+                      value={formData.EMAIL}
+                      onChange={handleChange}
+                      required
+                    />
+                    <Form.Control.Feedback type="invalid">
+                      Please provide a valid email address
+                    </Form.Control.Feedback>
+                  </Form.Group>
+                </Row>
+
+                <Row xs={1} sm={2}>
+                  <Form.Group controlId="Textarea" as={Col}>
+                    <Form.Label>
+                      Message <span className="text-danger">*</span>
+                    </Form.Label>
+                    <Form.Control
+                      type="textarea"
+                      placeholder=""
+                      name="MESSAGE"
+                      value={formData.MESSAGE}
+                      onChange={handleChange}
+                      required={formData["group[293774][4]"]}
+                      style={{ height: "100px" }}
+                    />
+                    <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
+                  </Form.Group>
+                </Row>
+
+                <Row className="mt-3">
+                  <Form.Group as={Col} xs="auto">
+                    <Button type="submit" variant="dark">
+                      {status === "sending" ? (
+                        <Spinner animation="border" size="sm" display="flex" />
+                      ) : (
+                        "Contact Us"
+                      )}
+                    </Button>
+                  </Form.Group>
+
+                  {respMessage}
+                </Row>
+>>>>>>> Animations, changes in forms.
+>>>>>>> d9af24a (Animations, changes in forms.)
               </form>
 >>>>>>> ccecdf0 (Updates)
             </Form>
@@ -310,6 +411,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
 };
 
 const StyledJumbotron = styled.div`
+<<<<<<< HEAD
 <<<<<<< HEAD
   background: var(--bs-primary);
 <<<<<<< HEAD
@@ -326,32 +428,46 @@ const StyledJumbotron = styled.div`
 =======
   background: #DC33B7;
 >>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
+=======
+  background: var(--bs-primary);
+  // margin-top: 2rem;
+  // margin-bottom: 5rem;
+  margin: 0.4rem;
+>>>>>>> d9af24a (Animations, changes in forms.)
   height: 100%;
 
   h1 {
     font-family: "Inter", sans-serif;
+    margin-top:2rem;
+    margin-left:10rem;
   }
 
   .form-label {
-    margin-left: 0.3rem;
-    margin-top: 0.3rem;
     font-weight: bold;
+    margin-left: 0.3rem;
+    margin-top: 0.5rem;
+    padding left: 10rem;
   }
 
   .form-control {
     border-radius: 0.6rem;
   }
 
+  form{
+    margin-left:5rem;
+  }
+
   .btn {
     letter-spacing: 1.7px;
-    margin-bottom: 0.9rem;
+    margin-bottom: 2rem;
+    margin-top:1rem;
   }
-  
+
   @media(max-width:47rem){
     margin-top:5rem;
     
     .form-label {
-      padding-left:2rem;
+      paddin-left:2rem;
     }
 
 <<<<<<< HEAD

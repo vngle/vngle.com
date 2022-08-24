@@ -208,15 +208,20 @@ const OldHomePage = () => {
           <a
             href="/vngler"
 <<<<<<< HEAD
+<<<<<<< HEAD
             style={{
 =======
              style={{
 >>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
+=======
+            style={{
+>>>>>>> d9af24a (Animations, changes in forms.)
               textDecorationLine: "none",
               color: "black",
               textEmphasisColor: "yellow",
             }}
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
             Get Involved
           </a>
@@ -235,6 +240,12 @@ const OldHomePage = () => {
           ))}
         </Row>
 >>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
+=======
+            Get Involved
+          </a>
+        </Title>
+        <SimpleSubForm />
+>>>>>>> d9af24a (Animations, changes in forms.)
       </ProcessContainer>
 
       <Container as="section" className="my-4">
@@ -337,6 +348,7 @@ const ProcessContainer = styled(Container)`
 
   a:visited {
 <<<<<<< HEAD
+<<<<<<< HEAD
     color: #dc33b7;
   }
 
@@ -349,18 +361,23 @@ const ProcessContainer = styled(Container)`
     color: #cdfeaa;
 =======
     color: #DC33B7;
+=======
+    color: #dc33b7;
+>>>>>>> d9af24a (Animations, changes in forms.)
   }
-  
-  
+
   a:hover {
-    background
-    : var(--bs-primary);
+    background: var(--bs-primary);
   }
-  
+
   a:active {
     background: #265301;
+<<<<<<< HEAD
     color: #CDFEAA;
 >>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
+=======
+    color: #cdfeaa;
+>>>>>>> d9af24a (Animations, changes in forms.)
   }
 `;
 
