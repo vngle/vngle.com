@@ -69,35 +69,6 @@ const OldHomePage = () => {
       imgSrc: Distribute,
     },
   ];
-  const actionCardData = [
-    {
-      title: "I need coverage",
-      text: (
-        <>
-          Know a topic that's underreported near you? <br /> Text "STORY" to{" "}
-          <b>(678) 995-5121</b> OR
-        </>
-      ),
-      btn: {
-        to: "https://blake680703.typeform.com/to/zwc2R2og",
-        text: "Request a Story",
-      },
-    },
-    {
-      title: "I want to report",
-      text: (
-        <>
-          Want to be a grassroots reporter for your community?
-          <br />
-          Click the button below.
-        </>
-      ),
-      btn: {
-        to: "/report",
-        text: "Report a story",
-      },
-    },
-  ];
 
   return (
     <Layout>
