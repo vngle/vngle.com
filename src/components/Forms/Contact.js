@@ -129,7 +129,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
               <Row xs={1} sm={2}>
                 <Form.Group controlId="Textarea" as={Col}>
                   <Form.Label>
-                  How will you get involved?<span className="text-danger">*</span>
+                  Share what role you want to play in our network<span className="text-danger">*</span>
                   </Form.Label>
                   <Form.Control
                     type="textarea"

@@ -18,7 +18,6 @@ import NewBanner from "../components/Banner";
 import NewContainer from "../components/Containers/SingleContainer";
 
 import World from "@images/home/world.svg";
-import MitGif from "@images/home/mit.gif";
 
 const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
   return (
@@ -196,20 +195,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
           <div className="text-center"></div>
         </div>
       </Container>
-
-      <Container fluid>
-        <NewContainer
-          title="Our impact won the 🌎 Community Award at MIT."
-          titleColor="black"
-          bgColor="#cdfd01"
-        />
-      </Container>
-      <Container>
-        <img src={MitGif} alt="" width="100%" />
-      </Container>
-      <Container fluid>
-        <Sub />
-      </Container>
+      <Sub />
     </Layout>
   );
 };
@@ -381,12 +367,11 @@ const SplitSection = styled(Row)`
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 
-  @media(max-width:47rem) {
+  @media (max-width: 47rem) {
     &.section2 {
       flex-direction: column-reverse;
     }
   }
-
 `;
 
 const Heading = styled.h1`
@@ -410,6 +395,5 @@ const MainPageContainer = styled.div`
     }
   }
 `;
-
 
 export default IndexPage;

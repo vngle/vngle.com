@@ -52,9 +52,12 @@ const creativeContent = () => {
             <Fade left>
               <div className="content p-md-5">
                 <p className="sup display-2">
-                  Leverage our grassroots expertise to create content that
-                  maximizes your local connection across the areas you care
-                  about.
+                  <Heading>
+                    {" "}
+                    Leverage our grassroots expertise to create content that
+                    maximizes your local connection across the areas you care
+                    about.
+                  </Heading>
                 </p>
               </div>
             </Fade>
@@ -84,47 +87,80 @@ const creativeContent = () => {
         </p>
       </HContainer>
 
-      <HeContainer>
-        <h1 className="content display-4 fw-bold">
-          {" "}
-          Our content team will work with you to plan your story and document
-          the story you want to capture.{" "}
-        </h1>
-        <div>
-          <StaticImage
-            className="img"
-            src="../../images/services/k.jpg"
-            alt="Hand holding camera"
-          />
-        </div>
+      <MaContainer>
+        <SplitSection background="" className="section2 gy-3">
+          <Col md={{ span: 6, order: "last" }}>
+            <Fade left>
+              <div className="content p-md-5">
+                <p className="sup">
+                  <Heading>
+                    {" "}
+                    Our content team will work with you to plan your story and
+                    document the story you want to capture.{" "}
+                  </Heading>
+                </p>
+              </div>
+            </Fade>
+          </Col>
+          <Col className="image" md={6}>
+            <Fade right>
+              <StaticImage
+                src="../../images/services/k.jpg"
+                alt="Hand holding camera"
+              />
+            </Fade>
+          </Col>
+        </SplitSection>
 
-        <h1 className="container display-4 fw-bold">
-          {" "}
-          No matter the if it’s on-the-ground or in-the-air, we have the tools
-          to tell your story.{" "}
-        </h1>
-        <div>
-          <StaticImage
-            className="img"
-            src="../../images/services/g.jpg"
-            alt="Drone Flying"
-          />
-        </div>
+        <SplitSection background="" className="section2 gy-3">
+          <Col md={6}>
+            <Fade left>
+              <div className="content p-md-5">
+                <p className="sup">
+                  <Heading>
+                    {" "}
+                    No matter the if it’s on-the-ground or in-the-air, we have
+                    the tools to tell your story.{" "}
+                  </Heading>
+                </p>
+              </div>
+            </Fade>
+          </Col>
+          <Col className="image" md={6}>
+            <Fade right>
+              <StaticImage
+                src="../../images/services/g.jpg"
+                alt="Drone Flying"
+              />
+            </Fade>
+          </Col>
+        </SplitSection>
 
-        <h2 className="content display-4 fw-bold">
-          {" "}
-          We offer end-to-end fulfillment: Whether you need support on reaching
-          your goals, increase distribution, or grow your audience, we got you
-          covered.{" "}
-        </h2>
-        <div>
-          <StaticImage
-            className="img"
-            src="../../images/services/stephen.jpeg"
-            alt="Quality Score"
-          />
-        </div>
-      </HeContainer>
+        <SplitSection background="" className="section2 gy-3">
+          <Col md={{ span: 6, order: "last" }}>
+            <Fade left>
+              <div className="content p-md-5">
+                <p className="sup">
+                  <Heading>
+                    {" "}
+                    We offer end-to-end fulfillment: Whether you need support on
+                    reaching your goals, increase distribution, or grow your
+                    audience, we got you covered.{" "}
+                  </Heading>
+                </p>
+              </div>
+            </Fade>
+          </Col>
+          <Col className="image" md={6}>
+            <Fade right>
+              <StaticImage
+                src="../../images/services/stephen.jpeg"
+                alt="Quality Score"
+              />
+            </Fade>
+          </Col>
+        </SplitSection>
+      </MaContainer>
 
       <Form />
 
@@ -196,44 +232,13 @@ const HeroContainer = styled(Container)`
   }
 `;
 
-const HeContainer = styled.div`
-  .content {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    text-align: center;
-
-    h1 {
-      font-size: 3rem;
-      font-family: "Playfair Display", serif;
-    }
-  }
-
-  img {
-    posiiton: absolute;
-    width: 100%;
-    padding-left: 0.1rem;
-  }
-
-  .container {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    text-align: center;
-
-    h1 {
-      font-size: 3rem;
-      font-family: "Playfair Display", serif;
-    }
-
-    h2 {
-      font-size: 3rem;
-      font-family: "Playfair Display", serif;
-    }
-  }
-  img {
-    posiiton: absolute;
-    width: 100%;
-    padding-left: 0.1rem;
-  }
+const Heading = styled.h1`
+  font-family: "Inter", sans-serif;
+  font-weight: ${(props) => props.weight || "bold"};
+  font-size: clamp(3rem, 7vw, ${(props) => props.size || "2.6rem"});
+  text-align: ${(props) => (props.center ? "center" : "left")};
+  line-height: ${(props) => props.lineHeight};
+  color: ${(props) => props.color};
 `;
 
 const MaContainer = styled.div`
@@ -263,6 +268,7 @@ const MaContainer = styled.div`
     font-weight: bold;
     font-family: "Playfair Display", serif;
     text-align: center;
+    font-size: 3rem;
   }
   }
 `;
@@ -336,29 +342,11 @@ const SplitSection = styled(Row)`
     border-radius: 10px;
     height: 100%;
     transition: transform 1s;
-
-    p.sup {
-      text-align: left;
-      font-weight: bold;
-      font-size: 4rem;
-      font-family: "Playfair Display", serif;
-      font-style: normal;
-      color: #000000;
-    }
   }
 
   @media (max-width: 47rem) {
     &.section2 {
       flex-direction: column-reverse;
-
-      p.sup {
-        text-align: left;
-        font-weight: bold;
-        font-size: 2rem;
-        font-family: "Playfair Display", serif;
-        font-style: normal;
-        color: #000000;
-      }
     }
   }
 `;

@@ -47,11 +47,18 @@ export default function AllyPage() {
       description: (
         <>
           <p>
-           VVA promotes and supports the full range of issues important to Vietnam veterans, to create a new identity for this generation of veterans, and to change public perception of Vietnam veterans. 
+            VVA promotes and supports the full range of issues important to
+            Vietnam veterans, to create a new identity for this generation of
+            veterans, and to change public perception of Vietnam veterans.
           </p>
           <p>
             <b>
-            VVA Metro-Atlanta Chapter #1118 worked with Vngle to kickoff thier media strategy around the <a href="https://www.sonsofatlanta.org/">Sons of Atlanta Memorial</a>, a Vietnam Veteran Memorial at Piedmont Park, in Atlanta, GA. 
+              VVA Metro-Atlanta Chapter #1118 worked with Vngle to kickoff thier
+              media strategy around the{" "}
+              <a href="https://www.sonsofatlanta.org/">
+                Sons of Atlanta Memorial
+              </a>
+              , a Vietnam Veteran Memorial at Piedmont Park, in Atlanta, GA.
             </b>
           </p>
         </>
@@ -65,7 +72,9 @@ export default function AllyPage() {
       description: (
         <>
           <p>
-            “Vngle has been tremendous in helping me connect with my constituents and gather the most up-to-date information on their needs. They now are my go to community channel.”{" "}
+            “Vngle has been tremendous in helping me connect with my
+            constituents and gather the most up-to-date information on their
+            needs. They now are my go to community channel.”{" "}
             <b>- Councilmember Roderick Gay</b>
           </p>
         </>
@@ -82,19 +91,14 @@ export default function AllyPage() {
           <Container>
             <h1 className="display-2">Become an Ally</h1>
             <h2>Grow with Vngle in cities across America!</h2>
-            
+
             <motion.div
-            animate={{ opacity: [0, 1] }}
-            transition={{ duration: 1.9, delay: 1 }}
-          >
-            <Button
-              size="lg"
-              href="https://forms.gle/XQ7ZBAje4pksxdnDA"
-              target="_blank"
-              rel="noreferrer"
+              animate={{ opacity: [0, 1] }}
+              transition={{ duration: 1.9, delay: 3 }}
             >
-              Become an ally today!
-            </Button>
+              <Button size="lg" href="#Form-2" rel="noreferrer">
+                Become an ally today!
+              </Button>
             </motion.div>
           </Container>
         </div>
@@ -103,7 +107,7 @@ export default function AllyPage() {
           <section className="intro">
             <Row xs={1} md={2}>
               <Col className="intro__content">
-                <h1>
+                <h1 style={{ marginTop: "5rem", marginBottom: "0.5rem" }}>
                   An ally is a <b>collaborative sponsor</b> aiming to extend
                   their presence across a desired geography.
                 </h1>
@@ -185,8 +189,10 @@ export default function AllyPage() {
           ))}
         </Container>
       </Styled>
-
-      <Sub/>
+      <a id="Form-2">
+        {" "}
+        <Sub />
+      </a>
     </Layout>
   );
 }
@@ -199,17 +205,31 @@ const Styled = styled.div`
     background-size: cover;
     color: white;
 
-
     h1 {
       font-weight: 900;
     }
 
     h2 {
       font-family: "Inter", sans-serif;
-    animation: play 1.5s steps (10) infinite;
+      animation: reveal 3000ms ease-in-out forwards 200ms,
+             glow 2500ms linear infinite 2000ms;
+      animation-delay: 1s;
+    }
+
+  @keyframes reveal {
+    80%{
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
     }
   }
-
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
+  }
+ 
   .intro {
     &__content {
       display: flex;
@@ -226,9 +246,7 @@ const Styled = styled.div`
     }
   }
 
-  @keyframes play {
-    100% { background-position: -1200px; }
-    }
+
 `;
 
 const LogoCol = styled(Col)`

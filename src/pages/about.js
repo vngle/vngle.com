@@ -8,10 +8,9 @@ import Seo from "@components/Seo";
 import NewsSubCard from "@components/Cards/NewsSubCard";
 import StorySlider from "@components/Sliders/StoryCarousel";
 import SimpleSubForm from "@components/Forms/SubForm";
-import ActionCard from "@components/Cards/ActionCard";
 import ClientLogoGrid from "@components/Grids/PartnerLogoGrid";
 
-import GaFlag from "@images/ga-flag.svg";
+import USAFlag from "@images/usa-flag.png";
 import Culture from "@images/about/culture.svg";
 import Transparent from "@images/about/transparent.svg";
 import Search from "@images/about/search.svg";
@@ -153,8 +152,7 @@ const OldHomePage = () => {
           <Col>
             {/* Consider hiding form in small screen sizes */}
             <NewsSubCard
-              title="Get the nonpartisan pulse on what's going on near you."
-              subtitle="Sign up for balanced coverage on everything from local campaigns, state politics, to COVID-19 updates."
+              title="Stay Updated & Follow Our Movement"
             />
           </Col>
         </Row>
@@ -164,19 +162,15 @@ const OldHomePage = () => {
         <Container>
           <Row className="align-items-center justify-content-center">
             <Col md={1} sm={2} xs={3}>
-              <img
-                src={GaFlag}
-                alt="flag of the state of Georgia"
-                width="100%"
-              />
+              <img src={USAFlag} alt="flag of USA" width="100%" />
             </Col>
             <Col xs="auto">
               <Subtitle className="mb-sm-0 mb-4 mx-auto">
-                Check out our Georgia coverage!
+                Check out our coverage!
               </Subtitle>
             </Col>
             <Col xs="auto">
-              <Button variant="outline-dark" size="md" as={Link} to="/georgia">
+              <Button variant="outline-dark" size="md" as={Link} to="/coverage">
                 See Coverage Now
               </Button>
             </Col>
@@ -243,23 +237,16 @@ const OldHomePage = () => {
           <br />
           <a
             href="/vngler"
-             style={{
+            style={{
               textDecorationLine: "none",
               color: "black",
               textEmphasisColor: "yellow",
             }}
           >
-            Get involved
+            Get Involved
           </a>
         </Title>
         <SimpleSubForm />
-        <Row className="card-row text-center">
-          {actionCardData.map((props, i) => (
-            <Col lg={6} sm={12} key={i}>
-              <ActionCard {...props}>{props.text}</ActionCard>
-            </Col>
-          ))}
-        </Row>
       </ProcessContainer>
 
       <Container as="section" className="my-4">
@@ -361,18 +348,16 @@ const ProcessContainer = styled(Container)`
   }
 
   a:visited {
-    color: #DC33B7;
+    color: #dc33b7;
   }
-  
-  
+
   a:hover {
-    background
-    : var(--bs-primary);
+    background: var(--bs-primary);
   }
-  
+
   a:active {
     background: #265301;
-    color: #CDFEAA;
+    color: #cdfeaa;
   }
 `;
 
