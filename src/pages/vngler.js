@@ -35,10 +35,10 @@ const Becomevngler = () => {
   return (
     <Layout>
       <HeroContainer className="main-banner">
-        <div>
+        <Container>
           <h1> Become a Vngler </h1>
           <img src={I} alt="" className="hero-img" />
-        </div>
+        </Container>
       </HeroContainer>
 
       <ButtonContainer
@@ -154,7 +154,7 @@ const Becomevngler = () => {
   );
 };
 
-const HeroContainer = styled.div`
+const HeroContainer = styled.h1`
   position: relative;
   text-align: center;
   padding-left: 0.5rem;
