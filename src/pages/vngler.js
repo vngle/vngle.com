@@ -27,7 +27,9 @@ function reveal() {
 }
 
 const Becomevngler = () => {
+
   useEffect(() => {
+    
     window.addEventListener("scroll", reveal);
     return () => window.removeEventListener("scroll", reveal);
   }, []);
@@ -35,10 +37,10 @@ const Becomevngler = () => {
   return (
     <Layout>
       <HeroContainer className="main-banner">
-        <Container>
+        <div>
           <h1> Become a Vngler </h1>
           <img src={I} alt="" className="hero-img" />
-        </Container>
+        </div>
       </HeroContainer>
 
       <ButtonContainer
@@ -154,7 +156,7 @@ const Becomevngler = () => {
   );
 };
 
-const HeroContainer = styled.h1`
+const HeroContainer = styled.div`
   position: relative;
   text-align: center;
   padding-left: 0.5rem;
