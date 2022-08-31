@@ -16,7 +16,10 @@ const SubForm = ({ status, message, onSubmitted }) => {
     FIRST: "",
     LAST: "",
     EMAIL: "",
+<<<<<<< HEAD
     MESSAGE: "",
+=======
+>>>>>>> 148ca85 (Merge conflict)
 
     "group[293774][4]": true, //messagenot opt-in
   });
@@ -86,6 +89,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
     <StyledJumbotron>
       <Container>
         <Row>
+<<<<<<< HEAD
           <Col>
             <h1 className="fw-bold">
               Let’s work together.
@@ -112,6 +116,31 @@ const SubForm = ({ status, message, onSubmitted }) => {
                     />
                   </Form.Group>
                 </Row>
+=======
+          <Col xs={12} md={7} lg={6}>
+            <h1>Let’s work together</h1>
+            <h2>Get in touch today</h2>
+
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+              <Row className="email-form" xs={1} sm={3}>
+                <Form.Group controlId="email" as={Col}>
+                  <Form.Label>
+                    Email address <span className="text-danger">*</span>
+                  </Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="Enter email"
+                    name="EMAIL"
+                    value={formData.EMAIL}
+                    onChange={handleChange}
+                    required
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    Please provide a valid email address
+                  </Form.Control.Feedback>
+                </Form.Group>
+              </Row>
+>>>>>>> 148ca85 (Merge conflict)
 
                 <Row xs={1} sm={2}>
                   <Form.Group controlId="name" as={Col}>
@@ -147,6 +176,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
                   </Form.Group>
                 </Row>
 
+<<<<<<< HEAD
                 <Row xs={1} sm={2}>
                   <Form.Group controlId="Textarea" as={Col}>
                     <Form.Label>
@@ -179,6 +209,10 @@ const SubForm = ({ status, message, onSubmitted }) => {
                   {respMessage}
                 </Row>
               </form>
+=======
+                {respMessage}
+              </Row>
+>>>>>>> 148ca85 (Merge conflict)
             </Form>
           </Col>
         </Row>

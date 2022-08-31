@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import Typed from "react-typed";
 import awsvideo from "../aws-video-exports";
-import Banner from "react-js-banner";
 
 import Layout from "../components/Layouts/MainLayout";
 import Seo from "../components/Seo";
@@ -243,8 +242,8 @@ const HeroContainer = styled(Container)`
 
   .hero-img {
     object-fit: cover;
-    width: 70%;
-    height: 100%;
+    width: 100%;
+    height: 20rem;
     position: absolute;
     z-index: -1;
     margin-left: auto;

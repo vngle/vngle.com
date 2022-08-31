@@ -158,7 +158,6 @@ const StyledHeader = styled.header`
       position: fixed;
       top: 0;
       .navbar-nav {
-
         .nav-link,
         .btn {
           color: var(--bs-dark);
