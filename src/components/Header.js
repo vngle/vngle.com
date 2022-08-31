@@ -146,7 +146,19 @@ const StyledHeader = styled.header`
     z-index: 1001;
 
     .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.7rem 2rem;
+      top: 0;
+      opacity: 0.9;
+      background-color: var(--bs-body-bg);
+      width: 90%;
+      z-index: 10;
+      position: fixed;
+      top: 0;
       .navbar-nav {
+
         .nav-link,
         .btn {
           color: var(--bs-dark);
