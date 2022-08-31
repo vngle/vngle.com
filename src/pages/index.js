@@ -271,7 +271,7 @@ const HeroContainer = styled(Container)`
 
   .w-container {
     background: #1a0117;
-    color: var(--bs-primary);
+    color: var(--bs-primary);-
     text-align: center;
     padding: 1 em;
 
