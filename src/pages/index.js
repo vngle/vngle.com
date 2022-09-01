@@ -18,6 +18,7 @@ import NewBanner from "../components/Banner";
 import NewContainer from "../components/Containers/SingleContainer";
 
 import World from "@images/home/world.svg";
+import MitGif from "@images/home/mit.gif";
 
 const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
   return (
@@ -195,6 +196,19 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
           <div className="text-center"></div>
         </div>
       </Container>
+
+      <Container fluid>
+        <NewContainer
+          title="Our impact won the 🌎 Community Award at MIT."
+          titleColor="black"
+          bgColor="#cdfd01"
+        />
+      </Container>
+
+      <Container>
+        <img src={MitGif} alt="" width="100%" />
+      </Container>
+
       <Sub />
     </Layout>
   );
