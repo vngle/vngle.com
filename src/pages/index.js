@@ -16,8 +16,6 @@ import SubForm from "../components/Forms/SubForm";
 import Sub from "../components/Forms/Sub";
 import NewBanner from "../components/Banner";
 import NewContainer from "../components/Containers/SingleContainer";
-import TextContainer from "../components/Containers/TextContainer";
-import ButtonContainer from "../components/Containers/ButtonContainer";
 
 import World from "@images/home/world.svg";
 import MitGif from "@images/home/mit.gif";
@@ -120,7 +118,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             </Col>
           </SplitSection>
 
-          <SplitSection background="#3cf" className="gy-3">
+          <SplitSection background="#3cf" className="section2 gy-3">
             <Col md={6}>
               <Fade left>
                 <div className="content p-md-5">
@@ -152,7 +150,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
             </Col>
           </SplitSection>
 
-          <SplitSection background="#ff52db" className="gy-3">
+          <SplitSection background="#ff52db" className="section2 gy-3">
             <Col md={{ span: 6, order: "last" }}>
               <Fade right>
                 <div className="content p-md-5">
@@ -186,16 +184,6 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
         </MainPageContainer>
       </Container>
 
-      {/* <ButtonContainer
-        title="We bring you hyper-local content & insights that’s verified by digital forensics & local experts."
-        titleColor="var(--bs-primary)"
-        buttonLink=""
-        buttonText="Learn More"
-        buttonColor="var(--bs-primary)"
-        butTexCol="black"
-        bgColor="black"
-      /> */}
-
       <NewContainer
         title="We bring you hyper-local content & insights that’s verified by digital forensics & local experts."
         titleColor="white"
@@ -215,16 +203,13 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
           titleColor="black"
           bgColor="#cdfd01"
         />
-        {/* <Sub /> */}
       </Container>
 
       <Container>
         <img src={MitGif} alt="" width="100%" />
       </Container>
 
-      <Container fluid>
-        <SubForm />
-      </Container>
+      <Sub />
     </Layout>
   );
 };
@@ -394,6 +379,12 @@ const SplitSection = styled(Row)`
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  @media (max-width: 47rem) {
+    &.section2 {
+      flex-direction: column-reverse;
+    }
   }
 `;
 

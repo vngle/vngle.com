@@ -55,13 +55,7 @@ NewsSubCard.propTypes = {
 };
 
 NewsSubCard.defaultProps = {
-  title: "Get the pulse of what's going on near you!",
-  subtitle: (
-    <>
-      Sign up for hyper-local stories on everything from <b>local campaigns</b>,{" "}
-      <b>protests</b>, to <b>COVID-19</b>.
-    </>
-  ),
+  title: "Stay Updated & Follow Our Movement",
 };
 
 export default NewsSubCard;

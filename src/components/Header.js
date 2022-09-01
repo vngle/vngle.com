@@ -15,23 +15,24 @@ const Header = ({ siteTitle }) => {
     // { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
   ];
   const dropdownLinks = [
-    { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
-    {
-      name: "Become a Reporter",
-      to: "https://forms.gle/JuxuSvst9aJTiDAk6",
-    },
-    {
-      name: "Request Coverage",
-      to: "https://vngle.typeform.com/to/zwc2R2og",
-    },
-    { name: "Become an Ally", to: "/ally" },
-    { name: "Submit a tip", to: "/report" },
+    { name: "Follow our Movement", to: "http://eepurl.com/g1cJk5" },
+    // {
+    //   name: "Become a Reporter",
+    //   to: "https://forms.gle/JuxuSvst9aJTiDAk6",
+    // },
+    // {
+    //   name: "Request Coverage",
+    //   to: "https://vngle.typeform.com/to/zwc2R2og",
+    // },
+    { name: "Be a Vngler", to: "/vngler" },
+    { name: "Become an Ally: Grow with Us", to: "/ally" },
+    { name: "Submit a Tip", to: "https://forms.gle/ezGNfYqZTqMUD8YZ9" },
   ];
 
   const dropdownLinksServices = [
-    { name: "Newsire", to: "/services/news-wire" },
-    { name: "Creative Content", to: "/services/creative-content" },
-    { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
+    { name: "Newswire", to: "/services/news-wire" },
+    { name: "Creative Content Strategy", to: "/services/creative-content" },
+    { name: "New Media Workshops", to: "/services/new-media-workshops" },
   ];
 
   return (
@@ -46,7 +47,7 @@ const Header = ({ siteTitle }) => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-end text-center">
             <Nav>
-              {/* <Dropdown className="nav-item">
+              <Dropdown className="nav-item">
                 <Dropdown.Toggle
                   className="menu-dropdown-toggle nav-link"
                   as="a"
@@ -62,7 +63,7 @@ const Header = ({ siteTitle }) => {
                     );
                   })}
                 </Dropdown.Menu>
-              </Dropdown> */}
+              </Dropdown>
 
               {navLinks.map((link, i) => {
                 return (

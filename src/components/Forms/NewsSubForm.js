@@ -18,7 +18,6 @@ const NewsSubForm = ({ status, message, onSubmitted }) => {
   // object key names are extracted from Mailchimp. Changing them will break the form.
   const [formData, setFormData] = useState({
     EMAIL: "",
-    ZIPCODE: "",
     NUMBER: "",
     "group[293774][4]": false,
   });
@@ -28,7 +27,6 @@ const NewsSubForm = ({ status, message, onSubmitted }) => {
     const form = event.currentTarget;
     const submitData = {
       EMAIL: formData.EMAIL,
-      ZIPCODE: formData.ZIPCODE,
       NUMBER: formData.NUMBER,
     };
 
@@ -101,31 +99,34 @@ const NewsSubForm = ({ status, message, onSubmitted }) => {
           <Form.Control.Feedback type="invalid">
             Please provide a valid email address
           </Form.Control.Feedback>
-        </Form.Group>
-        <Form.Group controlId="zipCode">
-          <Form.Label>
-            Zip Code<span className="text-danger">*</span>
-          </Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Enter zip code"
-            name="ZIPCODE"
-            value={formData.ZIPCODE}
-            onChange={handleChange}
-            required
-          />
-          <Form.Control.Feedback type="invalid">
-            Please provide a zip code
-          </Form.Control.Feedback>
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>Prefer text message updates instead?</Form.Label>
 
+          {formData["group[293774][4]"] === true && (
+            <Form.Group controlId="number">
+              <Form.Label>
+                Phone Number<span className="text-danger">*</span>
+              </Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter cell phone number"
+                name="NUMBER"
+                value={formData.NUMBER}
+                onChange={handleChange}
+                required={formData["group[293774][4]"]}
+              />
+              <Form.Control.Feedback type="invalid">
+                Please provide a phone number to receive updates through text
+                messages
+              </Form.Control.Feedback>
+            </Form.Group>
+          )}
+        </Form.Group>
+
+        <Form.Group>
           <Form.Group>
             <Form.Check
               type="checkbox"
               id="sms-confirm"
-              label="Yes! Do not send updates to my email"
+              label="Do not send updates to my email"
               name="group[293774][4]"
               checked={formData["group[293774][4]"]}
               onChange={handleChange}
@@ -133,25 +134,6 @@ const NewsSubForm = ({ status, message, onSubmitted }) => {
             />
           </Form.Group>
         </Form.Group>
-        {formData["group[293774][4]"] === true && (
-          <Form.Group controlId="number">
-            <Form.Label>
-              Phone Number<span className="text-danger">*</span>
-            </Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter cell phone number"
-              name="NUMBER"
-              value={formData.NUMBER}
-              onChange={handleChange}
-              required={formData["group[293774][4]"]}
-            />
-            <Form.Control.Feedback type="invalid">
-              Please provide a phone number to receive updates through text
-              messages
-            </Form.Control.Feedback>
-          </Form.Group>
-        )}
 
         {respMessage}
 
@@ -163,11 +145,11 @@ const NewsSubForm = ({ status, message, onSubmitted }) => {
           )}
         </Button>
       </Form>
-      <MutedMsg className="text-muted">
+      {/* <MutedMsg className="text-muted">
         *We’re operating in Georgia with more states coming soon. Sign ups
         outside of GA are invited to our national community newsletter until we
         reach them.
-      </MutedMsg>
+      </MutedMsg> */}
     </>
   );
 };
