@@ -78,7 +78,8 @@ const OldHomePage = () => {
         <Row className="row-intro">
           <Col className="col-intro text-md-left text-center" md={6} sm={12}>
             <h1 className="display-4 fw-bolder mb-4">
-              We help harmonize cities by{" "}
+              We help harmonize cities by
+              <br />
               <span className="highlight">
                 combatting misinformation & under-representation
               </span>
@@ -121,9 +122,7 @@ const OldHomePage = () => {
         <Row>
           <Col>
             {/* Consider hiding form in small screen sizes */}
-            <NewsSubCard
-              title="Stay Updated & Follow Our Movement"
-            />
+            <NewsSubCard title="Stay Updated & Follow Our Movement" />
           </Col>
         </Row>
       </HeroContainer>
@@ -207,45 +206,16 @@ const OldHomePage = () => {
           <br />
           <a
             href="/vngler"
-<<<<<<< HEAD
-<<<<<<< HEAD
             style={{
-=======
-             style={{
->>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
-=======
-            style={{
->>>>>>> d9af24a (Animations, changes in forms.)
               textDecorationLine: "none",
               color: "black",
               textEmphasisColor: "yellow",
             }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
             Get Involved
           </a>
         </Title>
         <SimpleSubForm />
-=======
-            Get involved
-          </a>
-        </Title>
-        <SimpleSubForm />
-        <Row className="card-row text-center">
-          {actionCardData.map((props, i) => (
-            <Col lg={6} sm={12} key={i}>
-              <ActionCard {...props}>{props.text}</ActionCard>
-            </Col>
-          ))}
-        </Row>
->>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
-=======
-            Get Involved
-          </a>
-        </Title>
-        <SimpleSubForm />
->>>>>>> d9af24a (Animations, changes in forms.)
       </ProcessContainer>
 
       <Container as="section" className="my-4">
@@ -347,8 +317,6 @@ const ProcessContainer = styled(Container)`
   }
 
   a:visited {
-<<<<<<< HEAD
-<<<<<<< HEAD
     color: #dc33b7;
   }
 
@@ -359,25 +327,6 @@ const ProcessContainer = styled(Container)`
   a:active {
     background: #265301;
     color: #cdfeaa;
-=======
-    color: #DC33B7;
-=======
-    color: #dc33b7;
->>>>>>> d9af24a (Animations, changes in forms.)
-  }
-
-  a:hover {
-    background: var(--bs-primary);
-  }
-
-  a:active {
-    background: #265301;
-<<<<<<< HEAD
-    color: #CDFEAA;
->>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
-=======
-    color: #cdfeaa;
->>>>>>> d9af24a (Animations, changes in forms.)
   }
 `;
 

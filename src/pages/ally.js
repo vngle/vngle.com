@@ -47,8 +47,6 @@ export default function AllyPage() {
       description: (
         <>
           <p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             VVA promotes and supports the full range of issues important to
             Vietnam veterans, to create a new identity for this generation of
             veterans, and to change public perception of Vietnam veterans.
@@ -61,27 +59,6 @@ export default function AllyPage() {
                 Sons of Atlanta Memorial
               </a>
               , a Vietnam Veteran Memorial at Piedmont Park, in Atlanta, GA.
-=======
-           VVA promotes and supports the full range of issues important to Vietnam veterans, to create a new identity for this generation of veterans, and to change public perception of Vietnam veterans. 
-          </p>
-          <p>
-            <b>
-            VVA Metro-Atlanta Chapter #1118 worked with Vngle to kickoff thier media strategy around the <a href="https://www.sonsofatlanta.org/">Sons of Atlanta Memorial</a>, a Vietnam Veteran Memorial at Piedmont Park, in Atlanta, GA. 
->>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
-=======
-            VVA promotes and supports the full range of issues important to
-            Vietnam veterans, to create a new identity for this generation of
-            veterans, and to change public perception of Vietnam veterans.
-          </p>
-          <p>
-            <b>
-              VVA Metro-Atlanta Chapter #1118 worked with Vngle to kickoff thier
-              media strategy around the{" "}
-              <a href="https://www.sonsofatlanta.org/">
-                Sons of Atlanta Memorial
-              </a>
-              , a Vietnam Veteran Memorial at Piedmont Park, in Atlanta, GA.
->>>>>>> d9af24a (Animations, changes in forms.)
             </b>
           </p>
         </>
@@ -95,19 +72,9 @@ export default function AllyPage() {
       description: (
         <>
           <p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             “Vngle has been tremendous in helping me connect with my
             constituents and gather the most up-to-date information on their
             needs. They now are my go to community channel.”{" "}
-=======
-            “Vngle has been tremendous in helping me connect with my constituents and gather the most up-to-date information on their needs. They now are my go to community channel.”{" "}
->>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
-=======
-            “Vngle has been tremendous in helping me connect with my
-            constituents and gather the most up-to-date information on their
-            needs. They now are my go to community channel.”{" "}
->>>>>>> d9af24a (Animations, changes in forms.)
             <b>- Councilmember Roderick Gay</b>
           </p>
         </>
@@ -124,8 +91,6 @@ export default function AllyPage() {
           <Container>
             <h1 className="display-2">Become an Ally</h1>
             <h2>Grow with Vngle in cities across America!</h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <motion.div
               animate={{ opacity: [0, 1] }}
@@ -134,24 +99,6 @@ export default function AllyPage() {
               <Button size="lg" href="#Form-2" rel="noreferrer">
                 Become an ally today!
               </Button>
-=======
-            
-=======
-
->>>>>>> d9af24a (Animations, changes in forms.)
-            <motion.div
-              animate={{ opacity: [0, 1] }}
-              transition={{ duration: 1.9, delay: 3 }}
-            >
-<<<<<<< HEAD
-              Become an ally today!
-            </Button>
->>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
-=======
-              <Button size="lg" href="#Form-2" rel="noreferrer">
-                Become an ally today!
-              </Button>
->>>>>>> d9af24a (Animations, changes in forms.)
             </motion.div>
           </Container>
         </div>
@@ -242,21 +189,10 @@ export default function AllyPage() {
           ))}
         </Container>
       </Styled>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d9af24a (Animations, changes in forms.)
       <a id="Form-2">
         {" "}
         <Sub />
       </a>
-<<<<<<< HEAD
-=======
-
-      <Sub/>
->>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
-=======
->>>>>>> d9af24a (Animations, changes in forms.)
     </Layout>
   );
 }
@@ -275,27 +211,18 @@ const Styled = styled.div`
 
     h2 {
       font-family: "Inter", sans-serif;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d9af24a (Animations, changes in forms.)
       animation: reveal 3000ms ease-in-out forwards 200ms,
-             glow 2500ms linear infinite 2000ms;
+        glow 2500ms linear infinite 2000ms;
       animation-delay: 1s;
     }
+  }
 
   @keyframes reveal {
-    80%{
+    80% {
       letter-spacing: 8px;
     }
     100% {
       background-size: 300% 300%;
-<<<<<<< HEAD
-=======
-    animation: play 1.5s steps (10) infinite;
->>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
-=======
->>>>>>> d9af24a (Animations, changes in forms.)
     }
   }
   @keyframes glow {
@@ -303,7 +230,7 @@ const Styled = styled.div`
       text-shadow: 0 0 8px #fff;
     }
   }
- 
+
   .intro {
     &__content {
       display: flex;
@@ -319,18 +246,6 @@ const Styled = styled.div`
       justify-content: center;
     }
   }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  @keyframes play {
-    100% { background-position: -1200px; }
-    }
->>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
-=======
-
->>>>>>> d9af24a (Animations, changes in forms.)
 `;
 
 const LogoCol = styled(Col)`

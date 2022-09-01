@@ -79,7 +79,6 @@ const SubForm = ({ status, message, onSubmitted }) => {
   }
 
   return (
-<<<<<<< HEAD
     <Fade bottom>
       <StyledJumbotron>
         <HeroContainer>
@@ -130,15 +129,6 @@ const SubForm = ({ status, message, onSubmitted }) => {
                     </Form.Group>
                   )}
                 </Row>
-=======
-  
-  <Fade bottom>
-    <StyledJumbotron>
-      <HeroHeroContainer>
-        <Row>
-          <Col xs={12}>
-            <h1>Stay Updated & Follow Our Movement</h1>
->>>>>>> 148ca85 (Merge conflict)
 
                 <Row className="mt-3">
                   <Form.Group class="center-element">
@@ -167,46 +157,12 @@ const SubForm = ({ status, message, onSubmitted }) => {
                   </Form.Group>
                 </Row>
 
-<<<<<<< HEAD
                 {respMessage}
               </Form>
             </Col>
           </Row>
         </HeroContainer>
       </StyledJumbotron>
-=======
-              <Row className="mt-3">
-                <Form.Group>
-                  <Button type="submit" variant="dark">
-                    {status === "sending" ? (
-                      <Spinner animation="border" size="sm" />
-                    ) : (
-                      // // "Subscribe"
-                      "SUBSCRIBE"
-                      "SUBSCRIBE"
-                    )}
-                  </Button>
-                </Form.Group>
-                <Form.Group as={Col} className="checkbox-container center-element">
-                  <Form.Check
-                    type="checkbox"
-                    id="sms-confirm"
-                    label="Text me instead!"
-                    name="group[293774][4]"
-                    checked={formData["group[293774][4]"]}
-                    onChange={handleChange}
-                    inline
-                  />
-                </Form.Group>
-              </Row>
-
-              {respMessage}
-            </Form>
-          </Col>
-        </Row>
-      </HeroHeroContainer>
-    </StyledJumbotron>
->>>>>>> 148ca85 (Merge conflict)
     </Fade>
   );
 };
@@ -250,7 +206,6 @@ const StyledJumbotron = styled.div`
     flex-direction: column;
     padding-top: 15px;
   }
->>>>>>> Co-authored-by: Nanami Inaba <mc5rgspider@users.noreply.github.com> Co-authored-by: Kenneth Chen <efeichen@gmail.com> Co-authored-by: jguadarr974 <jguadarr974@users.noreply.github.com>
 `;
 
 const HeroContainer = styled(Container)`

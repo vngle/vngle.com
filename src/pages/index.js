@@ -62,13 +62,6 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
           bgColor="var(--bs-primary)"
         />
 
-        <NewBanner
-          paragraph="Capture your story with our award-winning content services"
-          buttonText="CONTACT US"
-          buttonLink="https://docs.google.com/forms/d/e/1FAIpQLSf80FHwD9CVDZK954uUQ_-_0nkMvBGYT1vZ6nHvXsD12H7fDg/viewform"
-          bgColor="var(--bs-primary)"
-        />
-
         <Slider>
           {storiesFeatured.byType.items.map(({ title, caption, id, video }) => {
             return (
@@ -202,81 +195,7 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
           <div className="text-center"></div>
         </div>
       </Container>
-<<<<<<< master
-
-<<<<<<< master
-<<<<<<< master
-<<<<<<< master
-      <Container fluid>
-        <NewContainer
-          title="Our impact won the 🌎 Community Award at MIT."
-          titleColor="black"
-          bgColor="#cdfd01"
-        />
-        {/* <Sub /> */}
-      </Container>
-
-      <Container>
-        <img src={MitGif} alt="" width="100%" />
-      </Container>
-
-      <Container fluid>
-        <SubForm />
-      </Container>
-=======
-<<<<<<< Updated upstream
-      <TextContainer
-        title="Our impact won the 🌎 Community Award at MIT."
-        titleColor="black"
-        bgColor="#cdfd01"
-      />
-
-      <HeroContainer>
-        <div className="mit-container">
-          <img src={M} alt="" className="mi-img"/>
-        </div>
-        < Sub />
-      </HeroContainer>
-=======
-=======
->>>>>>> Creative Content Updates
-=======
->>>>>>> Creative Content and Become a Vngler
-      <Container fluid>
-        <NewContainer
-          title="Our impact won the 🌎 Community Award at MIT."
-          titleColor="black"
-          bgColor="#cdfd01"
-        />
-<<<<<<< master
-
-        <Row>
-          <Col xs={12} md={4} lg={3} xl={2}>
-            <img src={MitGif} alt="" width="100%" />
-          </Col>
-          <Col xs={12} md={8} lg={9} xl={10}>
-            <Sub/>
-          </Col>
-        </Row>
-        {/* <Sub /> */}
-      </Container>
-<<<<<<< master
->>>>>>> Stashed changes
->>>>>>> Updates
-=======
->>>>>>> Creative Content Updates
-=======
-      </Container>
-      <Container>
-        <img src={MitGif} alt="" width="100%" />
-      </Container>
-      <Container fluid>
-        <Sub />
-      </Container>
->>>>>>> Creative Content and Become a Vngler
-=======
       <Sub />
->>>>>>> Animations, changes in forms.
     </Layout>
   );
 };
@@ -296,35 +215,6 @@ const HeroContainer = styled(Container)`
     right: 0;
     text-align: center;
     opacity: 0.2;
-  }
-
-  .w4-container {
-    background: #f7f7f7;
-    text-align: left;
-    padding: 10px 10px;
-
-    .btn {
-      font-weight: bold;
-      background: #000000;
-      color: #fffff9;
-      text-align: center;
-      cursor: pointer;
-    }
-  }
-
-  .w-container {
-    background: #1a0117;
-    color: var(--bs-primary);
-    text-align: center;
-    padding: 1 em;
-
-    .btn {
-      font-weight: bold;
-      background: var(--bs-primary);
-      color: #1a0117;
-      text-align: center;
-      cursor: pointer;
-    }
   }
 
   .w4-container {
@@ -506,23 +396,4 @@ const MainPageContainer = styled.div`
   }
 `;
 
-<<<<<<< master
-<<<<<<< master
-<<<<<<< master
-<<<<<<< master
-<<<<<<< master
 export default IndexPage;
-=======
-export default IndexPage;
->>>>>>> Creative Content Updates
-=======
-export default IndexPage;
->>>>>>> Creative Content and Become a Vngler
-=======
-=======
-
->>>>>>>  Content creative, Vngler,Ally and  About
-=======
->>>>>>> Animations, changes in forms.
-export default IndexPage;
->>>>>>> formatting

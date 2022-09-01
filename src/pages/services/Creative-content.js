@@ -3,17 +3,9 @@ import styled from "styled-components";
 import Layout from "@components/Layouts/MainLayout";
 import Background from "@images/services/creative_content_background.jpeg";
 import { StaticImage } from "gatsby-plugin-image";
-<<<<<<< master
-import { Container, Button } from "react-bootstrap";
-<<<<<<< master
-import Form from "@components/Forms/form";
-=======
-=======
 import { Container, Button, Col, Row } from "react-bootstrap";
 import { Fade } from "react-reveal";
->>>>>>>  Content creative, Vngler,Ally and  About
 import Form from "@components/Forms/Form";
->>>>>>> Creative Content and Become a Vngler
 import { motion } from "framer-motion";
 
 const creativeContent = () => {
@@ -37,11 +29,7 @@ const creativeContent = () => {
             transition={{ duration: 1.3, delay: 2 }}
           >
             <div className="main-title btn-container">
-<<<<<<< HEAD
-              <Button className="animated-btn">Contact Us Today</Button>
-=======
               <Button className="animated-btn">Launch Your Campaign</Button>
->>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
             </div>
           </motion.div>
         </Container>
@@ -259,25 +247,10 @@ const MaContainer = styled.div`
   justify-content: center;
 
   .mt {
-    
     margin-bottom: 4rem;
 
-    .r  {
-      color: #E612D0;  
-
-<<<<<<< HEAD
-  .mb {
-    display: flex;
-    align-items: center;
-
-    ,
-    p {
-      font-size: 3rem;
-      font-weight: bold;
-      float: left;
-      font-family: "Playfair Display", serif;
-=======
->>>>>>> 39a7bb8 ( Content creative, Vngler,Ally and  About)
+    .r {
+      color: #e612d0;
     }
   }
 
@@ -295,7 +268,6 @@ const MaContainer = styled.div`
     text-align: center;
     font-size: 3rem;
   }
-  }
 `;
 
 const HContainer = styled(Container)`
@@ -310,51 +282,54 @@ const HContainer = styled(Container)`
     font-family: "Playfair Display", serif;
     text-align: left;
     .f {
-        color: var(--bs-primary);
-      }
+      color: var(--bs-primary);
+    }
   }
 
-  ,p {
+  p {
     color: white;
     font-weight: bold;
     font-size: 3rem;
     font-family: "Playfair Display", serif;
     text-align: left;
     .b {
-        color: #1EE4F0;
-        text-align: center;
-      }   
+      color: #1ee4f0;
+      text-align: center;
+    }
   }
 
   .one {
-    color: #1EE4F0;
+    color: #1ee4f0;
     text-align: center;
     animation: flip 3s infinite;
-    animation-delay: calc(.3s * var(--i)); 
+    animation-delay: calc(0.3s * var(--i));
     animation-iteration-count: 5;
   }
 
   .two {
-    color: #1EE4F0;
+    color: #1ee4f0;
     text-align: center;
     animation: flip 3s infinite;
-    animation-delay: calc(.3s * var(--i));
+    animation-delay: calc(0.3s * var(--i));
     animation-iteration-count: 5;
   }
 
   .third {
-    color: #1EE4F0;
+    color: #1ee4f0;
     text-align: center;
     animation: flip 3s infinite;
-    animation-delay: calc(.3s * var(--i));
-    animation-iteration-count: 5;  
+    animation-delay: calc(0.3s * var(--i));
+    animation-iteration-count: 5;
   }
 
   @keyframes flip {
-    0%,80% {
-      transform: rotateY(360deg) 
+    0%,
+    80% {
+      transform: rotateY(360deg);
     }
+  }
 `;
+
 const SplitSection = styled(Row)`
   margin-top: 2rem;
   margin-bottom: 2rem;

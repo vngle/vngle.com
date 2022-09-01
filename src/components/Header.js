@@ -10,30 +10,9 @@ const Header = ({ siteTitle }) => {
   const navLinks = [
     { name: "Coverage", to: "/coverage" },
     { name: "About", to: "/about" },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< master
-<<<<<<< HEAD
->>>>>>> 994d5d7 (Creative content changes with form)
-=======
-<<<<<<< master
->>>>>>> 9d7b92e (Creative Content and Become a Vngler)
     // { name: "Our Tech", to: "/technology" },
     { name: "Team", to: "/team" },
     // { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
-=======
-<<<<<<< HEAD
-    { name: "Our Tech", to: "/technology" },
-    { name: "Team", to: "/team" },
-    { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
->>>>>>> f2747a7 (Create initial coverage page (#60))
-=======
-    // { name: "Our Tech", to: "/technology" },
-    { name: "Team", to: "/team" },
-    // { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
->>>>>>> 57a2b90 (Hide some tabs)
   ];
   const dropdownLinks = [
     { name: "Follow our Movement", to: "http://eepurl.com/g1cJk5" },
@@ -53,117 +32,28 @@ const Header = ({ siteTitle }) => {
   const dropdownLinksServices = [
     { name: "Newswire", to: "/services/news-wire" },
     { name: "Creative Content Strategy", to: "/services/creative-content" },
-    { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
-=======
-    { name: "Our Team", to: "/team" },
->>>>>>> Creative content changes with form
-  ];
-  const dropdownLinks = [
-    { name: "Subscribe For Updates", to: "http://eepurl.com/g1cJk5" },
-    {
-      name: "Become a Reporter",
-      to: "https://forms.gle/JuxuSvst9aJTiDAk6",
-    },
-    {
-      name: "Request Coverage",
-      to: "https://vngle.typeform.com/to/zwc2R2og",
-    },
-    { name: "Become an Ally", to: "/ally" },
-    { name: "Submit a tip", to: "/report" },
-
-    { name: "Become a Vngler", to: "/becomevngler" },
->>>>>>> 994d5d7 (Creative content changes with form)
+    { name: "New Media Workshops", to: "/services/new-media-workshops" },
   ];
 
-<<<<<<< master
-<<<<<<< master
-<<<<<<< master
-  const dropdownLinksServices = [
-    { name: "Newsire", to: "/services/news-wire" },
-    { name: "Creative Content", to: "/services/creative-content" },
-    { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
-  ];
-
-=======
->>>>>>> Updates
-=======
-=======
-
->>>>>>> Creative content changes with form
-  const dropdownLinksServices = [
-    { name: "NewsWire", to: "/services/news-wire" },
-=======
-    // { name: "Our Tech", to: "/technology" },
-    { name: "Team", to: "/team" },
-    // { name: "Merch", to: "https://vngle-merch-demo.square.site/" },
-  ];
-  const dropdownLinks = [
-    { name: "Follow our Movement", to: "http://eepurl.com/g1cJk5" },
-    // {
-    //   name: "Become a Reporter",
-    //   to: "https://forms.gle/JuxuSvst9aJTiDAk6",
-    // },
-    // {
-    //   name: "Request Coverage",
-    //   to: "https://vngle.typeform.com/to/zwc2R2og",
-    // },
-    { name: "Become a Vngler", to: "/vngler" },
-    { name: "Serve as an Ally", to: "/ally" },
-    { name: "Submit a Tip or Request", to: "/report" },
-  ];
-
-  const dropdownLinksServices = [
-    { name: "Newswire", to: "/services/news-wire" },
-<<<<<<< master
->>>>>>> Creative Content and Become a Vngler
-    { name: "Creative Content", to: "/services/creative-content" },
-=======
-    { name: "Creative Content Strategy", to: "/services/creative-content" },
->>>>>>> Animations, changes in forms.
-    { name: "New Media Workshops", to: "/services/newMediaWorkshops" },
-  ];
-
->>>>>>> Creative Content Updates
   return (
     <StyledHeader>
-      <Navbar collapseOnSelect expand="lg" className="p-4" >
+      <Navbar collapseOnSelect expand="lg" className="p-4">
         <Container>
           <Navbar.Brand>
             <Link to="/" title={siteTitle}>
-              <img alt="Vngle logo" src={Logo} height="70" />
+              <img alt="Vngle logo" src={Logo} height="90" />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-end text-center">
             <Nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Dropdown className="nav-item">
-=======
-=======
-<<<<<<< master
-<<<<<<< HEAD
->>>>>>> 0102fb9 (Creative Content Updates)
-              {/* <Dropdown className="nav-item">
->>>>>>> f2747a7 (Create initial coverage page (#60))
-=======
-<<<<<<< master
-              {/* <Dropdown className="nav-item">
-=======
-              <Dropdown className="nav-item">
->>>>>>> Creative Content and Become a Vngler
->>>>>>> 9d7b92e (Creative Content and Become a Vngler)
                 <Dropdown.Toggle
                   className="menu-dropdown-toggle nav-link"
                   as="a"
                 >
                   Services
                 </Dropdown.Toggle>
-=======
-
-            <Dropdown className="nav-item">
-                <Dropdown.Toggle className="menu-dropdown-toggle nav-link" as="a">Services</Dropdown.Toggle>
->>>>>>> Creative Content Updates
                 <Dropdown.Menu>
                   {dropdownLinksServices.map((link, i) => {
                     return (
@@ -173,11 +63,7 @@ const Header = ({ siteTitle }) => {
                     );
                   })}
                 </Dropdown.Menu>
-<<<<<<< HEAD
               </Dropdown>
-=======
-              </Dropdown> */}
->>>>>>> f2747a7 (Create initial coverage page (#60))
 
               {navLinks.map((link, i) => {
                 return (
@@ -222,40 +108,11 @@ const StyledHeader = styled.header`
   & {
     background: rgba(247, 247, 247, 0.73);
     position: sticky;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     top: 0;
-=======
-    top: 0;  
->>>>>>> f2747a7 (Create initial coverage page (#60))
-=======
-    top: 0;
->>>>>>> 57a2b90 (Hide some tabs)
     z-index: 1001;
-=======
-    top: 0;  
-    z-index:1001;
->>>>>>> 0102fb9 (Creative Content Updates)
 
-<<<<<<< master
     .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.7rem 2rem;
-      top: 0;
-      opacity: 0.9;
-      background-color: var(--bs-body-bg);
-      width: 90%;
-      z-index: 10;
-      position: fixed;
-      top: 0;
       .navbar-nav {
-=======
-    .navbar {      
-        .navbar-nav {
->>>>>>> Creative Content Updates
         .nav-link,
         .btn {
           color: var(--bs-dark);
@@ -291,8 +148,4 @@ const StyledHeader = styled.header`
   }
 `;
 
-<<<<<<< master
-export default Header; 
-=======
 export default Header;
->>>>>>> formatting
