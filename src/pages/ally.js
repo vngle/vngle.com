@@ -66,7 +66,7 @@ export default function AllyPage() {
     },
     {
       name: " City of College Park, GA Ward 4 Neighborhood Association (via  Councilmember Roderick Gay)",
-      href: "https://www.onetalent.org/",
+      href: "https://www.collegeparkga.com/government/mayor___council/councilman_roderick_gay",
       logoSrc: CouncilmanGay,
       bg: "var(--bs-primary)",
       description: (
