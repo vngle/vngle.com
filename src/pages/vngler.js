@@ -86,7 +86,7 @@ const Becomevngler = () => {
               <div className="content p-md-5">
                 <p className="sup">
                   <Heading>Content Editors:</Heading>
-                  Constituents helping us get verfiable information to
+                  Constituents helping us get verifiable information to
                   newsrooms.
                 </p>
               </div>
