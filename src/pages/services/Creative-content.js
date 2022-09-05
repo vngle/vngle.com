@@ -53,7 +53,6 @@ const creativeContent = () => {
               <div className="content p-md-5">
                 <p className="sup display-2">
                   <Heading>
-                    {" "}
                     Leverage our grassroots expertise to create content that
                     maximizes your local connection across the areas you care
                     about.
@@ -73,19 +72,22 @@ const creativeContent = () => {
         </SplitSection>
       </MaContainer>
 
-      <HContainer className="rb-4">
-        <h1>
-          Our <span class="f">award-winning</span> approach combines :
-        </h1>{" "}
-        <p class="one"> Community Engagement </p>
-        <p class="two"> Media Creation</p>
-        <p class="third">And Grassroots Strategy</p>
-        <p>
-          {" "}
-          To make your desired stories resonate across channels to engage{" "}
-          <span class="b">the right audiences</span>.
-        </p>
-      </HContainer>
+      <div className="bg-dark">
+        <HContainer>
+          <p className="font-sans-serif">
+            Our <span class="f">award-winning</span> approach combines :
+          </p>
+          <div className="font-serif">
+            <p class="one"> Community Engagement </p>
+            <p class="two"> Media Creation</p>
+            <p class="third">And Grassroots Strategy</p>
+          </div>
+          <p className="font-sans-serif">
+            To make your desired stories resonate across channels to engage{" "}
+            <span class="b">the right audiences</span>.
+          </p>
+        </HContainer>
+      </div>
 
       <MaContainer>
         <SplitSection background="" className="section2 gy-3">
@@ -164,29 +166,25 @@ const creativeContent = () => {
 
       <Form />
 
-      <small class="lead text-center fw-bold">
-        {" "}
-        <br />
-        Creative Content Strategy Services are separate from the Vngle newsroom.
-        Clients and brands working with Vngle’s Creative Content Strategy
-        Services do not influence the editorial discretion of our news reporting
-        in any form. Conversely, custom storytelling projects through our
-        Creative Content Strategy Services do permit the collaborative input of
-        the clients and brands we work with.
-      </small>
+      <Container className="mt-3">
+        <small>
+          Creative Content Strategy Services are separate from the Vngle
+          newsroom. Clients and brands working with Vngle's Creative Content
+          Strategy Services do not influence the editorial discretion of our
+          news reporting in any form. Conversely, custom storytelling projects
+          through our Creative Content Strategy Services do permit the
+          collaborative input of the clients and brands we work with.
+        </small>
+      </Container>
     </Layout>
   );
 };
 
-const HeroContainer = styled(Container)`
+const HeroContainer = styled.div`
   position: relative;
-  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 
-  &.main-banner {
-    min-height: 44rem;
-    padding: 14rem 0rem;
-    display: flex;
-  }
   h1 {
     font-family: "Playfair Display", serif;
     margin-bottom: 0rem;
@@ -221,14 +219,6 @@ const HeroContainer = styled(Container)`
     right: 0;
     text-align: center;
     opacity: 0.9;
-  }
-
-  @media (max-width: 47rem) {
-    &.main-banner {
-      min-height: 5rem;
-      padding: 14rem 0rem;
-      display: flex;
-    }
   }
 `;
 
@@ -271,30 +261,22 @@ const MaContainer = styled.div`
 `;
 
 const HContainer = styled(Container)`
-  background: black;
   padding-top: 3rem;
   padding-bottom: 1rem;
-
-  h1 {
-    color: white;
-    font-weight: bold;
-    font-size: 3rem;
-    font-family: "Playfair Display", serif;
-    text-align: left;
-    .f {
-      color: var(--bs-primary);
-    }
-  }
 
   p {
     color: white;
     font-weight: bold;
     font-size: 3rem;
-    font-family: "Playfair Display", serif;
     text-align: left;
+
     .b {
       color: #1ee4f0;
       text-align: center;
+    }
+
+    .f {
+      color: var(--bs-primary);
     }
   }
 
