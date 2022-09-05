@@ -21,9 +21,6 @@ const newswire = () => {
               <nav className="navbar">
               <a href="#Contact" className="btn btn-primary">Contact Us Today!</a>
               </nav>
-              {/* 
-              
-              */}
             </div>
             <video
               playsinline="playsinline"
