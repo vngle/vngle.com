@@ -121,7 +121,7 @@ const newswire = () => {
         <div className="content-wrapper img">
           <div className="pic-wrapper"></div>
           <StaticImage
-            src="../../images/services/newsWire/mainHeader.jpeg"
+            src="https://source.unsplash.com/w_zE6qlkQKA"
             className="background-img"
           />
         </div>
