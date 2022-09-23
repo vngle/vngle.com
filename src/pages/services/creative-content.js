@@ -5,8 +5,8 @@ import Background from "@images/services/creative_content_background.jpeg";
 import { StaticImage } from "gatsby-plugin-image";
 import { Container, Button, Col, Row } from "react-bootstrap";
 import { Fade } from "react-reveal";
-import Form from "@components/Forms/Form";
 import { motion } from "framer-motion";
+import SubForm from "@components/Forms/Sub";
 
 const creativeContent = () => {
   return (
@@ -164,7 +164,7 @@ const creativeContent = () => {
         </SplitSection>
       </MaContainer>
 
-      <Form />
+      <SubForm />
 
       <Container className="mt-3">
         <small>

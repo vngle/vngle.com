@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Layout from "@components/Layouts/MainLayout";
 import { StaticImage } from "gatsby-plugin-image";
-import SubForm from "../../components/Forms/SubForm";
+import SubForm from "@components/Forms/Sub";
 
 import newswirevideo from "../../images/services/newsWire/Newswire-Header-1.mp4";
 

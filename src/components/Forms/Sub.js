@@ -88,7 +88,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
         <Row>
           <Col>
             <h1 className="fw-bold">
-              Let’s work together.
+              Let's work together.
               <br />
               Get in touch today.
             </h1>

@@ -4,7 +4,7 @@ import Layout from "@components/Layouts/MainLayout";
 import Background from "@images/services/workshop_background.jpeg";
 import EventBG from "@images/services/workshop-expert.jpg";
 import MediaBG from "@images/services/future-media.jpg";
-import SubForm from "@components/Forms/SubForm";
+import SubForm from "@components/Forms/Sub";
 
 import { Container, Button, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
@@ -12,8 +12,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Fade } from "react-reveal";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import { Navigation, EffectFade, Autoplay, Pagination } from "swiper";
+import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
@@ -257,10 +257,7 @@ const workshops = () => {
         <img src={MediaBG} alt="" className="hero-img" />
       </HeroContainer>
 
-      {/* <HeroContainer id="SubForm"> */}
-      <div id="SubForm"></div>
-      <SubForm id="SubForm" />
-      {/* </HeroContainer> */}
+      <SubForm />
     </Layout>
   );
 };
