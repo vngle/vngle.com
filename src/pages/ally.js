@@ -40,31 +40,6 @@ export default function AllyPage() {
       ),
     },
     {
-      name: "Vietnam Veterans of America",
-      href: "https://www.sonsofatlanta.org/",
-      logoSrc: VietnamVeteransLogo,
-      bg: "#03B7E6",
-      description: (
-        <>
-          <p>
-            VVA promotes and supports the full range of issues important to
-            Vietnam veterans, to create a new identity for this generation of
-            veterans, and to change public perception of Vietnam veterans.
-          </p>
-          <p>
-            <b>
-              VVA Metro-Atlanta Chapter #1118 worked with Vngle to kickoff thier
-              media strategy around the{" "}
-              <a href="https://www.sonsofatlanta.org/">
-                Sons of Atlanta Memorial
-              </a>
-              , a Vietnam Veteran Memorial at Piedmont Park, in Atlanta, GA.
-            </b>
-          </p>
-        </>
-      ),
-    },
-    {
       name: " City of College Park, GA Ward 4 Neighborhood Association (via  Councilmember Roderick Gay)",
       href: "https://www.collegeparkga.com/government/mayor___council/councilman_roderick_gay",
       logoSrc: CouncilmanGay,
