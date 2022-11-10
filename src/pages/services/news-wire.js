@@ -87,7 +87,7 @@ const newswire = () => {
           <div className="content-wrapper">
             <h1 className="padding">
               Our tech enables us to share a record of exactly where, when, and
-              how our conrent is captured, helping you get transparent insights
+              how our content is captured, helping you get transparent insights
               from the ground without being there.
             </h1>
           </div>
