@@ -209,7 +209,9 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
         <img src={MitGif} alt="" width="100%" />
       </Container>
 
-      <Sub />
+      <Container fluid>
+        <Sub />
+      </Container>
     </Layout>
   );
 };
