@@ -36,6 +36,7 @@ const newswire = () => {
               type="video/mp4"
               className="login-vid"
             />
+            <track kind="captions" />
           </video>
         </div>
       </Header>

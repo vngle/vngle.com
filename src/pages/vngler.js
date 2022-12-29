@@ -146,8 +146,8 @@ const Becomevngler = () => {
           />
         </div>
       </HContainer>
+
       <section id="Form">
-        {" "}
         <Form />
       </section>
     </Layout>
@@ -162,7 +162,7 @@ const HeroContainer = styled.div`
 
   h1 {
     font-size: clamp(4rem, 7vw, ${(props) => props.size || "2.6rem"});
-    text-aling: center;
+    text-align: center;
     font-family: "Inter";
     font-style: normal;
     font-weight: bold;

@@ -12,7 +12,6 @@ import Layout from "@components/Layouts/MainLayout";
 import Seo from "@components/Seo";
 import ActionButtonGroup from "@components/ActionBtnGroup";
 import InstaFeed from "@components/Grids/InstaFeed";
-import NewsFeed from "@components/Grids/NewsFeed";
 import WeatherWidget from "@components/WeatherWidget";
 
 /**
@@ -112,7 +111,7 @@ const FrontPageTemplate = ({
             <h1 className="display-3">News</h1>
             <div className="ribbon" />
           </div>
-          <NewsFeed query={`${cityName} AND ${state}`} />
+          {/* <NewsFeed query={`${cityName} AND ${state}`} /> */}
         </Col>
       </Row>
     </ContentContainer>

@@ -5,7 +5,6 @@
 
 import React, { useState } from "react";
 import { Form, Button, Spinner } from "react-bootstrap";
-import styled from "styled-components";
 import DOMPurify from "dompurify";
 
 /**
@@ -153,9 +152,5 @@ const NewsSubForm = ({ status, message, onSubmitted }) => {
     </>
   );
 };
-
-const MutedMsg = styled(Form.Text)`
-  font-size: 10px;
-`;
 
 export default NewsSubForm;

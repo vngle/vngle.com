@@ -19,7 +19,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
 
     "group[293774][3]": true, //messagenot opt-in
   });
-  const [validated, setValidated] = useState(true);
+  const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -81,7 +81,7 @@ const SubForm = ({ status, message, onSubmitted }) => {
   }
 
   return (
-    <StyledJumbotron>
+    <FormWrapper>
       <Container>
         <Row>
           <Col>
@@ -163,56 +163,35 @@ const SubForm = ({ status, message, onSubmitted }) => {
           </Col>
         </Row>
       </Container>
-    </StyledJumbotron>
+    </FormWrapper>
   );
 };
 
-const StyledJumbotron = styled.div`
+const FormWrapper = styled.div`
   background: var(--bs-primary);
-  margin: auto 0.5rem;
   height: 100%;
+  padding: 2rem;
 
   h1 {
     font-family: "Inter", sans-serif;
-    margin-top: 2rem;
-    margin-left: 10rem;
-  }
-
-  .form-label {
-    font-weight: bold;
-    margin-left: 0.3rem;
-    margin-top: 0.5rem;
-    padding-left: 10rem;
-  }
-
-  .form-control {
-    border-radius: 0.6rem;
   }
 
   form {
-    margin-left: 5rem;
+    .row {
+      margin-bottom: 1rem;
+    }
+
+    .form-label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      border-radius: 0.6rem;
+    }
   }
 
   .btn {
     letter-spacing: 1.7px;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-  }
-
-  @media (max-width: 47rem) {
-    margin-top: 5rem;
-
-    .form-label {
-      padding-left: 2rem;
-    }
-
-    form {
-      margin-left: 0;
-    }
-
-    h1 {
-      margin-left: 0;
-    }
   }
 `;
 

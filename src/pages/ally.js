@@ -11,7 +11,6 @@ import Sub from "@components/Forms/Sub";
 import TeamSvg from "@images/ally/team.svg";
 import ClubELogo from "@images/ally/logo-club-e.png";
 import CouncilmanGay from "@images/ally/councilman-gay.jpg";
-import VietnamVeteransLogo from "@images/ally/logo-vietnam-veterans-of-america.png";
 
 export default function AllyPage() {
   const allies = [
@@ -164,10 +163,10 @@ export default function AllyPage() {
           ))}
         </Container>
       </Styled>
-      <a id="Form-2">
-        {" "}
+
+      <section id="Form-2">
         <Sub />
-      </a>
+      </section>
     </Layout>
   );
 }
