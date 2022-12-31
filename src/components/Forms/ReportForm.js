@@ -6,6 +6,7 @@
 import React, { useState } from "react";
 import { Form, Button, Spinner } from "react-bootstrap";
 import * as contentful from "contentful-management";
+import styled from "styled-components";
 
 import Dropzone from "../FilePickers/Dropzone";
 
@@ -30,7 +31,7 @@ const ReportForm = ({ setFormSubmitted }) => {
   });
 
   // use Contentful Management API to upload to Contentful Space
-  const handleSubmit = async event => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setSending(true);
 
@@ -39,7 +40,7 @@ const ReportForm = ({ setFormSubmitted }) => {
 
     // wait for mediaAssets to upload before proceeding
     const mediaAssets = await Promise.all(
-      mediaFiles.map(async mediaFile => {
+      mediaFiles.map(async (mediaFile) => {
         let newAsset = await environment.createAssetFromFiles({
           fields: {
             title: {
@@ -91,7 +92,7 @@ const ReportForm = ({ setFormSubmitted }) => {
       .then(() => setFormSubmitted(true));
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const name = event.target.name;
     const value =
       event.target.type === "checkbox"
@@ -105,7 +106,7 @@ const ReportForm = ({ setFormSubmitted }) => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <StyledForm onSubmit={handleSubmit}>
       <Form.Group>
         <Form.Label>Title</Form.Label>
         <Form.Control
@@ -152,9 +153,7 @@ const ReportForm = ({ setFormSubmitted }) => {
         />
       </Form.Group>
       <Form.Group>
-        <Form.Label>
-          Click one of the following if it a popular topic
-        </Form.Label>
+        <Form.Label>Associated campaigns</Form.Label>
         <Form.Group>
           <Form.Check
             type="checkbox"
@@ -182,8 +181,14 @@ const ReportForm = ({ setFormSubmitted }) => {
       <Button variant="primary" type="submit">
         {sending ? <Spinner animation="border" size="sm" /> : "Submit"}
       </Button>
-    </Form>
+    </StyledForm>
   );
 };
 
 export default ReportForm;
+
+const StyledForm = styled(Form)`
+  div {
+    margin-bottom: 1rem;
+  }
+`;
