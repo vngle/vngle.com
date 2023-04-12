@@ -81,6 +81,23 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
 
         <SubForm />
 
+        <div className="bg-dark p-4">
+          <Row>
+            <Col md={4} className="text-center">
+              <StaticImage
+                alt="Next challenge medal"
+                src="../images/home/next.png"
+                width={200}
+              />
+            </Col>
+            <Col className="d-flex align-items-center">
+              <h1 className="display-4 fw-bolder text-light mb-0">
+                Top 10 Power Platforms
+              </h1>
+            </Col>
+          </Row>
+        </div>
+
         <NewContainer
           title="We boost equitable local representation across cities:"
           titleColor="white"
