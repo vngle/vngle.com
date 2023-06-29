@@ -88,7 +88,7 @@ const GeorgiaPage = ({ data: { storiesGeorgia, storiesNational } }) => {
 
       <StyledJumbotron className="mb-5" id="Georgia">
         <CoverImage
-          src="https://source.unsplash.com/tjdu7p_PaEM"
+          src="https://images.unsplash.com/photo-1504983376254-592a0ea9b0cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1033&q=80"
           alt="Georgia"
         />
         <Row className="align-items-end">
