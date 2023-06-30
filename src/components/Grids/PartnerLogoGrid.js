@@ -100,7 +100,7 @@ export default function ClientGrid() {
     <Row className="align-items-center text-center">
       {workedWithData.map(({ src, alt, href }, i) => {
         return (
-          <Col md={4} sm={12} className="mb-5" key={i}>
+          <Col md={4} sm={15} className="mb-5" key={i}>
             <a href={href}>
               <img alt={alt} src={src} width={200} />
             </a>
