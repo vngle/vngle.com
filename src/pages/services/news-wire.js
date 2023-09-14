@@ -15,7 +15,7 @@ const newswire = () => {
             <h1 className="display-4 yellow-text fw-bolder lh-sm background-white">
               Expand Your Coverage Capabilities.
               <h1 className="display-4 fw-bold text-white">
-                Better Reach Underrepresented Areas Through the Vngle Newswire.
+                Better Reach Underrepresented Areas Through The Vngle Newswire.
               </h1>
             </h1>
             <nav className="navbar">
@@ -46,7 +46,7 @@ const newswire = () => {
           <div className="text-wrapper">
             <h1 className="display-4 text-white">
               Our work strengthens the local news ecosystem to help you better
-              acurate more verified local insights.
+              attain more verified local insights.
             </h1>
           </div>
           <StaticImage
@@ -60,7 +60,7 @@ const newswire = () => {
           <div className="content-wrapper">
             <h1>
               Through partnering with trained local experts, we capture pressing
-              grassroots-level stories.
+              grassroots-level stories you won't find elsewhere.
             </h1>
           </div>
           <StaticImage
