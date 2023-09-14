@@ -14,8 +14,8 @@ import Nyc from "@images/partners/nyc.png";
 import Pyxera from "@images/partners/pyxera.png";
 import Sap from "@images/partners/sap.png";
 import Newmark from "@images/partners/newmark.png";
-import Starling from "@images/partners/Starling.png";
-import Brown from "@images/partners/Brown.png";
+import Starling from "@images/partners/starling.png";
+import Brown from "@images/partners/brown.png";
 
 const workedWithData = [
   {
@@ -83,7 +83,7 @@ const workedWithData = [
     alt: "Brown logo",
     href: "https://brown.columbia.edu/",
   },
-    {
+  {
     src: Newmark,
     alt: "Newmark logo",
     href: "https://www.journalism.cuny.edu/",
