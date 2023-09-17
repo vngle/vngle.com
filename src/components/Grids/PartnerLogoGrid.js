@@ -14,7 +14,7 @@ import Nyc from "@images/partners/nyc.png";
 import Pyxera from "@images/partners/pyxera.png";
 import Sap from "@images/partners/sap.png";
 import Newmark from "@images/partners/newmark.png";
-import Starling from "@images/partners/starling.png";
+import Starling from "@images/partners/starling.jpeg";
 import Brown from "@images/partners/brown.png";
 
 const workedWithData = [

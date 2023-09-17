@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Nav, Badge } from "react-bootstrap";
-import { FiInstagram, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiInstagram, FiFacebook, FiLinkedin } from "react-icons/fi";
+import { RiTwitterXLine } from "react-icons/ri";
+
 import styled from "styled-components";
 
 import Link from "./Link";
@@ -22,7 +24,7 @@ const Footer = () => (
             <FiLinkedin />
           </a>
           <a href="https://twitter.com/vnglestories">
-            <FiTwitter />
+            <RiTwitterXLine />
           </a>
         </SocialContainer>
         <div className="mb-4">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { Container, Image, Col, Row } from "react-bootstrap";
+import { Container, Image, Col, Row, Button } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import { Fade } from "react-reveal";
 import { motion } from "framer-motion";
@@ -81,6 +81,12 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
 
         <SubForm />
 
+        <NewContainer
+          title="Announcement: We're launching grassroots healthcare coverage with Stanford & USC’s Starling Lab for Data Integrity!"
+          titleColor="white"
+          bgColor="#222"
+        />
+
         <div className="bg-dark p-4">
           <Row>
             <Col md={4} className="text-center">
@@ -91,9 +97,16 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
               />
             </Col>
             <Col className="d-flex align-items-center">
-              <h1 className="display-4 fw-bolder text-light mb-0">
-                Top 10 Power Platforms
-              </h1>
+              <div>
+                <h1 className="display-4 fw-bolder text-light">
+                  Top 10 Power Platforms
+                </h1>
+                <p className="text-primary">
+                  Recognized by the American Public Media Group and Thomson
+                  Reuters as a top company for distributing content across the
+                  globe.
+                </p>
+              </div>
             </Col>
           </Row>
         </div>
@@ -201,11 +214,15 @@ const IndexPage = ({ data: { storiesFeatured, storiesGeorgia } }) => {
         </MainPageContainer>
       </Container>
 
-      <NewContainer
-        title="We bring you hyper-local content & insights that’s verified by digital forensics & local experts."
-        titleColor="white"
-        bgColor="#222"
-      />
+      <div className="bg-dark p-4">
+        <h1 className="font-sans-serif text-light text-center">
+          We bring you hyper-local content & insights that's verified by digital
+          forensics & local experts.
+        </h1>
+        <Link to="about/" className="d-block text-center">
+          <Button>Who we've worked with</Button>
+        </Link>
+      </div>
 
       <Container className="mt-5">
         <div className="mb-5">
