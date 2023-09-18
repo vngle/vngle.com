@@ -49,7 +49,7 @@ const GeorgiaPage = ({ data: { storiesGeorgia, storiesNational } }) => {
 
       {/* --------------------Based In Georgia--------------------*/}
       <SinContainer
-        title="We are based in Georgia, but our work reaches nationally."
+        title="We are Based in Georgia, but Our Work Reaches Nationally"
         titleColor={"white"}
         bgColor={"black"}
       />

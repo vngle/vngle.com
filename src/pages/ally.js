@@ -11,25 +11,9 @@ import Sub from "@components/Forms/Sub";
 import TeamSvg from "@images/ally/team.svg";
 import ClubELogo from "@images/ally/logo-club-e.png";
 import CouncilmanGay from "@images/ally/councilman-gay.jpg";
-import Starling from "@images/partners/starling.jpeg";
 
 export default function AllyPage() {
   const allies = [
-    {
-      name: "Starling Lab for Data Integrity (Stanford University & University of Southern California)",
-      href: "https://www.starlinglab.org/",
-      logoSrc: Starling,
-      bg: "#33CCFF",
-      description: (
-        <>
-          Stanford Engineering and the USC Shoah Foundation is working with
-          Vngle to build a case study around how decentralized technologies can
-          be used to source verifiable grassroots insights across urban and
-          rural parts of America. This is being kick started by a statewide
-          healthcare initiative in Georgia.
-        </>
-      ),
-    },
     {
       name: "Club E Atlanta",
       href: "https://www.clubeatlanta.com/",
