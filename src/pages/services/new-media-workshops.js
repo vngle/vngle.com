@@ -226,7 +226,7 @@ const workshops = () => {
           </SwiperSlide>
           <SwiperSlide className="swiperslide">
             <StaticImage
-              src=".../../images/services/past-event-dcamp-2.jpeg"
+              src="../../images/services/past-event-dcamp-2.jpeg"
               alt=""
             />
           </SwiperSlide>

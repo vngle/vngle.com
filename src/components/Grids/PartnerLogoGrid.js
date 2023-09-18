@@ -2,16 +2,11 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 
 import Mozilla from "@images/partners/mozilla.png";
-import Columbia from "@images/partners/columbia-tamer.png";
-import GoodieNation from "@images/partners/goodie-nation.png";
-import Envision from "@images/partners/envision.png";
-import DivInc from "@images/partners/divinc.png";
 import CollegePark from "@images/partners/cp-logo.png";
 import Gma from "@images/partners/gma.png";
 import Goldin from "@images/partners/goldin.png";
 import Mit from "@images/partners/mit.png";
 import Nyc from "@images/partners/nyc.png";
-import Pyxera from "@images/partners/pyxera.png";
 import Sap from "@images/partners/sap.png";
 import Newmark from "@images/partners/newmark.png";
 import Starling from "@images/partners/starling.png";
