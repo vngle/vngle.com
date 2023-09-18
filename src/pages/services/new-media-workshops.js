@@ -195,6 +195,61 @@ const workshops = () => {
           <div className="text-card">
             <h3 className="card-title">Past Event</h3>
             <h1>
+              A Vngle Strategy Workshop with the DWeb community (decentralized
+              web) at the Internet Archive's DWeb Camp in Camp Navarro,
+              California
+            </h1>
+          </div>
+        </HeroContainer>
+      </Fade>
+
+      <SwiperContainer>
+        <Swiper
+          modules={[Navigation, EffectFade, Autoplay, Pagination]}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          navigation
+          effect={"fade"}
+          speed={800}
+          slidesPerView={1}
+          pagination={true}
+          loop
+          className="myswiper"
+        >
+          <SwiperSlide className="swiperslide">
+            <StaticImage
+              src="../../images/services/past-event-dcamp-1.jpeg"
+              alt=""
+            />
+          </SwiperSlide>
+          <SwiperSlide className="swiperslide">
+            <StaticImage
+              src=".../../images/services/past-event-dcamp-2.jpeg"
+              alt=""
+            />
+          </SwiperSlide>
+          <SwiperSlide className="swiperslide">
+            <StaticImage
+              src="../../images/services/past-event-dcamp-3.jpeg"
+              alt=""
+            />
+          </SwiperSlide>
+          <SwiperSlide className="swiperslide">
+            <StaticImage
+              src="../../images/services/past-event-dcamp-4.jpeg"
+              alt=""
+            />
+          </SwiperSlide>
+        </Swiper>
+      </SwiperContainer>
+
+      <Fade bottom>
+        <HeroContainer className="card-container">
+          <div className="text-card">
+            <h3 className="card-title">Past Event</h3>
+            <h1>
               A Vngle New Media Workshop with the aSTEAM Village community in
               Kansas City, Missouri:
             </h1>
@@ -243,7 +298,7 @@ const workshops = () => {
         <Fade bottom>
           <div className="center-content">
             <h1 className="main-title">
-              Let’s create the future of media with your organization
+              Let's create the future of media with your organization
             </h1>
           </div>
         </Fade>

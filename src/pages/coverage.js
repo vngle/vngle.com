@@ -12,6 +12,8 @@ import { Link, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import SinContainer from "@components/Containers/SingleContainer";
 
+import DroneVideo from "../images/cover/drone.mp4";
+
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -39,6 +41,24 @@ const GeorgiaPage = ({ data: { storiesGeorgia, storiesNational } }) => {
       <Seo title="Our Coverage" />
 
       <Header>
+        <div className="content-wrapper">
+          <div className="text-wrapper d-flex">
+            <h1 className="display-2 font-sans-serif fw-bolder text-light">
+              Our Coverage
+            </h1>
+          </div>
+          <video
+            playsinline="playsinline"
+            autoplay="autoplay"
+            muted="muted"
+            loop="loop"
+            className="login-video"
+          >
+            <source src={DroneVideo} type="video/mp4" className="login-vid" />
+            <track kind="captions" />
+          </video>
+        </div>
+
         <Container>
           <h1 className="display-2 font-sans-serif fw-bolder text-light">
             Our Coverage
@@ -193,48 +213,44 @@ const CoverImage = styled.img`
 
 const Header = styled.div`
   position: relative;
-  padding: 10rem 0;
-
-  .bg-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: -1;
-  }
 
   .content-wrapper {
     display: flex;
-    align-items: center;
     position: relative;
-  }
-
-  .text-wrap {
-    z-index: 10;
-    display: flex;
     align-items: center;
+    min-height: 50vh;
   }
 
-  a {
-    text-align: center;
-    text-decoration: none;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
+  .text-wrapper {
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
   }
 
-  &.background-black {
-    background: black;
+  .login-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    object-fit: cover;
   }
-  @media (max-width: 36.25rem) {
-    h2 {
-      font-size: 1rem;
-      padding-top: 1rem;
-    }
+
+  .yellow-text {
+    color: #ffcc35;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 37rem) {
     h1 {
-      font-size: 2rem;
-      margin-bottom: 7rem;
-      margin-left: 0.75rem;
+      font-size: 1rem;
+    }
+    .content-wrapper {
+      min-height: 30vh;
     }
   }
 `;

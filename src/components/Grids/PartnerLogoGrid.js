@@ -16,67 +16,27 @@ import Sap from "@images/partners/sap.png";
 import Newmark from "@images/partners/newmark.png";
 import Starling from "@images/partners/starling.png";
 import Brown from "@images/partners/brown.png";
+import Ona from "@images/partners/ona.png";
+import Sjn from "@images/partners/sjn.png";
+import Gmc from "@images/partners/gmc.png";
+import Harvard from "@images/partners/harvard.png";
+import Ia from "@images/partners/ia.png";
 
 const workedWithData = [
   {
-    src: CollegePark,
-    alt: "College Park (GA) logo",
-    href: "https://www.collegeparkga.com/",
+    src: Starling,
+    alt: "Starling Lab for Data Integrity",
+    href: "https://www.starlinglab.org/",
   },
   {
-    src: Gma,
-    alt: "Georgia Municipal Association logo",
-    href: "https://www.gacities.com/",
+    src: Ona,
+    alt: "Online News Association",
+    href: "https://journalists.org/",
   },
   {
     src: Mozilla,
     alt: "Mozilla logo",
     href: "https://builders.mozilla.community/",
-  },
-  {
-    src: Columbia,
-    alt: "Columbia Tamer Center logo",
-    href: "https://www8.gsb.columbia.edu/socialenterprise/",
-  },
-  {
-    src: Envision,
-    alt: "Envision logo",
-    href: "https://www.envisionaccelerator.com/",
-  },
-  {
-    src: DivInc,
-    alt: "DivInc logo",
-    href: "https://www.divinc.org/apply",
-  },
-  {
-    src: GoodieNation,
-    alt: "Goodie Nation logo",
-    href: "https://goodienation.org/",
-  },
-  {
-    src: Goldin,
-    alt: "Goldin Institute logo",
-    href: "#",
-  },
-  {
-    src: Mit,
-    alt: "MIT Solve logo",
-    href: "#",
-  },
-  {
-    src: Nyc,
-    alt: "NYC Media Lab logo",
-    href: "#",
-  },
-  {
-    src: Pyxera,
-    alt: "Pyxera logo",
-    href: "#",
-  },
-  {
-    src: Sap,
-    alt: "SAP logo",
-    href: "#",
   },
   {
     src: Brown,
@@ -89,9 +49,54 @@ const workedWithData = [
     href: "https://www.journalism.cuny.edu/",
   },
   {
-    src: Starling,
-    alt: "Starling logo",
-    href: "https://www.starlinglab.org/",
+    src: Sjn,
+    alt: "Solutions Journalism Network logo",
+    href: "https://www.solutionsjournalism.org/",
+  },
+  {
+    src: Gmc,
+    alt: "Global Media Congress",
+    href: "https://www.solutionsjournalism.org/",
+  },
+  {
+    src: Harvard,
+    alt: "Harvard University logo",
+    href: "https://www.harvard.edu/",
+  },
+  {
+    src: Ia,
+    alt: "Internet Archive",
+    href: "https://archive.org/",
+  },
+  {
+    src: Goldin,
+    alt: "Goldin Institute logo",
+    href: "https://www.goldininstitute.org/",
+  },
+  {
+    src: Nyc,
+    alt: "NYC Media Lab logo",
+    href: "https://www.linkedin.com/company/nyc-media-lab/",
+  },
+  {
+    src: Sap,
+    alt: "SAP logo",
+    href: "https://www.sap.com/index.html",
+  },
+  {
+    src: Mit,
+    alt: "MIT Solve logo",
+    href: "https://solve.mit.edu/",
+  },
+  {
+    src: CollegePark,
+    alt: "College Park (GA) logo",
+    href: "https://www.collegeparkga.com/",
+  },
+  {
+    src: Gma,
+    alt: "Georgia Municipal Association logo",
+    href: "https://www.gacities.com/",
   },
 ];
 
