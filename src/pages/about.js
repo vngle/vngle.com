@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Link } from "gatsby";
 import { Container, Row, Col, Button, Image, Badge } from "react-bootstrap";
 import styled from "styled-components";
@@ -78,9 +78,9 @@ const OldHomePage = () => {
         <Row className="row-intro">
           <Col className="col-intro text-md-left text-center" md={6} sm={12}>
             <h1 className="display-4 fw-bolder mb-4">
-              We help harmonize cities by{" "}
+              We're helping build a{" "}
               <span className="highlight">
-                combatting misinformation & under-representation
+                stronger local news & information ecosystem
               </span>
             </h1>
             <Row>
@@ -92,9 +92,9 @@ const OldHomePage = () => {
             </Row>
             <Subtitle className="mb-4">
               Vngle is a nonpartisan grassroots news agency bringing various
-              angles of verified coverage to communities. Our creator community
-              is powered by a network of local experts and change-makers working
-              to curate deeper more intimate insights on the areas around us.{" "}
+              angles of verified coverage to underreported areas. Our creator
+              community is powered by a network of local experts working to
+              curate deeper cross-cultural insights on the areas around us.{" "}
               <Badge variant="primary">
                 <a
                   href="http://eepurl.com/g1cJk5"

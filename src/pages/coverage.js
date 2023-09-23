@@ -9,7 +9,6 @@ import NewsSubCard from "../components/Cards/NewsSubCard";
 import Grid from "../components/Grids/Grid";
 import List from "../components/Grids/List";
 import { Link, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import SinContainer from "@components/Containers/SingleContainer";
 
 import DroneVideo from "../images/cover/drone.mp4";
@@ -64,7 +63,6 @@ const GeorgiaPage = ({ data: { storiesGeorgia, storiesNational } }) => {
             Our Coverage
           </h1>
         </Container>
-        <StaticImage src="../images/camera.jpg" class="bg-img" />
       </Header>
 
       {/* --------------------Based In Georgia--------------------*/}
