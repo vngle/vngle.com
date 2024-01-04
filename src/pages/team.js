@@ -14,17 +14,11 @@ const TeamPage = () => {
     { name: "Shweta Jain", position: "Research & Development" },
     { name: "Jaime Fernandez", position: "Strategic Partnerships" },
     { name: "Alex Rhodd", position: "Operations" },
-    { name: "Kenneth Chen", position: "Technology Lead" },
-    { name: 'Devante "Don" Griffin', position: "Sales & Special Ops" },
+    { name: "Kenneth Chen", position: "UX Design" },
     { name: "Majestic Gay", position: "Collegiate Reporting Lead" },
-    { name: "Jennifer Guadarrama", position: "Engineering Intern: Front page" },
-    { name: "Nanami Inaba", position: "Engineering Intern: Front page" },
-    { name: "Chelsea Alcinord", position: "Engineering Intern: Front page" },
-    { name: "Israel Klein", position: "Engineering Intern: CMS" },
-    { name: "Robert Quartey", position: "Engineering Intern: CMS" },
-    { name: "Muzaffar Mukhitdinov", position: "Engineering Intern: CMS" },
-    { name: "Christopher Ortega", position: "Engineering Intern: Mobile" },
-    { name: "Shiming Huang", position: "Engineering Intern: Mobile" },
+    { name: "Shiming Huang", position: "Full-Stack Software Engineer" },
+    { name: "Kayla Arroyo", position: "Healthcare Project Manager" },
+    { name: 'Devante "Don" Griffin', position: "Sales & Special Ops" },
   ].map((profile, i) => {
     return { ...profile, img: Team[i] };
   });
@@ -67,6 +61,8 @@ const TeamPage = () => {
                     src={profile.img}
                     alt="Profile of team members"
                     width="100%"
+                    height='auto'
+                    style={{ objectFit: 'cover' }}
                   />
                   <Model>
                     <h2>{profile.name}</h2>
