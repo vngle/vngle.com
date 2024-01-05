@@ -1,5 +1,14 @@
 export type AmplifyDependentResourcesAttributes = {
+    "api": {
+        "storycms": {
+            "GraphQLAPIIdOutput": "string",
+            "GraphQLAPIEndpointOutput": "string"
+        }
+    },
     "auth": {
+        "userPoolGroups": {
+            "AdminGroupRole": "string"
+        },
         "vngleweb16f5322c": {
             "IdentityPoolId": "string",
             "IdentityPoolName": "string",
@@ -10,15 +19,6 @@ export type AmplifyDependentResourcesAttributes = {
             "AppClientIDWeb": "string",
             "AppClientID": "string",
             "AppClientSecret": "string"
-        },
-        "userPoolGroups": {
-            "AdminGroupRole": "string"
-        }
-    },
-    "api": {
-        "storycms": {
-            "GraphQLAPIIdOutput": "string",
-            "GraphQLAPIEndpointOutput": "string"
         }
     }
 }
